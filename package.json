@@ -10,8 +10,9 @@
     "main": "index.js",
     "scripts": {
       "test": "mocha test/jsonschema",
-      "build-modified": "jsonschema-tools materialize-modified --no-git-add",
-      "build-new": "jsonschema-tools materialize"
+      "build-new": "jsonschema-tools materialize",
+      "build-all": "jsonschema-tools materialize-all",
+      "build-modified": "for fn in $(git diff --name-only --diff-filter=ACM *.yaml); do npm run build-new $fn; done"
     },
     "keywords": [
       "jsonschema",
