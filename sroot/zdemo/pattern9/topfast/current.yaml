@@ -1,0 +1,26 @@
+title: zdemo/pattern9/topfast
+description: Top schema that changes often when child changes.
+$id: /zdemo/pattern9/topfast/0.0.1
+$schema: http://json-schema.org/draft-07/schema#
+type: object
+additionalProperties: false
+
+properties:
+
+  comment:
+    description: A string property added in topfast 0.0.1
+    type: string
+  
+  faster_point_releases:
+    allOf:
+      - $ref: /zdemo/pattern9/faster/0.0.1
+
+  slower_point_releases:
+    allOf:
+      - $ref: /zdemo/pattern9/slower/0.0.1
+
+
+required:
+  - comment
+  - faster_point_releases
+  - slower_point_releases

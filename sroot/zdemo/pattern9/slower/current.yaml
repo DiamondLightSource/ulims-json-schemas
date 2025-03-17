@@ -1,0 +1,19 @@
+title: zdemo/pattern9/slower
+description: A child with slower moving point releases
+$id: /zdemo/pattern9/slower/0.0.1
+$schema: http://json-schema.org/draft-07/schema#
+type: object
+additionalProperties: false
+
+properties:
+
+  about_slower:
+    description: A str property added by slower 0.0.1
+    type: string
+
+required:
+  - about_slower
+
+examples:
+  - about_slower: "Example with required data values in slower 0.0.1"
+  
