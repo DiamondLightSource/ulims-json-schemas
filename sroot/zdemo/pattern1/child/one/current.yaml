@@ -1,0 +1,19 @@
+title: zdemo/pattern1/child/one
+description: Child expected to be used by top level
+$id: /zdemo/pattern1/child/one/0.0.1
+$schema: http://json-schema.org/draft-07/schema#
+type: object
+additionalProperties: false
+
+properties:
+
+  about_one:
+    description: A property added by child one 0.0.1
+    type: string
+
+required:
+  - about_one
+
+examples:
+  - about_one: "Example with required data values in child one 0.0.1"
+  

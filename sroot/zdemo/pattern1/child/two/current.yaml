@@ -1,0 +1,37 @@
+title: zdemo/pattern1/child/two
+description: A child which uses a child
+$id: /zdemo/pattern1/child/two/0.0.1
+$schema: http://json-schema.org/draft-07/schema#
+type: object
+additionalProperties: false
+
+properties:
+
+  about_two:
+    description: A str property added by child two 0.0.1
+    type: string
+
+  # The following shows how the same schema can be
+  # reused by multiple properties in this schema. For
+  # example, if there a properties
+  child_three_first:
+    allOf:
+      - $ref: /zdemo/pattern1/child/three/0.0.1
+    properties:
+      extra_comment:
+        description: First requires an extra comment
+        type: string
+    required:
+      - extra_comment
+
+  
+  child_three_second:
+    allOf:
+      - $ref: /zdemo/pattern1/child/three/0.0.1
+
+required:
+  - about_two
+
+examples:
+  - about_two: "Example with required data values in child two 0.0.1"
+  
