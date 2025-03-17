@@ -13,8 +13,9 @@ import logging
 from collections.abc import Mapping
 from pathlib import Path
 
-# Added FormatChecker to import
-from jsonschema import Draft202012Validator, exceptions, FormatChecker
+# Added FormatChecker to import and changed
+# validator from 202012 (latest) to  7 (version wikimedia uses).
+from jsonschema import exceptions, FormatChecker, Draft7Validator
 from referencing import Registry, Resource
 from referencing import exceptions as exceptsref
 from referencing.jsonschema import EMPTY_REGISTRY as _EMPTY_REGISTRY
@@ -86,7 +87,7 @@ def _load(found_files: list[Path]) -> Mapping:  # type: ignore
             yield Resource.from_contents(content)
 
 
-def _validate(check: Draft202012Validator, metadata: dict, schemas_folder: Path):
+def _validate(check: Draft7Validator, metadata: dict, schemas_folder: Path):
     """Use registry enabled validator to check metadata if valid."""
     # The referencing package causes two levels of checking, where
     # the first occurs BEFORE json metadata is seen. The
@@ -156,7 +157,10 @@ def validate_data_against_registry(
     # We need to use the registry within validator so we
     # cannot use "jsonschema.validators.validator_for" as
     # used in other modules.
-    check = Draft202012Validator(
+    #check = Draft202012Validator(
+    #    schema=base, registry=loaded, format_checker=default_format_checker
+    #)
+    check = Draft7Validator(
         schema=base, registry=loaded, format_checker=default_format_checker
     )
     return _validate(check, metadata, schemas_folder)

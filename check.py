@@ -5,7 +5,6 @@ from pathlib import Path
 import json
 from typing_extensions import Annotated
 
-
 import typer
 
 from registry import populate, validate_data_against_registry
@@ -68,6 +67,20 @@ def checkdir() -> None:
         "urn:ulims:base:1.0",
     )
 
+@app.command()
+def zdemo() -> None:
+    """Confirm JSON schemas and data files in the zdemo are okay.
+
+    This command can be used whilst editing the files
+    in "sroot/zdemo" to see if any changes have broken
+    the "top" schema. A datafile known to validate with
+    top version 0.0.1 is checked.
+    """
+    confirm(Path(Path.cwd(), "sroot", "zdemo", "pattern1", "top", "checkpy.datafile"),
+            Path(Path.cwd(), "sroot", "zdemo"),
+            5,
+            "/zdemo/pattern1/top/0.0.1"
+            )
 
 @app.command()
 def confirm(
