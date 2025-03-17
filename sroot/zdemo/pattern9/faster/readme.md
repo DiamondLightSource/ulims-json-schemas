@@ -8,3 +8,4 @@ gives a safe place to confirm systems ignore the change.
 ## Changes
 
 * **0.0.1** - Start of faster child used by all 0.0.1 parents
+* **0.0.2** - First point release with changed properties.
