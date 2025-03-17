@@ -1,0 +1,26 @@
+{
+  "title": "zdemo/pattern9/faster",
+  "description": "A child with fast moving point releases",
+  "$id": "/zdemo/pattern9/faster/0.0.2",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "about_faster"
+  ],
+  "properties": {
+    "about_faster": {
+      "description": "A str property added by faster 0.0.1",
+      "type": "string"
+    },
+    "about_faster2": {
+      "description": "A str property added by faster 0.0.2",
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "about_faster": "Example with required data values in faster 0.0.1"
+    }
+  ]
+}
