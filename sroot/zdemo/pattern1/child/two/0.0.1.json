@@ -1,0 +1,71 @@
+{
+  "title": "zdemo/pattern1/child/two",
+  "description": "A child which uses a child",
+  "$id": "/zdemo/pattern1/child/two/0.0.1",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "about_two"
+  ],
+  "properties": {
+    "about_two": {
+      "description": "A str property added by child two 0.0.1",
+      "type": "string"
+    },
+    "child_three_first": {
+      "title": "zdemo/pattern1/child/three",
+      "description": "A child to be used by a child",
+      "$id": "/zdemo/pattern1/child/three/0.0.1",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "about_three",
+        "extra_comment"
+      ],
+      "properties": {
+        "about_three": {
+          "description": "A property added by child three 0.0.1",
+          "type": "string"
+        },
+        "extra_comment": {
+          "description": "First requires an extra comment",
+          "type": "string"
+        }
+      },
+      "examples": [
+        {
+          "about_three": "Example with required data values in child three 0.0.1"
+        }
+      ]
+    },
+    "child_three_second": {
+      "title": "zdemo/pattern1/child/three",
+      "description": "A child to be used by a child",
+      "$id": "/zdemo/pattern1/child/three/0.0.1",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "about_three"
+      ],
+      "properties": {
+        "about_three": {
+          "description": "A property added by child three 0.0.1",
+          "type": "string"
+        }
+      },
+      "examples": [
+        {
+          "about_three": "Example with required data values in child three 0.0.1"
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "about_two": "Example with required data values in child two 0.0.1"
+    }
+  ]
+}

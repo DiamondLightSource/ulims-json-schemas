@@ -1,0 +1,157 @@
+{
+  "title": "zdemo/pattern1/top",
+  "description": "Applications are expected to use top level schemes",
+  "$id": "/zdemo/pattern1/top/0.0.1",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "comment",
+    "counter_top"
+  ],
+  "properties": {
+    "child_one": {
+      "title": "zdemo/pattern1/child/one",
+      "description": "Child expected to be used by top level",
+      "$id": "/zdemo/pattern1/child/one/0.0.1",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "about_one"
+      ],
+      "properties": {
+        "about_one": {
+          "description": "A property added by child one 0.0.1",
+          "type": "string"
+        }
+      },
+      "examples": [
+        {
+          "about_one": "Example with required data values in child one 0.0.1"
+        }
+      ]
+    },
+    "child_two": {
+      "title": "zdemo/pattern1/child/two",
+      "description": "A child which uses a child",
+      "$id": "/zdemo/pattern1/child/two/0.0.1",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "about_two"
+      ],
+      "properties": {
+        "about_two": {
+          "description": "A str property added by child two 0.0.1",
+          "type": "string"
+        },
+        "child_three_first": {
+          "title": "zdemo/pattern1/child/three",
+          "description": "A child to be used by a child",
+          "$id": "/zdemo/pattern1/child/three/0.0.1",
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "about_three",
+            "extra_comment"
+          ],
+          "properties": {
+            "about_three": {
+              "description": "A property added by child three 0.0.1",
+              "type": "string"
+            },
+            "extra_comment": {
+              "description": "First requires an extra comment",
+              "type": "string"
+            }
+          },
+          "examples": [
+            {
+              "about_three": "Example with required data values in child three 0.0.1"
+            }
+          ]
+        },
+        "child_three_second": {
+          "title": "zdemo/pattern1/child/three",
+          "description": "A child to be used by a child",
+          "$id": "/zdemo/pattern1/child/three/0.0.1",
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "about_three"
+          ],
+          "properties": {
+            "about_three": {
+              "description": "A property added by child three 0.0.1",
+              "type": "string"
+            }
+          },
+          "examples": [
+            {
+              "about_three": "Example with required data values in child three 0.0.1"
+            }
+          ]
+        }
+      },
+      "examples": [
+        {
+          "about_two": "Example with required data values in child two 0.0.1"
+        }
+      ]
+    },
+    "comment": {
+      "description": "A string property added in top 0.0.1",
+      "type": "string"
+    },
+    "counter": {
+      "description": "An integer property added in empty 0.0.1",
+      "type": "integer",
+      "maximum": 1000,
+      "minimum": 0
+    },
+    "counter_top": {
+      "description": "An integer property added in top 0.0.1",
+      "type": "integer",
+      "maximum": 1000,
+      "minimum": 0
+    },
+    "ident": {
+      "description": "An UUID added in empty 0.0.1",
+      "type": "string",
+      "format": "uuid",
+      "maxLength": 40
+    },
+    "when": {
+      "description": "An ISO-8601 formatted timestamp added in empty 0.0.1",
+      "type": "string",
+      "format": "date-time",
+      "maxLength": 128
+    }
+  },
+  "examples": [
+    {
+      "child_one": {
+        "about_one": "dolor"
+      },
+      "child_two": {
+        "about_two": "dolor",
+        "child_three_first": {
+          "about_three": "dolor",
+          "extra_comment": "dolor"
+        },
+        "child_three_second": {
+          "about_three": "dolor"
+        }
+      },
+      "comment": "dolor",
+      "counter": 150,
+      "counter_top": 150,
+      "ident": "22222222-2222-2222-2222-222222222222",
+      "when": "2021-01-01T00:00:00.0Z"
+    }
+  ]
+}
