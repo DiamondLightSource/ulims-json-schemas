@@ -1,6 +1,6 @@
 title: zdemo/pattern9/faster
 description: A child with fast moving point releases
-$id: /zdemo/pattern9/faster/0.0.3
+$id: /zdemo/pattern9/faster/1.0.0
 $schema: http://json-schema.org/draft-07/schema#
 type: object
 additionalProperties: false
@@ -22,6 +22,8 @@ properties:
 
 required:
   - about_faster
+  - about_faster2
 
 examples:
   - about_faster: "Example with required data values in faster 0.0.1"
+    about_faster2: "Change to required values is a major release"

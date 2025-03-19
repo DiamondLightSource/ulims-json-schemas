@@ -36,6 +36,45 @@ when a schema author decides when there are enough changes to
 the children. The slower child and slow top should fall
 behind the current version.
 
+## How to change releases
+
+The empty schema readme documents how to alter a particular
+schema and build the latest version. This readme assumes those
+basics are understood.
+
+1. **npm run test** to confirm all existing files pass
+   minimum requirements.
+
+2. Edit current file
+
+   * **$id** change the version on the end of the line
+
+   * Make other changes to schema
+
+3. **npm run build-modified** will (via git diff) detect
+   changes, build a JSON file and redirect soft links to it
+
+4. **npm run test** to confirm new schema release passes
+   minimum requirements and compatibility checks.
+
+### Compatibility enforcement
+
+There are some changes to schema files which require
+major, minor or point releases to pass checks. This
+section documents them.
+
+#### Bypassing before release 1.0.0
+
+A simple way to bypass is to delete all files on disk
+before the schema release being worked on. The build
+will update the soft links so test passes again.
+
+#### Required values (major release required)
+
+Schema properties are not required by default. Changing a
+property to required **MUST** be a major release. Faster
+schema demonstrates that in version 1.0.0
+
 ## Changes
 
 * **0.0.1** - First point release of pattern 9 schemas where all
