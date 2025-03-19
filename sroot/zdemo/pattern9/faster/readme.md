@@ -10,3 +10,4 @@ gives a safe place to confirm systems ignore the change.
 * **0.0.1** - Start of faster child used by all 0.0.1 parents
 * **0.0.2** - First point release with changed properties.
 * **0.0.3** - Changed properties for build-modified detection
+* **1.0.0** - Property about_faster2 was optional now required
