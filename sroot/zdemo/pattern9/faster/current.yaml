@@ -1,6 +1,6 @@
 title: zdemo/pattern9/faster
 description: A child with fast moving point releases
-$id: /zdemo/pattern9/faster/1.0.0
+$id: /zdemo/pattern9/faster/1.0.1
 $schema: http://json-schema.org/draft-07/schema#
 type: object
 additionalProperties: false
@@ -17,6 +17,10 @@ properties:
 
   about_faster3:
     description: A str property added by faster 0.0.3
+    type: string
+  
+  about_faster4:
+    description: A str property added in faster 1.0.1
     type: string
 
 
