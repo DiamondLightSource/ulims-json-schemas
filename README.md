@@ -107,6 +107,8 @@ built schemas via a web server with mounted filesystem.
 * Schema root 2: https://gitlab-replica-b.wikimedia.org/repos/data-engineering/schemas-event-secondary/
 * Application access (ie. filesystem on web): https://schema.wikimedia.org/#!/
 * Build tools: https://gitlab.wikimedia.org/repos/data-engineering/jsonschema-tools
+* Why jsonschema: https://wikitech.wikimedia.org/wiki/Event_Platform/Schemas
+* Why git: https://phabricator.wikimedia.org/T201643
 
 ## Schema version
 
