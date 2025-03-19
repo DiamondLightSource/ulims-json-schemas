@@ -1,0 +1,84 @@
+{
+  "title": "zdemo/pattern9/topfast",
+  "description": "Top schema that changes often when child changes.",
+  "$id": "/zdemo/pattern9/topfast/0.0.2",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "comment",
+    "faster_point_releases",
+    "slower_point_releases"
+  ],
+  "properties": {
+    "comment": {
+      "description": "A string property added in topfast 0.0.1",
+      "type": "string"
+    },
+    "faster_point_releases": {
+      "title": "zdemo/pattern9/faster",
+      "description": "A child with fast moving point releases",
+      "$id": "/zdemo/pattern9/faster/0.0.3",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "about_faster"
+      ],
+      "properties": {
+        "about_faster": {
+          "description": "A str property added by faster 0.0.1",
+          "type": "string"
+        },
+        "about_faster2": {
+          "description": "A str property added by faster 0.0.2",
+          "type": "string"
+        },
+        "about_faster3": {
+          "description": "A str property added by faster 0.0.3",
+          "type": "string"
+        }
+      },
+      "examples": [
+        {
+          "about_faster": "Example with required data values in faster 0.0.1"
+        }
+      ]
+    },
+    "slower_point_releases": {
+      "title": "zdemo/pattern9/slower",
+      "description": "A child with slower moving point releases",
+      "$id": "/zdemo/pattern9/slower/0.0.1",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "about_slower"
+      ],
+      "properties": {
+        "about_slower": {
+          "description": "A str property added by slower 0.0.1",
+          "type": "string"
+        }
+      },
+      "examples": [
+        {
+          "about_slower": "Example with required data values in slower 0.0.1"
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "comment": "dolor",
+      "faster_point_releases": {
+        "about_faster": "dolor",
+        "about_faster2": "dolor",
+        "about_faster3": "dolor"
+      },
+      "slower_point_releases": {
+        "about_slower": "dolor"
+      }
+    }
+  ]
+}
