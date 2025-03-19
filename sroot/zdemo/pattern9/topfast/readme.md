@@ -9,3 +9,4 @@ schemas used.
 * **0.0.1** - Start with version 0.0.1 of faster and slower children
 * **0.0.2** - Update faster to release 0.0.3
 * **1.0.0** - Use faster 1.0.1 which added required property
+* **1.0.1** - Use slower 0.0.2 since need added property
