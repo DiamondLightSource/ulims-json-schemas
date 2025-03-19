@@ -57,25 +57,46 @@ basics are understood.
 4. **npm run test** to confirm new schema release passes
    minimum requirements and compatibility checks.
 
+5. Update the readme for each schema changed
+   and commit to git.
+
+It is possible to alter multiple schemas before step 3. A
+schema that uses a schema can be updated at the same time
+if necessary. See topfast 1.0.0 for example.
+
 ### Compatibility enforcement
 
 There are some changes to schema files which require
 major, minor or point releases to pass checks. This
 section documents them.
 
-#### Bypassing before release 1.0.0
-
-A simple way to bypass is to delete all files on disk
-before the schema release being worked on. The build
-will update the soft links so test passes again.
-
 #### Required values (major release required)
 
 Schema properties are not required by default. Changing a
 property to required **MUST** be a major release. Faster
-schema demonstrates that in version 1.0.0
+schema demonstrates that in release 1.0.0. This applies
+to all schemas using a schema, so topfast release 1.0.0
+used newer version faster.
 
-## Changes
+### Bypassing checks (before release 1.0.0)
+
+A simple way to bypass is to delete all generated files 
+
+on disk before the schema release being worked on. The build
+will update the soft links so test passes again.
+
+Delete is needed for uncommitted point releases when
+a schema change should have been a major release. So,
+topfast 0.0.3 built fine but test failed due to new
+required property. Note, build of 1.0.0 files does not
+remove failed files.
+
+## Changes / Summary of schema state change
 
 * **0.0.1** - First point release of pattern 9 schemas where all
 schemas have same version (March 2025)
+
+* **March 19th 2025** Number of releases per schema: faster had 5,
+  topfast had 4, slower had 2 and topslow unchanged. Topslow
+  release outstanding, if systems using topfast don't break. Then, slower 0.0.1 can have schema retirement policy applied since
+  no others in the schema root will be using it.
