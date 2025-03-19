@@ -105,6 +105,15 @@ and npm. Step 4 requires Python virtual environment.
 4. For Python, create and activate a virtual environment and
 run *./install.sh* to pip install required packages.
 
+### Pattern 9: schema group showing change over time
+
+Pattern 9 shows how schema releases can evolve at
+different speeds. The [pattern9 readme](pattern9/readme.md)
+documents how to modify one or more existing schemes and
+build all changes with single command. You should have
+created at least one schema manually and review of
+pattern 1 is suggested.
+
 ## Changes
 
 Major changes to the zdemo schema
@@ -116,3 +125,4 @@ Major changes to the zdemo schema
 * Added version 0.0.1 of empty schema.
 * Added schema design pattern 1 (top mostly defined by children
   and those children reuses a child)
+* Added design pattern 9 (schemas evolve at different speeds)
