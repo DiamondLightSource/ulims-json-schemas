@@ -36,6 +36,11 @@ The following sets exist.
    contains a pre-defined "empty" schema for copying with a
    schema group for trying it out.
 
+2. [shared](sroot/shared/readme.md) - A common set of schemas
+   that provides the highest level of reuse across all schema
+   sets, systems and applications.
+
+
 ## Glossary
 
 The following terms are used in the documentation.
