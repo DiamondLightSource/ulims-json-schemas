@@ -22,6 +22,11 @@ jobs:
           run: |
             cat .jsonschema-tools.yaml
             ls -al
+            echo "test folder not copied by default, so create it"
+            mkdir --parent test/jsonschema
+            touch test/jsonschema/repository.test.js
+            echo "'use strict'; " > test/jsonschema/repository.test.js
+            echo "require('@wikimedia/jsonschema-tools').tests.all({ logLevel: 'info' });" >> test/jsonschema/repository.test.js
 
         - name: Check schema root passes minimum requirements
           working-directory: ./  
