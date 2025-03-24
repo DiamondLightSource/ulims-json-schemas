@@ -19,12 +19,8 @@ jobs:
         
         - name: Add minimum configuration files for schema tools.
           run: |
-            touch .jsonschema-tools.yaml
-            cat "${{ github.action_path }}/.jsonschema-tools.yaml" > .jsonschema-tools.yaml
-  
-            mkdir -p test/jsonschema/
-            touch test/jsonschema/repository.test.js
-            cat "${{ github.action_path }}/test/jsonschema/repository.test.js" > test/jsonschema/repository.test.js
+            cat ./jsonschema-tools.yaml
+            cat ./test/jsonschema/repository.test.js
             
         - name: Check schema root passes minimum requirements
           run: npm run test
