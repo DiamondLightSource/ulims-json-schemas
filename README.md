@@ -39,6 +39,9 @@ The following sets exist.
 2. [shared](sroot/shared/readme.md) - A common set of schemas
    that provides the highest level of reuse across all schema
    sets, systems and applications.
+  
+3. [instruments](sroot/instruments/readme.md) - Schemas 
+   unique to instruments.
 
 
 ## Glossary
