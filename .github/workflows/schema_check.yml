@@ -18,9 +18,9 @@ jobs:
           run: npm install
         
         - name: Add minimum configuration files for schema tools.
+          working-directory: ./
           run: |
-            cat ./jsonschema-tools.yaml
-            cat ./test/jsonschema/repository.test.js
+            cat .jsonschema-tools.yaml
             
         - name: Check schema root passes minimum requirements
           run: npm run test
