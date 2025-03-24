@@ -105,7 +105,7 @@ and npm. Step 4 requires Python virtual environment.
 4. For Python, create and activate a virtual environment and
 run *./install.sh* to pip install required packages.
 
-#### Doing schema test inside container
+#### Doing schema check inside container
 
 The Dockerfile uses the same container image that the wikimedia
 primary root users. It copies configuration and adds the
@@ -114,6 +114,12 @@ schema folder before running test.
 * Whilst in project root: docker/podman build -t jsonschematools .
 
 If container build completes all schemas passed all tests.
+
+#### Schema check within github workflows
+
+All local checks should pass before being committed or
+pushed to remote. However, github actions are used to
+confirm pushes or pull requests pass the checks.
 
 ### Pattern 9: schema group showing change over time
 
