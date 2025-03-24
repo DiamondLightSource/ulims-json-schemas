@@ -17,10 +17,12 @@ jobs:
         - name: Install dependencies  # uses repo package.json 
           run: npm install
         
-        - name: Add minimum configuration files for schema tools.
+        - name: Confirm configuration files used
           working-directory: ./
           run: |
             cat .jsonschema-tools.yaml
+            cat test/jsonschema/repository.test.js
             
         - name: Check schema root passes minimum requirements
+          working-directory: ./  
           run: npm run test
