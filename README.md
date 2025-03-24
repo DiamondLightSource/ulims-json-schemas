@@ -15,7 +15,12 @@ Applications can download and use a built schema to
 validate data against that schema. A built schema has no
 external dependency. Various versions of each schema
 are maintained on disk and systems should cache
-those need. Github raw can be used in the first instance.
+those need. Github raw can be used in the first instance
+and applications should do a systems check against
+release top 0.0.1 before raising issues.
+
+* [Can host see this schema?](sroot/zdemo/pattern1/top/0.0.1.json?raw=1)
+* [Can schema downloaded validate this data?](sroot/zdemo/pattern1/top/checkpy.datafile?raw=1)
 
 The [zdemo readme](sroot/zdemo/readme.md) explains how to use
 this repository to test all existing schemas and explains
