@@ -67,7 +67,8 @@ with version 0.0.1 of a new schema. Failure to read
 [empty readme](empty/readme.md) (which highlights what
 to edit in the "current" file) will cause step 3 below to fail.
 
-* **/zdemo/empty/** (standard folder for new schema in repository.)
+* **/zdemo/empty/** (standard folder for new schema in repository using current.yaml)
+* **/zdemo/emptyj/** (standard folder for new schema in repository using current.json)
 
 ### How to confirm or detect changes to valid schemas
 

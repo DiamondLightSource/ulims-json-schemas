@@ -10,7 +10,7 @@
 # only one is available currently.
 #
 npm run build-new sroot/zdemo/empty/current.yaml
-# npm run build-new sroot/zdemo/emptyj/current.json
+npm run build-new sroot/zdemo/emptyj/current.json
 
 # Build pattern 1 schemas.
 #
