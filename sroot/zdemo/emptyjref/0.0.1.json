@@ -1,0 +1,69 @@
+{
+  "title": "zdemo/emptyjref",
+  "description": "Empty parent schema which references another empty schema",
+  "$id": "/zdemo/emptyjref/0.0.1",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "empty_from"
+  ],
+  "properties": {
+    "empty_from": {
+      "title": "zdemo/emptyj",
+      "description": "Empty schema as basis for new schemas as per usage instructions",
+      "$id": "/zdemo/emptyj/0.0.1",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "comment"
+      ],
+      "properties": {
+        "comment": {
+          "description": "A string property added in emptyj 0.0.1",
+          "type": "string"
+        },
+        "counter": {
+          "description": "An integer property added in emptyj 0.0.1",
+          "type": "integer",
+          "maximum": 1000,
+          "minimum": 0
+        },
+        "ident": {
+          "description": "An UUID added in emptyj 0.0.1",
+          "type": "string",
+          "format": "uuid",
+          "maxLength": 40
+        },
+        "when": {
+          "description": "An ISO-8601 formatted timestamp added in emptyj 0.0.1",
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 128
+        }
+      },
+      "examples": [
+        {
+          "comment": "Example showing required data values in emptyj 0.0.1"
+        },
+        {
+          "comment": "Example showing all values in emptyj 0.0.1 version.",
+          "counter": 101,
+          "ident": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
+          "when": "2018-11-13T20:20:39+00:00"
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "empty_from": {
+        "comment": "dolor",
+        "counter": 150,
+        "ident": "22222222-2222-2222-2222-222222222222",
+        "when": "2021-01-01T00:00:00.0Z"
+      }
+    }
+  ]
+}

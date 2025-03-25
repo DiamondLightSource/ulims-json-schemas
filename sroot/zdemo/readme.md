@@ -69,6 +69,7 @@ to edit in the "current" file) will cause step 3 below to fail.
 
 * **/zdemo/empty/** (standard folder for new schema in repository using current.yaml)
 * **/zdemo/emptyj/** (standard folder for new schema in repository using current.json)
+* **/zdemo/emptyjref/** (standard folder for new schema using references to other schemas)
 
 ### How to confirm or detect changes to valid schemas
 
