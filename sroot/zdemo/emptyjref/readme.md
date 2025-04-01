@@ -27,7 +27,7 @@ version 0.0.1 of that schema to define its properties.
 
 ## Creating a new schema using this schema.
 
-1. Run schema root check **npm run test** and correct
+1. Run schema root check **npm run check** and correct
    any issues before continuing. This command should be reused
    within a few seconds of any edit and build.
 
@@ -68,7 +68,7 @@ until 1.0.0 is reached.
 5. The file *0.0.1.json* will be overwritten and all
    soft links updated to point at the new file.
 
-6. Execute **npm run test** and your new schema should
+6. Execute **npm run check** and your new schema should
    appear on the list tested with any issues highlighted.
 
 7. Fix issue(s) before changing the rest of the file.
@@ -86,7 +86,7 @@ Schema version 0.0.1 needs changing based on comments in
 the github issues on the main branch and needs to use a newer
 release of referenced schemas.
 
-1. Execute *npm run test* to confirm schema root has no issues
+1. Execute *npm run check* to confirm schema root has no issues
    and fix if any existing before making changes.
 
 2. Edit the current file and alter values for:

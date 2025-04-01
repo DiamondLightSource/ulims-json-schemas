@@ -42,7 +42,7 @@ The empty schema readme documents how to alter a particular
 schema and build the latest version. This readme assumes those
 basics are understood.
 
-1. **npm run test** to confirm all existing files pass
+1. **npm run check** to confirm all existing files pass
    minimum requirements.
 
 2. Edit current file
@@ -54,7 +54,7 @@ basics are understood.
 3. **npm run build-modified** will (via git diff) detect
    changes, build a JSON file and redirect soft links to it
 
-4. **npm run test** to confirm new schema release passes
+4. **npm run check** to confirm new schema release passes
    minimum requirements and compatibility checks.
 
 5. Update the readme for each schema changed

@@ -83,7 +83,7 @@ can use to check core logic against.
 2. Run **./sroot/zdemo/build.sh** which will overwrite
    version 0.0.1 files unless values in an $id were changed.
 
-3. Run **npm run test** to confirm schema set pass minimum checks
+3. Run **npm run check** to confirm schema set pass minimum checks
    and will work with javascript front end applications
 
 4. Run **./check.py zdemo** to confirm schemas will work

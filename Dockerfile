@@ -13,4 +13,4 @@ ADD sroot sroot
 RUN /run.sh
 
 # The image build should fail with the same error seen
-# locally when doing: npm run test
+# locally when doing: npm run check
