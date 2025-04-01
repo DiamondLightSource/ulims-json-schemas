@@ -25,4 +25,4 @@ jobs:
 
         - name: Check schema root passes minimum requirements
           working-directory: ./  
-          run: npm run test
+          run: npm run check
