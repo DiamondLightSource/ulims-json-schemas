@@ -80,16 +80,15 @@ used newer version faster.
 
 ### Bypassing checks (before release 1.0.0)
 
-A simple way to bypass is to delete all generated files 
-
-on disk before the schema release being worked on. The build
+A simple way to bypass is to delete all generated files on
+disk before the schema release being worked on. The build
 will update the soft links so test passes again.
 
 Delete is needed for uncommitted point releases when
 a schema change should have been a major release. So,
 topfast 0.0.3 built fine but test failed due to new
-required property. Note, build of 1.0.0 files does not
-remove failed files.
+required property. The rebuild as 1.0.0 did not
+not remove failed files.
 
 ## Changes / Summary of schema state change
 
@@ -98,5 +97,7 @@ schemas have same version (March 2025)
 
 * **March 19th 2025** Number of releases per schema: faster had 5,
   topfast had 4, slower had 2 and topslow unchanged. Topslow
-  release outstanding, if systems using topfast don't break. Then, slower 0.0.1 can have schema retirement policy applied since
-  no others in the schema root will be using it.
+  release outstanding, if systems using topfast don't
+  break. Afterwards, slower 0.0.1 can have schema retirement policy
+  applied, since no others in the schema root will be using it, so
+  can be removed from git version control.

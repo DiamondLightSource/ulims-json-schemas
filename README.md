@@ -71,7 +71,7 @@ The following terms are used in the documentation.
   where the first is easiest.
 
   * **standalone** - have properties and no external references. A
-    build for low level schema (like empty) appears to does almost
+    build for low level schema (like empty) appears to do almost
     nothing. This type is how most schema will start until
     reuse patterns emerge. Folder *sroot/zdemo/pattern1/child/three*
     is example.
@@ -90,11 +90,16 @@ The following terms are used in the documentation.
 A schema root **MUST** be built and tested when a schema version
 changes. Additional terms:
 
-* **current** the source of a built schema with an $id that
+* **SRC (Schema Root Check)** - all schemas in all folders
+  must pass this check before being committed. Doing a SRC
+  means running command **npm run check** and it reporting
+  no oustanding issues.
+
+* **current** - the source of a built schema with an $id that
   encodes the version of this schema. The **only** file that
   should edited manually in a schema folder.
 
-* **built** a schema needs building at least once to generate
+* **built** - a schema needs building at least once to generate
   the necessary files. The version in $id will be used to
   generate an exact versioned schema and make soft links.
 

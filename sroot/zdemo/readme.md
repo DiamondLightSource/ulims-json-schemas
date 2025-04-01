@@ -61,15 +61,21 @@ being reused by other sets within a schema root.
 
 ### empty - a standard folder for creating a new schema
 
-The zdemo set provide a folder for copying into other
+The zdemo set provides three folder for copying into other
 schema sets. It provides the minimum files to get started
-with version 0.0.1 of a new schema. Failure to read 
-[empty readme](empty/readme.md) (which highlights what
-to edit in the "current" file) will cause step 3 below to fail.
+with version 0.0.1 of a new schema. Failure to read the
+readme (which highlights what to edit in the "current" file)
+will cause step 3 below to fail.
 
-* **/zdemo/empty/** (standard folder for new schema in repository using current.yaml)
-* **/zdemo/emptyj/** (standard folder for new schema in repository using current.json)
-* **/zdemo/emptyjref/** (standard folder for new schema using references to other schemas)
+* [readme in /zdemo/empty/](empty/readme.md) - a standard folder
+for new schema in repository using current.yaml
+
+* [readme in /zdemo/emptyj/](emptyj/readme.md) - a standard folder
+for new schema in repository using current.json
+
+* [readme in /zdemo/emptyjref/](emptyjref/readme.md) - a standard
+folder for new schema using references to other schemas all
+that are defined with current.json.
 
 ### How to confirm or detect changes to valid schemas
 
