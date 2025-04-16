@@ -2,8 +2,8 @@
 
 This empty schema contains the minimum set of files required
 to create a schema. It can be copied into another scheme set
-of group and **must be edited** before the schema root
-is next tested. There are two files and four soft links.
+or group and **must be edited** before the schema root
+is next checked. There are two files and four soft links.
 
 * **current.yaml** - the most important file used to build
   the latest version of a schema. 

@@ -86,7 +86,7 @@ will update the soft links so test passes again.
 
 Delete is needed for uncommitted point releases when
 a schema change should have been a major release. So,
-topfast 0.0.3 built fine but test failed due to new
+topfast 0.0.3 built fine but check failed due to new
 required property. The rebuild as 1.0.0 did not
 not remove failed files.
 

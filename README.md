@@ -93,7 +93,7 @@ changes. Additional terms:
 * **SRC (Schema Root Check)** - all schemas in all folders
   must pass this check before being committed. Doing a SRC
   means running command **npm run check** and it reporting
-  no oustanding issues.
+  no outstanding issues.
 
 * **current** - the source of a built schema with an $id that
   encodes the version of this schema. The **only** file that
