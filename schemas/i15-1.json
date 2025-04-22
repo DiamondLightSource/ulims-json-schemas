@@ -1,0 +1,17 @@
+{
+    "$id": "some url?",
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "title": "I15-1 Sample Schema",
+    "type": "object",
+    "required": [
+        "composition"
+    ],
+    "properties": {
+        "composition": {
+            "title": "Composition",
+            "type": "string",
+            "description": "Molar composition of sample",
+            "default": "C"
+        }
+    }
+}
