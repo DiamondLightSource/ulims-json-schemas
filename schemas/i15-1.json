@@ -4,7 +4,7 @@
     "title": "I15-1 Sample Schema",
     "type": "object",
     "required": [
-        "composition"
+        "composition", "density"
     ],
     "properties": {
         "composition": {
@@ -12,6 +12,12 @@
             "type": "string",
             "description": "Molar composition of sample",
             "default": "C"
+        },
+        "density": {
+            "title": "Density",
+            "type": "float",
+            "description": "Density of sample in g/cm^3",
+            "default": 1.0
         }
     }
 }
