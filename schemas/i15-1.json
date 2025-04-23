@@ -22,8 +22,8 @@
         "comment": {
             "title": "Comment",
             "type": "string",
-            "description": "Comment on sample",
+            "description": "Comment on sample (spelling?)",
             "default": ""
         }
     }
-}
+}s
