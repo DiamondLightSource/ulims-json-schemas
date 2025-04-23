@@ -18,6 +18,12 @@
             "type": "number",
             "description": "Density of sample in g/cm^3",
             "default": 1.0
+        },
+        "comment": {
+            "title": "Comment",
+            "type": "string",
+            "description": "Comment on sample",
+            "default": ""
         }
     }
 }
