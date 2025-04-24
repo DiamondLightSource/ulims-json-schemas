@@ -4,7 +4,7 @@
     "title": "I15-1 Sample Schema",
     "type": "object",
     "required": [
-        "composition", "density", "capillary"
+        "composition", "density", "capillary", "packing_fraction"
     ],
     "properties": {
         "composition": {
@@ -18,6 +18,14 @@
             "type": "number",
             "description": "Density of sample in g/cm^3",
             "default": 1.0
+        },
+        "packing_fraction": {
+            "title": "Packing Fraction",
+            "type": "number",
+            "description": "Packing fraction of the sample",
+            "default": 0.5,
+            "minimum": 0.0,
+            "maximum": 1.0
         },
         "comment": {
             "title": "Comment",
