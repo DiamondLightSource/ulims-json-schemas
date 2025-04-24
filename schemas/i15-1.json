@@ -4,7 +4,7 @@
     "title": "I15-1 Sample Schema",
     "type": "object",
     "required": [
-        "composition", "density"
+        "composition", "density", "capillary"
     ],
     "properties": {
         "composition": {
