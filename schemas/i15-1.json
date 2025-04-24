@@ -24,6 +24,25 @@
             "type": "string",
             "description": "Comment on sample (spelling?)",
             "default": ""
+        }, 
+        "capillary": {
+            "title": "Capillary",
+            "enum": [
+                "bs1.0", 
+                "bs1.5",
+                "bs2.0",
+                "fq0.4",
+                "fq1.0",
+                "fq1.5",
+                "fq2.0",
+                "fq2.5",
+                "fq3.17",
+                "pi1.0",
+                "pi1.5",
+                "pi2.0",
+                null
+            ],
+            "description": "The capillary type of this sample."
         }
     }
 }
