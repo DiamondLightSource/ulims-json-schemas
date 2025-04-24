@@ -7,6 +7,12 @@
         "composition", "density", "capillary", "packing_fraction"
     ],
     "properties": {
+        "name": {
+            "title": "Sample Name",
+            "type": "string",
+            "description": "A name/your reference for this sample",
+            "default": "C"
+        },
         "composition": {
             "title": "Composition",
             "type": "string",
