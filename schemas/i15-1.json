@@ -56,6 +56,6 @@
             "type": "string",
             "description": "Comment on this sample",
             "default": ""
-        }, 
+        }
     }
 }
