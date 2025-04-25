@@ -1,5 +1,5 @@
 {
-    "$id": "some url?",
+    "$id": "urn:ulims:samples:i15-1.0.0.1",
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "title": "I15-1 Sample Schema",
     "type": "object",
