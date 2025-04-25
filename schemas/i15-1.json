@@ -4,14 +4,13 @@
     "title": "I15-1 Sample Schema",
     "type": "object",
     "required": [
-        "composition", "density", "capillary", "packing_fraction"
+        "name", "composition", "density",  "packing_fraction", "capillary"
     ],
     "properties": {
         "name": {
             "title": "Sample Name",
             "type": "string",
-            "description": "A name/your reference for this sample",
-            "default": "C"
+            "description": "A name/your reference for this sample"
         },
         "composition": {
             "title": "Composition",
@@ -28,17 +27,11 @@
         "packing_fraction": {
             "title": "Packing Fraction",
             "type": "number",
-            "description": "Packing fraction of the sample",
+            "description": "Packing fraction of the sample in the capillary",
             "default": 0.5,
             "minimum": 0.0,
             "maximum": 1.0
         },
-        "comment": {
-            "title": "Comment",
-            "type": "string",
-            "description": "Comment on sample (spelling?)",
-            "default": ""
-        }, 
         "capillary": {
             "title": "Capillary",
             "enum": [
@@ -57,6 +50,12 @@
                 null
             ],
             "description": "The capillary type of this sample."
-        }
+        },
+        "comment": {
+            "title": "Comment",
+            "type": "string",
+            "description": "Comment on this sample",
+            "default": ""
+        }, 
     }
 }
