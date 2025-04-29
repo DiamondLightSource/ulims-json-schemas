@@ -55,7 +55,6 @@
             "properties": {
                 "shape": {
                     "title": "Shape",
-                    "type": "string",
                     "enum": [
                         "cylinder",
                         "plate",
