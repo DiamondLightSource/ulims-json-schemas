@@ -4,14 +4,9 @@
     "title": "I15-1 Sample Schema",
     "type": "object",
     "required": [
-        "name", "composition", "density",  "packing_fraction", "capillary"
+        "composition", "density",  "packing_fraction", "capillary"
     ],
     "properties": {
-        "name": {
-            "title": "Sample Name",
-            "type": "string",
-            "description": "A name/your reference for this sample"
-        },
         "composition": {
             "title": "Composition",
             "type": "string",
