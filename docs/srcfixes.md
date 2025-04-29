@@ -15,7 +15,7 @@ change to a schema. The common solution is:
 
 <details>
 
-<summary>Message to look during build or check<summary>
+<summary>Message to look during build or check</summary>
 
 ### Overview of issue
 
