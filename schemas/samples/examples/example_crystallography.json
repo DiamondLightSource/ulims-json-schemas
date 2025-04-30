@@ -1,85 +1,71 @@
 {
-    "$id": "https://example.com/crystallography.1.0.json",
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "title": "Crystallography Sample Schema",
-    "type": "object",
-    "required": [
-        "preparation_date",
-        "geometry"
-    ],
-    "properties": {
-        "preparation_date": {
-            "title": "Preparation Date-Time",
-            "type": "string",
-            "format": "date-time",
-            "description": "The date-time sample preparation was started."
+  "$id": "https://example.com/crystallography.1.0.json",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "Crystallography Sample Schema",
+  "type": "object",
+  "required": ["preparation_date", "geometry"],
+  "properties": {
+    "preparation_date": {
+      "title": "Preparation Date-Time",
+      "type": "",
+      "format": "date-time",
+      "description": "The date-time sample preparation was started."
+    },
+    "composition": {
+      "title": "Composition",
+      "type": "string",
+      "description": "Molar composition of sample",
+      "default": "C"
+    },
+    "density": {
+      "title": "Density",
+      "type": "number",
+      "description": "Density of sample (g/cm^3)",
+      "default": 1
+    },
+    "packing_fraction": {
+      "title": "Packing fraction",
+      "type": "number",
+      "description": "Packing fraction of sample (0-1)",
+      "default": 1,
+      "minimum": 0,
+      "maximum": 1
+    },
+    "form": {
+      "title": "Form",
+      "type": "string",
+      "description": "Form of the sample",
+      "enum": ["powder", "liquid", "glass", "mixed", "other", "none"],
+      "default": "none"
+    },
+    "geometry": {
+      "title": "Geometry",
+      "type": "object",
+      "description": "Geometry and dimensions of sample",
+      "properties": {
+        "shape": {
+          "title": "Shape",
+          "enum": ["cylinder", "plate", "disk"]
         },
-        "composition": {
-            "title": "Composition",
-            "type": "string",
-            "description": "Molar composition of sample",
-            "default": "C"
+        "dim1": {
+          "title": "Dimension 1",
+          "type": "number",
+          "description": "Dimension 1 (OD or z/thickness) (mm)",
+          "minimum": 0
         },
-        "density": {
-            "title": "Density",
-            "type": "number",
-            "description": "Density of sample (g/cm^3)",
-            "default": 1
+        "dim2": {
+          "title": "Dimension 2",
+          "type": "number",
+          "description": "Dimension 2 (ID or y/height) (mm)",
+          "minimum": 0
         },
-        "packing_fraction": {
-            "title": "Packing fraction",
-            "type": "number",
-            "description": "Packing fraction of sample (0-1)",
-            "default": 1,
-            "minimum": 0,
-            "maximum": 1
-        },
-        "form": {
-            "title": "Form",
-            "type": "string",
-            "description": "Form of the sample",
-            "enum": [
-                "powder",
-                "liquid",
-                "glass",
-                "mixed",
-                "other",
-                "none"
-            ],
-            "default": "none"
-        },
-        "geometry": {
-            "title": "Geometry",
-            "type": "object",
-            "description": "Geometry and dimensions of sample",
-            "properties": {
-                "shape": {
-                    "title": "Shape",
-                    "enum": [
-                        "cylinder",
-                        "plate",
-                        "disk"
-                    ]
-                },
-                "dim1": {
-                    "title": "Dimension 1",
-                    "type": "number",
-                    "description": "Dimension 1 (OD or z/thickness) (mm)",
-                    "minimum": 0
-                },
-                "dim2": {
-                    "title": "Dimension 2",
-                    "type": "number",
-                    "description": "Dimension 2 (ID or y/height) (mm)",
-                    "minimum": 0
-                },
-                "dim3": {
-                    "title": "Dimension 3",
-                    "type": "number",
-                    "description": "Dimension 3 (length or x/width) (mm)",
-                    "minimum": 0
-                }
-            }
+        "dim3": {
+          "title": "Dimension 3",
+          "type": "number",
+          "description": "Dimension 3 (length or x/width) (mm)",
+          "minimum": 0
         }
+      }
     }
+  }
 }
