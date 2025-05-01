@@ -9,7 +9,8 @@ to this repository.
 **If any folder or file is committed here
 they will be deleted without notice.**
 
-## Using a copy of empty schema
-Note the instructions on the readme.md for the empty
-schema. In particular, the need for certain parts
-to match some of the folder tree structure.
+## Tutorials using this folder
+
+The [main help page](../../../docs/readme.md) for
+repository has tutorial 1 and 2 which says to paste
+a schema folder into this folder.
