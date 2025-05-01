@@ -13,20 +13,11 @@ npm run build-new sroot/zdemo/empty/current.yaml
 npm run build-new sroot/zdemo/emptyj/current.json
 npm run build-new sroot/zdemo/emptyjref/current.json
 
-# Build pattern 1 schemas.
+# Build self-check schema
 #
-# Child 3 before child 2. Children before top parent.
-npm run build-new sroot/zdemo/pattern1/child/three/current.yaml 
-npm run build-new sroot/zdemo/pattern1/child/two/current.yaml 
-npm run build-new sroot/zdemo/pattern1/child/one/current.yaml 
-npm run build-new sroot/zdemo/pattern1/top/current.yaml 
-
-
-# Build pattern 9 schemas.
-#
-# Children moving at faster or slower paces with top
-# schema having point releases at fast or slow pace.
-npm run build-new sroot/zdemo/pattern9/faster/current.yaml
-npm run build-new sroot/zdemo/pattern9/slower/current.yaml
-npm run build-new sroot/zdemo/pattern9/topfast/current.yaml
-npm run build-new sroot/zdemo/pattern9/topslow/current.yaml
+# Do basics before advanced schema
+npm run build-new sroot/zdemo/reposhow/basic/fast/current.json
+npm run build-new sroot/zdemo/reposhow/basic/slow/current.json
+npm run build-new sroot/zdemo/reposhow/advfast/current.json
+npm run build-new sroot/zdemo/reposhow/advslow/current.json
+npm run build-new sroot/zdemo/reposhow/advtop/current.json
