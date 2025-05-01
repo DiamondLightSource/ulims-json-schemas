@@ -6,9 +6,11 @@ of properties. It can be copied into another scheme set
 of group and **must be edited** before the next schema root
 check.
 
-**Status:**  draft (completed, retired)
-**Team managing schema:** SIMS
-**Contributors:** Martin
+* **Status:**  draft (completed, retired)
+
+* **Team managing schema:** Team name or email address
+
+* **Contributors:** Person 1, Person 2
 
 ## Changes
 
@@ -17,4 +19,4 @@ check.
 # Differences to emptyj schema
 
 It is nearly identical to the emptyj folder but references
-version 0.0.1 of that schema to define its properties.
+release 0.0.1 of that schema to define its properties.
