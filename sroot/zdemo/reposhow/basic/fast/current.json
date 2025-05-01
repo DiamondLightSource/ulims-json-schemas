@@ -1,0 +1,22 @@
+{
+  "title": "zdemo/reposhow/basic/fast",
+  "description": "Basic schema having large number of releases.",
+  "$id": "/zdemo/reposhow/basic/fast/1.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "about_basicfast"
+  ],
+  "properties": {
+    "about_basicfast": {
+      "description": "A str property added by basicfast 1.0.0",
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "about_basicfast": "Example with required data values in basicfast 1.0.0"
+    }
+  ]
+}
