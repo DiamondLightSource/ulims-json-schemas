@@ -11,30 +11,30 @@ to Wikipedia usage end this document.
 
 ## Usage
 
-Applications can download and use a built schema to
-validate data against that schema. A built schema has no
-external dependency. Various versions of each schema
-are maintained on disk and systems should cache
-those need. Github raw can be used in the first instance
-and applications should do a systems check against
-release top 0.0.1 before raising issues.
+Applications can download and use a released schema to
+validate data against that schema. Schema have no
+external dependency once downloaded. Various releases
+of each schema can be maintained on disk and systems
+should cache those needed. Github raw can be used in
+the first instance and applications should do a systems
+check against a reposhow schema before raising issues.
 
-* [Can host see this schema?](sroot/zdemo/pattern1/top/0.0.1.json?raw=1)
-* [Can schema downloaded validate this data?](sroot/zdemo/pattern1/top/checkpy.datafile?raw=1)
+* [Can host see this schema?](sroot/zdemo/reposhow/advslow/1.0.0.json?raw=1)
 
-The [zdemo readme](sroot/zdemo/readme.md) explains how to use
-this repository to test all existing schemas and explains
-creating and building a standalone or shared schemas. 
+The schema linked above includes example data for required
+values. A writer can override with custom examples so all
+applications can use the same test cases for a schema release.
 
 ## Schema sets available
 
-The following sets exist.
+Schema can be put anywhere in the schema root but to avoid
+future issues the following sets exist to keep schema in.
 
 1. [zdemo](sroot/zdemo/readme.md) - A minimum set for
-   confirming a schema root can be built with design 
-   patterns that applications can test themselves against. It
-   contains a pre-defined "empty" schema for copying with a
-   schema group for trying it out.
+   confirming a schema root can be built. It contains
+   a pre-defined "empty" schema for copying with a
+   schema group for trying it out. See readme for
+   schema writer below.
 
 2. [shared](sroot/shared/readme.md) - A common set of schemas
    that provides the highest level of reuse across all schema
@@ -43,11 +43,22 @@ The following sets exist.
 3. [instruments](sroot/instruments/readme.md) - Schemas 
    unique to instruments.
 
-## Documentation
+## Documentation for schema writers
 
-The following documentation exists for schema writers:
+The documentation for [schema writers](docs/readme.md) explains
+how to add a new schema. It starts with some links for writers
+new to JSON schema. Tutorials 1 and 2 should be done by
+new contributors including those who have written
+schema before. Tutorial 3 simulates schema change
+over time and PR to main can be made on
+schema mentioned.
 
-* [glossary of terms](docs/glossary.md)
+The tutorial explains every schema **must**
+have a "current" file and releases of advanced schema
+merge schema. For example, the schema linked
+above is an application point of view. Writers get
+a [different point](sroot/zdemo/reposhow/advslow/current.json?raw=1)
+of view. 
 
 ## Useful links
 
@@ -62,12 +73,11 @@ built schemas via a web server with mounted filesystem.
 * Why jsonschema: https://wikitech.wikimedia.org/wiki/Event_Platform/Schemas
 * Why git: https://phabricator.wikimedia.org/T201643
 
-## Schema version
+## JSON schema version
 
-The jsonschema-tools (as of 1.3.0) test will fail if any file
-contains the latest (as of March 2025) JSON schema draft
-and requires use of draft 7
+The jsonschema-tools (as of 1.3.0) check will fail if any
+current file has a $schema not using draft 7.
  
 * ~~"$schema": "https://json-schema.org/draft/2020-12/schema"~~
 
-* "$schema": "https://json-schema.org/draft-07/schema#"git s
+* "$schema": "https://json-schema.org/draft-07/schema"
