@@ -28,20 +28,22 @@ applications can use the same test cases for a schema release.
 ## Schema sets available
 
 Schema can be put anywhere in the schema root but to avoid
-future issues the following sets exist to keep schema in.
+future issues the following sets exist to keep
+schema folders in. Additional sets might appear.
 
 1. [zdemo](sroot/zdemo/readme.md) - A minimum set for
    confirming a schema root can be built. It contains
    a pre-defined "empty" schema for copying with a
    schema group for trying it out. See readme for
-   schema writer below.
+   schema writers below.
 
 2. [shared](sroot/shared/readme.md) - A common set of schemas
    that provides the highest level of reuse across all schema
-   sets, systems and applications.
+   sets, systems and applications. For examples, units
+   or chemical elements.
   
 3. [instruments](sroot/instruments/readme.md) - Schemas 
-   unique to instruments.
+   unique to instruments, where each gets a folder.
 
 ## Documentation for schema writers
 
@@ -50,13 +52,12 @@ how to add a new schema. It starts with some links for writers
 new to JSON schema. Tutorials 1 and 2 should be done by
 new contributors including those who have written
 schema before. Tutorial 3 simulates schema change
-over time and PR to main can be made on
-schema mentioned.
+over time.
 
 The tutorial explains every schema **must**
-have a "current" file and releases of advanced schema
-merge schema. For example, the schema linked
-above is an application point of view. Writers get
+have a "current" file and releases merge schema. For
+example, the schema linked above is an application
+point of view. Writers get
 a [different point](sroot/zdemo/reposhow/advslow/current.json?raw=1)
 of view. 
 

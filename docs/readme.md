@@ -100,13 +100,13 @@ another example for an advanced schema is later.
 
    * **$id** is the most important value. It has three purposes.
 
-        A. It defines the latest release at build time and **must**
+      * It defines the latest release at build time and **must**
             end with semantic versioning. 
 
-        B. It defines this schema within a schema root
+      * It defines this schema within a schema root
             and must be unique.  *ie. /zdemo/practice/quickeg/0.0.1*
-               
-        C. It enables advanced schema (anywhere in a root) to
+
+      * It enables advanced schema (anywhere in a root) to
            find this schema release, so properties can be defined
            once and reused.
 
@@ -241,7 +241,7 @@ The file **0.0.1.json** will be overwritten and all soft links
 will be updated to point at the new file. This is an advanced
 schema so the content **will NOT** be identical to
 current. This is the most powerful feature of the tools
-used to manage JSON schemaa. It has merged emptyj 0.0.1 release
+used to manage JSON schema. It has merged emptyj 0.0.1 release
 into this schema. So quickegref release 0.0.1 is now
 a "basic" schema from an application perspective, a single
 standalone file.
@@ -276,12 +276,12 @@ full feature of the tools. Assuming change is required...
 
 <summary>Details... State of schema after tutorial 1 and 2. Two steps for change.</summary>
 
-### State of quickeg and quickegref
+### State of quickeg and quickegref at start of tutorial 3
 
 This tutorial pretends schema quickeg and schema quickegref
 were finalised at release 1.0.0 and have a "completed"
 status that was merged to main 12 months ago, so files for
-releases before 1.0.0 no longer exist on disk.
+1.0.0 exist on disk and earlier 0.0.1 files were deleted.
 
 ### Two steps over two days (simulates time passing)
 
@@ -326,26 +326,25 @@ by the team managing the advanced schema. That team can work
 to the own timetables for confirming change does not
 break their systems.
 
-> [!WARNING]
-> An aim of schema releases is that past, present
-> and future releases are available at the same time
-> to allow applications to migrate over time at
-> different rates for testing and deployment.
-> 
-> If a change is made to quickref and its $id was not
-> updated **before the build** so causing the latest file
-> to be overwritten, divergence can occur. It will mean
-> any built advanced schema using this as a $ref will appear to
-> be using the same "$id" but the **definition will differ**
-> until next build. An advanced schema can $ref another
-> advanced schema and not changing the $id causes
-> a 2nd level of difference.
->
-> Using the `npm run build-all` command might solve this
-> problem but increases the chance a schema changes
-> before all applications has tested it.
->
->
+#### Why changing $id is imporant
+
+An aim of schema releases is that past, present
+and future releases are available at the same time
+to allow applications to migrate over time at
+different rates for testing and deployment.
+
+If a change was made to quickref and its $id was not
+udated **before the build** so causing the latest file
+to be overwritten, divergence can occur. It will mean
+any built advanced schema using this as a $ref will appear to
+be using the same "$id" but the **definition will differ**
+until next build. An advanced schema can $ref another
+advanced schema and not changing the $id causes
+a 2nd level of difference.
+
+Using the `npm run build-all` command might solve this
+problem but increases the chance of schema changes
+before all applications has tested it.
 
 </details>
 
@@ -365,7 +364,7 @@ four schema changes are merged at same time.
 
 <summary>Details... Schema to edit and suggested order of changes</summary>
 
-### Five schema and what to edit when
+### Five schema and what to edit when in tutorial 4
 
 The schema group [reposhow](../sroot/zdemo/reposhow/readme.md)
 contains five schema. Suggested order of editing is
