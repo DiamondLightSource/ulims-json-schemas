@@ -7,7 +7,9 @@ change to a schema. The common solution is:
 1. Edit current.json file to fix problem.
 
 2. Target the build: `npm run build-new path-to-current-dot-json`
-   or `npm run
+   or `npm run build-modified` if changes were made to
+   commited file. The build-all command can make it more
+   difficult to track issues.
 
 3. Run schema root check `npm run check`
 
