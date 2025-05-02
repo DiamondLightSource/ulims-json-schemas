@@ -222,7 +222,7 @@ was changed too quickly.
 
 This tutorial explains how to add a new advanced schema
 which reuses a basic schema. Steps are almost identical
-to the first tutorial. The main difference is highlighted
+to the first tutorial. The key difference is highlighted
 after step 4. The edit in step 6 is limited to altering
 the $ref so it points at the release done during tutorial 1.
 
@@ -326,7 +326,7 @@ by the team managing the advanced schema. That team can work
 to the own timetables for confirming change does not
 break their systems.
 
-#### Why changing $id is imporant
+#### Why changing $id is important
 
 An aim of schema releases is that past, present
 and future releases are available at the same time
@@ -371,8 +371,8 @@ contains five schema. Suggested order of editing is
 as follows and imagine a day equals 6+ months. Doing day
 1 and 2 is suggested for most repository contributors. If
 a PR for an earlier day exist it should be merged
-to main first and the next day uses a branch from main. Ask
-repo team complete the PR outstanding. 
+to main first and the next day uses a branch
+from main. Flag outstanding PR to repo team.
 
 * day 1: change basic [fast schema](../sroot/zdemo/reposhow/basic/fast/current.json?raw=1)
 release number and add a new property. If a required property
