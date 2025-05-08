@@ -1,6 +1,6 @@
-title: zdemo/empty
+title: examples/reposhow/empty
 description: Empty schema as basis for new schemas as per usage instructions
-$id: /zdemo/empty/0.0.1
+$id: /examples/reposhow/empty/0.0.1
 $comment: status-draft
 $schema: http://json-schema.org/draft-07/schema#
 type: object

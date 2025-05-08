@@ -1,7 +1,7 @@
 {
-  "title": "examples/empty",
+  "title": "examples/reposhow/empty",
   "description": "Empty schema as basis for new schemas as per usage instructions",
-  "$id": "/examples/empty/0.0.1",
+  "$id": "/examples/reposhow/empty/0.0.1",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,
