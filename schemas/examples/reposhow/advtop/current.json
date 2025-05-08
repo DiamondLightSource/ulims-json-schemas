@@ -1,7 +1,7 @@
 {
-  "title": "zdemo/reposhow/advtop",
+  "title": "examples/reposhow/advtop",
   "description": "Schema using advanced schema to define itself.",
-  "$id": "/zdemo/reposhow/advtop/1.0.0",
+  "$id": "/examples/reposhow/advtop/1.0.0",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,
@@ -15,7 +15,7 @@
       "type": "string"
     },
     "advanced_slow": {
-      "$ref": "/zdemo/reposhow/advslow/1.0.0"
+      "$ref": "/examples/reposhow/advslow/1.0.0"
     }
   }
 }

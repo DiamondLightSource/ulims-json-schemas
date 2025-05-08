@@ -1,7 +1,7 @@
 {
-  "title": "zdemo/emptyjref",
+  "title": "examples/emptyjref",
   "description": "Empty parent schema which references another empty schema",
-  "$id": "/zdemo/emptyjref/0.0.1",
+  "$id": "/examples/emptyjref/0.0.1",
   "$comment": "status-draft",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
@@ -11,7 +11,7 @@
   ],
   "properties": {
     "empty_from": {
-      "$ref": "/zdemo/emptyj/0.0.1"
+      "$ref": "/examples/emptyj/0.0.1"
     }
   }
 }

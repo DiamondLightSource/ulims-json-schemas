@@ -1,7 +1,7 @@
 {
-  "title": "zdemo/reposhow/advtop",
+  "title": "examples/reposhow/advtop",
   "description": "Schema using advanced schema to define itself.",
-  "$id": "/zdemo/reposhow/advtop/1.0.0",
+  "$id": "/examples/reposhow/advtop/1.0.0",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,
@@ -11,9 +11,9 @@
   ],
   "properties": {
     "advanced_slow": {
-      "title": "zdemo/reposhow/advslow",
+      "title": "examples/reposhow/advslow",
       "description": "Advanced schema the keeps up with basic fast less often.",
-      "$id": "/zdemo/reposhow/advslow/1.0.0",
+      "$id": "/examples/reposhow/advslow/1.0.0",
       "$schema": "http://json-schema.org/draft-07/schema#",
       "type": "object",
       "additionalProperties": false,
@@ -24,9 +24,9 @@
       ],
       "properties": {
         "basic_fast": {
-          "title": "zdemo/reposhow/basic/fast",
+          "title": "examples/reposhow/basic/fast",
           "description": "Basic schema having large number of releases.",
-          "$id": "/zdemo/reposhow/basic/fast/1.0.0",
+          "$id": "/examples/reposhow/basic/fast/1.0.0",
           "$schema": "http://json-schema.org/draft-07/schema#",
           "type": "object",
           "additionalProperties": false,
@@ -46,9 +46,9 @@
           ]
         },
         "basic_slow": {
-          "title": "zdemo/reposhow/basic/slow",
+          "title": "examples/reposhow/basic/slow",
           "description": "Basic schema having fewer number of releases.",
-          "$id": "/zdemo/reposhow/basic/slow/1.0.0",
+          "$id": "/examples/reposhow/basic/slow/1.0.0",
           "$schema": "http://json-schema.org/draft-07/schema#",
           "type": "object",
           "additionalProperties": false,

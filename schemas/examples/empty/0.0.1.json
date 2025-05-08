@@ -1,7 +1,7 @@
 {
-  "title": "zdemo/empty",
+  "title": "examples/empty",
   "description": "Empty schema as basis for new schemas as per usage instructions",
-  "$id": "/zdemo/empty/0.0.1",
+  "$id": "/examples/empty/0.0.1",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,
@@ -42,5 +42,6 @@
       "ident": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
       "when": "2018-11-13T20:20:39+00:00"
     }
-  ]
+  ],
+  "$comment": "status-draft"
 }

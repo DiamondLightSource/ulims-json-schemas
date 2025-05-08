@@ -1,7 +1,7 @@
 {
-  "title": "zdemo/reposhow/basic/slow",
+  "title": "examples/reposhow/basic/slow",
   "description": "Basic schema having fewer number of releases.",
-  "$id": "/zdemo/reposhow/basic/slow/1.0.0",
+  "$id": "/examples/reposhow/basic/slow/1.0.0",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,
