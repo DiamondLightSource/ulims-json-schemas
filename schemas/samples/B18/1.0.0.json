@@ -1,0 +1,241 @@
+{
+  "title": "B18SampleSchema",
+  "$id": "samples/B18/1.0.0",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "Name",
+    "ChemicalComposition",
+    "QuantityOfSample",
+    "DiameterOfPellet",
+    "PelletPreparation",
+    "Binder",
+    "Sensitive",
+    "PelletPosition"
+  ],
+  "properties": {
+    "Binder": {
+      "title": "Binder",
+      "description": "The binder used for the pellet",
+      "enum": [
+        "Cellulose",
+        "Boron Nitride",
+        "Polyethylene Glycol",
+        "Other"
+      ]
+    },
+    "ChemicalComposition": {
+      "title": "Chemical Composition",
+      "description": "Chemical composition of the sample, by percentage of chemical elements",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Element": {
+            "title": "Element",
+            "$id": "shared/chemical_elements/1.0.0",
+            "$schema": "https://json-schema.org/draft-07/schema",
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "ChemicalElements": {
+                "type": "string",
+                "enum": [
+                  "H",
+                  "He",
+                  "Li",
+                  "Be",
+                  "B",
+                  "C",
+                  "N",
+                  "O",
+                  "F",
+                  "Ne",
+                  "Na",
+                  "Mg",
+                  "Al",
+                  "Si",
+                  "P",
+                  "S",
+                  "Cl",
+                  "Ar",
+                  "K",
+                  "Ca",
+                  "Sc",
+                  "Ti",
+                  "V",
+                  "Cr",
+                  "Mn",
+                  "Fe",
+                  "Co",
+                  "Ni",
+                  "Cu",
+                  "Zn",
+                  "Ga",
+                  "Ge",
+                  "As",
+                  "Se",
+                  "Br",
+                  "Kr",
+                  "Rb",
+                  "Sr",
+                  "Y",
+                  "Zr",
+                  "Nb",
+                  "Mo",
+                  "Tc",
+                  "Ru",
+                  "Rh",
+                  "Pd",
+                  "Ag",
+                  "Cd",
+                  "In",
+                  "Sn",
+                  "Sb",
+                  "Te",
+                  "I",
+                  "Xe",
+                  "Cs",
+                  "Ba",
+                  "La",
+                  "Ce",
+                  "Pr",
+                  "Nd",
+                  "Pm",
+                  "Sm",
+                  "Eu",
+                  "Gd",
+                  "Tb",
+                  "Dy",
+                  "Ho",
+                  "Er",
+                  "Tm",
+                  "Yb",
+                  "Lu",
+                  "Hf",
+                  "Ta",
+                  "W ",
+                  "Re",
+                  "Os",
+                  "Ir",
+                  "Pt",
+                  "Au",
+                  "Hg",
+                  "Tl",
+                  "Pb",
+                  "Bi",
+                  "Po",
+                  "At",
+                  "Rn",
+                  "Fr",
+                  "Ra",
+                  "Ac",
+                  "Th",
+                  "Pa",
+                  "U",
+                  "Np",
+                  "Pu",
+                  "Am",
+                  "Cm",
+                  "Bk",
+                  "Cf",
+                  "Es",
+                  "Fm",
+                  "Md",
+                  "No",
+                  "Lr",
+                  "Rf",
+                  "Db",
+                  "Sg",
+                  "Bh",
+                  "Hs",
+                  "Mt",
+                  "Ds",
+                  "Rg",
+                  "Cn",
+                  "Nh",
+                  "Fl",
+                  "Mc",
+                  "Lv",
+                  "Ts",
+                  "Og"
+                ]
+              }
+            },
+            "examples": [
+              {
+                "ChemicalElements": "Ar"
+              }
+            ]
+          },
+          "Percentage": {
+            "title": "Percentage",
+            "type": "number",
+            "maximum": 9007199254740991,
+            "maxValue": 100,
+            "minimum": -9007199254740991,
+            "minValue": 0
+          }
+        }
+      }
+    },
+    "DiameterOfPellet": {
+      "title": "Diameter of Pellet",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "Name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "PelletPosition": {
+      "title": "Pellet Position",
+      "description": "The position of the pellet during the scan",
+      "enum": [
+        "Free Standing",
+        "Plastic Container",
+        "Aluminium Bag",
+        "Plastic Bag"
+      ]
+    },
+    "PelletPreparation": {
+      "title": "Pellet Preparation",
+      "description": "Description of the preparation process",
+      "type": "string",
+      "maxLength": 500
+    },
+    "QuantityOfSample": {
+      "title": "Quantity Of Sample",
+      "description": "Weight of Sample in Pellet in mg",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "Sensitive": {
+      "title": "Sensitive",
+      "description": "Is the sample considered sensitive?",
+      "type": "boolean"
+    }
+  },
+  "examples": [
+    {
+      "Binder": "Cellulose",
+      "ChemicalComposition": [
+        {
+          "Element": {
+            "ChemicalElements": "Ar"
+          },
+          "Percentage": -6305039478318694
+        }
+      ],
+      "DiameterOfPellet": -6305039478318694,
+      "Name": "dolor",
+      "PelletPosition": "Free Standing",
+      "PelletPreparation": "dolor",
+      "QuantityOfSample": -6305039478318694,
+      "Sensitive": false
+    }
+  ]
+}
