@@ -9,6 +9,7 @@
     },
     "main": "index.js",
     "scripts": {
+      "postinstall": "patch-package",
       "check": "mocha test/jsonschema",
       "build-new": "jsonschema-tools materialize",
       "build-all": "jsonschema-tools materialize-all",
@@ -20,9 +21,12 @@
       "ulims"
     ],
     "devDependencies": {
-      "@wikimedia/jsonschema-tools": "^1.3.0",
+      "@wikimedia/jsonschema-tools": "1.3.0",
       "mocha": "^11.1.0",
       "eslint": "^8.57.1"
+    },
+    "dependencies": {
+      "patch-package": "^8.0.0"
     }
   }
   
