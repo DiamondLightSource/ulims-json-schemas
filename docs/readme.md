@@ -78,20 +78,20 @@ to those explained in this section. A second tutorial showing
 another example for an advanced schema is later. 
 
 1. A strong recommendation before adding a new schema folder
-   to the schema root is do SRC via command `npm run check` and
+   is do SRC via command `npm run check` and
    [fix any issues](srcfixes.md) highlighted. 
 
 ### Create schema folder and define the latest version
 
 2. Copy the **sroot/emptyj** schema folder to the location picked
-   for the new schema. The location *sroot/zdemo/practice* can
+   for the new schema. The location *schema/practice* can
    be used to store schema folders on a first attempt and
    don't commit new files created. *ie. a "quickeg" schema**
 
 > [!WARNING]
 > The SRC will now fail until step 3 and 4 are completed.
 
-3. Edit **sroot/zdemo/practice/quickeg/current.json** and alter
+3. Edit **schema/practice/quickeg/current.json** and alter
    the following values. The filename "current.json" is a
    required value in a schema folder. 
 
@@ -118,7 +118,7 @@ doing often whilst editing can reduce the effort required
 to track down issues or find schema syntax errors.
 
 4. Save the changes to "title" and $id and build the latest version
-with `npm run build-new sroot/zdemo/practice/quickeg/current.json`
+with `npm run build-new schema/practice/quickeg/current.json`
 
 The file **0.0.1.json** will be overwritten and all soft links
 will be updated to point at the new file. This is a basic
@@ -231,11 +231,11 @@ the $ref so it points at the release done during tutorial 1.
 2. Copy the **sroot/emptyjref** schema folder to
    the location picked for the new schema. 
 
-3. Edit **sroot/zdemo/practice/quickegref/current.json** and
+3. Edit **schema/practice/quickegref/current.json** and
    change title and $id to the required values.
 
 4. Save the changes and build the latest version
-with `npm run build-new sroot/zdemo/practice/quickegref/current.json`
+with `npm run build-new schema/practice/quickegref/current.json`
 
 The file **0.0.1.json** will be overwritten and all soft links
 will be updated to point at the new file. This is an advanced
