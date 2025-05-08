@@ -1,0 +1,13 @@
+diff --git a/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js b/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js
+index b09a2c1..ea0d2c8 100644
+--- a/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js
++++ b/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js
+@@ -60,7 +60,7 @@ function declareTests(options = { logLevel: 'warn' }) {
+                 const schemaDir = path.dirname(schemaInfos[0].path);
+ 
+                 it(`must contain ${options.currentName} schema file`, () => {
+-                    assert.ok(fs.existsSync(path.join(schemaDir, 'current.yaml')));
++                    assert.ok(fs.existsSync(path.join(schemaDir, 'current.yaml')) | fs.existsSync(path.join(schemaDir, 'current.json')) );
+                 });
+ 
+                 // TODO: Is this a test we really need?
