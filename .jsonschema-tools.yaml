@@ -1,4 +1,4 @@
-schemaBasePath: ./sroot/
+schemaBasePath: ./schemas/
 
 # Files to be generated. 
 # Available: [json] [yaml] [json, yaml]
