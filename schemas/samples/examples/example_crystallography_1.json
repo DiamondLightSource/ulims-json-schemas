@@ -57,13 +57,18 @@
           "title": "Dimension 2",
           "type": "boolean",
           "description": "Dimension 2 (ID or y/height) (mm)",
-          "default": false
+          "default": true
         },
         "dim3": {
           "title": "Dimension 3",
           "type": "number",
           "description": "Dimension 3 (length or x/width) (mm)",
           "minimum": 0
+        },
+        "dim4": {
+          "title": "Dimension 4",
+          "type": "boolean",
+          "description": "Dimension 4 (length or x/width) (mm)"
         }
       }
     }
