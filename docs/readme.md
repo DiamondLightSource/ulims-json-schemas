@@ -30,7 +30,10 @@ below and in the first tutorial.
 
 There are six steps, in summary:
 
-1. Create a schema folder inside schema root (the "schemas" folder)
+1. Create a folder inside the schema root. Folder "schemas"
+is the root of this repository. Folders in "schemas" exist
+and new schema folders will need to be inside the most suitable
+location by the end of step 6.
 
 2. Inside that new folder create a "current.json" file with "title"
    and $id matching an exact pattern based on path in root. 
