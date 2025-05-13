@@ -25,10 +25,10 @@ The schema linked above includes example data for required
 values. A writer can override with custom examples so all
 applications can use the same test cases for a schema release.
 
-Applications can use the 
+Applications with cached copies of the schemas folder can use the
 [latest.json](schemas/examples/reposhow/advslow/latest.json?raw=1)
-release of any schema and if certain values are changed
-by writers all previous releases continue to work. Draft
+soft link if certain values are changed by writers and all
+previous releases will continue to work. Draft
 schema are subject to change (without new release numbers)
 and applications will break if not designed for that. All
 schema should be considered draft unless marked.
@@ -38,7 +38,8 @@ schema should be considered draft unless marked.
 
 Schema can be put anywhere in the schema root but to avoid
 future issues the following sets exist to keep
-schema folders in. Additional sets might appear.
+schema folders in. Additional sets might appear which
+can be tied to applications optionally.
 
 1. [examples](schemas/examples/readme.md) - A minimum set for
    confirming a schema root can be built. It contains
