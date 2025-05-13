@@ -17,13 +17,22 @@ external dependency once downloaded. Various releases
 of each schema can be maintained on disk and systems
 should cache those needed. Github raw can be used in
 the first instance and applications should do a systems
-check against a reposhow schema before raising issues.
+check against an example schema before raising issues.
 
-* [Can host see this schema?](sroot/zdemo/reposhow/advslow/1.0.0.json?raw=1)
+* [Can host see this schema?](schemas/examples/reposhow/advslow/1.0.0.json?raw=1)
 
 The schema linked above includes example data for required
 values. A writer can override with custom examples so all
 applications can use the same test cases for a schema release.
+
+Applications can use the 
+[latest.json](schemas/examples/reposhow/advslow/latest.json?raw=1)
+release of any schema and if certain values are changed
+by writers all previous releases continue to work. Draft
+schema are subject to change (without new release numbers)
+and applications will break if not designed for that. All
+schema should be considered draft unless marked.
+
 
 ## Schema sets available
 
@@ -31,19 +40,17 @@ Schema can be put anywhere in the schema root but to avoid
 future issues the following sets exist to keep
 schema folders in. Additional sets might appear.
 
-1. [zdemo](sroot/zdemo/readme.md) - A minimum set for
+1. [examples](schemas/examples/readme.md) - A minimum set for
    confirming a schema root can be built. It contains
    a pre-defined "empty" schema for copying with a
    schema group for trying it out. See readme for
    schema writers below.
 
-2. [shared](sroot/shared/readme.md) - A common set of schemas
+2. [shared](schemas/shared/readme.md) - A common set of schemas
    that provides the highest level of reuse across all schema
    sets, systems and applications. For examples, units
    or chemical elements.
-  
-3. [instruments](sroot/instruments/readme.md) - Schemas 
-   unique to instruments, where each gets a folder.
+
 
 ## Documentation for schema writers
 
@@ -58,8 +65,8 @@ The tutorial explains every schema **must**
 have a "current" file and releases merge schema. For
 example, the schema linked above is an application
 point of view. Writers get
-a [different point](sroot/zdemo/reposhow/advslow/current.json?raw=1)
-of view. 
+a [different point](schemas/examples/reposhow/advslow/current.json?raw=1)
+of view which differs slightly.
 
 ## Useful links
 
