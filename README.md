@@ -80,12 +80,3 @@ built schemas via a web server with mounted filesystem.
 * Build tools: https://gitlab.wikimedia.org/repos/data-engineering/jsonschema-tools
 * Why jsonschema: https://wikitech.wikimedia.org/wiki/Event_Platform/Schemas
 * Why git: https://phabricator.wikimedia.org/T201643
-
-## JSON schema version
-
-The jsonschema-tools (as of 1.3.0) check will fail if any
-current file has a $schema not using draft 7.
- 
-* ~~"$schema": "https://json-schema.org/draft/2020-12/schema"~~
-
-* "$schema": "https://json-schema.org/draft-07/schema"
