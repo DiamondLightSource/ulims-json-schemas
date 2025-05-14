@@ -9,7 +9,7 @@ use for managing JSON schemas over time. They have
 two schema roots whilst ULIMS has this one. Links
 to Wikipedia usage end this document.
 
-## Usage
+## Usage by applications
 
 Applications can download and use a released schema to
 validate data against that schema. Schema have no
@@ -17,24 +17,12 @@ external dependency once downloaded. Various releases
 of each schema can be maintained on disk and systems
 should cache those needed. Github raw can be used in
 the first instance and applications should do a systems
-check against an example schema before raising issues.
-
-* [Can host see this schema?](schemas/examples/reposhow/advslow/1.0.0.json?raw=1)
+check against an example schema before raising issues. Can
+host [see this schema?](schemas/examples/reposhow/advslow/1.0.0.json?raw=1)
 
 The schema linked above includes example data for required
 values. A writer can override with custom examples so all
 applications can use the same test cases for a schema release.
-
-### Soft link to latest release and draft status
-
-Applications with a cached copy of the schemas folder can use the
-[latest.json](schemas/examples/reposhow/advslow/latest.json?raw=1)
-soft link. If certain values are changed by writers, all
-previous releases will continue to work. Draft
-schema are subject to change (without new release numbers)
-and applications will break if not designed for that. All
-schema should be considered draft unless marked.
-
 
 ## Schema sets available
 

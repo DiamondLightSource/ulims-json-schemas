@@ -14,9 +14,9 @@ the $ref so it points at the release done during tutorial one.
 3. Edit **schemas/practice/quickegref/current.json** and
    change title and $id to the required values.
 
-4. Save the changes and build the latest version
-with `npm run build-all` or target the build
-via `npm run build-new schema/practice/quickegref/current.json`
+4. Save the changes and build the latest version using
+command `npm run build-new schemas/practice/quickegref/current.json`
+or use `npm run build-all` shortcut.
 
 The file **0.0.1.json** will be overwritten and all soft links
 will be updated to point at the new file. This is an advanced
