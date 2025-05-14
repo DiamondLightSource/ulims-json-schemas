@@ -56,29 +56,22 @@ E. Populate current file with the unique parts of a
 F. Once the SRC passes create a pull request asking for
    a merge to main. 
 
-A shortcut for step 3 is command `npm run build-all` but more
-targeted commands exist that are recommended at certain
-times. The tutorials use those other commands.
-
-Step 4 is the command is `npm run check` which confirms every
-schema (and every release of a schema) meet minimum quality
-and security standard. For example, are $ref to a particular
-schema release still valid?
+The six steps are shown in tutorial one.
 
 ## Tutorials
 
 There are two tutorials which build on each other.
 
 * [Tutorial one](tutorial1.md) explains the exact patterns
-required in step 2 for a basic schema. It uses a pre-created
-schema folder in this repository for copying at step 1 with
-most of step 2 done so release 1.0.0 can be done quickly via
-steps 3 and 4 and it will just work for a new schema.
+required in step B for a basic schema. It uses a pre-created
+schema folder in this repository for copying at step A with
+most of step B done so release 1.0.0 can be done quickly via
+steps C and D and it will just work for a new schema.
 
 * [Tutorial two](tutorial2.md) is nearly identical to the first
 but applies it to an advanced schema using a $ref. It uses
-another pre-created schema folder for coping in step 1
-and assumes the exact pattern are understood. It hightlights
+another pre-created schema folder for coping in step A
+and assumes the exact pattern are understood. It highlights
 how a build of a basic schema differs from an advanced
 scheme. This difference has implications for schema
 change over time.
@@ -108,5 +101,7 @@ branch from main: `git checkout -b quickeg1`
 
 ## Additional docs
 
-*[Technical details](techdetails.md)
+* [Application details](appdetails.md)
+
+* [Technical details](techdetails.md)
 
