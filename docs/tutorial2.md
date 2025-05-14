@@ -4,18 +4,19 @@ This tutorial explains how to add a new advanced schema
 which reuses a basic schema. Steps are almost identical
 to the first tutorial. The key difference is highlighted
 after step 4. The edit in step 6 is limited to altering
-the $ref so it points at the release done during tutorial 1.
+the $ref so it points at the release done during tutorial one.
 
 1. Do SRC `npm run check` and fix any issues.
 
-2. Copy the **sroot/emptyjref** schema folder to
-   the location picked for the new schema. 
+2. Copy the **schemas/emptyjref** schema folder to
+   the location picked for the new schema. *ie. quickegref*
 
-3. Edit **schema/practice/quickegref/current.json** and
+3. Edit **schemas/practice/quickegref/current.json** and
    change title and $id to the required values.
 
 4. Save the changes and build the latest version
-with `npm run build-new schema/practice/quickegref/current.json`
+with `npm run build-all` or target the build
+via `npm run build-new schema/practice/quickegref/current.json`
 
 The file **0.0.1.json** will be overwritten and all soft links
 will be updated to point at the new file. This is an advanced
@@ -40,7 +41,9 @@ standalone file.
    this schema. Commit, push and request PR when not tutorial.
 
 Notice the content of 0.0.1.json has changed and has now merged
-the content of quickeg into this schema. If quickeg had reached
-"completed" status (and gets changed) all advanced schemas
-using it should get new releases where **$id and $ref** have
-changed.
+the content of quickeg into this schema.
+
+If quickeg had reached "completed" status (and gets changed)
+all advanced schemas using it should get new
+releases where **$id and $ref** have
+changed. Tutorial 3 goes into more detail.

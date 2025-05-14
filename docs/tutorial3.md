@@ -1,8 +1,8 @@
 # Tutorial 3: Changing two "completed" schema N months later
 
 You can avoid the following if you make sure a schema
-never requires changing or decide to avoid using $ref
-keyword that automates property reuse, which is the most powerful
+never requires changing or avoid using $ref keyword
+that automates property reuse, which is the most powerful
 full feature of the tools. Assuming change is required...
 
 ## State of quickeg and quickegref at start of tutorial 3
@@ -26,20 +26,20 @@ new number before making changes and keep doing releases until
 happy with the change. Remember the $id used. For a real
 completed schema this would ideally be committed, pushed and
 merged to main before doing day
-two. *eg. "$id": "/zdemo/practice/quickeg/1.0.5"*
+two. *eg. "$id": "/practice/quickeg/1.0.5"*
 
 3. Day 2, Do SRC `npm run check` and fix any issues. (Pretend
    merge occured on day 1.) Then,
 
 4. Complete tutorial 2. Edit $id in quickegref/current.json with
    a new number before making changes. Change the $ref to match
-   the $id in step 2. *eg. "$id": "/zdemo/practice/quickegref/1.0.1"
-   and "$ref": "/zdemo/practice/quickeg/1.0.5"*
+   the $id in step 2. *eg. "$id": "/practice/quickegref/1.0.1"
+   and "$ref": "/practice/quickeg/1.0.5"*
 
 Release numbers have nothing to do with each other. Numbers
 are likely to be similar at the start but can diverge over
 time if releases of basic schema occur more often. In this
-case the advanced schema is pretending to skip over a point
+case the advanced schema is pretending to skip over point
 releases (1.0.1 to  1.0.4) done on the basic schema over
 the last year. If a $ref is changed to a release that
 does not exist on disk the SRC will fail.
@@ -63,7 +63,7 @@ to allow applications to migrate over time at
 different rates for testing and deployment.
 
 If a change was made to quickref and its $id was not
-udated **before the build** so causing the latest file
+updated **before the build** so causing the latest file
 to be overwritten, divergence can occur. It will mean
 any built advanced schema using this as a $ref will appear to
 be using the same "$id" but the **definition will differ**
