@@ -2,6 +2,7 @@
   "title": "examples/reposhow/basic/slow",
   "description": "Basic schema having fewer number of releases.",
   "$id": "/examples/reposhow/basic/slow/1.0.0",
+  "$comment": "status-completed",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,

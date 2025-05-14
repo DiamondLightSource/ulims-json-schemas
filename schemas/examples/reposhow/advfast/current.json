@@ -2,6 +2,7 @@
   "title": "examples/reposhow/advfast",
   "description": "Advanced schema trying to keep up with basic fast",
   "$id": "/examples/reposhow/advfast/1.0.0",
+  "$comment": "status-completed",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,

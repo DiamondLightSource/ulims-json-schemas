@@ -18,5 +18,6 @@
     {
       "about_basicfast": "Example with required data values in basicfast 1.0.0"
     }
-  ]
+  ],
+  "$comment": "status-completed"
 }

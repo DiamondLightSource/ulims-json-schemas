@@ -31,7 +31,8 @@
         {
           "about_basicfast": "Example with required data values in basicfast 1.0.0"
         }
-      ]
+      ],
+      "$comment": "status-completed"
     },
     "basic_slow": {
       "title": "examples/reposhow/basic/slow",
@@ -53,7 +54,8 @@
         {
           "about_basicslow": "Example with required data values in basicslow 0.0.1"
         }
-      ]
+      ],
+      "$comment": "status-completed"
     },
     "comment": {
       "description": "A string property added in advfast 1.0.0",
@@ -70,5 +72,6 @@
       },
       "comment": "dolor"
     }
-  ]
+  ],
+  "$comment": "status-completed"
 }
