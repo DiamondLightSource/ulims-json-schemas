@@ -30,30 +30,30 @@ below and in the first tutorial.
 
 There are six steps, in summary:
 
-1. Create a folder inside the schema root. Folder "schemas"
+A. Create a folder inside the schema root. Folder "schemas"
 is the root of this repository. Folders in "schemas" exist
 and new schema folders will need to be inside the most suitable
 location by the end of step 6.
 
-2. Inside that new folder create a "current.json" file with "title"
+B. Inside that new folder create a "current.json" file with "title"
    and $id matching an exact pattern based on path in root. 
 
-3. Build the latest release. The $id in step 2 is important and
+C. Build the latest release. The $id in step 2 is important and
    defines the release number. There are recommendations for
    when to change the number. A JSON schema is valid if no
    errors occur. There is little point committing to git until
    a build completes at least once.
 
-4. Confirm the schema root check (SRC) passes. This is
+D. Confirm the schema root check (SRC) passes. This is
    done automatically on pushes to github
    repository. If issues are shown it will often be
    quicker to run this locally whilst editing file(s).
 
-5. Populate current file with the unique parts of a
+E. Populate current file with the unique parts of a
    schema. Step 2 and 5 can be combined. Steps 3 and 4
    is required before a schema will be merged to main.
 
-6. Once the SRC passes create a pull request asking for
+F. Once the SRC passes create a pull request asking for
    a merge to main. 
 
 A shortcut for step 3 is command `npm run build-all` but more
