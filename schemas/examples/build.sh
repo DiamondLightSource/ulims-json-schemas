@@ -1,23 +1,26 @@
 #!/usr/bin/env bash
 #
 # This will overwrite the last run of this command
-# if a schema version has not changed since last run.
+# if a schema $id has not changed since last run.
 #
 # The lowest child needs building first. If schema
 # starts standalone it can be anywhere in build.
 #
-# Templates for new schemas. Two types exist but
-# only one is available currently.
-#
-npm run build-new sroot/zdemo/empty/current.yaml
-npm run build-new sroot/zdemo/emptyj/current.json
-npm run build-new sroot/zdemo/emptyjref/current.json
+# The following enables schema tools vanilla usage
+# and output to be confirmed first.
+npm run build-new schemas/examples/reposhow/empty/current.yaml
 
-# Build self-check schema
-#
+# The following two are how this repository is using the
+# tools. The output of the first is near identical to the
+# previous. The second uses are reference to the first.
+npm run build-new schemas/examples/emptyj/current.json
+npm run build-new schemas/examples/emptyjref/current.json
+
 # Do basics before advanced schema
-npm run build-new sroot/zdemo/reposhow/basic/fast/current.json
-npm run build-new sroot/zdemo/reposhow/basic/slow/current.json
-npm run build-new sroot/zdemo/reposhow/advfast/current.json
-npm run build-new sroot/zdemo/reposhow/advslow/current.json
-npm run build-new sroot/zdemo/reposhow/advtop/current.json
+npm run build-new schemas/examples/reposhow/basic/fast/current.json
+npm run build-new schemas/examples/reposhow/basic/slow/current.json
+npm run build-new schemas/examples/reposhow/advfast/current.json
+npm run build-new schemas/examples/reposhow/advslow/current.json
+
+# Depends on advslow, so must be last.
+npm run build-new schemas/examples/reposhow/advtop/current.json
