@@ -30,15 +30,15 @@ Schema can be put anywhere in the schema root. The following
 sets exist for putting schema into and new ones can be
 added when needed:
 
-1. [examples](schemas/examples/readme.md) - A minimum set
+1. [examples](schemas/examples/) - A minimum set
    showing schema releases (build and check) are working. See
    readme for schema writers for details.
 
-2. [shared](schemas/shared/readme.md) - A common set of schemas
+2. [shared](schemas/shared/) - A common set of schemas
    that can but reused across all schema, services and
    applications. For examples, units or chemical elements.
 
-2. [samples](schemas/samples/readme.md) - Schemas for samples
+2. [samples](schemas/samples/) - Schemas for samples
   service.
 
 
