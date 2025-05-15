@@ -30,10 +30,8 @@ below and in the first tutorial.
 
 There are six steps, in summary:
 
-A. Create a folder inside the schema root. Folder "schemas"
-is the root of this repository. Folders in "schemas" exist
-and new schema folders will need to be inside the most suitable
-location by the end of step 6.
+A. Create a schema folder inside the appropriate folder
+   under `schemas` and instrument, for example `schemas/samples/p99/newschemaone`
 
 B. Inside that new folder create a "current.json" file with "title"
    and $id matching an exact pattern based on path in root.  See
