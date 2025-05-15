@@ -1,0 +1,28 @@
+name: Schema check
+
+on: [push, pull_request]
+
+jobs:
+  check:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+        - uses: actions/checkout@v4
+        - name: Use Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: '20.x'
+            cache: 'npm'
+        - name: Install dependencies  # uses repo package.json 
+          run: npm install
+        
+        - name: Confirm configuration files used
+          working-directory: ./
+          run: |
+            cat .jsonschema-tools.yaml
+            cat test/jsonschema/repository.test.js
+
+        - name: Check schema root passes minimum requirements
+          working-directory: ./  
+          run: npm run check
