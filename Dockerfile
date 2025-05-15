@@ -7,7 +7,7 @@ COPY package.json package.json
 COPY package-lock.json package-lock.json 
 COPY test/jsonschema/repository.test.js test/jsonschema/repository.test.js
 COPY .jsonschema-tools.yaml  .jsonschema-tools.yaml
-ADD sroot sroot
+ADD schemas schemas
 
 # https://github.com/wikimedia/integration-config/blob/master/dockerfiles/node20-test/run.sh
 RUN /run.sh
