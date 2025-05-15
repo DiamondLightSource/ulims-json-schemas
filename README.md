@@ -1,72 +1,68 @@
 # ULIMS JSON schemas
 
-A collection of whole or partial JSON schemas.
+A collection of JSON schemas for ULIMS systems.
 
-## Available schemas
-* checkdir - An example of JSON schemas that build from
-sets of JSON schemas, which validate data files. Provides
-repo self-testing with minimal depencencies.
- 
-## Checking schemas and datafiles are okay
+## About
 
-The check.py module provides a CLI to make it easier
-to confirm JSON schemas and sample datafile are valid. Use
---help to see commands and options. It uses a local copy
-of the registry.py module from an unpublished package.
+This repository uses the method the Wikipedia team
+use for managing JSON schemas over time. They have
+two schema roots whilst ULIMS has this one. Links
+to Wikipedia usage end this document.
 
-## CLI Usage
-* Create and activate virtenv. The following will prompt to install
-  required packages: * ./install.sh or manually *pip install jsonschema typer*
+## Usage by applications
 
-* Confirm example schemas and datafile sample are
-  still "good" using: ./check.py checkdir
+Applications can download and use a released schema to
+validate data against that schema. Schema have no
+external dependency once downloaded. Various releases
+of each schema can be maintained on disk and systems
+should cache those needed. Github raw can be used in
+the first instance and applications should do a systems
+check against an example schema before raising issues. Can
+host [see this schema?](schemas/examples/advanced/1.0.0.json?raw=1)
 
-### Break schema(s) or data files
-The CLI does minimal capture so requires users to interpret
-the output when it fails. Use the checkdir folder and
-command to see how change alters the error message.
+The schema linked above includes example data for required
+values. A writer can override with custom examples so all
+applications can use the same test cases for a schema release.
 
- *Make one change in checkdir folder and run: ./check.py checkdir
+## Schema sets available
 
-For example, editing checkdir/schemas/base.json and
-changing scan $ref (line 21) to a schema that does not
-exist will result in "Unresolvable: urn:ulims:scanschnoexist:1.0"
-error. Fix typo OR create as new schema file in schemas
-where the $id within MUST match $ref unresolved. In this case,
-the correct $ref is the $id in checkdir/schemas/scan.json
+Schema can be put anywhere in the schema root. The following
+sets exist for putting schema into and new ones can be
+added when needed:
 
-## Checking a custom folder
-All schemas should be kept in a custom folder with two subfolders
-like checkdir. Ideally, a large schema will be broken down
-into smaller schemas so fragments can be reused. A datafile
-sample should exist which is known to pass at commit time
-of any file in schemas folder.
+1. [examples](schemas/examples/readme.md) - A minimum set
+   showing schema releases (build and check) are working. See
+   readme for schema writers for details.
 
-Custom folders can be checked with: ./check.py confirm <options>
+2. [shared](schemas/shared/readme.md) - A common set of schemas
+   that can but reused across all schema, services and
+   applications. For examples, units or chemical elements.
 
-The checkdir command above is calling this confirm command
-with these options. Use confirm --help to see short
-and long options mean.
-
-./check.py confirm -d checkdir/datafiles/sample1.json -s checkdir/schemas -c 5 -r "urn:ulims:base:1.0"
-
-### Multiple roots in schema folder
-The checkdir example has multiple schema roots which reuse
-smaller schemas. In this case, the sample file validates
-to both schemas because nothing was unique for instrument. Notice
--r is now an instrument root.
-./check.py confirm -d checkdir/datafiles/sample1.json -s checkdir/schemas -c 5 -r "urn:ulims:base:i07:1.0"
-
-### Adding CLI shortcut to custom folder.
-Adding a CLI shortcut like checkdir is suggested if you use the
-confirm often and the schema is expected to be used for more
-than 6 months. Also, add to the list of available schemas
-at start of this document.
+2. [samples](schemas/samples/readme.md) - Schemas for samples
+  service.
 
 
-## Single file schemas
-The checkdir example breaks a large schema into smaller schemas,
-but requires use of a registry to cache all schema $id. The
-smaller schemas can be added as "definitions" in a single
-schema file. The effect will be to hard code so reuse
-more difficult, but some applications might require this.
+## Documentation for schema writers
+
+The documentation for [schema writers](docs/readme.md) explains
+how to add a new schema. It starts with some links for writers
+new to JSON schema before moving to the six steps for adding.
+
+It explains every schema **must** have a "current" file for
+building the "latest" release. A build will combine
+schema when needed so writers get
+a [different point of view](schemas/examples/advanced/current.json?raw=1)
+which shows the referenced schema.
+
+## Useful links
+
+The two roots show possible arrangements of schemas and
+how to use the tools on a repository. Applications access
+built schemas via a web server with mounted filesystem. 
+
+* Schema root 1: https://gitlab.wikimedia.org/repos/data-engineering/schemas-event-primary/
+* Schema root 2: https://gitlab-replica-b.wikimedia.org/repos/data-engineering/schemas-event-secondary/
+* Application access (ie. filesystem on web so "latest" links work): https://schema.wikimedia.org/#!/
+* Build tools: https://gitlab.wikimedia.org/repos/data-engineering/jsonschema-tools
+* Why jsonschema: https://wikitech.wikimedia.org/wiki/Event_Platform/Schemas
+* Why git: https://phabricator.wikimedia.org/T201643
