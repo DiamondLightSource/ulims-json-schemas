@@ -1,7 +1,7 @@
 {
   "title": "examples/basic",
   "description": "A basic schema not using references",
-  "$id": "/examples/basic/1.0.0",
+  "$id": "/examples/basic/1.0.1",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,
@@ -34,6 +34,11 @@
       "type": "string",
       "format": "date-time",
       "maxLength": 128
+    },
+     "is_confidential": {
+      "title": "Is Confidential",
+      "type": "boolean",
+      "description": "True if entry is confidential, adding in basic 1.0.1"
     }
   },
   "examples": [
@@ -44,7 +49,8 @@
       "comment": "Example showing all values in basic 1.0.0 version.",
       "counter": 101,
       "ident": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
-      "when": "2018-11-13T20:20:39+00:00"
+      "when": "2018-11-13T20:20:39+00:00",
+      "is_confidential": True
     }
   ]
 }
