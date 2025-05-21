@@ -2,7 +2,6 @@
   "title": "examples/basic",
   "description": "A basic schema not using references",
   "$id": "/examples/basic/1.0.0",
-  "$comment": "status-draft",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,
@@ -11,22 +10,26 @@
   ],
   "properties": {
     "comment": {
+      "title": "Field heading on interfaces",
       "description": "A string property added in basic 1.0.0",
       "type": "string"
     },
     "counter": {
+      "title": "Counter",
       "description": "An integer property added in basic 1.0.0",
       "type": "integer",
       "maximum": 1000,
       "minimum": 0
     },
     "ident": {
+      "title": "Identifier one",
       "description": "An UUID added in basic 1.0.0",
       "type": "string",
       "format": "uuid",
       "maxLength": 40
     },
     "when": {
+      "title": "When last reviewed",
       "description": "An ISO-8601 formatted timestamp added in basic 1.0.0",
       "type": "string",
       "format": "date-time",

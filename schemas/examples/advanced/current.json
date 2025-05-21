@@ -2,7 +2,6 @@
   "title": "examples/advanced",
   "description": "A schema that references another schema",
   "$id": "/examples/advanced/1.0.0",
-  "$comment": "status-draft",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,
@@ -11,6 +10,8 @@
   ],
   "properties": {
     "basic_from": {
+      "title": "basic_from schema data",
+      "description": "Description that replaces value from $ref ",
       "$ref": "/examples/basic/1.0.0"
     }
   }
