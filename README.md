@@ -11,14 +11,16 @@ to Wikipedia usage end this document.
 
 ## Usage by applications
 
-Applications can download and use a released schema to
-validate data against that schema. Schema have no
-external dependency once downloaded. Various releases
-of each schema can be maintained on disk and systems
-should cache those needed. Github raw can be used in
-the first instance and applications should do a systems
-check against an example schema before raising issues. Can
-host [see this schema?](schemas/examples/advanced/1.0.0.json?raw=1)
+Applications can use a released schema to validate
+data against that schema.
+
+For `latest.json` and specific versions (`X.X.X.json`) schema
+references are resolved such that a schema can be used
+directly without reference to any external dependencies.
+
+Github raw can be used for accessing schemas for now.
+The example schemas can be used for testing, such
+as [examples/advanced/1.0.0.json](schemas/examples/advanced/1.0.0.json?raw=1).
 
 The schema linked above includes example data for required
 values. A writer can override with custom examples so all
@@ -30,15 +32,14 @@ Schema can be put anywhere in the schema root. The following
 sets exist for putting schema into and new ones can be
 added when needed:
 
-1. [examples](schemas/examples/) - A minimum set
-   showing schema releases (build and check) are working. See
-   readme for schema writers for details.
+*. [examples](schemas/examples/) - - A minimum set that can be
+used for testing and checking release process.
 
-2. [shared](schemas/shared/) - A common set of schemas
+*. [shared](schemas/shared/) - A common set of schemas
    that can but reused across all schema, services and
    applications. For examples, units or chemical elements.
 
-2. [samples](schemas/samples/) - Schemas for samples
+*. [samples](schemas/samples/) - Schemas for samples
   service.
 
 
@@ -51,10 +52,10 @@ new to JSON schema before moving to the six steps for adding.
 It explains every schema **must** have a "current" file for
 building the "latest" release. A build will combine
 schema when needed so writers get
-a [different point of view](schemas/examples/advanced/current.json?raw=1)
-which shows the referenced schema.
+a [simpler view](schemas/examples/advanced/current.json?raw=1)
+which just shows a link to the referenced schema.
 
-## Useful links
+## Wikimedia Example Usage
 
 The two roots show possible arrangements of schemas and
 how to use the tools on a repository. Applications access
