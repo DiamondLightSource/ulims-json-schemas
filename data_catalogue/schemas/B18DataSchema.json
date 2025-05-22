@@ -102,52 +102,26 @@
                     }
                 }
             }
-        }
-    },
-        
-    "allOf": [
-        {
-            "if": {
-                "properties": {
-                    "DetectionMode": { "const": "Transmission" }
-                }
-            },
-            "then": {
-                "properties": {
-                    "Amplification": {
-                        "title": "Amplification",
-                        "description" : "",
-                        "type": "number"
-                    }
-                }
-            }
         },
-        {
-            "if": {
-                "properties": {
-                    "DetectionMode": { "const": "Fluorescence" }
-                }
-            },
-            "then": {
-                "properties": {
-                    "DetectorDistance": {
-                        "title": "Detector Distance",
-                        "description" : "The distance of the detector",
-                        "type": "number"
-                    },
-                    "RegionOfInterestStart": {
-                        "title": "Region of Interest Start Value",
-                        "description": "",
-                        "type": "number"
-                    },
-                    "RegionOfInterestEnd": {
-                        "title": "Region of Interest End Value",
-                        "description": "",
-                        "type": "number"
-                    }
-                }
-            }    
+        "Amplification": {
+            "title": "Amplification",
+            "description" : "For Transmission detection mode.",
+            "type": "number"
+        },
+        "DetectorDistance": {
+            "title": "Detector Distance",
+            "description" : "The distance of the detector, for Fluorescence detection mode",
+            "type": "number"
+        },
+        "RegionOfInterestStart": {
+            "title": "Region of Interest Start Value",
+            "description": "For Fluorescence detection mode",
+            "type": "number"
+        },
+        "RegionOfInterestEnd": {
+            "title": "Region of Interest End Value",
+            "description": "For Fluorescence detection mode",
+            "type": "number"
         }
-    ]  
-
+    }
 }

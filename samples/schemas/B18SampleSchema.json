@@ -49,6 +49,26 @@
       "description": "The binder used for the pellet",
       "enum": ["Cellulose", "Boron Nitride", "Polyethylene Glycol", "Other"]
     },
+    "OtherBinder": {
+      "title": "Chemical Composition of Binder",
+      "description": "Chemical composition of the binder, by percentage of chemical elements. Only needed if 'Other' selected.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Element": { 
+            "title": "Element",
+            "$ref": "ulims:chemicalelements:1.0"
+          },
+          "Percentage": {
+            "title": "Percentage",
+            "type": "number",
+            "minValue": 0,
+            "maxValue": 100
+          }
+        }
+      } 
+    },
     "Sensitive": {
       "title": "Sensitive",
       "description": "Is the sample considered sensitive?",
@@ -58,35 +78,6 @@
       "title": "Pellet Position",
       "description": "The position of the pellet during the scan",
       "enum": ["Free Standing", "Plastic Container", "Aluminium Bag", "Plastic Bag"]
-    }
-  },
-  "if": {
-    "properties": {
-      "Binder": { "const": "Other" }
-    }
-  },
-  "then": {
-    "properties": {
-      "OtherBinder": {
-        "title": "Chemical Composition of Binder",
-        "description": "Chemical composition of the binder, by percentage of chemical elements",
-        "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "Element": { 
-              "title": "Element",
-              "$ref": "ulims:chemicalelements:1.0"
-            },
-            "Percentage": {
-              "title": "Percentage",
-              "type": "number",
-              "minValue": 0,
-              "maxValue": 100
-            }
-          }
-        } 
-      }
     }
   },
   "required": [
