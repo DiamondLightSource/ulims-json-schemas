@@ -1,0 +1,194 @@
+{
+    "$id": "urn:ulims:b21data:1.0",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "title": "B21DataSchema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "ExperimentType": {
+            "title": "Experiment Type",
+            "description": "The experiment type",
+            "type": "string"
+        },
+        "Wavelength": {
+            "title": "Wavelength",
+            "description": "The wavelength of the beam, Angstroms",
+            "type": "number"
+        },
+        "Energy": {
+            "title": "Energy",
+            "description": "The energy of the beam, keV",
+            "type": "number"
+        },
+        "BeamCentreX": {
+            "title": "Beam Centre X",
+            "description": "The beam centre x-axis value, mm",
+            "type": "number"
+        },
+        "BeamCentreY": {
+            "title": "Beam Centre Y",
+            "description": "The beam centre y-axis value, mm",
+            "type": "number"
+        },
+        "SampleDetectorDistance": {
+            "title": "Sample to Detector Distance",
+            "description": "The distance of the sample from the detector, mm",
+            "type": "number"
+        },
+        "Detector": {
+            "title": "Detector",
+            "description": "The detector used for the scan",
+            "type": "string"
+        },
+        "Source": {
+            "title": "Source",
+            "description": "The source of the beam",
+            "type": "string"
+        },
+        "Flux": {
+            "title": "Flux",
+            "description": "The flux of the beam, photons per second",
+            "type": "number"
+        },
+        "QRange": {
+            "title": "Q Range",
+            "description": "The Q range, per Angstrom",
+            "type": "number"
+        },
+        "QDefinition": {
+            "title": "Q Definition",
+            "description": "The Q definition",
+            "type": "string"
+        },
+        "IntensityUnits": {
+            "title": "Intensity Units",
+            "description": "The intensity units",
+            "type": "string"
+        },
+        "CapillaryDiameter": {
+            "title": "Capillary Diameter",
+            "description": "The capillary diameter, mm",
+            "type": "number"
+        },
+        "DefaultExposureTemperature": {
+            "title": "Default Exposure Temperature",
+            "description": "The defult exposure temperature, C. Used unless specified per sample.",
+            "type": "number"
+        },
+        "BeamSizeAtSample": {
+            "title": "Beam Size at Sample",
+            "description": "The size of the beam at the sample",
+            "type": "string"
+        },
+        "BeamSizeAtDetector": {
+            "title": "Beam Size at Detector (focus)",
+            "description": "The size of the beam at the detector",
+            "type": "string"
+        },
+        "DataReductionSoftware": {
+            "title": "Data Reduction Software",
+            "description": "The data reduction software used",
+            "type": "string"
+        },
+        "DataAnalysisSoftware": {
+            "title": "Data Analysis Software",
+            "description": "The data analysis software used",
+            "type": "string"
+        },
+        "ZeroAngleScattering": {
+            "title": "Zero Angle Scattering",
+            "type": "object",
+            "properties": {
+                "RealI0": {
+                    "title": "Real I(0)",
+                    "description": "Real space value of zero-angle scattering",
+                    "type": "number"
+                },
+                "RealI0Error": {
+                    "title": "Real I(0) Error",
+                    "description": "Error (+-) of the real space value of zero-angle scattering",
+                    "type": "number"
+                },
+                "ReciprocalI0": {
+                    "title": "Reciprocal I(0)",
+                    "description": "Reciprocal space value of zero-angle scattering",
+                    "type": "number"
+                },
+                "ReciprocalI0Error": {
+                    "title": "Reciprocal I(0) Error",
+                    "description": "Error (+-) of the reciprocal space value of zero-angle scattering",
+                    "type": "number"
+                },
+                "PercentageDifference": {
+                    "title": "Percentage Diference",
+                    "type": "number"
+                }
+            }
+        },
+        "RadiusOfGyration": {
+            "title": "Radius of Gyration",
+            "type": "object",
+            "properties": {
+                "RealI0": {
+                    "title": "Real Rg",
+                    "description": "Real space value of the radius of gyration",
+                    "type": "number"
+                },
+                "RealI0Error": {
+                    "title": "Real Rg Error",
+                    "description": "Error (+-) of the real space value of the radius of gyration",
+                    "type": "number"
+                },
+                "ReciprocalI0": {
+                    "title": "Reciprocal Rg",
+                    "description": "Reciprocal space value of the radius of gyration",
+                    "type": "number"
+                },
+                "ReciprocalI0Error": {
+                    "title": "Reciprocal Rg Error",
+                    "description": "Error (+-) of the reciprocal space value of the radius of gyration",
+                    "type": "number"
+                },
+                "PercentageDifference": {
+                    "title": "Percentage Diference",
+                    "type": "number"
+                }
+            }
+        },
+        "Volume": {
+            "title": "Volume",
+            "description": "The volume, Angstroms^3",
+            "type": "number"
+        },
+        "PorodExponent": {
+            "title": "Porod Exponent",
+            "description": "The Porod exponent for the scan",
+            "type": "number"
+        },
+        "Real<r>": {
+            "title": "Real <r>",
+            "description": "Angstroms",
+            "type": "number"
+        },
+        "Dmax": {
+            "title": "Dmax",
+            "description": "The maximum dimension of the particle, Angstroms",
+            "type": "number"
+        },
+        "ResolutionLimitQMax": {
+            "title": "Resolution Limit, qmax",
+            "description": "The resolution limit of the scan, per Angstrom",
+            "type": "number"
+        },
+        "ResolutionLimitDSpacing": {
+            "title": "Resolution Limit d-spacing",
+            "description": "The smallest discernable distance in the sample, Angstroms",
+            "type": "number"
+        },
+        "ResolutionLimitBinWidth": {
+            "title": "Resolution Limit Bin Width",
+            "description": "The bin width, Angstroms",
+            "type": "number"
+        }
+    }
+}

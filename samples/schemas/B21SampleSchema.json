@@ -1,0 +1,69 @@
+{
+    "$id": "urn:ulims:b21sample:1.0",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "title": "B21SampleSchema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "SampleName": {
+            "title": "Sample Name",
+            "description": "The name of the sample",
+            "type": "string"
+        },
+        "Barcode": {
+            "title": "Barcode",
+            "description": "The sample's barcode",
+            "type": "string",
+            "pattern": "[A-Z]{4}-[0-9]{3}" 
+        },
+        "Position": {
+            "title": "Sample Position",
+            "description": "The position of the sample in the holder",
+            "type": "number"
+        },
+        "OperationalMode": {
+            "title": "Operational Mode",
+            "description": "The operational mode of the beamline for this sample",
+            "enum": ["HPLC", "Batch"]
+        },
+        "FlowRate": {
+            "title": "Flow Rate",
+            "description": "The flow rate for the sample, ml/min, for HLPC operational mode",
+            "type": "number"
+        },
+        "Volume": {
+            "title": "Volume",
+            "description": "Volume of sample in uL. Minimum 25 for batch mode, 30 for HLPC mode.",
+            "type": "number",
+            "minimum": 25.0,
+            "maximum": 100.0
+        },
+        "BufferIDpH": {
+            "title": "Buffer Identifier and pH",
+            "description": "The buffer identifier and pH, for HLPC operational mode",
+            "type": "string"
+        },
+        "Column": {
+            "title": "Column",
+            "description": "The beamline column used, for HLPC operational mode",
+            "enum": ["Shodex KW-402.5", "Shodex KW-403", "Shodex KW-404", "Shodex KW-405", "Superdex 200 Increase 3.2", "Superose 6 Increase 3.2"]
+        },
+        "Buffer": {
+            "title": "Buffer",
+            "description": "Is this a buffer or a sample? For batch operational mode.",
+            "type": "boolean"
+        },
+        "BufferPosition": {
+            "title": "Buffer Position Number",
+            "description": "Buffer position in the holder. Should be a number 1-9. For batch operational mode.",
+            "type": "number",
+            "minimum": 1,
+            "maximum": 9
+        },
+        "Notes": {
+            "title": "Notes",
+            "description": "Any further notes about the sample",
+            "type": "string"
+        }
+    }
+}
