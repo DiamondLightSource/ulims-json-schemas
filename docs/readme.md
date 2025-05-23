@@ -51,6 +51,29 @@ There are six steps, in summary:
 5. Once the check passes create a pull request asking for
    a merge to main. 
 
+### Stable and beta releases
+
+The `$id` define releases and it must end with semantic
+numbers. Release 1.0.0 is the first stable release. Earlier
+numbers are beta releases that could change without notice.
+
+* Changes to a stable schema should be point releases unless
+  major or minor release are forced by step 4. Old releases
+  should continue to work for lifetime of repository until
+  a release is phased out.
+
+* Schema writers of beta releases do not have to alter
+  the number in $id for every change. This avoids keeping
+  multiple releases on disk. For example, having an $id end
+  with `/0.0.1` will overwrite `0.0.1.json` on every build. 
+
+> [TIP]
+> Advanced schema using a basic schema can evolve at
+> different speeds and release numbers can appear to
+> be related. But, each schema is standlone so
+> each release number is seperate from the other. 
+
+
 ## Setup on a new machine
 
 A text editor and git is often already installed, but NPM
