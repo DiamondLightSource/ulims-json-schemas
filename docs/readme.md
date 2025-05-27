@@ -28,7 +28,7 @@ below and in the first tutorial.
 
 ## Adding a schema to the repository
 
-There are six steps, in summary:
+There are five steps, in summary:
 
 1. Create a schema folder inside the appropriate folder
    under `schemas` and instrument, for example `schemas/samples/p99/newschemaone`
@@ -38,13 +38,13 @@ There are six steps, in summary:
    basic and advanced schema in examples folder for pattern. Create
    the schema as required.
 
-3. Build the latest release. The $id in step B is important and
-   defines the release number. There are recommendations for
-   when to change the number. A JSON schema is valid if no
-   errors occur.
+3. Build the latest release by running `npm run build-all`. The
+   $id in step B is important and defines the release number.
+   There are recommendations for when to change the number.
+   A JSON schema is valid if no errors occur.
 
-4. Confirm the check passes. This is
-   done automatically on pushes to github
+4. Confirm the check passes with `npm run check`. This
+   is done automatically on pushes to github
    repository. If issues are shown it will often be
    quicker to run this locally whilst editing file(s).
 
@@ -67,11 +67,11 @@ numbers are beta releases that could change without notice.
   multiple releases on disk. For example, having an $id end
   with `/0.0.1` will overwrite `0.0.1.json` on every build. 
 
-> [TIP]
+> [!TIP]
 > Advanced schema using a basic schema can evolve at
 > different speeds and release numbers can appear to
-> be related. But, each schema is standlone so
-> each release number is seperate from the other. 
+> be related. But, each schema is standalone so
+> each release number is separate from the other.
 
 
 ## Setup on a new machine
