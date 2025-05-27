@@ -1,0 +1,73 @@
+{
+  "title": "examples/advanced",
+  "description": "A schema that references another schema",
+  "$id": "/examples/advanced/1.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "basic_from"
+  ],
+  "properties": {
+    "basic_from": {
+      "title": "basic_from schema data",
+      "description": "Description that replaces value from $ref ",
+      "$id": "/examples/basic/1.0.0",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "comment"
+      ],
+      "properties": {
+        "comment": {
+          "title": "Field heading on interfaces",
+          "description": "A string property added in basic 1.0.0",
+          "type": "string"
+        },
+        "counter": {
+          "title": "Counter",
+          "description": "An integer property added in basic 1.0.0",
+          "type": "integer",
+          "maximum": 1000,
+          "minimum": 0
+        },
+        "ident": {
+          "title": "Identifier one",
+          "description": "An UUID added in basic 1.0.0",
+          "type": "string",
+          "format": "uuid",
+          "maxLength": 40
+        },
+        "when": {
+          "title": "When last reviewed",
+          "description": "An ISO-8601 formatted timestamp added in basic 1.0.0",
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 128
+        }
+      },
+      "examples": [
+        {
+          "comment": "Example showing required data values in basic 1.0.0"
+        },
+        {
+          "comment": "Example showing all values in basic 1.0.0 version.",
+          "counter": 101,
+          "ident": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
+          "when": "2018-11-13T20:20:39+00:00"
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "basic_from": {
+        "comment": "dolor",
+        "counter": 150,
+        "ident": "22222222-2222-2222-2222-222222222222",
+        "when": "2021-01-01T00:00:00.0Z"
+      }
+    }
+  ]
+}
