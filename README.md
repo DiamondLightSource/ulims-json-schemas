@@ -32,16 +32,15 @@ Schema can be put anywhere in the schema root. The following
 sets exist for putting schema into and new ones can be
 added when needed:
 
-*. [examples](schemas/examples/) - - A minimum set that can be
-used for testing and checking release process.
+* [examples](schemas/examples/) - - A minimum set that can be
+  used for testing and checking release process.
 
-*. [shared](schemas/shared/) - A common set of schemas
+* [shared](schemas/shared/) - A common set of schemas
    that can but reused across all schema, services and
    applications. For examples, units or chemical elements.
 
-*. [samples](schemas/samples/) - Schemas for samples
+* [samples](schemas/samples/) - Schemas for samples
   service.
-
 
 ## Documentation for schema writers
 
