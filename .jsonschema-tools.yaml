@@ -1,0 +1,8 @@
+schemaBasePath: ./schemas/
+
+# Files to be generated. 
+# Available: [json] [yaml] [json, yaml]
+contentTypes: [json]
+
+logLevel: info
+shouldGenerateExample: true
