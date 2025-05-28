@@ -1,0 +1,80 @@
+{
+  "$id": "https://example.com/schemas/samples/examples/arrays/example_arrays.json",
+  "$schema": "https://json-schema.org/draft/2025-05/schema",
+  "title": "Example arrays",
+  "type": "object",
+  "properties": {
+    "preparation_date": {
+      "title": "Preparation Date-Time",
+      "type": "string",
+      "format": "date-time",
+      "description": "The date-time sample preparation was started."
+    },
+    "composition": {
+      "title": "Composition",
+      "description": "An UUID added in basic 1.0.0",
+      "type": "string",
+      "format": "uuid",
+      "maxLength": 40
+    },
+    "counter": {
+      "title": "Counter",
+      "description": "An integer property added in basic 1.0.0",
+      "type": "integer",
+      "maximum": 1000,
+      "minimum": 0
+    },
+    "packing_fraction": {
+      "title": "Packing fraction",
+      "type": "number",
+      "description": "Packing fraction of sample (0-1)",
+      "default": 1,
+      "minimum": 0,
+      "maximum": 1
+    },
+    "form": {
+      "title": "Form",
+      "type": "string",
+      "description": "Form of the sample",
+      "enum": ["powder", "liquid", "glass", "mixed", "other", "none"],
+      "default": "none"
+    },
+    "comment_1": {
+      "title": "Enter a comment 1",
+      "description": "A string array",
+      "type": "string",
+      "enum": ["foo", "bar", "too", "then"]
+    },
+    "name": {
+      "title": "Name",
+      "description": "A string array",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["name 1", "name 2", "name 3"]
+      }
+    },
+    "age": {
+      "title": "Age",
+      "description": "An integer array",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "enum": [1, 2, 3]
+      }
+    },
+    "true_or_false": {
+      "title": "True or False",
+      "description": "A boolean array",
+      "type": "array",
+      "items": {
+        "type": "boolean",
+        "enum": [true, false]
+      },
+      "shape": {
+        "title": "Shape",
+        "enum": ["cylinder", "plate", "disk"]
+      }
+    }
+  }
+}
