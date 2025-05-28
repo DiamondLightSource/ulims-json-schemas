@@ -6,15 +6,13 @@
   "required": [
     "composition",
     "density",
-    "packing_fraction",
-    "capillary"
+    "packing_fraction"
   ],
   "properties": {
     "capillary": {
       "title": "Capillary",
       "description": "The capillary type of this sample.",
       "type": "string",
-      "default": "",
       "enum": [
         "bs1.0",
         "bs1.5",
@@ -27,8 +25,7 @@
         "fq3.17",
         "pi1.0",
         "pi1.5",
-        "pi2.0",
-        ""
+        "pi2.0"
       ]
     },
     "comment": {
@@ -62,7 +59,7 @@
   },
   "examples": [
     {
-      "capillary": "",
+      "capillary": "bs1.5",
       "comment": "",
       "composition": "C",
       "density": 1,
