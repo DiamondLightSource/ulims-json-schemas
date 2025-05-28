@@ -1,7 +1,7 @@
 {
-    "$id": "urn:ulims:samples:i15-1.0.0.1",
-    "$schema": "https://json-schema.org/draft/2019-09/schema",
-    "title": "I15-1 Sample Schema",
+    "$id": "samples/i15-1/0.0.1",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "samples/i15-1",
     "type": "object",
     "required": [
         "composition", "density",  "packing_fraction", "capillary"
@@ -29,6 +29,8 @@
         },
         "capillary": {
             "title": "Capillary",
+            "type": "string",
+            "default": "",
             "enum": [
                 "bs1.0", 
                 "bs1.5",
@@ -42,7 +44,7 @@
                 "pi1.0",
                 "pi1.5",
                 "pi2.0",
-                null
+                ""
             ],
             "description": "The capillary type of this sample."
         },
