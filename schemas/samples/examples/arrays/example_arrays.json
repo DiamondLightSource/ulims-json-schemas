@@ -64,11 +64,11 @@
       "items": {
         "type": "boolean",
         "enum": [true, false]
-      },
-      "shape": {
-        "title": "Shape",
-        "enum": ["cylinder", "plate", "disk"]
       }
+    },
+    "shape": {
+      "title": "Shape",
+      "enum": ["cylinder", "plate", "disk"]
     }
   }
 }
