@@ -44,8 +44,7 @@
       "description": "A string array",
       "type": "array",
       "items": {
-        "type": "string",
-        "enum": ["name 1", "name 2", "name 3"]
+        "type": "string"
       }
     },
     "age": {
@@ -53,8 +52,7 @@
       "description": "An integer array",
       "type": "array",
       "items": {
-        "type": "number",
-        "enum": [1, 2, 3]
+        "type": "number"
       }
     },
     "true_or_false": {
@@ -62,8 +60,7 @@
       "description": "A boolean array",
       "type": "array",
       "items": {
-        "type": "boolean",
-        "enum": [true, false]
+        "type": "boolean"
       }
     }
   }
