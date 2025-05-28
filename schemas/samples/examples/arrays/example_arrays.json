@@ -36,7 +36,10 @@
       "title": "Form",
       "type": "array",
       "description": "Form of the sample",
-      "enum": ["powder", "liquid", "glass", "mixed", "other", "none"],
+      "items": {
+        "type": "string",
+        "enum": ["powder", "liquid", "glass", "mixed", "other", "none"]
+      },
       "default": "none"
     },
     "name": {
