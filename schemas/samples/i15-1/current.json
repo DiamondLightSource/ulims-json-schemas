@@ -4,7 +4,7 @@
     "title": "samples/i15-1",
     "type": "object",
     "required": [
-        "composition", "density",  "packing_fraction", "capillary"
+        "composition", "density",  "packing_fraction"
     ],
     "properties": {
         "composition": {
@@ -30,7 +30,6 @@
         "capillary": {
             "title": "Capillary",
             "type": "string",
-            "default": "",
             "enum": [
                 "bs1.0", 
                 "bs1.5",
@@ -43,8 +42,7 @@
                 "fq3.17",
                 "pi1.0",
                 "pi1.5",
-                "pi2.0",
-                ""
+                "pi2.0"
             ],
             "description": "The capillary type of this sample."
         },
