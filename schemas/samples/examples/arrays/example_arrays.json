@@ -39,12 +39,6 @@
       "enum": ["powder", "liquid", "glass", "mixed", "other", "none"],
       "default": "none"
     },
-    "comment_1": {
-      "title": "Enter a comment 1",
-      "description": "A string array",
-      "type": "string",
-      "enum": ["foo", "bar", "too", "then"]
-    },
     "name": {
       "title": "Name",
       "description": "A string array",
