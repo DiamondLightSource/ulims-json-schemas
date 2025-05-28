@@ -1,7 +1,7 @@
 {
-    "$id": "urn:ulims:b21sample:1.0",
+    "$id": "samples/B21/1.0.0",
     "$schema": "https://json-schema.org/draft-07/schema",
-    "title": "B21SampleSchema",
+    "title": "samples/B21",
     "type": "object",
     "additionalProperties": false,
     "properties": {
