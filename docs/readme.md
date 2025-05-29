@@ -52,7 +52,7 @@ There are five steps, in summary:
    a merge to main. 
 
 
-A page of [common build or check issues](docs/common_issues.md)
+A page of [common build or check issues](common_issues.md)
 starts with some tips and shows messages the jsonschema-tools
 can cause. Expand the message to see cause and fixes.
 
