@@ -23,8 +23,13 @@ jobs:
         run: |
           cat .jsonschema-tools.yaml
           cat test/jsonschema/repository.test.js
-        
+      
+      - #name: Fetch repo  # to fix error: fatal: bad revision 'main'
+        #working-directory: ./
+        #run:  git fetch
+
       - name: Build current files different than main branch
+        working-directory: ./  
         run:  npm run build-modified-main
 
       - name: Commit changes
