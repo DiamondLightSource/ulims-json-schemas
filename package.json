@@ -1,0 +1,32 @@
+{
+    "name": "ulims-json-schemas",
+    "version": "0.0.1",
+    "description": "Primary JSONSchemas for ULIMS projects.",
+    "license": "GPL-3.0-or-later",
+    "repository": {
+      "type": "git",
+      "url": "git@github.com:DiamondLightSource/ulims-json-schemas.git"
+    },
+    "main": "index.js",
+    "scripts": {
+      "postinstall": "patch-package",
+      "check": "mocha test/jsonschema",
+      "build-new": "jsonschema-tools materialize",
+      "build-all": "jsonschema-tools materialize-all",
+      "build-modified": "for fn in $(git diff --name-only --diff-filter=ACM -- *current.yaml *current.json); do npm run build-new $fn; done"
+    },
+    "keywords": [
+      "jsonschema",
+      "json",
+      "ulims"
+    ],
+    "devDependencies": {
+      "@wikimedia/jsonschema-tools": "1.3.0",
+      "mocha": "^11.1.0",
+      "eslint": "^8.57.1"
+    },
+    "dependencies": {
+      "patch-package": "^8.0.0"
+    }
+  }
+  
