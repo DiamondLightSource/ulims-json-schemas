@@ -28,12 +28,6 @@ jobs:
           cat .jsonschema-tools.yaml
           cat test/jsonschema/repository.test.js
 
-      - name: Pull main to local copy # to fix error: fatal: bad revision 'main'
-        working-directory: ./
-        run: |
-           git config pull.ff only
-           git pull origin main
-
       - name: Build current files different than main branch
         working-directory: ./  
         run:  npm run build-modified-main
