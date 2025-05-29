@@ -39,7 +39,6 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v9
         with:
-          author_name: GH action
-          author_email: ghaction@diamond.ac.uk
-          message: 'GH built schema'
+          default_author: github_actor
+          message: 'Schema(s) build and commit via GH action.'
           add: '*'
