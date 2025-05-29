@@ -1,6 +1,6 @@
 {
   "title": "examples/u470advanced",
-  "description": "A schema that references another schema",
+  "description": "A schema that references another schema fails first time",
   "$id": "/examples/u470advanced/1.0.0",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
