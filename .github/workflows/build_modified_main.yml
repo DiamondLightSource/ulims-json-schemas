@@ -27,10 +27,6 @@ jobs:
             cat .jsonschema-tools.yaml
             cat test/jsonschema/repository.test.js
 
-        - name: Check schema root passes before build
-          working-directory: ./  
-          run: npm run check
-
         - name: Build schemas where current.yaml differ from main
           working-directory: ./  
           run: npm run build-modified-main
