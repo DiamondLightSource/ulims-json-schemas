@@ -6,9 +6,9 @@ This page highlights some common issues and fixes.
 > Doing the check is recommended before and after making any
 > change to a schema when having issues.
 
-## Common solution
+## General approach
 
-The common solution is:
+When fixing errors in general you will need to:
 
 1. Edit current.json file to fix problem as highlighted below.
 
@@ -29,17 +29,6 @@ during step 2.
 > just checked is okay and build will merge everything
 > into a single file.
 
-### Using values in $id that never change (ie. draft schema)
-
-The value in $id is important and **must be** correct. A "draft"
-schema can retain the same value (where $id ending
-with "/0.0.1" is recommended at start) and builds overwrites.
-An $id ending in 1.0.0 or higher
-is considered "completed" where the $id should be alter
-with certain patterns to increase robustness of schema
-change over time so all old, current and future
-versions are available at the same time.
-
 ## Values for "title" or "$id" are wrong
 
 These issues are mostly likely to occur when creating a
@@ -51,7 +40,7 @@ required values.
 
 <summary>check: "schema title must match relative schema directory"</summary>
 
-### Edit "title" in current
+### Edit "title" in current.json
 
 **Fix:** Depends on path to schema folder. See
 file `schemas/examples/basic/current.json` for context and it
@@ -72,7 +61,7 @@ found after guessing what json file to look at.
 
 <summary>check: "could not find latest schema version file"</summary>
 
-### Edit "$id" in current
+### Edit "$id" in current.json
 
 **Fix:** Depends on path to schema folder. See
 file `schemas/examples/basic/current.json` for context and it
@@ -96,18 +85,18 @@ validation of every release.
 
 ### A $ref points at a release that does not exist on disk
 
-This can occur for different reasons. A typo most often
-but sometimes it will be because the schema
-being referenced has not been built at least once. Later (N months)
-a more important cause is a schema moved location
-in the root without all references in all
-versions being changed to correct values.
+This can occur for different reasons. It is most often
+due to a typo but sometimes it will be because the schema
+being referenced has not been built at least once. It could
+also be because a schema moved location in the root without
+all references in all versions being changed to correct values.
 
-**Fix:** Confirm not a typo. If not: find the schema folder
+**Fix:** Confirm the path in $ref is correct and starts
+with a '/'. If it is find the schema folder
 for $ref schema, check current.json exists
-and version in $id, then check does a file
-for that version exists on disk, if not
-build it; then build faulty schema again. Running `build-all`
+and version in $id, then check if a file
+for that version exists on disk (like 1.2.3.json). If not
+build it, then build faulty schema again. Running `build-all`
 twice will sometimes fix the issue.
 
 **Tools output:** The error above.
@@ -117,24 +106,5 @@ important and so are each version. A schema folder
 moving in the schema root requires every $ref in
 every version to be updated to the new
 path. Build order is important for schema.
-
-#### Example fix
-Error occurs on `npm run build-new schemas/examples/advanced/current.json`
-if the $ref is `schemas/examples/basic/1.0.2` so expecting to
-find a 1.0.2.json file. Looking at basic schema folder can see
-a build of release 1.0.1 was
-done `npm run build-new schemas/examples/basic/current.json`
-and that current file shows its $id ending with 1.0.1 and
-file 1.0.1.json exists. So, typo on the point number? But, if
-basic $id ended with 1.0.2 a build is needed. Build basic first
-or run `build-all` twice with issue disappearing on 2nd run.
-
-> [!CAUTION] Alter $id on advanced schema before build
-> Say, advanced/1.0.0 is used by M applications who need
-> it for N years. The **first edit** before altering
-> the $ref value and doing a build (which caused this error),
-> should have been to update its $id so advanced/1.0.1 will
-> contain changes (ie. use a newer version of basic). If build
-> overwrote files for advanced 1.0.0 then undo those changes.
 
 </details>
