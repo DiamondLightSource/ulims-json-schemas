@@ -42,7 +42,4 @@ jobs:
           author_name: GH action
           author_email: ghaction@diamond.ac.uk
           message: 'GH built schema'
-          add: |
-            - '*.json'
-            - '*.*.*.*'
-            - '*latest'
+          add: '*'
