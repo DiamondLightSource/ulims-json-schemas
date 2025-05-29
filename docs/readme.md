@@ -51,6 +51,11 @@ There are five steps, in summary:
 5. Once the check passes create a pull request asking for
    a merge to main. 
 
+
+A page of [common build or check issues](common_issues.md)
+starts with some tips and shows messages the jsonschema-tools
+can cause. Expand the message to see cause and fixes.
+
 ### Stable and beta releases
 
 The `$id` define releases and it must end with semantic
