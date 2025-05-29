@@ -1,7 +1,7 @@
 {
   "title": "examples/u470bonpush",
-  "description": "A basic schema to be built by GH action",
-  "$id": "/examples/u470bonpush/0.0.1",
+  "description": "A basic schema to be built by GH action changed",
+  "$id": "/examples/u470bonpush/0.0.2",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,
