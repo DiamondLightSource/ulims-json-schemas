@@ -1,0 +1,47 @@
+name: Build current files not in main and commit
+on: 
+  push:
+    branches:
+      - '*'
+      - '!main'
+
+jobs:
+  run:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Confirm configuration files used
+        working-directory: ./
+        run: |
+          cat .jsonschema-tools.yaml
+          cat test/jsonschema/repository.test.js
+
+      - name: Pull main to local copy # to fix error: fatal: bad revision 'main'
+        working-directory: ./
+        run: |
+           git config pull.ff only
+           git pull origin main
+
+      - name: Build current files different than main branch
+        working-directory: ./  
+        run:  npm run build-modified-main
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: GH action
+          author_email: ghaction@diamond.ac.uk
+          message: 'GH built schema'
+          add: '*.json'
