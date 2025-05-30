@@ -1,7 +1,7 @@
 {
-    "$id": "samples/i15-1/0.0.1",
+    "$id": "samples/i15-1/powder/0.0.1",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "samples/i15-1",
+    "title": "samples/i15-1/powder",
     "type": "object",
     "required": [
         "composition", "density",  "packing_fraction"
