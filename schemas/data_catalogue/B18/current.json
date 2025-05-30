@@ -1,7 +1,7 @@
 {
     "$id": "data_catalogue/B18/1.0.0",
     "$schema": "https://json-schema.org/draft-07/schema",
-    "title": "data_catalogue/B18",
+    "title": "data_catalogue\\B18",
     "type": "object",
     "additionalProperties": false,
     "properties": {
@@ -17,26 +17,17 @@
                         "description": "The name of the detector",
                         "enum": ["Ionization Chambers", "Si Drift Fluorescence Detector", "Ge Fluorescence Detector", " Mythen XRD Detector", "Dispersive Emission Spectrometer"]
                     },
-                    "if": {
-                        "properties": {
-                          "Detector": { "const": "" }
-                        }
-                      },
-                      "then": {
-                        "properties": {
-                          "DetectionMode": {
-                            "title": "Detection Mode",
-                            "string": ""
-                            }
-                        }
-                    }      
+                    "DetectionMode": {
+                        "title": "Detection Mode",
+                        "string": ""
+                    }    
                 }
             }
         },
         "ElementMeasured": {
             "title": "Element Measured",
             "description": "Which element was measured",
-            "$ref": "shared/chemical_elements/1.0.0"
+            "$ref": "/shared/chemical_elements/1.0.0"
         },
         "Edge": {
             "title": "Edge",
