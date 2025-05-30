@@ -1,7 +1,7 @@
 {
     "$id": "data_catalogue/B18/1.0.0",
     "$schema": "https://json-schema.org/draft-07/schema",
-    "title": "data_catalogue\\B18",
+    "title": "data_catalogue/B18",
     "type": "object",
     "additionalProperties": false,
     "properties": {

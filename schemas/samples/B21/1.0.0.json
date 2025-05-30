@@ -1,5 +1,5 @@
 {
-  "title": "samples\\B21",
+  "title": "samples/B21",
   "$id": "samples/B21/1.0.0",
   "$schema": "https://json-schema.org/draft-07/schema",
   "type": "object",

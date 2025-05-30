@@ -1,0 +1,328 @@
+{
+  "title": "data_catalogue/B18",
+  "$id": "data_catalogue/B18/1.0.0",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "Amplification": {
+      "title": "Amplification",
+      "description": "For Transmission detection mode.",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "BeamSize": {
+      "title": "Beam Size",
+      "description": "The size of the beam",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "DetectorDistance": {
+      "title": "Detector Distance",
+      "description": "The distance of the detector, for Fluorescence detection mode",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "Detectors": {
+      "title": "Detectors",
+      "description": "The detector used for the scan, and the detection mode used",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "DetectionMode": {
+            "title": "Detection Mode",
+            "string": ""
+          },
+          "Detector": {
+            "title": "Detector",
+            "description": "The name of the detector",
+            "enum": [
+              "Ionization Chambers",
+              "Si Drift Fluorescence Detector",
+              "Ge Fluorescence Detector",
+              " Mythen XRD Detector",
+              "Dispersive Emission Spectrometer"
+            ]
+          }
+        }
+      }
+    },
+    "Edge": {
+      "title": "Edge",
+      "description": "",
+      "enum": [
+        "K",
+        "L1",
+        "L2",
+        "L3",
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ]
+    },
+    "ElementMeasured": {
+      "title": "Element Measured",
+      "description": "Which element was measured",
+      "$id": "/shared/chemical_elements/1.0.0",
+      "$schema": "https://json-schema.org/draft-07/schema",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ChemicalElements": {
+          "type": "string",
+          "enum": [
+            "H",
+            "He",
+            "Li",
+            "Be",
+            "B",
+            "C",
+            "N",
+            "O",
+            "F",
+            "Ne",
+            "Na",
+            "Mg",
+            "Al",
+            "Si",
+            "P",
+            "S",
+            "Cl",
+            "Ar",
+            "K",
+            "Ca",
+            "Sc",
+            "Ti",
+            "V",
+            "Cr",
+            "Mn",
+            "Fe",
+            "Co",
+            "Ni",
+            "Cu",
+            "Zn",
+            "Ga",
+            "Ge",
+            "As",
+            "Se",
+            "Br",
+            "Kr",
+            "Rb",
+            "Sr",
+            "Y",
+            "Zr",
+            "Nb",
+            "Mo",
+            "Tc",
+            "Ru",
+            "Rh",
+            "Pd",
+            "Ag",
+            "Cd",
+            "In",
+            "Sn",
+            "Sb",
+            "Te",
+            "I",
+            "Xe",
+            "Cs",
+            "Ba",
+            "La",
+            "Ce",
+            "Pr",
+            "Nd",
+            "Pm",
+            "Sm",
+            "Eu",
+            "Gd",
+            "Tb",
+            "Dy",
+            "Ho",
+            "Er",
+            "Tm",
+            "Yb",
+            "Lu",
+            "Hf",
+            "Ta",
+            "W ",
+            "Re",
+            "Os",
+            "Ir",
+            "Pt",
+            "Au",
+            "Hg",
+            "Tl",
+            "Pb",
+            "Bi",
+            "Po",
+            "At",
+            "Rn",
+            "Fr",
+            "Ra",
+            "Ac",
+            "Th",
+            "Pa",
+            "U",
+            "Np",
+            "Pu",
+            "Am",
+            "Cm",
+            "Bk",
+            "Cf",
+            "Es",
+            "Fm",
+            "Md",
+            "No",
+            "Lr",
+            "Rf",
+            "Db",
+            "Sg",
+            "Bh",
+            "Hs",
+            "Mt",
+            "Ds",
+            "Rg",
+            "Cn",
+            "Nh",
+            "Fl",
+            "Mc",
+            "Lv",
+            "Ts",
+            "Og"
+          ]
+        }
+      },
+      "examples": [
+        {
+          "ChemicalElements": "Ar"
+        }
+      ]
+    },
+    "EnergyMax": {
+      "title": "Maximum Energy",
+      "description": "The maximum energy during the scan",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "EnergyMin": {
+      "title": "Minimum Energy",
+      "description": "The minimum energy during the scan",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "EnergyResolution": {
+      "title": "Energy Resolution",
+      "description": "The energy resolution of the scan",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "MotorPositions": {
+      "title": "Motor Positions",
+      "description": "The positions of the motors moved for the scan",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "MotorName": {
+            "title": "Motor Name",
+            "description": "The name of the motor",
+            "type": "string"
+          },
+          "MotorPositionX": {
+            "title": "X Position",
+            "description": "The x-position of the motor",
+            "type": "number",
+            "maximum": 9007199254740991,
+            "minimum": -9007199254740991
+          },
+          "MotorPositionY": {
+            "title": "Y Position",
+            "description": "The y-position of the motor",
+            "type": "number",
+            "maximum": 9007199254740991,
+            "minimum": -9007199254740991
+          }
+        }
+      }
+    },
+    "RegionOfInterestEnd": {
+      "title": "Region of Interest End Value",
+      "description": "For Fluorescence detection mode",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "RegionOfInterestStart": {
+      "title": "Region of Interest Start Value",
+      "description": "For Fluorescence detection mode",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "ScanType": {
+      "title": "Scan type",
+      "description": "Was the scan continuous or stepwise",
+      "enum": [
+        "Continuous",
+        "Step"
+      ]
+    },
+    "Temperature": {
+      "title": "Temperature",
+      "description": "The temperature of the heating or cooling device, in K",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "TimePerPoint": {
+      "title": "Total time per point",
+      "description": "The total time of scan or the acquisition time per point, in seconds",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    }
+  },
+  "examples": [
+    {
+      "Amplification": -6305039478318694,
+      "BeamSize": -6305039478318694,
+      "DetectorDistance": -6305039478318694,
+      "Detectors": [
+        {
+          "DetectionMode": {
+            "title": "Detection Mode",
+            "string": ""
+          },
+          "Detector": "Ionization Chambers"
+        }
+      ],
+      "Edge": "L1",
+      "ElementMeasured": {
+        "ChemicalElements": "Ar"
+      },
+      "EnergyMax": -6305039478318694,
+      "EnergyMin": -6305039478318694,
+      "EnergyResolution": -6305039478318694,
+      "MotorPositions": [
+        {
+          "MotorName": "dolor",
+          "MotorPositionX": -6305039478318694,
+          "MotorPositionY": -6305039478318694
+        }
+      ],
+      "RegionOfInterestEnd": -6305039478318694,
+      "RegionOfInterestStart": -6305039478318694,
+      "ScanType": "Continuous",
+      "Temperature": -6305039478318694,
+      "TimePerPoint": -6305039478318694
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
-  "title": "shared\\chemical_elements",
-  "$id": "shared/chemical_elements/1.0.0",
+  "title": "shared/chemical_elements",
+  "$id": "/shared/chemical_elements/1.0.0",
   "$schema": "https://json-schema.org/draft-07/schema",
   "type": "object",
   "additionalProperties": false,

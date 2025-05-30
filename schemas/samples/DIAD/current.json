@@ -1,7 +1,7 @@
 {
     "$id": "samples/DIAD/1.0.0",
     "$schema": "https://json-schema.org/draft-07/schema",
-    "title": "samples\\DIAD",
+    "title": "samples/DIAD",
     "type": "object",
     "additionalProperties": false,
     "properties": {

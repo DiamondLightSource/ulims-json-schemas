@@ -1,5 +1,5 @@
 {
-  "title": "samples\\DIAD",
+  "title": "samples/DIAD",
   "$id": "samples/DIAD/1.0.0",
   "$schema": "https://json-schema.org/draft-07/schema",
   "type": "object",
