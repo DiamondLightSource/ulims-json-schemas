@@ -1,0 +1,29 @@
+{
+    "$id": "urn:ulims:base:i07:1.0",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "title": "I07Metadata",
+    "properties": {
+        "Name": {
+            "title": "Name",
+            "type": "string"
+        },
+        "ProgramName": {
+            "title": "Program Name",
+            "type": "string",
+            "nxpath": "/entry/program_name"
+        },
+        "Instrument": {
+            "$ref": "urn:ulims:instrument:1.0"
+        },
+        "Scan": {
+            "$ref": "urn:ulims:scan:1.0"
+        }
+    },
+    "required": [
+        "ProgramName",
+        "Scan",
+        "Instrument"
+    ]
+}

@@ -1,7 +1,7 @@
 {
   "$id": "shared/chemical_elements/1.0.0",
   "$schema": "https://json-schema.org/draft-07/schema",
-  "title": "shared/chemical_elements",
+  "title": "shared\\chemical_elements",
   "type": "object",
   "additionalProperties": false,
   "properties": {

@@ -1,0 +1,120 @@
+{
+  "title": "samples\\DIAD",
+  "$id": "samples/DIAD/1.0.0",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "AspectRatio": {
+      "title": "Aspect Ratio",
+      "description": "The aspect ratio of the image",
+      "type": "string"
+    },
+    "CapillaryShape": {
+      "title": "Capillary Shape",
+      "description": "The shape of the capillary.",
+      "enum": [
+        "Cylinder",
+        "Cuboid"
+      ]
+    },
+    "CapillaryType": {
+      "title": "Capillary Type",
+      "description": "The capillary type of this sample.",
+      "type": "string"
+    },
+    "ContainerComposition": {
+      "title": "Container Composition",
+      "description": "The composition of the container of the sample",
+      "type": "string"
+    },
+    "Depth": {
+      "title": "Depth",
+      "description": "The depth of the capillary, if a cuboid",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "ElectricCurrent": {
+      "title": "Electric Current",
+      "description": "The electric current through the sample, mA",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "Form": {
+      "title": "Form",
+      "description": "The form of the sample",
+      "enum": [
+        "Powder",
+        "Liquid",
+        "Solid"
+      ]
+    },
+    "Height": {
+      "title": "Height",
+      "description": "The height of the capillary",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "PackingFraction": {
+      "title": "Packing Fraction",
+      "description": "The packing fraction of the sample in the capillary",
+      "type": "number",
+      "maximum": 1,
+      "minimum": 0
+    },
+    "PhaseStructure": {
+      "title": "Phase Structure",
+      "description": "The phase structure of the sample",
+      "type": "string"
+    },
+    "Porosity": {
+      "title": "Porosity",
+      "description": "The porosity of the sample",
+      "type": "number",
+      "maximum": 100,
+      "minimum": 0
+    },
+    "Radius": {
+      "title": "Radius",
+      "description": "The radius of the capillary, if a cylinder",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "Temperature": {
+      "title": "Temperature",
+      "description": "The temperature of the sample, in K",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "Width": {
+      "title": "Width",
+      "description": "The width of the capillary, if a cuboid",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    }
+  },
+  "examples": [
+    {
+      "AspectRatio": "dolor",
+      "CapillaryShape": "Cylinder",
+      "CapillaryType": "dolor",
+      "ContainerComposition": "dolor",
+      "Depth": -6305039478318694,
+      "ElectricCurrent": -6305039478318694,
+      "Form": "Powder",
+      "Height": -6305039478318694,
+      "PackingFraction": 0.15,
+      "PhaseStructure": "dolor",
+      "Porosity": 15,
+      "Radius": -6305039478318694,
+      "Temperature": -6305039478318694,
+      "Width": -6305039478318694
+    }
+  ]
+}

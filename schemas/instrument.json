@@ -1,0 +1,35 @@
+{
+    "$id": "urn:ulims:instrument:1.0",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Standard ULIMS instrument",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "Name": {
+            "title": "Name",
+            "type": "string",
+            "nxpath": "/entry/instrument/name"
+        },
+        "RingCurrent": {
+            "title": "Ring Current",
+            "type": "number",
+            "nxpath": "/entry/instrument/ringcurrent"
+        },
+        "BeamEnergy": {
+            "title": "Beam Energy",
+            "type": "number",
+            "nxpath": "/entry/instrument/beamenergy"
+        },
+        "Detector1": {
+            "$ref": "urn:ulims:detector:1.0"
+        },
+        "Detector2": {
+            "$ref": "urn:ulims:detector:1.0"
+        }
+    },
+    "required": [
+        "Name",
+        "RingCurrent",
+        "BeamEnergy"
+    ]
+}
