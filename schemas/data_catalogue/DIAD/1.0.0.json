@@ -1,0 +1,100 @@
+{
+  "title": "data_catalogue\\DIAD",
+  "$id": "data_catalogue/DIAD/1.0.0",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "BeamEnergy": {
+      "title": "Beam Energy",
+      "description": "The beam energy during the scan, keV",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "Beamline": {
+      "const": "DIAD"
+    },
+    "Detector": {
+      "title": "Detector",
+      "description": "Which detector was used to collect the data",
+      "enum": [
+        "Imaging Detector",
+        "Diffraction Detector"
+      ]
+    },
+    "DetectorBeaming": {
+      "title": "Beaming of Detector",
+      "description": "Was there beaming of the detector? Only needed for Imaging scans",
+      "type": "boolean"
+    },
+    "ElectricCurrentProfile": {
+      "title": "Electric Current Profile",
+      "description": "",
+      "type": "string"
+    },
+    "ExposureTime": {
+      "title": "Exposure Time",
+      "description": "The exposure time of the scan, ms",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "Generator": {
+    },
+    "GroundScan": {
+      "title": "Ground Scan",
+      "description": "Was the scan a ground scan with an empty capillary?",
+      "type": "boolean"
+    },
+    "Imaging": {
+      "title": "Imaging",
+      "description": "Was the scan an imaging scan?",
+      "type": "boolean"
+    },
+    "RingCurrent": {
+      "title": "Ring Current",
+      "description": "The ring current, mA",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "StartTime": {
+      "title": "Start Time",
+      "description": "The start time of the scan",
+      "type": "string"
+    },
+    "Strain": {
+      "title": "Strain",
+      "description": "The strain or force on the sample during the scan (units?)",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "Temperature": {
+      "title": "Temperature",
+      "description": "The temperature of the sample environment, in K",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    }
+  },
+  "examples": [
+    {
+      "BeamEnergy": -6305039478318694,
+      "Beamline": "DIAD",
+      "Detector": "Imaging Detector",
+      "DetectorBeaming": false,
+      "ElectricCurrentProfile": "dolor",
+      "ExposureTime": -6305039478318694,
+      "Generator": {
+      },
+      "GroundScan": false,
+      "Imaging": false,
+      "RingCurrent": -6305039478318694,
+      "StartTime": "dolor",
+      "Strain": -6305039478318694,
+      "Temperature": -6305039478318694
+    }
+  ]
+}

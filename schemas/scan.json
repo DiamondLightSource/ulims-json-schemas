@@ -1,0 +1,37 @@
+{
+    "$id": "urn:ulims:scan:1.0",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "description": "Standard ULIMS scan",
+    "type": "object",
+    "additionalProperties": false,
+    "title": "Scan",
+    "properties": {
+        "StartTime": {
+            "title": "Start Time",
+            "type": "string",
+            "format": "date-time",
+            "nxpath": "/entry/start_time"
+        },
+        "EndTime": {
+            "title": "End Time",
+            "type": "string",
+            "format": "date-time",
+            "nxpath": "/entry/end_time"
+        },
+        "ScanRequest": {
+            "title": "Scan Request",
+            "type": "string",
+            "nxpath": "/entry/diamond_scan/scan_request"
+        },
+        "ScanShape": {
+            "title": "Scan Shape",
+            "type": "string",
+            "nxpath": "/entry/diamond_scan/scan_shape"
+        }
+    },
+    "required": [
+        "StartTime",
+        "EndTime",
+        "ScanRequest"
+    ]
+}
