@@ -65,6 +65,14 @@
       "items": {
         "type": "boolean"
       }
+    },
+    "object": {
+      "title": "Object example",
+      "type": "array",
+      "description": "This is an object examples",
+      "items": {
+        "type": "object"
+      }
     }
   }
 }
