@@ -44,7 +44,8 @@
   },
   "examples": [
     {
-      "comment": "Example showing required data values in basic 1.0.0"
+      "comment": "Example showing required data values in basic 1.0.0",
+      "counter": 103
     },
     {
       "comment": "Example showing all values in basic 1.0.0 version.",
