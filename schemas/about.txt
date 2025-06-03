@@ -1,0 +1,3 @@
+Files MUST be valid json files or are ignored.
+
+Also, $ref in JSON files must resolve to $id in other JSON files.
