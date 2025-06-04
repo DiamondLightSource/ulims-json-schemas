@@ -1,13 +1,13 @@
 name: Build current.json different than main and commit
 on: 
-  pull_request:
+  push:
     branches:
       - '*'
       - '!main'
 
 jobs:
   run:
-    name: Build
+    name: Build and commit
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
