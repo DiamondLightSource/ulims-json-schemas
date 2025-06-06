@@ -123,7 +123,7 @@ A page of [common build or check issues](common_issues.md)
 starts with some tips and shows messages the jsonschema-tools
 can cause. Expand the message to see cause and fixes.
 
-### Stable and beta releases
+## Stable and beta releases
 
 The `$id` define releases and it must end with semantic
 numbers. Release 1.0.0 is the first stable release. Earlier
