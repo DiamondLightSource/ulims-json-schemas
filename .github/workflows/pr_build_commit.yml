@@ -2,9 +2,7 @@ name: Build current.json different than main and commit
 on: 
   pull_request:
     branches:
-      - 'main'
-    paths:
-      - '**.json'
+      - '*'
 
 jobs:
   run:
