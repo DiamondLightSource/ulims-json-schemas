@@ -42,21 +42,9 @@ There are six steps.
    basic and advanced schema in examples folder for pattern. Create
    the schema as required.
 
-> [!IMPORTANT]
-> For existing schema, changing the number
-> in **$id first** is recommended to avoid overwriting
-> existing releases. This is **very important** for schema
-> at 1.0.0 or newer being used by production systems. If
-> you forget to change the $id now, a cleanup via the advanced
-> method is required in many cases after step 6. Draft schema
-> can overwrite themselves.
-
 4. Commit current.json and in commit message mention:
-   the schema name, version change made to $id and
-   optionally what changed. The basic and advanced
-   examples have a changelog.md which is recommended
-   for most schema. Example commit message: "Bump schemaD to 1.0.1
-   using newer ref-schemaE 2.0.6"
+   the schema name and version used in $id. Example commit
+   message: "SchemaD release 0.0.1"
 
 5. Execute `git push origin your-schema-branch` and
    visit https://github.com/DiamondLightSource/ulims-json-schemas
@@ -122,6 +110,21 @@ There are five steps, in summary:
 A page of [common build or check issues](common_issues.md)
 starts with some tips and shows messages the jsonschema-tools
 can cause. Expand the message to see cause and fixes.
+
+## Updating a Schema
+
+Edit current.json with alterations required. Changing the
+number in $id first is recommended to avoid overwriting existing
+releases. This is very important for schema at 1.0.0 or newer
+being used by production systems. If you forget to change
+the $id now, a cleanup will be required in many cases
+after step 6. Draft schema can overwrite themselves.
+
+Commit current.json and in commit message mention: the schema
+name, version change made to $id and optionally what changed. The
+basic and advanced examples have a changelog.md which is recommended
+for most schema. Example commit message:
+ "Bump schemaD to 1.0.1 using newer ref-schemaE 2.0.6".
 
 ## Stable and beta releases
 
