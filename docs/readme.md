@@ -6,7 +6,7 @@ enables schema to reuse schema to avoid duplication.
 
 This document starts with introduction for people new
 to JSON schema. It explains adding a schema to the repository 
-and links to some tutorials. If you have not contributed
+via automatic and advanced methods. If you have not contributed
 previously the setup at the end of this page maybe required.
 
 ## New to JSON schema
@@ -60,19 +60,17 @@ There are six steps.
 6. The action "Build current.json different..." will run and
    appear on the GH `Actions` tab. A green tick will appear if
    everything builds and the check passes. Technically, this
-   action is doing `npm run build-main-diff` then commiting
-   new files to your branch.
+   action is doing `npm run build-main-diff` then **commiting
+   new files to your branch** which you can pull to see changes.
 
 > [!TIP]
 > The commit message "Schema(s) build and commit via GH action."
 > will appear if the alterations made in step 3 caused new files or
 > the "latest" softlinks to change.
 
-6. On workstation `git pull origin your-schema-branch` to get
-   the built files. This will usually pull four files which are
-   those that would have been created by running a build
-   command locally. If four files are not pulled the edited
-   current.json file probably has issues that need fixing.
+If a red cross appears then you can click on it to see
+more information about the failures. Check any
+failures in "Build current.json different than main and commit".
 
 If getting a lot of errors it is recommended to try running this 
 process locally. See the "Setup on a new machine" section for 
@@ -80,7 +78,7 @@ information on the set-up. Then run `npm run build-main-diff`
 and `npm run check` to test locally. It removes most delays 
 caused by steps 3-6 so build/check iterations can be quicker. 
 Once everything passes, repeat from step 4 and the action 
-will commit the other files.
+will commit the other four files a build generates.
 
 > [!TIP]
 > A green tick on action, then a pull and new local build should
