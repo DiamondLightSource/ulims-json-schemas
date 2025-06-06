@@ -2,7 +2,7 @@ name: Build current.json different than main and commit
 on: 
   pull_request:
     branches:
-      - '*'
+      - 'main'
 
 jobs:
   run:
@@ -11,7 +11,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
+        with:
+          ref: ${{ github.head_ref }}
       - name: use Node.js
         uses: actions/setup-node@v4
         with:
