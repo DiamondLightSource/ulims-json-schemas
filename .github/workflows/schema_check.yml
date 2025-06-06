@@ -1,6 +1,8 @@
 name: Schema check
 
-on: [push, pull_request]
+on:   
+  check_suite:
+    types: [completed]
 
 jobs:
   check:
