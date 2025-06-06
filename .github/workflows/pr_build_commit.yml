@@ -1,9 +1,8 @@
 name: Build current.json different than main and commit
 on: 
-  push:
+  pull_request:
     branches:
-      - '*'
-      - '!main'
+      - 'main'
 
 jobs:
   run:
