@@ -34,15 +34,22 @@ There are six steps.
    a new branch via `git checkout -b your-schema-branch`. One
    schema change per branch is recommended.
 
-2. Find the folder with the schema to be edited.
+2. Create a schema folder inside the appropriate folder
+   under `schemas` and instrument, for example `schemas/samples/p99/newschemaone`
 
-3. Edit current.json with alterations required. Changing
-   the number in **$id first** is recommended to avoid overwriting
-   existing releases. This is **very important** for schema
-   at 1.0.0 or newer being used by production systems. If
-   you forget to change the $id now, a cleanup will
-   be required in many cases after step 6. Draft schema
-   can overwrite themselves.
+3. Inside that new folder create a "current.json" file with "title"
+   and $id matching an exact pattern based on path in root. See
+   basic and advanced schema in examples folder for pattern. Create
+   the schema as required.
+
+> [!IMPORTANT]
+> For existing schema, changing the number
+> in **$id first** is recommended to avoid overwriting
+> existing releases. This is **very important** for schema
+> at 1.0.0 or newer being used by production systems. If
+> you forget to change the $id now, a cleanup via the advanced
+> method is required in many cases after step 6. Draft schema
+> can overwrite themselves.
 
 4. Commit current.json and in commit message mention:
    the schema name, version change made to $id and
@@ -86,7 +93,7 @@ will commit the other four files a build generates.
 > `git diff` output.
 
 
-## Adding a schema to the repository - advanced
+## Adding a schema to the repository - local build (advanced)
 
 There are five steps, in summary:
 
