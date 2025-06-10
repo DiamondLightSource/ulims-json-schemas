@@ -118,7 +118,7 @@ number in $id first is recommended to avoid overwriting existing
 releases. This is very important for schema at 1.0.0 or newer
 being used by production systems. If you forget to change
 the $id now, a cleanup will be required in many cases
-after step 6. Draft schema can overwrite themselves.
+after merging the changes. Draft schema can overwrite themselves.
 
 Commit current.json and in commit message mention: the schema
 name, version change made to $id and optionally what changed. The
