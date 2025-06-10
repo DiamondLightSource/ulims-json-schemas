@@ -6,7 +6,7 @@ enables schema to reuse schema to avoid duplication.
 
 This document starts with introduction for people new
 to JSON schema. It explains adding a schema to the repository 
-and links to some tutorials. If you have not contributed
+via automatic and advanced methods. If you have not contributed
 previously the setup at the end of this page maybe required.
 
 ## New to JSON schema
@@ -26,7 +26,62 @@ This repository supports both basic and advanced schema. A
 required check must pass for all schema. This is explained
 below and in the first tutorial.
 
-## Adding a schema to the repository
+## Adding a schema to the repository - automatic build (recommended)
+
+There are six steps.
+
+1. Make sure you have the latest origin main and have created
+   a new branch via `git checkout -b your-schema-branch`. One
+   schema change per branch is recommended.
+
+2. Create a schema folder inside the appropriate folder
+   under `schemas` and instrument, for example `schemas/samples/p99/newschemaone`
+
+3. Inside that new folder create a "current.json" file with "title"
+   and $id matching an exact pattern based on path in root. See
+   basic and advanced schema in examples folder for pattern. Create
+   the schema as required.
+
+4. Commit current.json and in commit message mention:
+   the schema name and version used in $id. Example commit
+   message: "SchemaD release 0.0.1"
+
+5. Execute `git push origin your-schema-branch` and
+   visit https://github.com/DiamondLightSource/ulims-json-schemas
+   to start a pull request on your branch. (Your push should
+   have appeared with a button to start a pull-request if you
+   are logged in.
+   
+6. The action "Build current.json different..." will run and
+   appear on the GH `Actions` tab. A green tick will appear if
+   everything builds and the check passes. Technically, this
+   action is doing `npm run build-main-diff` then **commiting
+   new files to your branch** which you can pull to see changes.
+
+> [!TIP]
+> The commit message "Schema(s) build and commit via GH action."
+> will appear if the alterations made in step 3 caused new files or
+> the "latest" softlinks to change.
+
+If a red cross appears then you can click on it to see
+more information about the failures. Check any
+failures in "Build current.json different than main and commit".
+
+If getting a lot of errors it is recommended to try running this 
+process locally. See the "Setup on a new machine" section for 
+information on the set-up. Then run `npm run build-main-diff` 
+and `npm run check` to test locally. It removes most delays 
+caused by steps 3-6 so build/check iterations can be quicker. 
+Once everything passes, repeat from step 4 and the action 
+will commit the other four files a build generates.
+
+> [!TIP]
+> A green tick on action, then a pull and new local build should
+> cause no schema related files to appear in a `git status` or
+> `git diff` output.
+
+
+## Adding a schema to the repository - local build (advanced)
 
 There are five steps, in summary:
 
@@ -56,7 +111,22 @@ A page of [common build or check issues](common_issues.md)
 starts with some tips and shows messages the jsonschema-tools
 can cause. Expand the message to see cause and fixes.
 
-### Stable and beta releases
+## Updating a Schema
+
+Edit current.json with alterations required. Changing the
+number in $id first is recommended to avoid overwriting existing
+releases. This is very important for schema at 1.0.0 or newer
+being used by production systems. If you forget to change
+the $id now, a cleanup will be required in many cases
+after merging the changes. Draft schema can overwrite themselves.
+
+Commit current.json and in commit message mention: the schema
+name, version change made to $id and optionally what changed. The
+basic and advanced examples have a changelog.md which is recommended
+for most schema. Example commit message:
+ "Bump schemaD to 1.0.1 using newer ref-schemaE 2.0.6".
+
+## Stable and beta releases
 
 The `$id` define releases and it must end with semantic
 numbers. Release 1.0.0 is the first stable release. Earlier
