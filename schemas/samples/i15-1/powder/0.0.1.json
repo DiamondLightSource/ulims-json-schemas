@@ -45,8 +45,8 @@
       "description": "Density of sample in g/cm^3",
       "type": "number",
       "default": 1,
-      "maximum": 9007199254740991,
-      "minimum": -9007199254740991
+      "maximum": 1000,
+      "minimum": 0
     },
     "packing_fraction": {
       "title": "Packing Fraction",
