@@ -5,7 +5,7 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
-      "SpaceGroups": {
+      "space_groups": {
         "type": "string",
         "enum": [
                 "P 1",

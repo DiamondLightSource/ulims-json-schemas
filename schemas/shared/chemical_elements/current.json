@@ -5,7 +5,7 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "ChemicalElements": {
+    "chemical_elements": {
       "type": "string",
       "enum": [ "H",
                 "He",
