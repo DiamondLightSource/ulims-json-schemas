@@ -5,76 +5,78 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
-        "CapillaryType": {
+        "capillary_type": {
             "title": "Capillary Type",
             "description": "The capillary type of this sample.",
             "type": "string"
         },
-        "CapillaryShape": {
+        "capillary_shape": {
             "title": "Capillary Shape",
             "description": "The shape of the capillary.",
-            "enum": ["Cylinder", "Cuboid"]
+            "enum": ["Cylinder", "Cuboid"],
+            "type": "string"
         },
-        "Height": {
+        "height": {
             "title": "Height",
             "description": "The height of the capillary",
             "type": "number"
         },
-        "Radius": {
+        "radius": {
             "title": "Radius",
             "description": "The radius of the capillary, if a cylinder",
             "type": "number"
         },
-        "Width": {
+        "width": {
             "title": "Width",
             "description": "The width of the capillary, if a cuboid",
             "type": "number"
         },
-        "Depth": {
+        "depth": {
             "title": "Depth",
             "description": "The depth of the capillary, if a cuboid",
             "type": "number"
         },
-        "AspectRatio": {
+        "aspect_ratio": {
             "title": "Aspect Ratio",
             "description": "The aspect ratio of the image",
             "type": "string"
         },
-        "ContainerComposition": {
+        "container_composition": {
             "title": "Container Composition",
             "description": "The composition of the container of the sample",
             "type": "string"
         },
-        "PhaseStructure": {
+        "phase_structure": {
             "title": "Phase Structure",
             "description": "The phase structure of the sample",
             "type": "string"
         },
-        "Form": {
+        "form": {
             "title": "Form",
             "description": "The form of the sample",
-            "enum": ["Powder", "Liquid", "Solid"]
+            "enum": ["Powder", "Liquid", "Solid"],
+            "type": "string"
         },
-        "PackingFraction": {
+        "packing_fraction": {
             "title": "Packing Fraction",
             "description": "The packing fraction of the sample in the capillary",
             "type": "number",
             "minimum": 0.0,
             "maximum": 1.0
         },
-        "Porosity": {
+        "porosity": {
             "title": "Porosity",
             "description": "The porosity of the sample",
             "type": "number",
             "minimum": 0.0,
             "maximum": 100.0
         },
-        "Temperature": {
+        "temperature": {
             "title": "Temperature",
             "description": "The temperature of the sample, in K",
             "type": "number"
         },
-        "ElectricCurrent": {
+        "electric_current": {
             "title": "Electric Current",
             "description": "The electric current through the sample, mA",
             "type": "number"

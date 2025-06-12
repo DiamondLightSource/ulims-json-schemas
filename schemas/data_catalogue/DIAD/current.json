@@ -5,63 +5,62 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
-        "Beamline": {
-            "const": "DIAD"
+        "beamline": {
+            "const": "DIAD",
+            "type": "string"
         },
-        "Generator": {
-
-        },
-        "RingCurrent": {
+        "ring_current": {
             "title": "Ring Current",
             "description": "The ring current, mA",
             "type": "number"
         },
-        "BeamEnergy": {
+        "beam_energy": {
             "title": "Beam Energy",
             "description": "The beam energy during the scan, keV",
             "type": "number"
         },
-        "Detector": {
+        "detector": {
             "title": "Detector",
             "description": "Which detector was used to collect the data",
-            "enum": ["Imaging Detector", "Diffraction Detector"]
+            "enum": ["Imaging Detector", "Diffraction Detector"],
+            "type": "string"
         },
-        "ExposureTime": {
+        "exposure_time": {
             "title": "Exposure Time",
             "description": "The exposure time of the scan, ms",
             "type": "number"
         },
-        "StartTime": {
+        "start_time": {
             "title": "Start Time",
             "description": "The start time of the scan",
             "type": "string"
         },
-        "Temperature": {
+        "temperature": {
             "title": "Temperature",
             "description": "The temperature of the sample environment, in K",
             "type": "number"
         },
-        "Strain": {
+        "strain": {
             "title": "Strain",
             "description": "The strain or force on the sample during the scan (units?)",
             "type": "number"
         },
-        "ElectricCurrentProfile": {
+        "electric_current_profile": {
             "title": "Electric Current Profile",
             "description": "",
             "type": "string"
         },
-        "GroundScan": {
+        "ground_scan": {
             "title": "Ground Scan",
             "description": "Was the scan a ground scan with an empty capillary?",
             "type": "boolean"
         },
-        "Imaging": {
+        "imaging": {
             "title": "Imaging",
             "description": "Was the scan an imaging scan?",
             "type": "boolean"
         },
-        "DetectorBeaming": {
+        "detector_beaming": {
             "title": "Beaming of Detector",
             "description": "Was there beaming of the detector? Only needed for Imaging scans",
             "type": "boolean"
