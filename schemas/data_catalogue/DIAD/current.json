@@ -1,0 +1,70 @@
+{
+    "$id": "/data_catalogue/DIAD/1.0.0",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "title": "data_catalogue/DIAD",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "Beamline": {
+            "const": "DIAD"
+        },
+        "Generator": {
+
+        },
+        "RingCurrent": {
+            "title": "Ring Current",
+            "description": "The ring current, mA",
+            "type": "number"
+        },
+        "BeamEnergy": {
+            "title": "Beam Energy",
+            "description": "The beam energy during the scan, keV",
+            "type": "number"
+        },
+        "Detector": {
+            "title": "Detector",
+            "description": "Which detector was used to collect the data",
+            "enum": ["Imaging Detector", "Diffraction Detector"]
+        },
+        "ExposureTime": {
+            "title": "Exposure Time",
+            "description": "The exposure time of the scan, ms",
+            "type": "number"
+        },
+        "StartTime": {
+            "title": "Start Time",
+            "description": "The start time of the scan",
+            "type": "string"
+        },
+        "Temperature": {
+            "title": "Temperature",
+            "description": "The temperature of the sample environment, in K",
+            "type": "number"
+        },
+        "Strain": {
+            "title": "Strain",
+            "description": "The strain or force on the sample during the scan (units?)",
+            "type": "number"
+        },
+        "ElectricCurrentProfile": {
+            "title": "Electric Current Profile",
+            "description": "",
+            "type": "string"
+        },
+        "GroundScan": {
+            "title": "Ground Scan",
+            "description": "Was the scan a ground scan with an empty capillary?",
+            "type": "boolean"
+        },
+        "Imaging": {
+            "title": "Imaging",
+            "description": "Was the scan an imaging scan?",
+            "type": "boolean"
+        },
+        "DetectorBeaming": {
+            "title": "Beaming of Detector",
+            "description": "Was there beaming of the detector? Only needed for Imaging scans",
+            "type": "boolean"
+        }
+    }
+}

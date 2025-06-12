@@ -1,0 +1,83 @@
+{
+    "$id": "/samples/DIAD/1.0.0",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "title": "samples/DIAD",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "CapillaryType": {
+            "title": "Capillary Type",
+            "description": "The capillary type of this sample.",
+            "type": "string"
+        },
+        "CapillaryShape": {
+            "title": "Capillary Shape",
+            "description": "The shape of the capillary.",
+            "enum": ["Cylinder", "Cuboid"]
+        },
+        "Height": {
+            "title": "Height",
+            "description": "The height of the capillary",
+            "type": "number"
+        },
+        "Radius": {
+            "title": "Radius",
+            "description": "The radius of the capillary, if a cylinder",
+            "type": "number"
+        },
+        "Width": {
+            "title": "Width",
+            "description": "The width of the capillary, if a cuboid",
+            "type": "number"
+        },
+        "Depth": {
+            "title": "Depth",
+            "description": "The depth of the capillary, if a cuboid",
+            "type": "number"
+        },
+        "AspectRatio": {
+            "title": "Aspect Ratio",
+            "description": "The aspect ratio of the image",
+            "type": "string"
+        },
+        "ContainerComposition": {
+            "title": "Container Composition",
+            "description": "The composition of the container of the sample",
+            "type": "string"
+        },
+        "PhaseStructure": {
+            "title": "Phase Structure",
+            "description": "The phase structure of the sample",
+            "type": "string"
+        },
+        "Form": {
+            "title": "Form",
+            "description": "The form of the sample",
+            "enum": ["Powder", "Liquid", "Solid"]
+        },
+        "PackingFraction": {
+            "title": "Packing Fraction",
+            "description": "The packing fraction of the sample in the capillary",
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0
+        },
+        "Porosity": {
+            "title": "Porosity",
+            "description": "The porosity of the sample",
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 100.0
+        },
+        "Temperature": {
+            "title": "Temperature",
+            "description": "The temperature of the sample, in K",
+            "type": "number"
+        },
+        "ElectricCurrent": {
+            "title": "Electric Current",
+            "description": "The electric current through the sample, mA",
+            "type": "number"
+        }
+    }
+}
