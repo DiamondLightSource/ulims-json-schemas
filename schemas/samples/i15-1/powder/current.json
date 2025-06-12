@@ -1,0 +1,58 @@
+{
+    "$id": "samples/i15-1/powder/0.0.1",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "samples/i15-1/powder",
+    "type": "object",
+    "required": [
+        "composition", "density",  "packing_fraction"
+    ],
+    "properties": {
+        "composition": {
+            "title": "Composition",
+            "type": "string",
+            "description": "Molar composition of sample",
+            "default": "C"
+        },
+        "density": {
+            "title": "Density",
+            "type": "number",
+            "description": "Density of sample in g/cm^3",
+            "default": 1.0,
+            "minimum": 0.0,
+            "maximum": 1000.0
+        },
+        "packing_fraction": {
+            "title": "Packing Fraction",
+            "type": "number",
+            "description": "Packing fraction of the sample in the capillary",
+            "default": 0.5,
+            "minimum": 0.0,
+            "maximum": 1.0
+        },
+        "capillary": {
+            "title": "Capillary",
+            "type": "string",
+            "enum": [
+                "bs1.0", 
+                "bs1.5",
+                "bs2.0",
+                "fq0.4",
+                "fq1.0",
+                "fq1.5",
+                "fq2.0",
+                "fq2.5",
+                "fq3.17",
+                "pi1.0",
+                "pi1.5",
+                "pi2.0"
+            ],
+            "description": "The capillary type of this sample."
+        },
+        "comment": {
+            "title": "Comment",
+            "type": "string",
+            "description": "Comment on this sample",
+            "default": ""
+        }
+    }
+}
