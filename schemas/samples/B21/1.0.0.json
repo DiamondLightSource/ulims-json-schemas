@@ -1,0 +1,95 @@
+{
+  "title": "samples/B21",
+  "$id": "/samples/B21/1.0.0",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "barcode": {
+      "title": "Barcode",
+      "description": "The sample's barcode",
+      "type": "string",
+      "maxLength": 8,
+      "pattern": "[A-Z]{4}-[0-9]{3}"
+    },
+    "buffer": {
+      "title": "Buffer",
+      "description": "Is this a buffer or a sample? For batch operational mode.",
+      "type": "boolean"
+    },
+    "buffer_id_ph": {
+      "title": "Buffer Identifier and pH",
+      "description": "The buffer identifier and pH, for HLPC operational mode",
+      "type": "string"
+    },
+    "buffer_position": {
+      "title": "Buffer Position Number",
+      "description": "Buffer position in the holder. Should be a number 1-9. For batch operational mode.",
+      "type": "number",
+      "maximum": 9,
+      "minimum": 1
+    },
+    "column": {
+      "title": "Column",
+      "description": "The beamline column used, for HLPC operational mode",
+      "type": "string",
+      "enum": [
+        "Shodex KW-402.5",
+        "Shodex KW-403",
+        "Shodex KW-404",
+        "Shodex KW-405",
+        "Superdex 200 Increase 3.2",
+        "Superose 6 Increase 3.2"
+      ]
+    },
+    "flow_rate": {
+      "title": "Flow Rate",
+      "description": "The flow rate for the sample, ml/min, for HLPC operational mode",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "notes": {
+      "title": "Notes",
+      "description": "Any further notes about the sample",
+      "type": "string"
+    },
+    "operational_mode": {
+      "title": "Operational Mode",
+      "description": "The operational mode of the beamline for this sample",
+      "type": "string",
+      "enum": [
+        "HPLC",
+        "Batch"
+      ]
+    },
+    "position": {
+      "title": "Sample Position",
+      "description": "The position of the sample in the holder",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "volume": {
+      "title": "Volume",
+      "description": "Volume of sample in uL. Minimum 25 for batch mode, 30 for HLPC mode.",
+      "type": "number",
+      "maximum": 100,
+      "minimum": 25
+    }
+  },
+  "examples": [
+    {
+      "barcode": "DDDD-111",
+      "buffer": false,
+      "buffer_id_ph": "dolor",
+      "buffer_position": 2.2,
+      "column": "Shodex KW-402.5",
+      "flow_rate": -6305039478318694,
+      "notes": "dolor",
+      "operational_mode": "HPLC",
+      "position": -6305039478318694,
+      "volume": 36.25
+    }
+  ]
+}
