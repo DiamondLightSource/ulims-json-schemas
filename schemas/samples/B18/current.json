@@ -5,22 +5,18 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "Name": {
-      "title": "Name",
-      "type": "string"
-    },
-    "ChemicalComposition": { 
+    "chemical_composition": { 
       "title": "Chemical Composition",
       "description": "Chemical composition of the sample, by percentage of chemical elements",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "Element": { 
+          "element": { 
             "title": "Element",
             "$ref": "/shared/chemical_elements/1.0.0"
           },
-          "Percentage": {
+          "percentage": {
             "title": "Percentage",
             "type": "number",
             "minValue": 0,
@@ -29,38 +25,39 @@
         }
       }      
     },
-    "QuantityOfSample": {
+    "quantity_of_sample": {
       "title": "Quantity Of Sample",
       "description": "Weight of Sample in Pellet in mg",
       "type": "number"
     },
-    "DiameterOfPellet": {
+    "diameter_of_pellet": {
       "title": "Diameter of Pellet",
       "type": "number"
     },
-    "PelletPreparation": {
+    "pellet_preparation": {
       "title": "Pellet Preparation",
       "description": "Description of the preparation process",
       "type": "string",
       "maxLength": 500
     },
-    "Binder": {
+    "binder": {
       "title": "Binder",
       "description": "The binder used for the pellet",
-      "enum": ["Cellulose", "Boron Nitride", "Polyethylene Glycol", "Other"]
+      "enum": ["Cellulose", "Boron Nitride", "Polyethylene Glycol", "Other"],
+      "type": "string"
     },
-    "OtherBinder": {
+    "other_binder": {
       "title": "Chemical Composition of Binder",
       "description": "Chemical composition of the binder, by percentage of chemical elements. Only needed if 'Other' selected.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "Element": { 
+          "element": { 
             "title": "Element",
             "$ref": "/shared/chemical_elements/1.0.0"
           },
-          "Percentage": {
+          "percentage": {
             "title": "Percentage",
             "type": "number",
             "minValue": 0,
@@ -69,25 +66,25 @@
         }
       } 
     },
-    "Sensitive": {
+    "sensitive": {
       "title": "Sensitive",
       "description": "Is the sample considered sensitive?",
       "type": "boolean"
     },
-    "PelletPosition": {
+    "pellet_position": {
       "title": "Pellet Position",
       "description": "The position of the pellet during the scan",
-      "enum": ["Free Standing", "Plastic Container", "Aluminium Bag", "Plastic Bag"]
+      "enum": ["Free Standing", "Plastic Container", "Aluminium Bag", "Plastic Bag"],
+      "type": "string"
     }
   },
   "required": [
-    "Name",
-    "ChemicalComposition",
-    "QuantityOfSample",  
-    "DiameterOfPellet",
-    "PelletPreparation",
-    "Binder",
-    "Sensitive",
-    "PelletPosition"
+    "chemical_composition",
+    "quantity_of_sample",  
+    "diameter_of_pellet",
+    "pellet_preparation",
+    "binder",
+    "sensitive",
+    "pellet_position"
   ]
 }
