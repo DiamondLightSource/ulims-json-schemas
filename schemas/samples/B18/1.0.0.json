@@ -5,19 +5,19 @@
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "Name",
-    "ChemicalComposition",
-    "QuantityOfSample",
-    "DiameterOfPellet",
-    "PelletPreparation",
-    "Binder",
-    "Sensitive",
-    "PelletPosition"
+    "chemical_composition",
+    "quantity_of_sample",
+    "diameter_of_pellet",
+    "pellet_preparation",
+    "binder",
+    "sensitive",
+    "pellet_position"
   ],
   "properties": {
-    "Binder": {
+    "binder": {
       "title": "Binder",
       "description": "The binder used for the pellet",
+      "type": "string",
       "enum": [
         "Cellulose",
         "Boron Nitride",
@@ -25,14 +25,14 @@
         "Other"
       ]
     },
-    "ChemicalComposition": {
+    "chemical_composition": {
       "title": "Chemical Composition",
       "description": "Chemical composition of the sample, by percentage of chemical elements",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "Element": {
+          "element": {
             "title": "Element",
             "$id": "/shared/chemical_elements/1.0.0",
             "$schema": "https://json-schema.org/draft-07/schema",
@@ -169,7 +169,7 @@
               }
             ]
           },
-          "Percentage": {
+          "percentage": {
             "title": "Percentage",
             "type": "number",
             "maximum": 9007199254740991,
@@ -180,24 +180,20 @@
         }
       }
     },
-    "DiameterOfPellet": {
+    "diameter_of_pellet": {
       "title": "Diameter of Pellet",
       "type": "number",
       "maximum": 9007199254740991,
       "minimum": -9007199254740991
     },
-    "Name": {
-      "title": "Name",
-      "type": "string"
-    },
-    "OtherBinder": {
+    "other_binder": {
       "title": "Chemical Composition of Binder",
       "description": "Chemical composition of the binder, by percentage of chemical elements. Only needed if 'Other' selected.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "Element": {
+          "element": {
             "title": "Element",
             "$id": "/shared/chemical_elements/1.0.0",
             "$schema": "https://json-schema.org/draft-07/schema",
@@ -334,7 +330,7 @@
               }
             ]
           },
-          "Percentage": {
+          "percentage": {
             "title": "Percentage",
             "type": "number",
             "maximum": 9007199254740991,
@@ -345,9 +341,10 @@
         }
       }
     },
-    "PelletPosition": {
+    "pellet_position": {
       "title": "Pellet Position",
       "description": "The position of the pellet during the scan",
+      "type": "string",
       "enum": [
         "Free Standing",
         "Plastic Container",
@@ -355,20 +352,20 @@
         "Plastic Bag"
       ]
     },
-    "PelletPreparation": {
+    "pellet_preparation": {
       "title": "Pellet Preparation",
       "description": "Description of the preparation process",
       "type": "string",
       "maxLength": 500
     },
-    "QuantityOfSample": {
+    "quantity_of_sample": {
       "title": "Quantity Of Sample",
       "description": "Weight of Sample in Pellet in mg",
       "type": "number",
       "maximum": 9007199254740991,
       "minimum": -9007199254740991
     },
-    "Sensitive": {
+    "sensitive": {
       "title": "Sensitive",
       "description": "Is the sample considered sensitive?",
       "type": "boolean"
@@ -376,29 +373,28 @@
   },
   "examples": [
     {
-      "Binder": "Cellulose",
-      "ChemicalComposition": [
+      "binder": "Cellulose",
+      "chemical_composition": [
         {
-          "Element": {
+          "element": {
             "chemical_elements": "Ar"
           },
-          "Percentage": -6305039478318694
+          "percentage": -6305039478318694
         }
       ],
-      "DiameterOfPellet": -6305039478318694,
-      "Name": "dolor",
-      "OtherBinder": [
+      "diameter_of_pellet": -6305039478318694,
+      "other_binder": [
         {
-          "Element": {
+          "element": {
             "chemical_elements": "Ar"
           },
-          "Percentage": -6305039478318694
+          "percentage": -6305039478318694
         }
       ],
-      "PelletPosition": "Free Standing",
-      "PelletPreparation": "dolor",
-      "QuantityOfSample": -6305039478318694,
-      "Sensitive": false
+      "pellet_position": "Free Standing",
+      "pellet_preparation": "dolor",
+      "quantity_of_sample": -6305039478318694,
+      "sensitive": false
     }
   ]
 }
