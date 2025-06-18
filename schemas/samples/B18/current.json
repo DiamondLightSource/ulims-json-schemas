@@ -6,24 +6,9 @@
   "additionalProperties": false,
   "properties": {
     "chemical_composition": { 
-      "title": "Chemical Composition",
-      "description": "Chemical composition of the sample, by percentage of chemical elements",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "element": { 
-            "title": "Element",
-            "$ref": "/shared/chemical_elements/1.0.0"
-          },
-          "percentage": {
-            "title": "Percentage",
-            "type": "number",
-            "minValue": 0,
-            "maxValue": 100
-         }
-        }
-      }      
+      "title": "Chemical Formula",
+      "description": "Chemical formula of the sample",
+      "type": "string"    
     },
     "quantity_of_sample": {
       "title": "Quantity Of Sample",
@@ -47,24 +32,9 @@
       "type": "string"
     },
     "other_binder": {
-      "title": "Chemical Composition of Binder",
-      "description": "Chemical composition of the binder, by percentage of chemical elements. Only needed if 'Other' selected.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "element": { 
-            "title": "Element",
-            "$ref": "/shared/chemical_elements/1.0.0"
-          },
-          "percentage": {
-            "title": "Percentage",
-            "type": "number",
-            "minValue": 0,
-            "maxValue": 100
-          }
-        }
-      } 
+      "title": "Chemical Formula of Binder",
+      "description": "Chemical formula of the binder. Only needed if 'Other' selected.",
+      "type": "string"
     },
     "sensitive": {
       "title": "Sensitive",
