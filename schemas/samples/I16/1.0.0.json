@@ -129,9 +129,9 @@
         }
       }
     },
-    "safety_precautions": {
-      "title": "Safety Precautions",
-      "description": "Safety precautions needed for the sample",
+    "sample_precautions": {
+      "title": "Sample Precautions",
+      "description": "Handling precautions needed for the sample",
       "type": "string"
     },
     "space_group": {
@@ -445,7 +445,7 @@
         "k": "(1, 1, 1)",
         "l": "(1, 1, 1)"
       },
-      "safety_precautions": "dolor",
+      "sample_precautions": "dolor",
       "space_group": {
         "space_groups": "A m a 2"
       },
