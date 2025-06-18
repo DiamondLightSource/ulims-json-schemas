@@ -93,9 +93,9 @@
                 }
             }
         },
-        "safety_precautions": {
-            "title": "Safety Precautions",
-            "description": "Safety precautions needed for the sample",
+        "sample_precautions": {
+            "title": "Sample Precautions",
+            "description": "Handling precautions needed for the sample",
             "type": "string"
         },
         "temperature": {
