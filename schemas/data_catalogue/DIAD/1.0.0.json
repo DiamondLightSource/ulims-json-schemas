@@ -12,10 +12,6 @@
       "maximum": 9007199254740991,
       "minimum": -9007199254740991
     },
-    "beamline": {
-      "type": "string",
-      "const": "DIAD"
-    },
     "detector": {
       "title": "Detector",
       "description": "Which detector was used to collect the data",
@@ -82,7 +78,6 @@
   "examples": [
     {
       "beam_energy": -6305039478318694,
-      "beamline": "DIAD",
       "detector": "Imaging Detector",
       "detector_beaming": false,
       "electric_current_profile": "dolor",
