@@ -5,10 +5,6 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
-        "beamline": {
-            "const": "DIAD",
-            "type": "string"
-        },
         "ring_current": {
             "title": "Ring Current",
             "description": "The ring current, mA",
