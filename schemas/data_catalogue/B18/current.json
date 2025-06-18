@@ -1,0 +1,121 @@
+{
+    "$id": "/data_catalogue/B18/1.0.0",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "title": "data_catalogue/B18",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "detectors": { 
+            "title": "Detectors",
+            "description": "The detector used for the scan, and the detection mode used",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "detector": {
+                        "title": "Detector",
+                        "description": "The name of the detector",
+                        "enum": ["Ionization Chambers", "Si Drift Fluorescence Detector", "Ge Fluorescence Detector", " Mythen XRD Detector", "Dispersive Emission Spectrometer"],
+                        "type": "string"
+                    },
+                    "detection_mode": {
+                        "title": "Detection Mode",
+                        "type": "string"
+                    }    
+                }
+            }
+        },
+        "element_measured": {
+            "title": "Element Measured",
+            "description": "Which element was measured",
+            "$ref": "/shared/chemical_elements/1.0.0"
+        },
+        "edge": {
+            "title": "edge",
+            "description": "",
+            "enum": ["K", "L1", "L2", "L3", "M1", "M2", "M3", "M4"],
+            "type": "string"
+        },
+        "scan_type": {
+            "title": "Scan type",
+            "description": "Was the scan continuous or stepwise",
+            "enum": ["Continuous", "Step"],
+            "type": "string"
+        },
+        "energy_min": {
+            "title": "Minimum Energy",
+            "description": "The minimum energy during the scan",
+            "type": "number"
+        },
+        "energy_max": {
+            "title": "Maximum Energy",
+            "description": "The maximum energy during the scan",
+            "type": "number"
+        },
+        "energy_resolution": {
+            "title": "Energy Resolution",
+            "description": "The energy resolution of the scan",
+            "type": "number"
+        },
+        "time_per_point": {
+            "title": "Total time per point",
+            "description": "The total time of scan or the acquisition time per point, in seconds",
+            "type": "number"
+        },
+        "temperature": {
+            "title": "Temperature",
+            "description": "The temperature of the heating or cooling device, in K",
+            "type": "number"
+        },
+        "beam_size": {
+            "title": "Beam Size",
+            "description": "The size of the beam",
+            "type": "number"
+        },
+        "motor_positions": { 
+            "title": "Motor Positions",
+            "description": "The positions of the motors moved for the scan",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "motor_name": { 
+                        "title": "Motor Name",
+                        "description": "The name of the motor",
+                        "type": "string"                        
+                    },
+                    "motor_position_x": {
+                        "title": "X Position",
+                        "description": "The x-position of the motor",
+                        "type": "number"
+                    },
+                    "motor_position_y": {
+                        "title": "Y Position",
+                        "description": "The y-position of the motor",
+                        "type": "number"
+                    }
+                }
+            }
+        },
+        "amplification": {
+            "title": "Amplification",
+            "description" : "For Transmission detection mode.",
+            "type": "number"
+        },
+        "detector_distance": {
+            "title": "Detector Distance",
+            "description" : "The distance of the detector, for Fluorescence detection mode",
+            "type": "number"
+        },
+        "region_of_interest_start": {
+            "title": "Region of Interest Start Value",
+            "description": "For Fluorescence detection mode",
+            "type": "number"
+        },
+        "region_of_interest_end": {
+            "title": "Region of Interest End Value",
+            "description": "For Fluorescence detection mode",
+            "type": "number"
+        }
+    }
+}
