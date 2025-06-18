@@ -1,3 +1,16 @@
+diff --git a/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js b/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js
+index acd2991..15da16e 100644
+--- a/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js
++++ b/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js
+@@ -212,7 +212,7 @@ function jsonStableStringifySchemaCompare(kv1, kv2) {
+  */
+ const serializers = {
+     yaml: (obj) => { return yaml.dump(obj, { sortKeys: schemaKeyCompare }); },
+-    json: (obj) => { return jsonStableStringify(obj, { cmp: jsonStableStringifySchemaCompare, space: 2 }); },
++    json: (obj) => { return jsonStableStringify(obj, { cmp: () => 1, space: 2 }); },
+ };
+ 
+ /**
 diff --git a/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js b/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js
 index b09a2c1..ea0d2c8 100644
 --- a/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js
