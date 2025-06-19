@@ -9,6 +9,28 @@
     "packing_fraction"
   ],
   "properties": {
+    "composition": {
+      "title": "Composition",
+      "description": "Molar composition of sample",
+      "type": "string",
+      "default": "C"
+    },
+    "density": {
+      "title": "Density",
+      "description": "Density of sample in g/cm^3",
+      "type": "number",
+      "default": 1,
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "packing_fraction": {
+      "title": "Packing Fraction",
+      "description": "Packing fraction of the sample in the capillary",
+      "type": "number",
+      "default": 0.5,
+      "minimum": 0,
+      "maximum": 1
+    },
     "capillary": {
       "title": "Capillary",
       "description": "The capillary type of this sample.",
@@ -33,37 +55,15 @@
       "description": "Comment on this sample",
       "type": "string",
       "default": ""
-    },
-    "composition": {
-      "title": "Composition",
-      "description": "Molar composition of sample",
-      "type": "string",
-      "default": "C"
-    },
-    "density": {
-      "title": "Density",
-      "description": "Density of sample in g/cm^3",
-      "type": "number",
-      "default": 1,
-      "maximum": 1000,
-      "minimum": 0
-    },
-    "packing_fraction": {
-      "title": "Packing Fraction",
-      "description": "Packing fraction of the sample in the capillary",
-      "type": "number",
-      "default": 0.5,
-      "maximum": 1,
-      "minimum": 0
     }
   },
   "examples": [
     {
-      "capillary": "bs1.5",
-      "comment": "",
       "composition": "C",
       "density": 1,
-      "packing_fraction": 0.5
+      "packing_fraction": 0.5,
+      "comment": "",
+      "capillary": "bs1.5"
     }
   ]
 }
