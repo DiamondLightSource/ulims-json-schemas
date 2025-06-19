@@ -39,17 +39,17 @@
           "format": "uuid",
           "maxLength": 40
         },
-        "is_confidential": {
-          "title": "Is Confidential",
-          "description": "True if entry is confidential, adding in basic 1.0.1",
-          "type": "boolean"
-        },
         "when": {
           "title": "When last reviewed",
           "description": "An ISO-8601 formatted timestamp added in basic 1.0.0",
           "type": "string",
           "format": "date-time",
           "maxLength": 128
+        },
+        "is_confidential": {
+          "title": "Is Confidential",
+          "description": "True if entry is confidential, adding in basic 1.0.1",
+          "type": "boolean"
         }
       },
       "examples": [
@@ -60,8 +60,8 @@
           "comment": "Example showing all values in basic 1.0.0 version.",
           "counter": 101,
           "ident": "3e4666bf-d5e5-4aa7-b8ce-cefe41c7568a",
-          "is_confidential": true,
-          "when": "2018-11-13T20:20:39+00:00"
+          "when": "2018-11-13T20:20:39+00:00",
+          "is_confidential": true
         }
       ]
     }
@@ -70,10 +70,10 @@
     {
       "basic_from": {
         "comment": "dolor",
-        "counter": 150,
         "ident": "22222222-2222-2222-2222-222222222222",
+        "when": "2021-01-01T00:00:00.0Z",
         "is_confidential": false,
-        "when": "2021-01-01T00:00:00.0Z"
+        "counter": 150
       }
     }
   ]
