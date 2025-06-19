@@ -1,14 +1,14 @@
 diff --git a/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js b/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js
-index acd2991..1e1591c 100644
+index acd2991..cc239f3 100644
 --- a/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js
 +++ b/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js
-@@ -212,7 +212,7 @@ function jsonStableStringifySchemaCompare(kv1, kv2) {
-  */
- const serializers = {
-     yaml: (obj) => { return yaml.dump(obj, { sortKeys: schemaKeyCompare }); },
--    json: (obj) => { return jsonStableStringify(obj, { cmp: jsonStableStringifySchemaCompare, space: 2 }); },
-+    json: (obj) => { return jsonStableStringify(obj, { cmp: () => 1, space: 2 }); }, // Do not sort JSON keys
- };
+@@ -192,7 +192,7 @@ function schemaKeyCompare(k1, k2) {
+     } else if (k2 in schemaKeySortOrder) {
+         return 1;
+     }
+-    return k1.localeCompare(k2);
++    return 1; // Do not sort any other keys
+ }
  
  /**
 diff --git a/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js b/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js
