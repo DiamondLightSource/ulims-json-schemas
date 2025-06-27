@@ -14,9 +14,10 @@ When fixing errors in general you will need to:
 
 2. Target the build: `npm run build-new path-to-current-dot-json`
    or `npm run build-modified` if changes were made to a
-   committed files. The `npm run build-all` command can
-   make it more difficult to track down some issues
-   and fix them.
+   committed files or `npm run build-main-diff` to build
+   current.json files different than origin/main branch.
+   The `npm run build-all` command can make it more difficult
+   to track down some issues and fix them.
 
 3. Do check via: `npm run check` 
 
@@ -106,5 +107,68 @@ important and so are each version. A schema folder
 moving in the schema root requires every $ref in
 every version to be updated to the new
 path. Build order is important for schema.
+
+</details>
+
+## Schema changed and $id number was not updated correctly
+
+All changes to a schema should start with the $id
+being edited in current.json to make at least
+a point release. It helps ensure all schema files do
+not change in uncontrolled ways which applications
+cannot be expected to detect or support. Changing
+the $id is not enforced, except in certain
+cases like these. If you see any of the following it means
+semantic version number in $id was wrong in some way.
+
+<details>
+<summary>check: "Requiredness of properties cannot be modified at: .required"</summary>
+
+### Major release is needed
+
+This occurs whenever a property become required and there has
+been least one previous release. The property may have
+been optional in an earlier release. 
+
+If the $id being fixed has been used as a $ref you should raise
+a Github issue labelled "major" that is mentioned on a PR. To
+find these do a search for the $id without semantic version and
+look for $ref lines. Add the $id of any current.json file found
+to the issue. Writers of those schema can decided when to do
+major release after your major release is merged to main.
+
+The fix below uses a pretend schema that had
+release 1.1.6 merged to main. Months later an attempt
+to make a property required caused this issue.
+
+1. Edit the $id value so the major version is increased
+   by one. Reset minor and point numbers to 0. So, an $id
+   ending with 1.1.7 would become 2.0.0 to fix the issue.
+
+2. The next build will create new files and update the
+   latest links. Two tips: do cleanup before push to
+   github; start a new branch if cleanup 3 is needed and
+   follow the recommendation.
+
+#### Cleanup is required before check will pass
+
+The first cleanup assumes a point release in $id was the
+first value altered before other changes. Cleanup 2 and 3
+are required when that recommendation was not applied.
+
+   * **Cleanup 1 (best case)** - Files built or committed with
+that release need deleting from branch. In example, files 1.1.7
+and 1.1.7.json were built and need deleting.
+
+   * **Cleanup 2 (okay case)** The files (already merged to
+main) **must** be restored to the branch. In example, changes
+to files 1.1.6 and 1.1.6.json need undoing.
+
+   * **Cleanup 3 (worse case)** when the $id being fixed has
+been used as a $ref and `build-new` command was not used. A
+git diff or commit log will show pairs of files that
+need restoring from main. Since
+each schema is seperate they will have different
+release numbers. Often quicker to start new branch.
 
 </details>
