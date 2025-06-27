@@ -172,3 +172,29 @@ each schema is seperate they will have different
 release numbers. Often quicker to start new branch.
 
 </details>
+
+
+## Issues with examples
+
+Every release of every scheme should have at least 1
+example tied to it and this issue occurs if any
+are now invalid. The build will add an example block
+to every file released which uses the example block from
+current.json or generates that block containing
+required properties. Can also occur when editing
+released json files manually.
+
+Example number and message can vary. Example 0 should
+always be the required properties. Example 1 is recommended
+to contain properties most commonly used by applications.
+
+<details>
+<summary>check: "example 0 did not validate against schema: data should NOT have additional properties"</summary>
+
+### Check typo or remove property from example
+
+**Fix:** Edit current.json and confirm the property in the example
+is defined by the schema. If not, remove from example or correct
+spelling mistake. Rebuild and check will pass again.
+
+</details>
