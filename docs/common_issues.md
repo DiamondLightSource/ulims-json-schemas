@@ -198,3 +198,21 @@ is defined by the schema. If not, remove from example or correct
 spelling mistake. Rebuild and check will pass again.
 
 </details>
+
+
+## Other issues
+
+<details>
+<summary>check: "unexpected end of the stream within a flow collection"</summary>
+
+### Restore the json file being referenced
+
+The probable cause is a current.json file has a $ref and the
+current.json or released files for that $ref has
+been left as invalid JSON. For example, it was edited my
+mistake whilst reviewing the properties being reused.
+
+**Fix:** Find the $id being referenced and restoring the required
+file or use IDE undo buffer.
+
+</details>
