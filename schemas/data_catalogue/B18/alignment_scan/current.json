@@ -1,0 +1,150 @@
+{
+    "$id": "/data_catalogue/B18/alignment_scan/1.0.0",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "title": "data_catalogue/B18/alignment_scan",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "detector_information": {
+            "title": "Detector Information",
+            "type": "object",
+            "properties": {
+                "detectors": { 
+                    "title": "Detectors",
+                    "description": "The detector used for the scan, and the detection mode used",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "detector": {
+                                "title": "Detector",
+                                "description": "The name of the detector",
+                                "enum": ["Ionization Chambers", "Si Drift Fluorescence Detector", "Ge Fluorescence Detector", " Mythen XRD Detector", "Dispersive Emission Spectrometer"],
+                                "type": "string"
+                            },
+                            "detection_mode": {
+                                "title": "Detection Mode",
+                                "type": "string"
+                            }    
+                        }
+                    }
+                },
+                "amplification": {
+                    "title": "Amplification",
+                    "description" : "For Transmission detection mode.",
+                    "type": "number"
+                },
+                "detector_distance": {
+                    "title": "Detector Distance",
+                    "description" : "The distance of the detector, for Fluorescence detection mode",
+                    "type": "number"
+                },
+                "region_of_interest_start": {
+                    "title": "Region of Interest Start Value",
+                    "description": "For Fluorescence detection mode",
+                    "type": "number"
+                },
+                "region_of_interest_end": {
+                    "title": "Region of Interest End Value",
+                    "description": "For Fluorescence detection mode",
+                    "type": "number"
+                }        
+            }
+        },
+        "element_measured": {
+            "title": "Element Measured",
+            "description": "Which element was measured",
+            "$ref": "/shared/chemical_elements/1.0.0"
+        },
+        "edge": {
+            "title": "edge",
+            "description": "",
+            "enum": ["K", "L1", "L2", "L3", "M1", "M2", "M3", "M4"],
+            "type": "string"
+        },
+        "optical_configurations": {
+            "title": "Optical Configurations",
+            "type": "object",
+            "properties": {
+                "beam_size": {
+                    "title": "Beam Size",
+                    "description": "The size of the beam",
+                    "type": "number"
+                },
+                "mirror_types": {
+                    "title": "Mirror Types",
+                    "type": "object",
+                    "properties": {
+                         "collimating_mirror": {
+                             "title": "Collimating Mirror",
+                             "enum" : ["311", "111"]
+                         },
+                        "focusing_mirror": {
+                             "title": "Double Toroidal V/H Focusing Mirror",
+                             "enum" : ["Pt", "Cr"]
+                         },
+                        "hr_mirror": {
+                             "title": "H/R Mirror",
+                             "enum" : ["Pt", "Ni"]
+                         }
+                    }
+                }
+            }
+        },
+        "motor_positions": { 
+            "title": "Motor Positions",
+            "description": "The positions of the motors moved for the scan",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "motor_name": { 
+                        "title": "Motor Name",
+                        "description": "The name of the motor",
+                        "type": "string"                        
+                    },
+                    "motor_position_x_start": {
+                        "title": "X Position at Start of Scan",
+                        "description": "The x-position of the motor at the start of the scan",
+                        "type": "number"
+                    },
+                   "motor_position_x_end": {
+                        "title": "X Position at End of Scan",
+                        "description": "The x-position of the motor at the end of the scan",
+                        "type": "number"
+                    },
+                   "motor_position_x_step": {
+                        "title": "X Position Step Size",
+                        "description": "The step size for the x-position of the motor",
+                        "type": "number"
+                    },
+                    "motor_position_y_start": {
+                        "title": "Y Position at Start of Scan",
+                        "description": "The y-position of the motor at the start of the scan",
+                        "type": "number"
+                    },
+                    "motor_position_y_end": {
+                        "title": "Y Position at End of Scan",
+                        "description": "The y-position of the motor at the end of the scan",
+                        "type": "number"
+                    },
+                    "motor_position_y_step": {
+                        "title": "Y Position Step Size",
+                        "description": "The step size for the y-position of the motor",
+                        "type": "number"
+                    }
+                }
+            }
+        },
+        "temperature": {
+            "title": "Temperature",
+            "description": "The temperature of the heating or cooling device, in K",
+            "type": "number"
+        },
+        "comments": {
+            "title": "Comments",
+            "description": "Any further comments",
+            "type": "string"
+        }
+    }
+}
