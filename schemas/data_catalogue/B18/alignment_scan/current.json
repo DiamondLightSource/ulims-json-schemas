@@ -77,15 +77,18 @@
                     "properties": {
                          "collimating_mirror": {
                              "title": "Collimating Mirror",
-                             "enum" : ["311", "111"]
+                             "enum" : ["311", "111"],
+                             "type" : "string"
                          },
                         "focusing_mirror": {
                              "title": "Double Toroidal V/H Focusing Mirror",
-                             "enum" : ["Pt", "Cr"]
+                             "enum" : ["Pt", "Cr"],
+                             "type" : "string"
                          },
                         "hr_mirror": {
                              "title": "H/R Mirror",
-                             "enum" : ["Pt", "Ni"]
+                             "enum" : ["Pt", "Ni"],
+                             "type" : "string"
                          }
                     }
                 }

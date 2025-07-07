@@ -66,8 +66,7 @@
     "quantity_of_sample",  
     "diameter_of_pellet",
     "pellet_preparation",
-    "binder",
     "sensitive",
-    "pellet_position"
+    "pellet_holder"
   ]
 }
