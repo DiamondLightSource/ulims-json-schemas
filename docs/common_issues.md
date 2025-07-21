@@ -130,13 +130,6 @@ This occurs whenever a property become required and there has
 been least one previous release. The property may have
 been optional in an earlier release. 
 
-If the $id being fixed has been used as a $ref you should raise
-a Github issue labelled "major" that is mentioned on a PR. To
-find these do a search for the $id without semantic version and
-look for $ref lines. Add the $id of any current.json file found
-to the issue. Writers of those schema can decided when to do
-major release after your major release is merged to main.
-
 The fix below uses a pretend schema that had
 release 1.1.6 merged to main. Months later an attempt
 to make a property required caused this issue.
@@ -170,6 +163,15 @@ git diff or commit log will show pairs of files that
 need restoring from main. Since
 each schema is seperate they will have different
 release numbers. Often quicker to start new branch.
+
+#### Informing schema writers about this major release
+
+If the $id being fixed has been used as a $ref you should raise
+a Github issue labelled "major" that is mentioned on a PR. To
+find these do a search for the $id without semantic version and
+look for $ref lines. Add the $id of any current.json file found
+to the issue. Writers of those schema can decided when to do
+major release after your major release is merged to main.
 
 </details>
 
