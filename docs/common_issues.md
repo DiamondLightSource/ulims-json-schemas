@@ -13,7 +13,7 @@ When fixing errors in general you will need to:
 1. Edit current.json file to fix problem as highlighted below.
 
 2. Target the build: `npm run build-new path-to-current-dot-json`
-   or `npm run build-modified` if changes were made to a
+   or `npm run build-modified` if changes were made to
    committed files or `npm run build-main-diff` to build
    current.json files different than origin/main branch.
    The `npm run build-all` command can make it more difficult
@@ -178,9 +178,7 @@ major release after your major release is merged to main.
 
 ## Issues with examples
 
-Every release of every scheme should have at least 1
-example tied to it and this issue occurs if any
-are now invalid. The build will add an example block
+The build will add an example block
 to every file released which uses the example block from
 current.json or generates that block containing
 required properties. Can also occur when editing
@@ -214,7 +212,7 @@ current.json or released files for that $ref has
 been left as invalid JSON. For example, it was edited my
 mistake whilst reviewing the properties being reused.
 
-**Fix:** Find the $id being referenced and restoring the required
-file or use IDE undo buffer.
+**Fix:** Find the $id being referenced and restore the required
+file to its original state.
 
 </details>
