@@ -129,39 +129,17 @@ This occurs whenever a property become required and there has
 been least one previous release. The property may have
 been optional in an earlier release. 
 
-The fix below uses a pretend schema that had
-release 1.1.6 merged to main. Months later an attempt
-to make a property required caused this issue.
+**Fix:** Increment the major version in current.json
+and do a cleanup before the next build and check.
 
-1. Edit the $id value so the major version is increased
-   by one. Reset minor and point numbers to 0. So, an $id
-   ending with 1.1.7 would become 2.0.0 to fix the issue.
-
-2. The next build will create new files and update the
-   latest links. Two tips: do cleanup before push to
-   github; start a new branch if cleanup 3 is needed and
-   follow the recommendation.
-
-#### Cleanup is required before check will pass
-
-The first cleanup assumes a point release in $id was the
-first value altered before other changes. Cleanup 2 and 3
-are required when that recommendation was not applied.
-
-   * **Cleanup 1 (best case)** - Files built or committed with
-that release need deleting from branch. In example, files 1.1.7
-and 1.1.7.json were built and need deleting.
-
-   * **Cleanup 2 (okay case)** The files (already merged to
-main) **must** be restored to the branch. In example, changes
-to files 1.1.6 and 1.1.6.json need undoing.
-
-   * **Cleanup 3 (worse case)** when the $id being fixed has
-been used as a $ref and `build-new` command was not used. A
-git diff or commit log will show pairs of files that
-need restoring from main. Since
-each schema is seperate they will have different
-release numbers. Often quicker to start new branch.
+**Example:** If this issue occurred after editing $id
+from `1.1.6` to `1.1.7` the value to
+fix issue is `2.0.0`. The cleanup needs to delete
+new files not in origin/main branch. In this case,
+the file 1.1.7.json needs removing. If $id had
+not been changed (prior to causing this
+issue) the file 1.1.6.json would have been
+overwritten and needs restoring from main.
 
 #### Informing schema writers about this major release
 
