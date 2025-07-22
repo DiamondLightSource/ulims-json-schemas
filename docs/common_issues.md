@@ -13,8 +13,7 @@ When fixing errors in general you will need to:
 1. Edit current.json file to fix problem as highlighted below.
 
 2. Target the build: `npm run build-new path-to-current-dot-json`
-   or `npm run build-modified` if changes were made to
-   committed files or `npm run build-main-diff` to build
+   for single file or  `npm run build-main-diff` to build
    current.json files different than origin/main branch.
    The `npm run build-all` command can make it more difficult
    to track down some issues and fix them.
