@@ -161,9 +161,7 @@ current.json or generates that block containing
 required properties. Can also occur when editing
 released json files manually.
 
-Example number and message can vary. Example 0 should
-always be the required properties. Example 1 is recommended
-to contain properties most commonly used by applications.
+Example number and message can vary.
 
 <details>
 <summary>check: "example 0 did not validate against schema: data should NOT have additional properties"</summary>
