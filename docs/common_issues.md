@@ -161,8 +161,8 @@ current.json or generates that block containing
 required properties. Can also occur when editing
 released json files manually.
 
-Example number and message can vary.
-
+The number and message can vary but the solution
+is similar in most cases.
 <details>
 <summary>check: "example 0 did not validate against schema: data should NOT have additional properties"</summary>
 
