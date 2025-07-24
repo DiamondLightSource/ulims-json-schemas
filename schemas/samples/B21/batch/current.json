@@ -1,0 +1,53 @@
+{
+    "$id": "/samples/B21/batch/1.0.0",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "title": "samples/B21/batch",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "barcode": {
+            "title": "Barcode",
+            "description": "The sample's barcode",
+            "type": "string",
+            "pattern": "[A-Z]{4}-[0-9]{3}" ,
+            "maxLength": 8
+        },
+        "position": {
+            "title": "Sample Position",
+            "description": "The position of the sample in the holder",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9
+        },
+        "volume": {
+            "title": "Volume",
+            "description": "Volume of sample in uL",
+            "type": "number",
+            "minimum": 25.0,
+            "maximum": 100.0
+        },
+        "buffer": {
+            "title": "Buffer",
+            "description": "Is this a buffer or a sample?",
+            "type": "boolean"
+        },
+        "buffer_position": {
+            "title": "Buffer Position Number",
+            "description": "Buffer position in the holder. Should be a number 1-9.",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 9
+        },
+        "notes": {
+            "title": "Notes",
+            "description": "Any further notes about the sample",
+            "type": "string"
+        }
+    },
+    "required": [
+        "barcode",
+        "position",
+        "volume",
+        "buffer_position"
+    ]
+}
