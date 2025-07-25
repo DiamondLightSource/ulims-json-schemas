@@ -141,15 +141,6 @@ not been changed (prior to causing this
 issue) the file 1.1.6.json would have been
 overwritten and needs restoring from main.
 
-#### Informing schema writers about this major release
-
-If the $id being fixed has been used as a $ref you should raise
-a Github issue labelled "major" that is mentioned on a PR. To
-find these do a search for the $id without semantic version and
-look for $ref lines. Add the $id of any current.json file found
-to the issue. Writers of those schema can decided when to do
-major release after your major release is merged to main.
-
 </details>
 
 
