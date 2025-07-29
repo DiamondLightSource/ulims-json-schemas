@@ -1,0 +1,289 @@
+{
+  "title": "data_catalogue/B21/solution_scattering",
+  "$id": "/data_catalogue/B21/solution_scattering/1.0.0",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "experiment_type": {
+      "title": "Experiment Type",
+      "description": "The experiment type",
+      "type": "string"
+    },
+    "instrument": {
+      "title": "Instrument",
+      "type": "object",
+      "properties": {
+        "wavelength": {
+          "title": "Wavelength",
+          "description": "The wavelength of the beam, Angstroms",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "energy": {
+          "title": "Energy",
+          "description": "The energy of the beam, keV",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "beam_centre_x": {
+          "title": "Beam Centre X",
+          "description": "The beam centre x-axis value, mm",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "beam_centre_y": {
+          "title": "Beam Centre Y",
+          "description": "The beam centre y-axis value, mm",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "sample_detector_distance": {
+          "title": "Sample to Detector Distance",
+          "description": "The distance of the sample from the detector, mm",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "detector": {
+          "title": "Detector",
+          "description": "The detector used for the scan",
+          "type": "string"
+        },
+        "source": {
+          "title": "Source",
+          "description": "The source of the beam",
+          "type": "string"
+        },
+        "flux": {
+          "title": "Flux",
+          "description": "The flux of the beam, photons per second",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "q_range": {
+          "title": "Q Range",
+          "description": "The Q range, per Angstrom",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "q_definition": {
+          "title": "Q Definition",
+          "description": "The Q definition",
+          "type": "string"
+        },
+        "intensity_units": {
+          "title": "Intensity Units",
+          "description": "The intensity units",
+          "type": "string"
+        },
+        "capillary_diameter": {
+          "title": "Capillary Diameter",
+          "description": "The capillary diameter, mm",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "beam_size_at_sample": {
+          "title": "Beam Size at Sample",
+          "description": "The size of the beam at the sample",
+          "type": "string"
+        },
+        "beam_size_at_detector": {
+          "title": "Beam Size at Detector (focus)",
+          "description": "The size of the beam at the detector",
+          "type": "string"
+        }
+      }
+    },
+    "data_reduction_software": {
+      "title": "Data Reduction Software",
+      "description": "The data reduction software used",
+      "type": "string"
+    },
+    "data_analysis_software": {
+      "title": "Data Analysis Software",
+      "description": "The data analysis software used",
+      "type": "string"
+    },
+    "exposure_temperature": {
+      "title": "Exposure Temperature",
+      "description": "The exposure temperature, C. Used unless specified per sample.",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    },
+    "zero_angle_scattering": {
+      "title": "Zero Angle Scattering",
+      "type": "object",
+      "properties": {
+        "real_i0": {
+          "title": "Real I(0)",
+          "description": "Real space value of zero-angle scattering",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "real_i0_error": {
+          "title": "Real I(0) Error",
+          "description": "Error (+-) of the real space value of zero-angle scattering",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "reciprocal_i0": {
+          "title": "Reciprocal I(0)",
+          "description": "Reciprocal space value of zero-angle scattering",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "reciprocal_i0_error": {
+          "title": "Reciprocal I(0) Error",
+          "description": "Error (+-) of the reciprocal space value of zero-angle scattering",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "percentage_difference": {
+          "title": "Percentage Difference",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        }
+      }
+    },
+    "radius_of_gyration": {
+      "title": "Radius of Gyration",
+      "type": "object",
+      "properties": {
+        "real_i0": {
+          "title": "Real Rg",
+          "description": "Real space value of the radius of gyration",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "real_i0_error": {
+          "title": "Real Rg Error",
+          "description": "Error (+-) of the real space value of the radius of gyration",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "reciprocal_i0": {
+          "title": "Reciprocal Rg",
+          "description": "Reciprocal space value of the radius of gyration",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "reciprocal_i0_error": {
+          "title": "Reciprocal Rg Error",
+          "description": "Error (+-) of the reciprocal space value of the radius of gyration",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "percentage_difference": {
+          "title": "Percentage Difference",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        }
+      }
+    },
+    "volume": {
+      "title": "Volume",
+      "description": "The volume, Angstroms^3",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    },
+    "porod_exponent": {
+      "title": "Porod Exponent",
+      "description": "The Porod exponent for the scan",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    },
+    "dmax": {
+      "title": "Dmax",
+      "description": "The maximum dimension of the particle, Angstroms",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    },
+    "resolution_limit_qmax": {
+      "title": "Resolution Limit, qmax",
+      "description": "The resolution limit of the scan, per Angstrom",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    },
+    "resolution_limit_d_spacing": {
+      "title": "Resolution Limit d-spacing",
+      "description": "The smallest discernable distance in the sample, Angstroms",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    },
+    "resolution_limit_bin_width": {
+      "title": "Resolution Limit Bin Width",
+      "description": "The bin width, Angstroms",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    }
+  },
+  "examples": [
+    {
+      "radius_of_gyration": {
+        "real_i0_error": -6305039478318694,
+        "reciprocal_i0": -6305039478318694,
+        "reciprocal_i0_error": -6305039478318694,
+        "percentage_difference": -6305039478318694,
+        "real_i0": -6305039478318694
+      },
+      "data_reduction_software": "dolor",
+      "data_analysis_software": "dolor",
+      "exposure_temperature": -6305039478318694,
+      "zero_angle_scattering": {
+        "real_i0_error": -6305039478318694,
+        "reciprocal_i0": -6305039478318694,
+        "reciprocal_i0_error": -6305039478318694,
+        "percentage_difference": -6305039478318694,
+        "real_i0": -6305039478318694
+      },
+      "experiment_type": "dolor",
+      "volume": -6305039478318694,
+      "porod_exponent": -6305039478318694,
+      "dmax": -6305039478318694,
+      "resolution_limit_qmax": -6305039478318694,
+      "resolution_limit_d_spacing": -6305039478318694,
+      "resolution_limit_bin_width": -6305039478318694,
+      "instrument": {
+        "source": "dolor",
+        "beam_size_at_detector": "dolor",
+        "beam_centre_y": -6305039478318694,
+        "sample_detector_distance": -6305039478318694,
+        "detector": "dolor",
+        "wavelength": -6305039478318694,
+        "flux": -6305039478318694,
+        "q_range": -6305039478318694,
+        "q_definition": "dolor",
+        "intensity_units": "dolor",
+        "capillary_diameter": -6305039478318694,
+        "beam_size_at_sample": "dolor",
+        "energy": -6305039478318694,
+        "beam_centre_x": -6305039478318694
+      }
+    }
+  ]
+}

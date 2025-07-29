@@ -1,0 +1,78 @@
+{
+  "title": "samples/B21/hplc",
+  "$id": "/samples/B21/hplc/1.0.0",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "barcode",
+    "position",
+    "volume",
+    "buffer_id_ph",
+    "column"
+  ],
+  "properties": {
+    "barcode": {
+      "title": "Barcode",
+      "description": "The sample's barcode",
+      "type": "string",
+      "pattern": "[A-Z]{4}-[0-9]{3}",
+      "maxLength": 8
+    },
+    "position": {
+      "title": "Sample Position",
+      "description": "The position of the sample in the holder",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9
+    },
+    "flow_rate": {
+      "title": "Flow Rate",
+      "description": "The flow rate for the sample, ml/min",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 9007199254740991
+    },
+    "volume": {
+      "title": "Volume",
+      "description": "Volume of sample in uL",
+      "type": "number",
+      "minimum": 30,
+      "maximum": 100
+    },
+    "buffer_id_ph": {
+      "title": "Buffer Identifier and pH",
+      "description": "The buffer identifier and pH",
+      "type": "string"
+    },
+    "column": {
+      "title": "Column",
+      "description": "The beamline column used",
+      "type": "string",
+      "enum": [
+        "Shodex KW-402.5",
+        "Shodex KW-403",
+        "Shodex KW-404",
+        "Shodex KW-405",
+        "Superdex 200 Increase 3.2",
+        "Superose 6 Increase 3.2"
+      ]
+    },
+    "notes": {
+      "title": "Notes",
+      "description": "Any further notes about the sample",
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "barcode": "DDDD-111",
+      "position": 2,
+      "volume": 40.5,
+      "buffer_id_ph": "dolor",
+      "column": "Shodex KW-402.5",
+      "notes": "dolor",
+      "flow_rate": 1351079888211148.5
+    }
+  ]
+}
