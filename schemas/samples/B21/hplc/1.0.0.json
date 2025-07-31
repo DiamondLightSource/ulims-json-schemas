@@ -35,7 +35,7 @@
     },
     "volume": {
       "title": "Volume",
-      "description": "Volume of sample in uL",
+      "description": "Volume of sample in μL",
       "type": "number",
       "minimum": 30,
       "maximum": 100
