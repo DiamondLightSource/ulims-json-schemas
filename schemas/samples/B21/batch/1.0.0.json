@@ -20,14 +20,14 @@
     },
     "position": {
       "title": "Sample Position",
-      "description": "The position of the sample in the holder",
+      "description": "The position of the sample in the holder. Should be a number 1-9.",
       "type": "integer",
       "minimum": 1,
       "maximum": 9
     },
     "volume": {
       "title": "Volume",
-      "description": "Volume of sample in uL",
+      "description": "Volume of sample in μL",
       "type": "number",
       "minimum": 25,
       "maximum": 100

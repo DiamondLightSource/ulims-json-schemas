@@ -16,7 +16,7 @@
       "properties": {
         "wavelength": {
           "title": "Wavelength",
-          "description": "The wavelength of the beam, Angstroms",
+          "description": "The wavelength of the beam, Å",
           "type": "number",
           "minimum": -9007199254740991,
           "maximum": 9007199254740991
@@ -68,7 +68,7 @@
         },
         "q_range": {
           "title": "Q Range",
-          "description": "The Q range, per Angstrom",
+          "description": "The Q range, per Å",
           "type": "number",
           "minimum": -9007199254740991,
           "maximum": 9007199254740991
@@ -201,7 +201,7 @@
     },
     "volume": {
       "title": "Volume",
-      "description": "The volume, Angstroms^3",
+      "description": "The volume, Å³",
       "type": "number",
       "minimum": -9007199254740991,
       "maximum": 9007199254740991
@@ -215,28 +215,28 @@
     },
     "dmax": {
       "title": "Dmax",
-      "description": "The maximum dimension of the particle, Angstroms",
+      "description": "The maximum dimension of the particle, Å",
       "type": "number",
       "minimum": -9007199254740991,
       "maximum": 9007199254740991
     },
     "resolution_limit_qmax": {
       "title": "Resolution Limit, qmax",
-      "description": "The resolution limit of the scan, per Angstrom",
+      "description": "The resolution limit of the scan, Å⁻¹",
       "type": "number",
       "minimum": -9007199254740991,
       "maximum": 9007199254740991
     },
     "resolution_limit_d_spacing": {
       "title": "Resolution Limit d-spacing",
-      "description": "The smallest discernable distance in the sample, Angstroms",
+      "description": "The smallest discernable distance in the sample, Å",
       "type": "number",
       "minimum": -9007199254740991,
       "maximum": 9007199254740991
     },
     "resolution_limit_bin_width": {
       "title": "Resolution Limit Bin Width",
-      "description": "The bin width, Angstroms",
+      "description": "The bin width, Å",
       "type": "number",
       "minimum": -9007199254740991,
       "maximum": 9007199254740991
