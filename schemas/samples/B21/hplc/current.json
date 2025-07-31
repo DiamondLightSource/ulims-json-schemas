@@ -1,6 +1,6 @@
 {
     "$id": "/samples/B21/hplc/1.0.0",
-    "$schema": "https://json-schema.org/draft-07/schema",
+    "$schema": "https://json-schema.org/draft-07/schema#",
     "title": "samples/B21/hplc",
     "type": "object",
     "additionalProperties": false,
