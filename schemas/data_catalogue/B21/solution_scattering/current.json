@@ -112,7 +112,7 @@
                 },
                 "real_i0_error": {
                     "title": "Real I(0) Error",
-                    "description": "Error (+-) of the real space value of zero-angle scattering",
+                    "description": "Error (±) of the real space value of zero-angle scattering",
                     "type": "number"
                 },
                 "reciprocal_i0": {
@@ -122,7 +122,7 @@
                 },
                 "reciprocal_i0_error": {
                     "title": "Reciprocal I(0) Error",
-                    "description": "Error (+-) of the reciprocal space value of zero-angle scattering",
+                    "description": "Error (±) of the reciprocal space value of zero-angle scattering",
                     "type": "number"
                 },
                 "percentage_difference": {
@@ -142,7 +142,7 @@
                 },
                 "real_i0_error": {
                     "title": "Real Rg Error",
-                    "description": "Error (+-) of the real space value of the radius of gyration",
+                    "description": "Error (±) of the real space value of the radius of gyration",
                     "type": "number"
                 },
                 "reciprocal_i0": {
@@ -152,7 +152,7 @@
                 },
                 "reciprocal_i0_error": {
                     "title": "Reciprocal Rg Error",
-                    "description": "Error (+-) of the reciprocal space value of the radius of gyration",
+                    "description": "Error (±) of the reciprocal space value of the radius of gyration",
                     "type": "number"
                 },
                 "percentage_difference": {
