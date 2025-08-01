@@ -1,0 +1,375 @@
+{
+  "title": "data_catalogue/B18/alignment_scan",
+  "$id": "/data_catalogue/B18/alignment_scan/1.0.0",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "comments": {
+      "title": "Comments",
+      "description": "Any further comments",
+      "type": "string"
+    },
+    "detector_information": {
+      "title": "Detector Information",
+      "type": "object",
+      "properties": {
+        "amplification": {
+          "title": "Amplification",
+          "description": "For Transmission detection mode.",
+          "type": "number",
+          "maximum": 9007199254740991,
+          "minimum": -9007199254740991
+        },
+        "detector_distance": {
+          "title": "Detector Distance",
+          "description": "The distance of the detector, for Fluorescence detection mode",
+          "type": "number",
+          "maximum": 9007199254740991,
+          "minimum": -9007199254740991
+        },
+        "detectors": {
+          "title": "Detectors",
+          "description": "The detector used for the scan, and the detection mode used",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "detection_mode": {
+                "title": "Detection Mode",
+                "type": "string"
+              },
+              "detector": {
+                "title": "Detector",
+                "description": "The name of the detector",
+                "type": "string",
+                "enum": [
+                  "Ionization Chambers",
+                  "Si Drift Fluorescence Detector",
+                  "Ge Fluorescence Detector",
+                  " Mythen XRD Detector",
+                  "Dispersive Emission Spectrometer"
+                ]
+              }
+            }
+          }
+        },
+        "region_of_interest_end": {
+          "title": "Region of Interest End Value",
+          "description": "For Fluorescence detection mode",
+          "type": "number",
+          "maximum": 9007199254740991,
+          "minimum": -9007199254740991
+        },
+        "region_of_interest_start": {
+          "title": "Region of Interest Start Value",
+          "description": "For Fluorescence detection mode",
+          "type": "number",
+          "maximum": 9007199254740991,
+          "minimum": -9007199254740991
+        }
+      }
+    },
+    "edge": {
+      "title": "edge",
+      "description": "",
+      "type": "string",
+      "enum": [
+        "K",
+        "L1",
+        "L2",
+        "L3",
+        "M1",
+        "M2",
+        "M3",
+        "M4"
+      ]
+    },
+    "element_measured": {
+      "title": "Element Measured",
+      "description": "Which element was measured",
+      "$id": "/shared/chemical_elements/1.0.0",
+      "$schema": "https://json-schema.org/draft-07/schema",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "chemical_elements": {
+          "type": "string",
+          "enum": [
+            "H",
+            "He",
+            "Li",
+            "Be",
+            "B",
+            "C",
+            "N",
+            "O",
+            "F",
+            "Ne",
+            "Na",
+            "Mg",
+            "Al",
+            "Si",
+            "P",
+            "S",
+            "Cl",
+            "Ar",
+            "K",
+            "Ca",
+            "Sc",
+            "Ti",
+            "V",
+            "Cr",
+            "Mn",
+            "Fe",
+            "Co",
+            "Ni",
+            "Cu",
+            "Zn",
+            "Ga",
+            "Ge",
+            "As",
+            "Se",
+            "Br",
+            "Kr",
+            "Rb",
+            "Sr",
+            "Y",
+            "Zr",
+            "Nb",
+            "Mo",
+            "Tc",
+            "Ru",
+            "Rh",
+            "Pd",
+            "Ag",
+            "Cd",
+            "In",
+            "Sn",
+            "Sb",
+            "Te",
+            "I",
+            "Xe",
+            "Cs",
+            "Ba",
+            "La",
+            "Ce",
+            "Pr",
+            "Nd",
+            "Pm",
+            "Sm",
+            "Eu",
+            "Gd",
+            "Tb",
+            "Dy",
+            "Ho",
+            "Er",
+            "Tm",
+            "Yb",
+            "Lu",
+            "Hf",
+            "Ta",
+            "W ",
+            "Re",
+            "Os",
+            "Ir",
+            "Pt",
+            "Au",
+            "Hg",
+            "Tl",
+            "Pb",
+            "Bi",
+            "Po",
+            "At",
+            "Rn",
+            "Fr",
+            "Ra",
+            "Ac",
+            "Th",
+            "Pa",
+            "U",
+            "Np",
+            "Pu",
+            "Am",
+            "Cm",
+            "Bk",
+            "Cf",
+            "Es",
+            "Fm",
+            "Md",
+            "No",
+            "Lr",
+            "Rf",
+            "Db",
+            "Sg",
+            "Bh",
+            "Hs",
+            "Mt",
+            "Ds",
+            "Rg",
+            "Cn",
+            "Nh",
+            "Fl",
+            "Mc",
+            "Lv",
+            "Ts",
+            "Og"
+          ]
+        }
+      },
+      "examples": [
+        {
+          "chemical_elements": "Ar"
+        }
+      ]
+    },
+    "motor_positions": {
+      "title": "Motor Positions",
+      "description": "The positions of the motors moved for the scan",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "motor_name": {
+            "title": "Motor Name",
+            "description": "The name of the motor",
+            "type": "string"
+          },
+          "motor_position_x_end": {
+            "title": "X Position at End of Scan",
+            "description": "The x-position of the motor at the end of the scan",
+            "type": "number",
+            "maximum": 9007199254740991,
+            "minimum": -9007199254740991
+          },
+          "motor_position_x_start": {
+            "title": "X Position at Start of Scan",
+            "description": "The x-position of the motor at the start of the scan",
+            "type": "number",
+            "maximum": 9007199254740991,
+            "minimum": -9007199254740991
+          },
+          "motor_position_x_step": {
+            "title": "X Position Step Size",
+            "description": "The step size for the x-position of the motor",
+            "type": "number",
+            "maximum": 9007199254740991,
+            "minimum": -9007199254740991
+          },
+          "motor_position_y_end": {
+            "title": "Y Position at End of Scan",
+            "description": "The y-position of the motor at the end of the scan",
+            "type": "number",
+            "maximum": 9007199254740991,
+            "minimum": -9007199254740991
+          },
+          "motor_position_y_start": {
+            "title": "Y Position at Start of Scan",
+            "description": "The y-position of the motor at the start of the scan",
+            "type": "number",
+            "maximum": 9007199254740991,
+            "minimum": -9007199254740991
+          },
+          "motor_position_y_step": {
+            "title": "Y Position Step Size",
+            "description": "The step size for the y-position of the motor",
+            "type": "number",
+            "maximum": 9007199254740991,
+            "minimum": -9007199254740991
+          }
+        }
+      }
+    },
+    "optical_configurations": {
+      "title": "Optical Configurations",
+      "type": "object",
+      "properties": {
+        "beam_size": {
+          "title": "Beam Size",
+          "description": "The size of the beam",
+          "type": "number",
+          "maximum": 9007199254740991,
+          "minimum": -9007199254740991
+        },
+        "mirror_types": {
+          "title": "Mirror Types",
+          "type": "object",
+          "properties": {
+            "collimating_mirror": {
+              "title": "Collimating Mirror",
+              "type": "string",
+              "enum": [
+                "311",
+                "111"
+              ]
+            },
+            "focusing_mirror": {
+              "title": "Double Toroidal V/H Focusing Mirror",
+              "type": "string",
+              "enum": [
+                "Pt",
+                "Cr"
+              ]
+            },
+            "hr_mirror": {
+              "title": "H/R Mirror",
+              "type": "string",
+              "enum": [
+                "Pt",
+                "Ni"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "temperature": {
+      "title": "Temperature",
+      "description": "The temperature of the heating or cooling device, in K",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    }
+  },
+  "examples": [
+    {
+      "comments": "dolor",
+      "detector_information": {
+        "amplification": -6305039478318694,
+        "detector_distance": -6305039478318694,
+        "detectors": [
+          {
+            "detection_mode": "dolor",
+            "detector": "Ionization Chambers"
+          }
+        ],
+        "region_of_interest_end": -6305039478318694,
+        "region_of_interest_start": -6305039478318694
+      },
+      "edge": "L1",
+      "element_measured": {
+        "chemical_elements": "Ar"
+      },
+      "motor_positions": [
+        {
+          "motor_name": "dolor",
+          "motor_position_x_end": -6305039478318694,
+          "motor_position_x_start": -6305039478318694,
+          "motor_position_x_step": -6305039478318694,
+          "motor_position_y_end": -6305039478318694,
+          "motor_position_y_start": -6305039478318694,
+          "motor_position_y_step": -6305039478318694
+        }
+      ],
+      "optical_configurations": {
+        "beam_size": -6305039478318694,
+        "mirror_types": {
+          "collimating_mirror": "311",
+          "focusing_mirror": "Pt",
+          "hr_mirror": "Pt"
+        }
+      },
+      "temperature": -6305039478318694
+    }
+  ]
+}
