@@ -1,7 +1,7 @@
 {
-    "$id": "/data_catalogue/B21/solution_scattering/1.0.0",
+    "$id": "/data_catalogue/b21/solution_scattering/1.0.0",
     "$schema": "https://json-schema.org/draft-07/schema#",
-    "title": "data_catalogue/B21/solution_scattering",
+    "title": "data_catalogue/b21/solution_scattering",
     "type": "object",
     "additionalProperties": false,
     "properties": {

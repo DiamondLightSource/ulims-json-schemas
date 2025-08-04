@@ -1,7 +1,7 @@
 {
-    "$id": "/samples/B21/batch/1.0.0",
+    "$id": "/samples/b21/hplc/1.0.0",
     "$schema": "https://json-schema.org/draft-07/schema#",
-    "title": "samples/B21/batch",
+    "title": "samples/b21/hplc",
     "type": "object",
     "additionalProperties": false,
     "properties": {
@@ -19,24 +19,29 @@
             "minimum": 1,
             "maximum": 9
         },
+        "flow_rate": {
+            "title": "Flow Rate",
+            "description": "The flow rate for the sample, ml/min",
+            "type": "number",
+            "minimum": 0
+        },
         "volume": {
             "title": "Volume",
             "description": "Volume of sample in μL",
             "type": "number",
-            "minimum": 25.0,
+            "minimum": 30.0,
             "maximum": 100.0
         },
-        "buffer": {
-            "title": "Buffer",
-            "description": "Is this a buffer or a sample?",
-            "type": "boolean"
+        "buffer_id_ph": {
+            "title": "Buffer Identifier and pH",
+            "description": "The buffer identifier and pH",
+            "type": "string"
         },
-        "buffer_position": {
-            "title": "Buffer Position Number",
-            "description": "Buffer position in the holder. Should be a number 1-9.",
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 9
+        "column": {
+            "title": "Column",
+            "description": "The beamline column used",
+            "enum": ["Shodex KW-402.5", "Shodex KW-403", "Shodex KW-404", "Shodex KW-405", "Superdex 200 Increase 3.2", "Superose 6 Increase 3.2"],
+            "type": "string"
         },
         "notes": {
             "title": "Notes",
@@ -45,9 +50,10 @@
         }
     },
     "required": [
-        "barcode",
-        "position",
-        "volume",
-        "buffer_position"
+      "barcode",
+      "position",
+      "volume",
+      "buffer_id_ph",
+      "column"
     ]
 }
