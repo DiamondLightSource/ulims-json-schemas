@@ -13,7 +13,6 @@
       "check": "mocha test/jsonschema",
       "build-new": "jsonschema-tools materialize",
       "build-all": "jsonschema-tools materialize-all",
-      "build-modified": "for fn in $(git diff --name-only --diff-filter=ACM -- *current.yaml *current.json); do npm run build-new $fn; done",
       "build-main-diff": "for fn in $(git diff --name-only origin/main --diff-filter=ACM -- *current.json); do npm run build-new $fn; done"
     },
     "keywords": [

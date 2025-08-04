@@ -13,10 +13,10 @@ When fixing errors in general you will need to:
 1. Edit current.json file to fix problem as highlighted below.
 
 2. Target the build: `npm run build-new path-to-current-dot-json`
-   or `npm run build-modified` if changes were made to a
-   committed files. The `npm run build-all` command can
-   make it more difficult to track down some issues
-   and fix them.
+   for single file or  `npm run build-main-diff` to build
+   current.json files different than origin/main branch.
+   The `npm run build-all` command can make it more difficult
+   to track down some issues and fix them.
 
 3. Do check via: `npm run check` 
 
@@ -106,5 +106,79 @@ important and so are each version. A schema folder
 moving in the schema root requires every $ref in
 every version to be updated to the new
 path. Build order is important for schema.
+
+</details>
+
+## Schema changed and $id number was not updated correctly
+
+All changes to a schema should start with the $id
+being edited in current.json to make at least
+a point release. It helps ensure all schema files do
+not change in uncontrolled ways which applications
+cannot be expected to detect or support. Changing
+the $id is not enforced, except in certain
+cases like these. If you see any of the following it means
+semantic version number in $id was wrong in some way.
+
+<details>
+<summary>check: "Requiredness of properties cannot be modified at: .required"</summary>
+
+### Major release is needed
+
+This occurs whenever a property become required and there has
+been least one previous release. The property may have
+been optional in an earlier release. 
+
+**Fix:** Increment the major version in current.json
+and do a cleanup before the next build and check.
+
+**Example:** If this issue occurred after editing $id
+from `1.1.6` to `1.1.7` the value to
+fix issue is `2.0.0`. The cleanup needs to delete
+new files not in origin/main branch. In this case,
+the file 1.1.7.json needs removing. If $id had
+not been changed (prior to causing this
+issue) the file 1.1.6.json would have been
+overwritten and needs restoring from main.
+
+</details>
+
+
+## Issues with examples
+
+The build will add an example block
+to every file released which uses the example block from
+current.json or generates that block containing
+required properties. Can also occur when editing
+released json files manually.
+
+The number and message can vary but the solution
+is similar in most cases.
+<details>
+<summary>check: "example 0 did not validate against schema: data should NOT have additional properties"</summary>
+
+### Check typo or remove property from example
+
+**Fix:** Edit current.json and confirm the property in the example
+is defined by the schema. If not, remove from example or correct
+spelling mistake. Rebuild and check will pass again.
+
+</details>
+
+
+## Other issues
+
+<details>
+<summary>check: "unexpected end of the stream within a flow collection"</summary>
+
+### Restore the json file being referenced
+
+The probable cause is a current.json file has a $ref and the
+current.json or released files for that $ref has
+been left as invalid JSON. For example, it was edited my
+mistake whilst reviewing the properties being reused.
+
+**Fix:** Find the $id being referenced and restore the required
+file to its original state.
 
 </details>
