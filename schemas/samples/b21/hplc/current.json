@@ -4,6 +4,13 @@
     "title": "samples/b21/hplc",
     "type": "object",
     "additionalProperties": false,
+    "required": [
+      "barcode",
+      "position",
+      "volume",
+      "buffer_id_ph",
+      "column"
+    ],
     "properties": {
         "barcode": {
             "title": "Barcode",
@@ -48,12 +55,5 @@
             "description": "Any further notes about the sample",
             "type": "string"
         }
-    },
-    "required": [
-      "barcode",
-      "position",
-      "volume",
-      "buffer_id_ph",
-      "column"
-    ]
+    }
 }
