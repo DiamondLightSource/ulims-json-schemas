@@ -128,8 +128,11 @@ for most schema. Example commit message:
 
 ## Stable and beta releases
 
-The `$id` define releases and it must end with semantic
-numbers. Release 1.0.0 is the first stable release. Earlier
+The `$id` define releases. They should be normalised to
+lowercase so folder names need to be the same. It must
+end with semantic numbers.
+
+Release 1.0.0 is the first stable release. Earlier
 numbers are beta releases that could change without notice.
 
 * Changes to a stable schema should be point releases unless

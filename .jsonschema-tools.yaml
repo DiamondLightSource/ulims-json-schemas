@@ -6,3 +6,5 @@ contentTypes: [json]
 
 logLevel: info
 shouldGenerateExample: true
+
+shouldSymlinkLatest: false
