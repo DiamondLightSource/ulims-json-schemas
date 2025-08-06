@@ -1,25 +1,36 @@
-
 {
-  "$id": "/samples/B18/pellet/1.0.0",
+  "title": "samples/b18/pellet",
+  "$id": "/samples/b18/pellet/1.0.0",
   "$schema": "https://json-schema.org/draft-07/schema",
-  "title": "samples/B18/pellet",
   "type": "object",
   "additionalProperties": false,
+  "required": [
+    "chemical_composition",
+    "quantity_of_sample",
+    "diameter_of_pellet",
+    "pellet_preparation",
+    "sensitive",
+    "pellet_holder"
+  ],
   "properties": {
-    "chemical_composition": { 
+    "chemical_composition": {
       "title": "Chemical Formula",
       "description": "Chemical formula of the sample, where known, or best possible description, e.g. 5% copper, etc.",
-      "type": "string"    
+      "type": "string"
     },
     "quantity_of_sample": {
       "title": "Quantity Of Sample",
       "description": "Weight of Sample in Pellet in mg",
-      "type": "number"
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
     },
     "diameter_of_pellet": {
       "title": "Diameter of Pellet",
       "description": "The diameter of the pellet, in mm",
-      "type": "number"
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
     },
     "pellet_preparation": {
       "title": "Pellet Preparation",
@@ -29,13 +40,18 @@
     },
     "binder_info": {
       "title": "Binder Information",
-      "type" : "object",
+      "type": "object",
       "properties": {
         "binder": {
           "title": "Binder",
           "description": "The binder used for the pellet",
-          "enum": ["Cellulose", "Boron Nitride", "Polyethylene Glycol", "Other"],
-          "type": "string"
+          "type": "string",
+          "enum": [
+            "Cellulose",
+            "Boron Nitride",
+            "Polyethylene Glycol",
+            "Other"
+          ]
         },
         "other_binder": {
           "title": "Chemical Formula of Binder",
@@ -52,21 +68,33 @@
     "pellet_holder": {
       "title": "Pellet Holder",
       "description": "The holder of the pellet during the scan",
-      "enum": ["Free Standing", "Plastic Container", "Aluminium Bag", "Plastic Bag"],
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "Free Standing",
+        "Plastic Container",
+        "Aluminium Bag",
+        "Plastic Bag"
+      ]
     },
-    "chemical_treatments": { 
+    "chemical_treatments": {
       "title": "History of Chemical Treatments",
       "description": "The history of chemical treatments done on the sample",
-      "type": "string"    
+      "type": "string"
     }
   },
-  "required": [
-    "chemical_composition",
-    "quantity_of_sample",  
-    "diameter_of_pellet",
-    "pellet_preparation",
-    "sensitive",
-    "pellet_holder"
+  "examples": [
+    {
+      "chemical_composition": "dolor",
+      "quantity_of_sample": -6305039478318694,
+      "diameter_of_pellet": -6305039478318694,
+      "pellet_preparation": "dolor",
+      "sensitive": false,
+      "pellet_holder": "Free Standing",
+      "chemical_treatments": "dolor",
+      "binder_info": {
+        "other_binder": "dolor",
+        "binder": "Cellulose"
+      }
+    }
   ]
 }
