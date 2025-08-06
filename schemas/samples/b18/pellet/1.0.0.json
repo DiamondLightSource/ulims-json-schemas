@@ -20,17 +20,17 @@
     },
     "quantity_of_sample": {
       "title": "Quantity Of Sample",
-      "description": "Weight of Sample in Pellet in mg",
+      "description": "Weight of Sample in Pellet, mg",
       "type": "number",
-      "minimum": -9007199254740991,
-      "maximum": 9007199254740991
+      "minimum": 0,
+      "maximum": 1000000
     },
     "diameter_of_pellet": {
       "title": "Diameter of Pellet",
-      "description": "The diameter of the pellet, in mm",
+      "description": "The diameter of the pellet, mm",
       "type": "number",
-      "minimum": -9007199254740991,
-      "maximum": 9007199254740991
+      "minimum": 0,
+      "maximum": 1000
     },
     "pellet_preparation": {
       "title": "Pellet Preparation",
@@ -85,8 +85,8 @@
   "examples": [
     {
       "chemical_composition": "dolor",
-      "quantity_of_sample": -6305039478318694,
-      "diameter_of_pellet": -6305039478318694,
+      "quantity_of_sample": 150000,
+      "diameter_of_pellet": 150,
       "pellet_preparation": "dolor",
       "sensitive": false,
       "pellet_holder": "Free Standing",

@@ -24,7 +24,7 @@
                   "Ionization Chambers",
                   "Si Drift Fluorescence Detector",
                   "Ge Fluorescence Detector",
-                  " Mythen XRD Detector",
+                  "Mythen XRD Detector",
                   "Dispersive Emission Spectrometer"
                 ]
               },
@@ -37,14 +37,14 @@
         },
         "amplification": {
           "title": "Amplification",
-          "description": "For Transmission detection mode.",
+          "description": "For Transmission detection mode",
           "type": "number",
           "minimum": -9007199254740991,
           "maximum": 9007199254740991
         },
         "detector_distance": {
           "title": "Detector Distance",
-          "description": "The distance of the detector, for Fluorescence detection mode",
+          "description": "The distance of the detector, for Fluorescence detection mode, ??",
           "type": "number",
           "minimum": -9007199254740991,
           "maximum": 9007199254740991
@@ -224,7 +224,7 @@
       "properties": {
         "beam_size": {
           "title": "Beam Size",
-          "description": "The size of the beam",
+          "description": "The size of the beam, ??",
           "type": "number",
           "minimum": -9007199254740991,
           "maximum": 9007199254740991
@@ -320,7 +320,7 @@
     },
     "temperature": {
       "title": "Temperature",
-      "description": "The temperature of the heating or cooling device, in K",
+      "description": "The temperature of the heating or cooling device, K",
       "type": "number",
       "minimum": -9007199254740991,
       "maximum": 9007199254740991
