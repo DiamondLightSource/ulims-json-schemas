@@ -7,5 +7,5 @@ contentTypes: [json]
 logLevel: info
 shouldGenerateExample: true
 
-shouldSymlinkExtensionless: true
+shouldSymlinkExtensionless: false
 shouldSymlinkLatest: false
