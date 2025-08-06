@@ -218,7 +218,7 @@
         "M4"
       ]
     },
-    "scan_paramaters": {
+    "scan_parameters": {
       "title": "Scan Parameters",
       "type": "object",
       "properties": {
@@ -290,8 +290,7 @@
               "enum": [
                 "Pt",
                 "Cr"
-              ],
-              "null": null
+              ]
             },
             "hr_mirror": {
               "title": "H/R Mirror",
@@ -351,7 +350,7 @@
     {
       "temperature": -6305039478318694,
       "edge": "L1",
-      "scan_paramaters": {
+      "scan_parameters": {
         "energy_min": -6305039478318694,
         "energy_max": -6305039478318694,
         "energy_resolution": -6305039478318694,
