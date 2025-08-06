@@ -77,7 +77,7 @@
             ],
             "type": "string"
         },
-        "scan_paramaters": {
+        "scan_parameters": {
             "title": "Scan Parameters",
             "type": "object",
             "properties": {
@@ -139,7 +139,6 @@
                                 "Pt",
                                 "Cr"
                             ],
-                            ,
                             "type": "string"
                         },
                         "hr_mirror": {
