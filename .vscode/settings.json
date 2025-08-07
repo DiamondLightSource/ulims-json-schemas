@@ -2,13 +2,13 @@
     "json.schemas": [
         {
         "fileMatch": [
-            "**/data/examples/basic/*.json"
+            "**/data_examples/basic/*.json"
         ],
-        "url": "https://raw.githubusercontent.com/DiamondLightSource/ulims-json-schemas/refs/heads/main/schemas/examples/basic/1.0.1.json"
+        "url": "./schemas/examples/basic/1.0.1.json"
     },
       {
         "fileMatch": [
-            "**/data/examples/advanced/*.json"
+            "**/data_examples/advanced/*.json"
         ],
         "url": "./schemas/examples/advanced/1.0.1.json"
     }
