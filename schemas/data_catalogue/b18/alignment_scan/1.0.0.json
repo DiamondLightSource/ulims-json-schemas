@@ -6,7 +6,8 @@
   "additionalProperties": false,
   "properties": {
     "detector_information": {
-      "title": "data_catalogue/b18/_detector_information",
+      "title": "Detector Information",
+      "description": "Which element was measured",
       "$id": "/data_catalogue/b18/_detector_information/1.0.0",
       "$schema": "https://json-schema.org/draft-07/schema",
       "type": "object",
@@ -221,7 +222,7 @@
       ]
     },
     "edge": {
-      "title": "shared/absorption_edges",
+      "title": "Edge",
       "$id": "/shared/absorption_edges/1.0.0",
       "$schema": "https://json-schema.org/draft-07/schema",
       "type": "object",
