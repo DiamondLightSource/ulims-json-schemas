@@ -83,7 +83,8 @@
       ]
     },
     "element_measured": {
-      "title": "shared/chemical_elements",
+      "title": "Element Measured",
+      "description": "Which element was measured",
       "$id": "/shared/chemical_elements/1.0.0",
       "$schema": "https://json-schema.org/draft-07/schema",
       "type": "object",
