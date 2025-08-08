@@ -1,0 +1,77 @@
+{
+  "title": "data_catalogue/b18/_detector_information",
+  "$id": "/data_catalogue/b18/_detector_information/1.0.0",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "detectors": {
+      "title": "Detectors",
+      "description": "The detector used for the scan, and the detection mode used",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "detector": {
+            "title": "Detector",
+            "description": "The name of the detector",
+            "type": "string",
+            "enum": [
+              "Ionization Chambers",
+              "Si Drift Fluorescence Detector",
+              "Ge Fluorescence Detector",
+              "Mythen XRD Detector",
+              "Dispersive Emission Spectrometer"
+            ]
+          },
+          "detection_mode": {
+            "title": "Detection Mode",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "amplification": {
+      "title": "Amplification",
+      "description": "For Transmission detection mode",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    },
+    "detector_distance": {
+      "title": "Detector Distance",
+      "description": "The distance of the detector, for Fluorescence detection mode, ??",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    },
+    "region_of_interest_start": {
+      "title": "Region of Interest Start Value",
+      "description": "For Fluorescence detection mode",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    },
+    "region_of_interest_end": {
+      "title": "Region of Interest End Value",
+      "description": "For Fluorescence detection mode",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    }
+  },
+  "examples": [
+    {
+      "amplification": -6305039478318694,
+      "detector_distance": -6305039478318694,
+      "region_of_interest_start": -6305039478318694,
+      "region_of_interest_end": -6305039478318694,
+      "detectors": [
+        {
+          "detection_mode": "dolor",
+          "detector": "Ionization Chambers"
+        }
+      ]
+    }
+  ]
+}

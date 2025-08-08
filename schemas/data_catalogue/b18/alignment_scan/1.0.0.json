@@ -6,8 +6,11 @@
   "additionalProperties": false,
   "properties": {
     "detector_information": {
-      "title": "Detector Information",
+      "title": "data_catalogue/b18/_detector_information",
+      "$id": "/data_catalogue/b18/_detector_information/1.0.0",
+      "$schema": "https://json-schema.org/draft-07/schema",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "detectors": {
           "title": "Detectors",
@@ -63,7 +66,21 @@
           "minimum": -9007199254740991,
           "maximum": 9007199254740991
         }
-      }
+      },
+      "examples": [
+        {
+          "amplification": -6305039478318694,
+          "detector_distance": -6305039478318694,
+          "region_of_interest_start": -6305039478318694,
+          "region_of_interest_end": -6305039478318694,
+          "detectors": [
+            {
+              "detection_mode": "dolor",
+              "detector": "Ionization Chambers"
+            }
+          ]
+        }
+      ]
     },
     "element_measured": {
       "title": "Element Measured",
@@ -204,18 +221,32 @@
       ]
     },
     "edge": {
-      "title": "edge",
-      "description": "",
-      "type": "string",
-      "enum": [
-        "K",
-        "L1",
-        "L2",
-        "L3",
-        "M1",
-        "M2",
-        "M3",
-        "M4"
+      "title": "shared/absorption_edges",
+      "$id": "/shared/absorption_edges/1.0.0",
+      "$schema": "https://json-schema.org/draft-07/schema",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "edge": {
+          "title": "edge",
+          "description": "",
+          "type": "string",
+          "enum": [
+            "K",
+            "L1",
+            "L2",
+            "L3",
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ]
+        }
+      },
+      "examples": [
+        {
+          "edge": "L1"
+        }
       ]
     },
     "optical_configurations": {
@@ -334,7 +365,9 @@
   "examples": [
     {
       "comments": "dolor",
-      "edge": "L1",
+      "edge": {
+        "edge": "L1"
+      },
       "optical_configurations": {
         "mirror_types": {
           "focusing_mirror": "Pt",

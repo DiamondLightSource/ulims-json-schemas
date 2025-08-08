@@ -6,76 +6,15 @@
     "additionalProperties": false,
     "properties": {
         "detector_information": {
-            "title": "Detector Information",
-            "type": "object",
-            "properties": {
-                "detectors": {
-                    "title": "Detectors",
-                    "description": "The detector used for the scan, and the detection mode used",
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "detector": {
-                                "title": "Detector",
-                                "description": "The name of the detector",
-                                "enum": [
-                                    "Ionization Chambers",
-                                    "Si Drift Fluorescence Detector",
-                                    "Ge Fluorescence Detector",
-                                    "Mythen XRD Detector",
-                                    "Dispersive Emission Spectrometer"
-                                ],
-                                "type": "string"
-                            },
-                            "detection_mode": {
-                                "title": "Detection Mode",
-                                "type": "string"
-                            }
-                        }
-                    }
-                },
-                "amplification": {
-                    "title": "Amplification",
-                    "description": "For Transmission detection mode",
-                    "type": "number"
-                },
-                "detector_distance": {
-                    "title": "Detector Distance",
-                    "description": "The distance of the detector, for Fluorescence detection mode, ??",
-                    "type": "number"
-                },
-                "region_of_interest_start": {
-                    "title": "Region of Interest Start Value",
-                    "description": "For Fluorescence detection mode",
-                    "type": "number"
-                },
-                "region_of_interest_end": {
-                    "title": "Region of Interest End Value",
-                    "description": "For Fluorescence detection mode",
-                    "type": "number"
-                }
-            }
+            "$ref": "/data_catalogue/b18/_detector_information/1.0.0.json"
         },
         "element_measured": {
             "title": "Element Measured",
             "description": "Which element was measured",
-            "$ref": "/shared/chemical_elements/1.0.0"
+            "$ref": "/shared/chemical_elements/1.0.0.json"
         },
         "edge": {
-            "title": "edge",
-            "description": "",
-            "enum": [
-                "K",
-                "L1",
-                "L2",
-                "L3",
-                "M1",
-                "M2",
-                "M3",
-                "M4"
-            ],
-            "type": "string"
+            "$ref": "/shared/absorption_edges/1.0.0.json"
         },
         "optical_configurations": {
             "title": "Optical Configurations",
