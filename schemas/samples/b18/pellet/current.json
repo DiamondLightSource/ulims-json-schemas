@@ -1,0 +1,85 @@
+{
+  "$id": "/samples/b18/pellet/1.0.0",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "title": "samples/b18/pellet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "chemical_composition",
+    "quantity_of_sample",
+    "diameter_of_pellet",
+    "pellet_preparation",
+    "sensitive",
+    "pellet_holder"
+  ],
+  "properties": {
+    "chemical_composition": {
+      "title": "Chemical Formula",
+      "description": "Chemical formula of the sample, where known, or best possible description, e.g. 5% copper, etc.",
+      "type": "string"
+    },
+    "quantity_of_sample": {
+      "title": "Quantity Of Sample",
+      "description": "Weight of Sample in Pellet, mg",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1000000
+    },
+    "diameter_of_pellet": {
+      "title": "Diameter of Pellet",
+      "description": "The diameter of the pellet, mm",
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1000
+    },
+    "pellet_preparation": {
+      "title": "Pellet Preparation",
+      "description": "Description of the preparation process",
+      "type": "string",
+      "maxLength": 500
+    },
+    "binder_info": {
+      "title": "Binder Information",
+      "type": "object",
+      "properties": {
+        "binder": {
+          "title": "Binder",
+          "description": "The binder used for the pellet",
+          "enum": [
+            "Cellulose",
+            "Boron Nitride",
+            "Polyethylene Glycol",
+            "Other"
+          ],
+          "type": "string"
+        },
+        "other_binder": {
+          "title": "Chemical Formula of Binder",
+          "description": "Chemical formula of the binder. Only needed if 'Other' selected.",
+          "type": "string"
+        }
+      }
+    },
+    "sensitive": {
+      "title": "Air/Water Sensitive",
+      "description": "Is the sample considered sensitive to air or water?",
+      "type": "boolean"
+    },
+    "pellet_holder": {
+      "title": "Pellet Holder",
+      "description": "The holder of the pellet during the scan",
+      "enum": [
+        "Free Standing",
+        "Plastic Container",
+        "Aluminium Bag",
+        "Plastic Bag"
+      ],
+      "type": "string"
+    },
+    "chemical_treatments": {
+      "title": "History of Chemical Treatments",
+      "description": "The history of chemical treatments done on the sample",
+      "type": "string"
+    }
+  }
+}
