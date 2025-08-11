@@ -12,7 +12,7 @@
     "basic_from": {
       "title": "basic_from schema data",
       "description": "Description that replaces value from $ref ",
-      "$ref": "/examples/basic/1.0.1"
+      "$ref": "/examples/basic/1.0.1.json"
     }
   }
 }
