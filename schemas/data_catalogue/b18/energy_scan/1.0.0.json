@@ -7,8 +7,7 @@
   "properties": {
     "detector_information": {
       "title": "Detector Information",
-      "description": "Which element was measured",
-      "$id": "/data_catalogue/b18/_detector_information/1.0.0",
+      "$id": "/data_catalogue/b18/_detectors/1.0.0",
       "$schema": "https://json-schema.org/draft-07/schema",
       "type": "object",
       "additionalProperties": false,
@@ -92,6 +91,7 @@
       "additionalProperties": false,
       "properties": {
         "chemical_elements": {
+          "description": "Which chemical element?",
           "type": "string",
           "enum": [
             "H",
@@ -230,7 +230,7 @@
       "properties": {
         "edge": {
           "title": "edge",
-          "description": "",
+          "description": "Which absorption edge?",
           "type": "string",
           "enum": [
             "K",
@@ -337,7 +337,8 @@
       }
     },
     "motors": {
-      "title": "shared/motors/motor_positions",
+      "title": "Motors",
+      "description": "Motor information",
       "$id": "/shared/motors/motor_positions/1.0.0",
       "$schema": "https://json-schema.org/draft-07/schema",
       "type": "object",

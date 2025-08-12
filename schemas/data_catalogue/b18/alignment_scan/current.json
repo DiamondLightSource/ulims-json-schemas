@@ -1,14 +1,13 @@
 {
+    "title": "data_catalogue/b18/alignment_scan",
     "$id": "/data_catalogue/b18/alignment_scan/1.0.0",
     "$schema": "https://json-schema.org/draft-07/schema",
-    "title": "data_catalogue/b18/alignment_scan",
     "type": "object",
     "additionalProperties": false,
     "properties": {
         "detector_information": {
-            "$ref": "/data_catalogue/b18/_detector_information/1.0.0.json",
-            "title": "Detector Information",
-            "description": "Which element was measured"
+            "$ref": "/data_catalogue/b18/_detectors/1.0.0.json",
+            "title": "Detector Information"
         },
         "element_measured": {
             "$ref": "/shared/chemical_elements/1.0.0.json",
@@ -62,8 +61,8 @@
         },
         "motors": {
             "$ref": "/shared/motors/motor_scan/1.0.0.json",
-            "title": "Element Measured",
-            "description": "Which element was measured"
+            "title": "Motors",
+            "description": "Motor information"
         },
         "temperature": {
             "title": "Temperature",

@@ -7,7 +7,7 @@
     "properties": {
         "edge": {
             "title": "edge",
-            "description": "",
+            "description": "Which absorption edge?",
             "enum": [
                 "K",
                 "L1",
