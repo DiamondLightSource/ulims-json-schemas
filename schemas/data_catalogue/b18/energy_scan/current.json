@@ -95,7 +95,7 @@
         },
         "motor_information": {
             "$ref": "/shared/motors/motor_positions/1.0.0.json",
-            "title": "Motor information"
+            "title": "Motor Information"
         },
         "temperature": {
             "title": "Temperature",

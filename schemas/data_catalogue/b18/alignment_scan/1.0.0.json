@@ -293,7 +293,7 @@
       }
     },
     "motor_information": {
-      "title": "Motor information",
+      "title": "Motor Information",
       "$id": "/shared/motors/motor_scan/1.0.0",
       "$schema": "https://json-schema.org/draft-07/schema",
       "type": "object",
