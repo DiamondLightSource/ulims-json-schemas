@@ -1,0 +1,24 @@
+{
+    "$id": "/shared/absorption_edges/1.0.0",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "title": "shared/absorption_edges",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "edge": {
+            "title": "edge",
+            "description": "Which absorption edge?",
+            "enum": [
+                "K",
+                "L1",
+                "L2",
+                "L3",
+                "M1",
+                "M2",
+                "M3",
+                "M4"
+            ],
+            "type": "string"
+        }
+    }
+}

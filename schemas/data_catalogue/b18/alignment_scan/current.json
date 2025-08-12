@@ -1,0 +1,77 @@
+{
+    "title": "data_catalogue/b18/alignment_scan",
+    "$id": "/data_catalogue/b18/alignment_scan/1.0.0",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "detector_information": {
+            "$ref": "/data_catalogue/b18/_detectors/1.0.0.json",
+            "title": "Detector Information"
+        },
+        "element_measured": {
+            "$ref": "/shared/chemical_elements/1.0.0.json",
+            "title": "Element Measured"
+        },
+        "edge_measured": {
+            "$ref": "/shared/absorption_edges/1.0.0.json",
+            "title": "Edge Measured"
+        },
+        "optical_configurations": {
+            "title": "Optical Configurations",
+            "type": "object",
+            "properties": {
+                "beam_size": {
+                    "title": "Beam Size",
+                    "description": "The size of the beam, ??",
+                    "type": "number"
+                },
+                "mirror_types": {
+                    "title": "Mirror Types",
+                    "type": "object",
+                    "properties": {
+                        "collimating_mirror": {
+                            "title": "Collimating Mirror",
+                            "enum": [
+                                "311",
+                                "111"
+                            ],
+                            "type": "string"
+                        },
+                        "focusing_mirror": {
+                            "title": "Double Toroidal V/H Focusing Mirror",
+                            "enum": [
+                                "Pt",
+                                "Cr"
+                            ],
+                            "type": "string"
+                        },
+                        "hr_mirror": {
+                            "title": "H/R Mirror",
+                            "enum": [
+                                "Pt",
+                                "Ni"
+                            ],
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "motor_information": {
+            "$ref": "/shared/motors/motor_scan/1.0.0.json",
+            "title": "Motor Information"
+        },
+        "temperature": {
+            "title": "Temperature",
+            "description": "The temperature of the heating or cooling device, K",
+            "type": "number",
+            "nexus_path": "/scan/temperature"
+        },
+        "comments": {
+            "title": "Comments",
+            "description": "Any further comments",
+            "type": "string"
+        }
+    }
+}

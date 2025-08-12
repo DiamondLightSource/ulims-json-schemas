@@ -1,0 +1,34 @@
+{
+    "$id": "/shared/motors/motor_positions/1.0.0",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "title": "shared/motors/motor_positions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "motor_positions": {
+            "title": "Motor Positions",
+            "description": "The positions of the motors at the start of the scan",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "motor_name": {
+                        "title": "Motor Name",
+                        "description": "The name of the motor",
+                        "type": "string"
+                    },
+                    "motor_position_x": {
+                        "title": "X Position",
+                        "description": "The x-position of the motor",
+                        "type": "number"
+                    },
+                    "motor_position_y": {
+                        "title": "Y Position",
+                        "description": "The y-position of the motor",
+                        "type": "number"
+                    }
+                }
+            }
+        }
+    }
+}
