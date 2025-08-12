@@ -1,0 +1,16 @@
+{
+    "json.schemas": [
+        {
+        "fileMatch": [
+            "**/data_examples/basic/*.json"
+        ],
+        "url": "./schemas/examples/basic/1.0.1.json"
+    },
+      {
+        "fileMatch": [
+            "**/data_examples/advanced/*.json"
+        ],
+        "url": "./schemas/examples/advanced/1.0.1.json"
+    }
+    ]
+}
