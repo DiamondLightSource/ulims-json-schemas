@@ -84,7 +84,6 @@
     },
     "element_measured": {
       "title": "Element Measured",
-      "description": "Which element was measured",
       "$id": "/shared/chemical_elements/1.0.0",
       "$schema": "https://json-schema.org/draft-07/schema",
       "type": "object",
@@ -221,8 +220,8 @@
         }
       ]
     },
-    "edge": {
-      "title": "Edge",
+    "edge_measured": {
+      "title": "Edge Measured",
       "$id": "/shared/absorption_edges/1.0.0",
       "$schema": "https://json-schema.org/draft-07/schema",
       "type": "object",
@@ -293,9 +292,8 @@
         }
       }
     },
-    "motors": {
-      "title": "Motors",
-      "description": "Motor information",
+    "motor_information": {
+      "title": "Motor information",
       "$id": "/shared/motors/motor_scan/1.0.0",
       "$schema": "https://json-schema.org/draft-07/schema",
       "type": "object",
@@ -379,6 +377,7 @@
       "title": "Temperature",
       "description": "The temperature of the heating or cooling device, K",
       "type": "number",
+      "nexus_path": "/scan/temperature",
       "minimum": -9007199254740991,
       "maximum": 9007199254740991
     },
@@ -391,7 +390,7 @@
   "examples": [
     {
       "comments": "dolor",
-      "edge": {
+      "edge_measured": {
         "edge": "L1"
       },
       "optical_configurations": {
@@ -402,7 +401,7 @@
         },
         "beam_size": -6305039478318694
       },
-      "motors": {
+      "motor_information": {
         "motor_scan": [
           {
             "motor_position_y_step": -6305039478318694,

@@ -11,12 +11,11 @@
         },
         "element_measured": {
             "$ref": "/shared/chemical_elements/1.0.0.json",
-            "title": "Element Measured",
-            "description": "Which element was measured"
+            "title": "Element Measured"
         },
-        "edge": {
-            "title": "Edge",
-            "$ref": "/shared/absorption_edges/1.0.0.json"
+        "edge_measured": {
+            "$ref": "/shared/absorption_edges/1.0.0.json",
+            "title": "Edge Measured"
         },
         "optical_configurations": {
             "title": "Optical Configurations",
@@ -59,15 +58,15 @@
                 }
             }
         },
-        "motors": {
+        "motor_information": {
             "$ref": "/shared/motors/motor_scan/1.0.0.json",
-            "title": "Motors",
-            "description": "Motor information"
+            "title": "Motor information"
         },
         "temperature": {
             "title": "Temperature",
             "description": "The temperature of the heating or cooling device, K",
-            "type": "number"
+            "type": "number",
+            "nexus_path": "/scan/temperature"
         },
         "comments": {
             "title": "Comments",
