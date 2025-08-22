@@ -6,6 +6,7 @@
   "additionalProperties": false,
   "properties": {
     "chemical_elements": {
+      "description": "Which chemical element?",
       "type": "string",
       "enum": [
         "H",

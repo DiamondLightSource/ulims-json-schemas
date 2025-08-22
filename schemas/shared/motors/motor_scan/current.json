@@ -1,0 +1,54 @@
+{
+    "$id": "/shared/motors/motor_scan/1.0.0",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "title": "shared/motors/motor_scan",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "motor_scan": {
+            "title": "Motor Scan",
+            "description": "The positions of the motors moved for the scan",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "motor_name": {
+                        "title": "Motor Name",
+                        "description": "The name of the motor",
+                        "type": "string"
+                    },
+                    "motor_position_x_start": {
+                        "title": "X Position at Start of Scan",
+                        "description": "The x-position of the motor at the start of the scan",
+                        "type": "number"
+                    },
+                    "motor_position_x_end": {
+                        "title": "X Position at End of Scan",
+                        "description": "The x-position of the motor at the end of the scan",
+                        "type": "number"
+                    },
+                    "motor_position_x_step": {
+                        "title": "X Position Step Size",
+                        "description": "The step size for the x-position of the motor",
+                        "type": "number"
+                    },
+                    "motor_position_y_start": {
+                        "title": "Y Position at Start of Scan",
+                        "description": "The y-position of the motor at the start of the scan",
+                        "type": "number"
+                    },
+                    "motor_position_y_end": {
+                        "title": "Y Position at End of Scan",
+                        "description": "The y-position of the motor at the end of the scan",
+                        "type": "number"
+                    },
+                    "motor_position_y_step": {
+                        "title": "Y Position Step Size",
+                        "description": "The step size for the y-position of the motor",
+                        "type": "number"
+                    }
+                }
+            }
+        }
+    }
+}
