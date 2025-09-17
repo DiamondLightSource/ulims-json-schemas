@@ -330,8 +330,7 @@
               "enum": [
                 "Pt",
                 "Ni"
-              ],
-              "nexus_path": "/entry1/instrument/HRMirror/hr_coating"
+              ]
             }
           }
         }

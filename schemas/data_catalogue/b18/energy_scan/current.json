@@ -88,8 +88,7 @@
                                 "Pt",
                                 "Ni"
                             ],
-                            "type": "string",
-                            "nexus_path": "/entry1/instrument/HRMirror/hr_coating"
+                            "type": "string"
                         }
                     }
                 }
