@@ -322,7 +322,9 @@
                 "Pt",
                 "Cr"
               ],
-              "nexus_path": "/entry1/instrument/OHMirror/oh_coating"
+              "nexus_path": [
+                "/entry1/instrument/OHMirror/oh_coating"
+              ]
             },
             "hr_mirror": {
               "title": "H/R Mirror",
