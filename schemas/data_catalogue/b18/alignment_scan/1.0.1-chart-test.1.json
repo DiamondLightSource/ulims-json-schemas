@@ -385,6 +385,14 @@
       "title": "Comments",
       "description": "Any further comments",
       "type": "string"
+    },
+    "data": {
+      "title": "Chart Data",
+      "description": "Data to chart",
+      "type": "array",
+      "items": {
+          "type": "number"
+      }
     }
   },
   "examples": [
