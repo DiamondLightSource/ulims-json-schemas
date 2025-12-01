@@ -1,6 +1,6 @@
 {
     "title": "data_catalogue/b18/energy_scan",
-    "$id": "/data_catalogue/b18/energy_scan/1.0.1",
+    "$id": "/data_catalogue/b18/energy_scan/2.0.0",
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "additionalProperties": false,
@@ -21,6 +21,11 @@
             "title": "Scan Parameters",
             "type": "object",
             "properties": {
+                "scan_command": {
+                    "description": "The full scan command",
+                    "type": "string",
+                    "nexus_path": ["/entry1/scan_command"]
+                },
                 "scan_type": {
                     "title": "Scan type",
                     "description": "Was the scan continuous or stepwise?",
@@ -39,6 +44,32 @@
                     "title": "Maximum Energy",
                     "description": "The maximum energy during the scan, eV",
                     "type": "number"
+                },
+                "qexafs_energy": {
+                    "title": "Qexafs Energy",
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "nexus_path": ["/entry1/instrument/qexafs_energy/qexafs_energy"]
+                },
+                "transmission": {
+                    "title": "Transmission",
+                    "description": "Dectection Mode Type",
+                    "type":"array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "nexus_path": ["/entry1/instrument/qexafs_counterTimer01/lnI0It"]
+                },
+                "fluoresence": {
+                    "title": "Fluoresence",
+                    "description": "Dectection Mode Type",
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "nexus_path": ["/entry1/instrument/qexafs_FFI0_xspress3X/FFI0"]
                 },
                 "energy_resolution": {
                     "title": "Energy Resolution",
@@ -65,13 +96,14 @@
                     "title": "Mirror Types",
                     "type": "object",
                     "properties": {
-                        "collimating_mirror": {
-                            "title": "Collimating Mirror",
+                        "double_crystal_monochromator": {
+                            "title": "Double Crystal Monochromator",
                             "enum": [
                                 "311",
                                 "111"
                             ],
-                            "type": "string"
+                            "type": "string",
+                            "nexus_path": ["/entry1/instrument/DoubleCrystal/dcm_crystal"]
                         },
                         "focusing_mirror": {
                             "title": "Double Toroidal V/H Focusing Mirror",
@@ -85,10 +117,16 @@
                         "hr_mirror": {
                             "title": "H/R Mirror",
                             "enum": [
-                                "Pt",
-                                "Ni"
+                                "In",
+                                "Out"
                             ],
-                            "type": "string"
+                            "type": "string",
+                            "nexus_path": ["/entry1/instrument/HRMirror/hr_inout"]
+                        },
+                        "hr_pitch": {
+                            "title": "H/R Pitch",
+                            "type": "number",
+                            "nexus_path": ["/entry1/instrument/HRMirror/hrpitch"]
                         }
                     }
                 }
