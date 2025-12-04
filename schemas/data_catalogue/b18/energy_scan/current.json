@@ -45,32 +45,6 @@
                     "description": "The maximum energy during the scan, eV",
                     "type": "number"
                 },
-                "qexafs_energy": {
-                    "title": "Qexafs Energy",
-                    "type": "array",
-                    "items": {
-                        "type": "number"
-                    },
-                    "nexus_path": ["/entry1/instrument/qexafs_energy/qexafs_energy"]
-                },
-                "transmission": {
-                    "title": "Transmission",
-                    "description": "Dectection Mode Type",
-                    "type":"array",
-                    "items": {
-                        "type": "number"
-                    },
-                    "nexus_path": ["/entry1/instrument/qexafs_counterTimer01/lnI0It"]
-                },
-                "fluoresence": {
-                    "title": "Fluoresence",
-                    "description": "Dectection Mode Type",
-                    "type": "array",
-                    "items": {
-                        "type": "number"
-                    },
-                    "nexus_path": ["/entry1/instrument/qexafs_FFI0_xspress3X/FFI0"]
-                },
                 "energy_resolution": {
                     "title": "Energy Resolution",
                     "description": "The energy resolution of the scan, eV",

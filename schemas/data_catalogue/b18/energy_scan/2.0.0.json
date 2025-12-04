@@ -283,44 +283,6 @@
           "minimum": -9007199254740991,
           "maximum": 9007199254740991
         },
-        "qexafs_energy": {
-          "title": "Qexafs Energy",
-          "type": "array",
-          "nexus_path": [
-            "/entry1/instrument/qexafs_energy/qexafs_energy"
-          ],
-          "items": {
-            "type": "number",
-            "minimum": -9007199254740991,
-            "maximum": 9007199254740991
-          }
-        },
-        "transmission": {
-          "title": "Transmission",
-          "description": "Dectection Mode Type",
-          "type": "array",
-          "nexus_path": [
-            "/entry1/instrument/qexafs_counterTimer01/lnI0It"
-          ],
-          "items": {
-            "type": "number",
-            "minimum": -9007199254740991,
-            "maximum": 9007199254740991
-          }
-        },
-        "fluoresence": {
-          "title": "Fluoresence",
-          "description": "Dectection Mode Type",
-          "type": "array",
-          "nexus_path": [
-            "/entry1/instrument/qexafs_FFI0_xspress3X/FFI0"
-          ],
-          "items": {
-            "type": "number",
-            "minimum": -9007199254740991,
-            "maximum": 9007199254740991
-          }
-        },
         "energy_resolution": {
           "title": "Energy Resolution",
           "description": "The energy resolution of the scan, eV",
@@ -467,21 +429,12 @@
         "edge": "L1"
       },
       "scan_parameters": {
-        "fluoresence": [
-          -6305039478318694
-        ],
+        "scan_type": "Continuous",
         "energy_min": -6305039478318694,
         "energy_max": -6305039478318694,
-        "qexafs_energy": [
-          -6305039478318694
-        ],
-        "transmission": [
-          -6305039478318694
-        ],
-        "scan_command": "dolor",
         "energy_resolution": -6305039478318694,
         "time_per_scan": -6305039478318694,
-        "scan_type": "Continuous"
+        "scan_command": "dolor"
       },
       "optical_configurations": {
         "mirror_types": {
