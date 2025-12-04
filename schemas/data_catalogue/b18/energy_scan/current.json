@@ -99,8 +99,8 @@
                         "double_crystal_monochromator": {
                             "title": "Double Crystal Monochromator",
                             "enum": [
-                                "311",
-                                "111"
+                                "Si(311)",
+                                "Si(111)"
                             ],
                             "type": "string",
                             "nexus_path": ["/entry1/instrument/DoubleCrystal/dcm_crystal"]
