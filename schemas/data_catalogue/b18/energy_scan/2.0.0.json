@@ -356,8 +356,8 @@
               "title": "Double Crystal Monochromator",
               "type": "string",
               "enum": [
-                "311",
-                "111"
+                "Si(311)",
+                "Si(111)"
               ],
               "nexus_path": [
                 "/entry1/instrument/DoubleCrystal/dcm_crystal"
@@ -488,7 +488,7 @@
           "focusing_mirror": "Pt",
           "hr_mirror": "In",
           "hr_pitch": -6305039478318694,
-          "double_crystal_monochromator": "311"
+          "double_crystal_monochromator": "Si(311)"
         },
         "beam_size": -6305039478318694
       },
