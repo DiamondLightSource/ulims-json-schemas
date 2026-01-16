@@ -14,7 +14,7 @@
       "build-new": "jsonschema-tools materialize",
       "build-all": "jsonschema-tools materialize-all",
       "build-main-diff": "for fn in $(git diff --name-only origin/main --diff-filter=ACM -- *current.json); do npm run build-new $fn; done",
-      "find-deleted": "! git diff --name-status --diff-filter=D main...HEAD | awk '{print $2}' | grep -e 'schemas/.*.json' "
+      "find-deleted": "! git diff --name-status --diff-filter=D origin/main | awk '{print $2}' | grep -e 'schemas/.*.json' "
     },
     "keywords": [
       "jsonschema",
