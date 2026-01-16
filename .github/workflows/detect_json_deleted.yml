@@ -1,0 +1,14 @@
+name: Confirm no json files in main were deleted
+on: 
+  push:
+    branches-ignore:
+      - 'main'
+
+jobs:
+  run:
+    name: Detect and flag deleted json files
+    uses: ./.github/workflows/setup.yml
+    steps:
+      - name: Detect deleted files
+        working-directory: ./  
+        run: npm run find-deleted
