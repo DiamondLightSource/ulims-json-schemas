@@ -28,7 +28,7 @@ jobs:
 
       - name: Fetch repo  
         working-directory: ./
-        run: git fetch  # fixes error fatal: ambiguous argument
+        run: git fetch --all  # fixes error fatal: ambiguous argument
 
       - name: Find deleted JSON files
         working-directory: ./  
