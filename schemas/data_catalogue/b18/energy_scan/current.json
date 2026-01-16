@@ -1,0 +1,124 @@
+{
+    "title": "data_catalogue/b18/energy_scan",
+    "$id": "/data_catalogue/b18/energy_scan/3.0.0",
+    "$schema": "https://json-schema.org/draft-07/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "detector_information": {
+            "$ref": "/data_catalogue/b18/_detectors/1.0.0.json",
+            "title": "Detector Information"
+        },
+        "element_measured": {
+            "$ref": "/shared/chemical_elements/1.0.0.json",
+            "title": "Element Measured"
+        },
+        "edge_measured": {
+            "title": "Edge Measured",
+            "$ref": "/shared/absorption_edges/1.0.0.json"
+        },
+        "scan_parameters": {
+            "title": "Scan Parameters",
+            "type": "object",
+            "properties": {
+                "scan_command": {
+                    "description": "The full scan command",
+                    "type": "string",
+                    "nexus_path": ["/entry1/scan_command"]
+                },
+                "scan_type": {
+                    "title": "Scan type",
+                    "description": "Was the scan continuous or stepwise?",
+                    "enum": [
+                        "Continuous",
+                        "Step"
+                    ],
+                    "type": "string"
+                },
+                "energy_min": {
+                    "title": "Minimum Energy",
+                    "description": "The minimum energy during the scan, eV",
+                    "type": "number"
+                },
+                "energy_max": {
+                    "title": "Maximum Energy",
+                    "description": "The maximum energy during the scan, eV",
+                    "type": "number"
+                },
+                "energy_resolution": {
+                    "title": "Energy Resolution",
+                    "description": "The energy resolution of the scan, eV",
+                    "type": "number"
+                },
+                "time_per_scan": {
+                    "title": "Total time per scan",
+                    "description": "The total time of scan or the acquisition time per point, s",
+                    "type": "number"
+                }
+            }
+        },
+        "optical_configurations": {
+            "title": "Optical Configurations",
+            "type": "object",
+            "properties": {
+                "beam_size": {
+                    "title": "Beam Size",
+                    "description": "The size of the beam, ??",
+                    "type": "number"
+                },
+                "mirror_types": {
+                    "title": "Mirror Types",
+                    "type": "object",
+                    "properties": {
+                        "double_crystal_monochromator": {
+                            "title": "Double Crystal Monochromator",
+                            "enum": [
+                                "Si(311)",
+                                "Si(111)"
+                            ],
+                            "type": "string",
+                            "nexus_path": ["/entry1/instrument/DoubleCrystal/dcm_crystal"]
+                        },
+                        "focusing_mirror": {
+                            "title": "Double Toroidal V/H Focusing Mirror",
+                            "enum": [
+                                "Pt",
+                                "Cr"
+                            ],
+                            "type": "string",
+                            "nexus_path": ["/entry1/instrument/OHMirror/oh_coating"]
+                        },
+                        "hr_mirror": {
+                            "title": "H/R Mirror",
+                            "enum": [
+                                "in",
+                                "out"
+                            ],
+                            "type": "string",
+                            "nexus_path": ["/entry1/instrument/HRMirror/hr_inout"]
+                        },
+                        "hr_pitch": {
+                            "title": "H/R Pitch",
+                            "type": "number",
+                            "nexus_path": ["/entry1/instrument/HRMirror/hrpitch"]
+                        }
+                    }
+                }
+            }
+        },
+        "motor_information": {
+            "$ref": "/shared/motors/motor_positions/1.0.0.json",
+            "title": "Motor Information"
+        },
+        "temperature": {
+            "title": "Temperature",
+            "description": "The temperature of the heating or cooling device, K",
+            "type": "number"
+        },
+        "comments": {
+            "title": "Comments",
+            "description": "Any further comments",
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,475 @@
+{
+  "title": "data_catalogue/b18/energy_scan",
+  "$id": "/data_catalogue/b18/energy_scan/3.0.0",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "detector_information": {
+      "title": "Detector Information",
+      "$id": "/data_catalogue/b18/_detectors/1.0.0",
+      "$schema": "https://json-schema.org/draft-07/schema",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "detectors": {
+          "title": "Detectors",
+          "description": "The detector used for the scan, and the detection mode used",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "detector": {
+                "title": "Detector",
+                "description": "The name of the detector",
+                "type": "string",
+                "enum": [
+                  "Ionization Chambers",
+                  "Si Drift Fluorescence Detector",
+                  "Ge Fluorescence Detector",
+                  "Mythen XRD Detector",
+                  "Dispersive Emission Spectrometer"
+                ]
+              },
+              "detection_mode": {
+                "title": "Detection Mode",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "amplification": {
+          "title": "Amplification",
+          "description": "For Transmission detection mode",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "detector_distance": {
+          "title": "Detector Distance",
+          "description": "The distance of the detector, for Fluorescence detection mode, ??",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "region_of_interest_start": {
+          "title": "Region of Interest Start Value",
+          "description": "For Fluorescence detection mode",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "region_of_interest_end": {
+          "title": "Region of Interest End Value",
+          "description": "For Fluorescence detection mode",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        }
+      },
+      "examples": [
+        {
+          "amplification": -6305039478318694,
+          "detector_distance": -6305039478318694,
+          "region_of_interest_start": -6305039478318694,
+          "region_of_interest_end": -6305039478318694,
+          "detectors": [
+            {
+              "detection_mode": "dolor",
+              "detector": "Ionization Chambers"
+            }
+          ]
+        }
+      ]
+    },
+    "element_measured": {
+      "title": "Element Measured",
+      "$id": "/shared/chemical_elements/1.0.0",
+      "$schema": "https://json-schema.org/draft-07/schema",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "chemical_elements": {
+          "description": "Which chemical element?",
+          "type": "string",
+          "enum": [
+            "H",
+            "He",
+            "Li",
+            "Be",
+            "B",
+            "C",
+            "N",
+            "O",
+            "F",
+            "Ne",
+            "Na",
+            "Mg",
+            "Al",
+            "Si",
+            "P",
+            "S",
+            "Cl",
+            "Ar",
+            "K",
+            "Ca",
+            "Sc",
+            "Ti",
+            "V",
+            "Cr",
+            "Mn",
+            "Fe",
+            "Co",
+            "Ni",
+            "Cu",
+            "Zn",
+            "Ga",
+            "Ge",
+            "As",
+            "Se",
+            "Br",
+            "Kr",
+            "Rb",
+            "Sr",
+            "Y",
+            "Zr",
+            "Nb",
+            "Mo",
+            "Tc",
+            "Ru",
+            "Rh",
+            "Pd",
+            "Ag",
+            "Cd",
+            "In",
+            "Sn",
+            "Sb",
+            "Te",
+            "I",
+            "Xe",
+            "Cs",
+            "Ba",
+            "La",
+            "Ce",
+            "Pr",
+            "Nd",
+            "Pm",
+            "Sm",
+            "Eu",
+            "Gd",
+            "Tb",
+            "Dy",
+            "Ho",
+            "Er",
+            "Tm",
+            "Yb",
+            "Lu",
+            "Hf",
+            "Ta",
+            "W ",
+            "Re",
+            "Os",
+            "Ir",
+            "Pt",
+            "Au",
+            "Hg",
+            "Tl",
+            "Pb",
+            "Bi",
+            "Po",
+            "At",
+            "Rn",
+            "Fr",
+            "Ra",
+            "Ac",
+            "Th",
+            "Pa",
+            "U",
+            "Np",
+            "Pu",
+            "Am",
+            "Cm",
+            "Bk",
+            "Cf",
+            "Es",
+            "Fm",
+            "Md",
+            "No",
+            "Lr",
+            "Rf",
+            "Db",
+            "Sg",
+            "Bh",
+            "Hs",
+            "Mt",
+            "Ds",
+            "Rg",
+            "Cn",
+            "Nh",
+            "Fl",
+            "Mc",
+            "Lv",
+            "Ts",
+            "Og"
+          ]
+        }
+      },
+      "examples": [
+        {
+          "chemical_elements": "Ar"
+        }
+      ]
+    },
+    "edge_measured": {
+      "title": "Edge Measured",
+      "$id": "/shared/absorption_edges/1.0.0",
+      "$schema": "https://json-schema.org/draft-07/schema",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "edge": {
+          "title": "edge",
+          "description": "Which absorption edge?",
+          "type": "string",
+          "enum": [
+            "K",
+            "L1",
+            "L2",
+            "L3",
+            "M1",
+            "M2",
+            "M3",
+            "M4"
+          ]
+        }
+      },
+      "examples": [
+        {
+          "edge": "L1"
+        }
+      ]
+    },
+    "scan_parameters": {
+      "title": "Scan Parameters",
+      "type": "object",
+      "properties": {
+        "scan_command": {
+          "description": "The full scan command",
+          "type": "string",
+          "nexus_path": [
+            "/entry1/scan_command"
+          ]
+        },
+        "scan_type": {
+          "title": "Scan type",
+          "description": "Was the scan continuous or stepwise?",
+          "type": "string",
+          "enum": [
+            "Continuous",
+            "Step"
+          ]
+        },
+        "energy_min": {
+          "title": "Minimum Energy",
+          "description": "The minimum energy during the scan, eV",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "energy_max": {
+          "title": "Maximum Energy",
+          "description": "The maximum energy during the scan, eV",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "energy_resolution": {
+          "title": "Energy Resolution",
+          "description": "The energy resolution of the scan, eV",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "time_per_scan": {
+          "title": "Total time per scan",
+          "description": "The total time of scan or the acquisition time per point, s",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        }
+      }
+    },
+    "optical_configurations": {
+      "title": "Optical Configurations",
+      "type": "object",
+      "properties": {
+        "beam_size": {
+          "title": "Beam Size",
+          "description": "The size of the beam, ??",
+          "type": "number",
+          "minimum": -9007199254740991,
+          "maximum": 9007199254740991
+        },
+        "mirror_types": {
+          "title": "Mirror Types",
+          "type": "object",
+          "properties": {
+            "double_crystal_monochromator": {
+              "title": "Double Crystal Monochromator",
+              "type": "string",
+              "enum": [
+                "Si(311)",
+                "Si(111)"
+              ],
+              "nexus_path": [
+                "/entry1/instrument/DoubleCrystal/dcm_crystal"
+              ]
+            },
+            "focusing_mirror": {
+              "title": "Double Toroidal V/H Focusing Mirror",
+              "type": "string",
+              "enum": [
+                "Pt",
+                "Cr"
+              ],
+              "nexus_path": [
+                "/entry1/instrument/OHMirror/oh_coating"
+              ]
+            },
+            "hr_mirror": {
+              "title": "H/R Mirror",
+              "type": "string",
+              "enum": [
+                "in",
+                "out"
+              ],
+              "nexus_path": [
+                "/entry1/instrument/HRMirror/hr_inout"
+              ]
+            },
+            "hr_pitch": {
+              "title": "H/R Pitch",
+              "type": "number",
+              "nexus_path": [
+                "/entry1/instrument/HRMirror/hrpitch"
+              ],
+              "minimum": -9007199254740991,
+              "maximum": 9007199254740991
+            }
+          }
+        }
+      }
+    },
+    "motor_information": {
+      "title": "Motor Information",
+      "$id": "/shared/motors/motor_positions/1.0.0",
+      "$schema": "https://json-schema.org/draft-07/schema",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "motor_positions": {
+          "title": "Motor Positions",
+          "description": "The positions of the motors at the start of the scan",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "motor_name": {
+                "title": "Motor Name",
+                "description": "The name of the motor",
+                "type": "string"
+              },
+              "motor_position_x": {
+                "title": "X Position",
+                "description": "The x-position of the motor",
+                "type": "number",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              },
+              "motor_position_y": {
+                "title": "Y Position",
+                "description": "The y-position of the motor",
+                "type": "number",
+                "minimum": -9007199254740991,
+                "maximum": 9007199254740991
+              }
+            }
+          }
+        }
+      },
+      "examples": [
+        {
+          "motor_positions": [
+            {
+              "motor_position_x": -6305039478318694,
+              "motor_position_y": -6305039478318694,
+              "motor_name": "dolor"
+            }
+          ]
+        }
+      ]
+    },
+    "temperature": {
+      "title": "Temperature",
+      "description": "The temperature of the heating or cooling device, K",
+      "type": "number",
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    },
+    "comments": {
+      "title": "Comments",
+      "description": "Any further comments",
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "temperature": -6305039478318694,
+      "edge_measured": {
+        "edge": "L1"
+      },
+      "scan_parameters": {
+        "scan_type": "Continuous",
+        "energy_min": -6305039478318694,
+        "energy_max": -6305039478318694,
+        "energy_resolution": -6305039478318694,
+        "time_per_scan": -6305039478318694,
+        "scan_command": "dolor"
+      },
+      "optical_configurations": {
+        "mirror_types": {
+          "focusing_mirror": "Pt",
+          "hr_mirror": "in",
+          "hr_pitch": -6305039478318694,
+          "double_crystal_monochromator": "Si(311)"
+        },
+        "beam_size": -6305039478318694
+      },
+      "motor_information": {
+        "motor_positions": [
+          {
+            "motor_position_x": -6305039478318694,
+            "motor_position_y": -6305039478318694,
+            "motor_name": "dolor"
+          }
+        ]
+      },
+      "detector_information": {
+        "amplification": -6305039478318694,
+        "detector_distance": -6305039478318694,
+        "region_of_interest_start": -6305039478318694,
+        "region_of_interest_end": -6305039478318694,
+        "detectors": [
+          {
+            "detection_mode": "dolor",
+            "detector": "Ionization Chambers"
+          }
+        ]
+      },
+      "comments": "dolor",
+      "element_measured": {
+        "chemical_elements": "Ar"
+      }
+    }
+  ]
+}
