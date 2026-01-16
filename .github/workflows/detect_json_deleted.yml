@@ -26,6 +26,10 @@ jobs:
           cat .jsonschema-tools.yaml
           cat test/jsonschema/repository.test.js
 
-      - name: Check schema root passes minimum requirements
+      - name: Fetch repo  
+        working-directory: ./
+        run: git fetch  # fixes error fatal: ambiguous argument
+
+      - name: Find deleted JSON files
         working-directory: ./  
         run: npm run find-deleted
