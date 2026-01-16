@@ -26,9 +26,9 @@ jobs:
           cat .jsonschema-tools.yaml
           cat test/jsonschema/repository.test.js
 
-      #- name: Fetch repo  
-      #  working-directory: ./
-       # run: git fetch --all  # fixes error fatal: ambiguous argument
+      - name: Fetch repo  
+        working-directory: ./
+        run: git fetch origin main  # fixes error fatal: ambiguous argument
 
       - name: Find deleted JSON files
         working-directory: ./  
