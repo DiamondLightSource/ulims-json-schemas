@@ -5,7 +5,7 @@ on:
       - 'main'
 jobs:
   run:
-    name: Setup and check for deleted json files.
+    name: Detect deletes.
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
