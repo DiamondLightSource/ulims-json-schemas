@@ -1,8 +1,7 @@
 name: Confirm no json files in main were deleted
-on: 
-  push:
-    branches-ignore:
-      - 'main'
+
+on: [pull_request]
+
 jobs:
   run:
     name: Detect deletes.
