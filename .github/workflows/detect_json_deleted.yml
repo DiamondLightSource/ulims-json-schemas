@@ -9,6 +9,11 @@ jobs:
     name: Detect and flag deleted json files
     uses: ./.github/workflows/setup.yml
     steps:
+      - name: Confirm command being run in configuration
+        working-directory: ./
+        run: |
+          cat package.json
+
       - name: Detect deleted files
         working-directory: ./  
         run: npm run find-deleted
