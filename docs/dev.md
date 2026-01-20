@@ -23,15 +23,12 @@ two examples. Any json file within will validate on
 opening. The files example_1.json were created on
 first code completion.
 
-# Updating schema-tools
+# Updating jsonschema-tools
 
-There are two stages. Update tools and update our patches where
-needed.
+There are two stages: updating the `@wikimedia/jsonschema-tools` dependency, and updating our patches where needed.
 
 ## Tools
-The tools have not been updated in NPM but a packaged version is
-available. The tarball method can be used to update package. The
-versions available are here: https://gitlab.wikimedia.org/repos/data-engineering/jsonschema-tools/-/packages/
+The latest version of `@wikimedia/jsonschema-tools` are published here: https://gitlab.wikimedia.org/repos/data-engineering/jsonschema-tools/-/packages/
 
 The following two lines should be changed whenever
 tools is updated change. The url in the install will
