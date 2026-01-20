@@ -30,21 +30,19 @@ There are two stages: updating the `@wikimedia/jsonschema-tools` dependency, and
 ## Tools
 The latest version of `@wikimedia/jsonschema-tools` are published here: https://gitlab.wikimedia.org/repos/data-engineering/jsonschema-tools/-/packages/
 
-The following two lines should be changed whenever
+The version and details link below should be changed whenever
 tools is updated change. The url in the install will
-update the value in package.json.
+update the value in package.json
 
 Current tools version: 1.9.0
 Details: https://gitlab.wikimedia.org/repos/data-engineering/jsonschema-tools/-/packages/1606
-
-* `npm install <url to .tgz found on details page>`
 
 ## Patches
 
 Files in `patches` are tied to particular versions. At the minimum
 a new file tied to version installed is needed.
 
-* Install it
+* `npm install <url to .tgz found on details page above>`
 * `npm run check` and probably see errors (ie. "The expression
 evaluated to a falsy value") until patching is done.
 * Make all changes in `node_modules/@wikimedia/jsonschema-tools`.
