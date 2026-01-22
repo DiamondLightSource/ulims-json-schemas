@@ -10,28 +10,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-#      - name: use Node.js
-#        uses: actions/setup-node@v4
-#        with:
-#          node-version: '20.x'
-#          cache: 'npm'
-
-#      - name: Install dependencies
-#        run: npm install
-
-#      - name: Confirm configuration files used
-#        working-directory: ./
-#        run: |
-#          cat .jsonschema-tools.yaml
-#          cat test/jsonschema/repository.test.js
-
       - name: Fetch repo  
         working-directory: ./
         run: git fetch origin main  # fixes error fatal: ambiguous argument
-
-#      - name: Find deleted JSON files
-#        working-directory: ./  
-#        run: npm run find-deleted
 
       - name: Find deleted JSON files
         working-directory: ./  
