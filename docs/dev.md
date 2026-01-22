@@ -40,25 +40,30 @@ Details: https://gitlab.wikimedia.org/repos/data-engineering/jsonschema-tools/-/
 ## Patches
 
 Files in `patches` are tied to particular versions and file
-for new version should be created:
+for new version should be created with old one removed. 
 
-* `npm install <url to .tgz found on details page above>`
-* `npm run check` and probably see errors (ie. "The expression
-evaluated to a falsy value") until patching is done.
-* Make all changes in `node_modules/@wikimedia/jsonschema-tools`.
-* `npx patch-package @wikimedia/jsonschema-tools` to generate
-  file in patches folder. For example, package with 1606 in details
-  url resulted in: `patches/@wikimedia+jsonschema-tools+1.9.0.patch`
+1. Use `npm run check` to confirm everything is working with
+   current version and all schema are good.
+2. `npm install <url to .tgz found on details page above>` which
+   installs that version and `packages.json` changed. It applied
+   all patches found for package, which changed files
+   in `node_modules/@wikimedia/jsonschema-tools`.
+3. Patching can be redone/confirmed via `npx patch-package` and
+   it will show warnings patch for old was applied to new.
+4. `npx patch-package @wikimedia/jsonschema-tools` to generate
+   file in patches folder. For example, package with 1606 in details
+   url resulted in: `patches/@wikimedia+jsonschema-tools+1.9.0.patch`
+5. Repeat step 1. The error "The expression evaluated to
+   a falsy value" indicates patch did not work.
+6. The two files in `patches` should be close to identical. Diff
+   them to confirm.
+7. Commit the new patch and remove the old one. The warning
+   during step 2 and 3 should have gone.
+   
+### Patching issues
 
-### Change missing?
-
-Look at patch for the old version to see probable changes
-in new version. New version will have different patch
-references. If a change missing between the two files:
-
-1. Disable patch for old version, such as changing file extension.
-2. Repeat the install so version in `node_modules` is an
-   unpatched version. 
-3. Make changes.
-4. Patch-package should detect and will overwrite
-   existing patch file for version being patched.
+Disable patches, such as changing file extension. Repeat
+step 2 so have unpatched new version. Look at patches and
+manually change files indicated. Repeat step 4 to create
+new patch file. Repeat step 3 and confirm new patch
+applied. Continue from step 5.
