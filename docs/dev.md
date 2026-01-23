@@ -67,3 +67,22 @@ step 2 so have unpatched new version. Look at patches and
 manually change files indicated. Repeat step 4 to create
 new patch file. Repeat step 3 and confirm new patch
 applied. Continue from step 5.
+
+
+## Deleting schemas
+
+Schemas published (ie. merged to main) should never be
+deleted. A policy should be agreed before deletion occurs.
+
+### Detecting deleted schemas
+
+Command `npm run find-deleted` will detect
+if branch has deleted files with `schemas/*/*.json` pattern
+found in main. A CI job on PRs does the same and
+will fail if detection occurs. Idea from: https://gitlab.wikimedia.org/repos/data-engineering/jsonschema-tools/-/blob/master/templates/schema-deletion/template.yml?ref_type=heads
+
+### Restoring deleted schema
+
+The output on fail reports deleted files. For example, if all versions of a schema had `git rm` with commit, then detection
+occurred, branch can be fixed via: `git restore --source main schemas/data_catalogue/b18/energy_scan/*.json` with commit. On push
+the CI on PR will pass again.
