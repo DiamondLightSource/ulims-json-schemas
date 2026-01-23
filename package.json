@@ -4,8 +4,8 @@
     "description": "Primary JSONSchemas for ULIMS projects.",
     "license": "GPL-3.0-or-later",
     "repository": {
-      "type": "git",
-      "url": "git@github.com:DiamondLightSource/ulims-json-schemas.git"
+        "type": "git",
+        "url": "git@github.com:DiamondLightSource/ulims-json-schemas.git"
     },
     "main": "index.js",
     "scripts": {
@@ -18,17 +18,16 @@
       "fail-snohash-found": "! grep --include=\\*.json -rn './schemas' -e 'https.*draft-07/schema[^#]'"
     },
     "keywords": [
-      "jsonschema",
-      "json",
-      "ulims"
+        "jsonschema",
+        "json",
+        "ulims"
     ],
     "devDependencies": {
-      "@wikimedia/jsonschema-tools": "1.3.0",
-      "mocha": "^11.1.0",
-      "eslint": "^8.57.1"
+        "@wikimedia/jsonschema-tools": "https://gitlab.wikimedia.org/repos/data-engineering/jsonschema-tools/-/package_files/12916/download",
+        "eslint": "^8.57.1",
+        "mocha": "^11.1.0"
     },
     "dependencies": {
-      "patch-package": "^8.0.0"
+        "patch-package": "^8.0.0"
     }
-  }
-  
+}
