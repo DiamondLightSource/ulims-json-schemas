@@ -1,7 +1,7 @@
 {
     "name": "ulims-json-schemas",
     "version": "0.0.2",
-    "description": "Primary JSONSchemas for ULIMS projects.",
+    "description": "Primary JSON Schemas for ULIMS projects.",
     "license": "GPL-3.0-or-later",
     "repository": {
         "type": "git",
