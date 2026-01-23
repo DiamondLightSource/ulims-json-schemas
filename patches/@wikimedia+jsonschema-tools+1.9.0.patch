@@ -1,8 +1,8 @@
 diff --git a/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js b/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js
-index acd2991..cc239f3 100644
+index 81e1c49..4a4e894 100644
 --- a/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js
 +++ b/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js
-@@ -192,7 +192,7 @@ function schemaKeyCompare(k1, k2) {
+@@ -189,7 +189,7 @@ function schemaKeyCompare(k1, k2) {
      } else if (k2 in schemaKeySortOrder) {
          return 1;
      }
@@ -12,7 +12,7 @@ index acd2991..cc239f3 100644
  
  /**
 diff --git a/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js b/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js
-index b09a2c1..ea0d2c8 100644
+index 9853233..68066f5 100644
 --- a/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js
 +++ b/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js
 @@ -60,7 +60,7 @@ function declareTests(options = { logLevel: 'warn' }) {

@@ -4,30 +4,28 @@
     "description": "Primary JSONSchemas for ULIMS projects.",
     "license": "GPL-3.0-or-later",
     "repository": {
-      "type": "git",
-      "url": "git@github.com:DiamondLightSource/ulims-json-schemas.git"
+        "type": "git",
+        "url": "git@github.com:DiamondLightSource/ulims-json-schemas.git"
     },
     "main": "index.js",
     "scripts": {
-      "postinstall": "patch-package",
-      "check": "mocha test/jsonschema",
-      "build-new": "jsonschema-tools materialize",
-      "build-all": "jsonschema-tools materialize-all",
-      "build-main-diff": "for fn in $(git diff --name-only origin/main --diff-filter=ACM -- *current.json); do npm run build-new $fn; done",
-      "find-deleted": "! git diff --name-status --diff-filter=D origin/main | awk '{print $2}' | grep -e 'schemas/.*.json' "
+        "postinstall": "patch-package",
+        "check": "mocha test/jsonschema",
+        "build-new": "jsonschema-tools materialize",
+        "build-all": "jsonschema-tools materialize-all",
+        "build-main-diff": "for fn in $(git diff --name-only origin/main --diff-filter=ACM -- *current.json); do npm run build-new $fn; done"
     },
     "keywords": [
-      "jsonschema",
-      "json",
-      "ulims"
+        "jsonschema",
+        "json",
+        "ulims"
     ],
     "devDependencies": {
-      "@wikimedia/jsonschema-tools": "1.3.0",
-      "mocha": "^11.1.0",
-      "eslint": "^8.57.1"
+        "@wikimedia/jsonschema-tools": "https://gitlab.wikimedia.org/repos/data-engineering/jsonschema-tools/-/package_files/12916/download",
+        "eslint": "^8.57.1",
+        "mocha": "^11.1.0"
     },
     "dependencies": {
-      "patch-package": "^8.0.0"
+        "patch-package": "^8.0.0"
     }
-  }
-  
+}
