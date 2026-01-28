@@ -10,7 +10,7 @@
   ],
   "properties": {
     "comment": {
-      "title": "Field heading on interfaces",
+      "title": "Field heading on interfaces CHANGE without ID edit so FAIL",
       "description": "A string property added in basic 1.0.0",
       "type": "string"
     },
