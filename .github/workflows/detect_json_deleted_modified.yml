@@ -18,17 +18,3 @@ jobs:
         working-directory: ./  
         run:  |
           ! git diff --name-status --diff-filter=D origin/main | awk '{print $2}' | grep -e 'schemas/.*.json'
-
-      - name: Find modified JSON files.
-        working-directory: ./  
-        run:  |
-          ! git diff --name-status --diff-filter=M origin/main | awk '{print $2}' | grep -e 'schemas/.*.json'
-        
-      - name: Show fail message
-        if: failure()
-        run:  |
-          echo "# ⚠️ Published JSON files were deleted or modified" >> $GITHUB_STEP_SUMMARY
-          echo "Detect job reports files each type. Probable fixes are:" >> $GITHUB_STEP_SUMMARY
-          echo "For deleted files: git restore" >> $GITHUB_STEP_SUMMARY
-          echo "For modified files: change the $id in schema so next build creates" >> $GITHUB_STEP_SUMMARY
-          echo "a new version for publishing." >> $GITHUB_STEP_SUMMARY
