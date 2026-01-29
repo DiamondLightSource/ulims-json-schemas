@@ -1,6 +1,6 @@
 {
     "title": "data_catalogue/b18/energy_scan",
-    "$id": "/data_catalogue/b18/energy_scan/3.0.0",
+    "$id": "/data_catalogue/b18/energy_scan/4.0.0",
     "$schema": "https://json-schema.org/draft-07/schema",
     "type": "object",
     "additionalProperties": false,
@@ -119,6 +119,85 @@
             "title": "Comments",
             "description": "Any further comments",
             "type": "string"
+        },
+        "display" : {
+            "title": "display information",
+            "description": "This section is for front-end display settings",
+            "type": "object",
+            "properties": {
+                "charts": {
+                    "title": "Charts",
+                    "type": "object",
+                    "properties": {
+                        "line_chart_1" : {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "title": "Chart title",
+                                    "type": "string",
+                                    "default": "FFI0"
+                                },
+                                "line_1" : {
+                                    "type": "object",
+                                    "properties": {
+                                        "x": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "number"
+                                            },
+                                            "nexus_path": [
+                                                "/entry1/qexafs_FFI0_xspress3X/qexafs_energy"
+                                            ]
+                                        },
+                                        "y": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "number"
+                                            },
+                                            "nexus_path": [
+                                                "/entry1/qexafs_FFI0_xspress3X/FFI0"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "line_chart_2" : {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "title": "Chart title",
+                                    "type": "string",
+                                    "default": "lnI0It"
+                                },
+                                "line_1" : {
+                                    "type": "object",
+                                    "properties" : {
+                                        "x": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "number"
+                                            },
+                                            "nexus_path": [
+                                                "/entry1/qexafs_counterTimer01/qexafs_energy"
+                                            ]
+                                        },
+                                        "y": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "number"
+                                            },
+                                            "nexus_path": [
+                                                "/entry1/qexafs_counterTimer01/lnI0It"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
