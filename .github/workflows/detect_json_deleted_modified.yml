@@ -1,0 +1,20 @@
+name: Confirm no json files in main were deleted or modified
+
+on: [pull_request]
+
+jobs:
+  run:
+    name: Detect deleted or modified files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fetch repo  
+        working-directory: ./
+        run: git fetch origin main  # fixes error fatal: ambiguous argument
+
+      - name: Find deleted JSON files
+        working-directory: ./  
+        run:  |
+          ! git diff --name-status --diff-filter=D origin/main | awk '{print $2}' | grep -e 'schemas/.*.json'
