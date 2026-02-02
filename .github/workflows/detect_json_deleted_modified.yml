@@ -10,9 +10,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Fetch repo  
-        working-directory: ./
-        run: git fetch origin main  # fixes error fatal: ambiguous argument
+      #- name: Fetch repo  
+      #  working-directory: ./
+       # run: git fetch origin main  # fixes error fatal: ambiguous argument
 
       - name: Find deleted JSON files
         working-directory: ./  
