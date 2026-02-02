@@ -1,7 +1,7 @@
 {
   "title": "shared/motors/motor_scan",
   "$id": "/shared/motors/motor_scan/1.0.0",
-  "$schema": "https://json-schema.org/draft-07/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,
   "properties": {
