@@ -1,7 +1,7 @@
 {
     "name": "ulims-json-schemas",
     "version": "0.0.2",
-    "description": "Primary JSONSchemas for ULIMS projects.",
+    "description": "Primary JSON Schemas for ULIMS projects.",
     "license": "GPL-3.0-or-later",
     "repository": {
         "type": "git",
@@ -9,12 +9,13 @@
     },
     "main": "index.js",
     "scripts": {
-        "postinstall": "patch-package",
-        "check": "mocha test/jsonschema",
-        "build-new": "jsonschema-tools materialize",
-        "build-all": "jsonschema-tools materialize-all",
-        "build-main-diff": "for fn in $(git diff --name-only origin/main --diff-filter=ACM -- *current.json); do npm run build-new $fn; done",
-        "find-deleted": "! git diff --name-status --diff-filter=D origin/main | awk '{print $2}' | grep -e 'schemas/.*.json' "
+      "postinstall": "patch-package",
+      "check": "mocha test/jsonschema",
+      "build-new": "jsonschema-tools materialize",
+      "build-all": "jsonschema-tools materialize-all",
+      "build-main-diff": "for fn in $(git diff --name-only origin/main --diff-filter=ACM -- *current.json); do npm run build-new $fn; done",
+      "count-snohash": "grep --include=\\*.json -r './schemas' -e 'https.*draft-07/schema[^#]' | wc -l",
+      "fail-snohash-found": "! grep --include=\\*.json -rn './schemas' -e 'https.*draft-07/schema[^#]'"
     },
     "keywords": [
         "jsonschema",
