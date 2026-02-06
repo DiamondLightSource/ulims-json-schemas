@@ -28,6 +28,5 @@ jobs:
           run: npm run check
 
         - name: Confirm http and hash used in schema value
-          continue-on-error: true  # remove once all schema corrected and merged to main
           working-directory: ./  
           run: npm run fail-snohash-found

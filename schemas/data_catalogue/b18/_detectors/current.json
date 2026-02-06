@@ -1,7 +1,7 @@
 {
     "title": "data_catalogue/b18/_detectors",
     "$id": "/data_catalogue/b18/_detectors/1.0.0",
-    "$schema": "https://json-schema.org/draft-07/schema",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "additionalProperties": false,
     "properties": {

@@ -1,6 +1,6 @@
 {
     "$id": "/samples/b21/batch/1.0.0",
-    "$schema": "https://json-schema.org/draft-07/schema#",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "samples/b21/batch",
     "type": "object",
     "additionalProperties": false,
