@@ -18,3 +18,8 @@ jobs:
         working-directory: ./  
         run:  |
           ! git diff --name-status --diff-filter=D origin/main | awk '{print $2}' | grep -e 'schemas/.*.json'
+
+      - name: Find modified JSON files
+        working-directory: ./  
+        run:  |
+          ! git diff --name-status --diff-filter=M origin/main | awk '{print $2}' | grep -e 'schemas/.*.json'
