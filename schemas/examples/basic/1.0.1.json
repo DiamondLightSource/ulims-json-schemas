@@ -10,7 +10,7 @@
   ],
   "properties": {
     "comment": {
-      "title": "Field heading on interfaces CHANGED DIRECTLY",
+      "title": "Field heading on interfaces",
       "description": "A string property added in basic 1.0.0",
       "type": "string"
     },
