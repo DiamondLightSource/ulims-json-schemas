@@ -1,6 +1,6 @@
 {
   "title": "examples/basic",
-  "description": "A basic schema not using references EDIT WITHOUT CHANGING ID NEW BUILD OVERWRITES 1.0.1",
+  "description": "A basic schema not using references",
   "$id": "/examples/basic/1.0.1",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
