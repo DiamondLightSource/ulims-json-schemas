@@ -7,3 +7,6 @@
   this schema as a $ref until a decision is made to avoid them
   also needing a major number increment. Already in use
   by /examples/advanced/ which is pinned at first release.
+
+# 1.0.1 (Feb 2026)
+- Attempt to reuse
