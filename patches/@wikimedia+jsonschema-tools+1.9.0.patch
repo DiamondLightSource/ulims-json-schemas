@@ -1,5 +1,5 @@
 diff --git a/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js b/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js
-index 81e1c49..4a4e894 100644
+index 81e1c49..b4df4f7 100644
 --- a/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js
 +++ b/node_modules/@wikimedia/jsonschema-tools/lib/jsonschema-tools.js
 @@ -189,7 +189,7 @@ function schemaKeyCompare(k1, k2) {
@@ -11,6 +11,20 @@ index 81e1c49..4a4e894 100644
  }
  
  /**
+@@ -772,11 +772,13 @@ async function materializeSchemaToPath(schemaDirectory, schema, options = {}) {
+                 // Just in case, force remove (ignore errors) latestSchemaPath
+                 // before writing it.
+                 await fse.rm(latestSchemaPath, { force: true });
++                /* See ULIMS-1091 for reason disabled
+                 await writeObject(schema, latestSchemaPath, contentType);
+                 log.info(
+                     `Materialized latest schema at ${latestSchemaPath} with version ${version}.`
+                 );
+                 materializedFiles.push(latestSchemaPath);
++                */
+             } else {
+                 log.info(
+                     '--dry-run: Would have materialized latest schema at ' +
 diff --git a/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js b/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js
 index 9853233..68066f5 100644
 --- a/node_modules/@wikimedia/jsonschema-tools/lib/tests/structure.js
