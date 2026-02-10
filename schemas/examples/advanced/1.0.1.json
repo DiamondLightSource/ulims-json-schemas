@@ -64,11 +64,6 @@
           "is_confidential": true
         }
       ]
-    },
-    "is_confidential": {
-      "title": "Is Confidential EDITED",
-      "description": "True if entry is confidential, adding in basic 1.0.1",
-      "type": "boolean"
     }
   },
   "examples": [
@@ -79,8 +74,7 @@
         "when": "2021-01-01T00:00:00.0Z",
         "is_confidential": false,
         "counter": 150
-      },
-      "is_confidential": false
+      }
     }
   ]
 }

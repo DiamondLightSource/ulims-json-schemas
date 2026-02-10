@@ -15,7 +15,7 @@
       "$ref": "/examples/basic/1.0.1.json"
     },
      "is_confidential": {
-      "title": "Is Confidential ID CHANGED SO IF VALID CHANGE",
+      "title": "Is Confidential",
       "type": "boolean",
       "description": "True if entry is confidential, adding in basic 1.0.1"
     }
