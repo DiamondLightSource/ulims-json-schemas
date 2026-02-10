@@ -3,3 +3,5 @@
 
 # 1.0.1 (June 2024)
 - Update to using basic 1.0.1
+
+CI SHOULD RUN AND FAIL 1.0.1 was modified
