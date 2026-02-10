@@ -1,7 +1,7 @@
 {
   "title": "examples/advanced",
   "description": "A schema that references another schema",
-  "$id": "/examples/advanced/2.0.0",
+  "$id": "/examples/advanced/1.0.1",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,
@@ -13,13 +13,6 @@
       "title": "basic_from schema data",
       "description": "Description that replaces value from $ref ",
       "$ref": "/examples/basic/1.0.1.json"
-    },
-    "ident": {
-      "title": "Identifier one",
-      "description": "An UUID added in basic 1.0.0",
-      "type": "string",
-      "format": "uuid",
-      "maxLength": 40
     }
   }
 }

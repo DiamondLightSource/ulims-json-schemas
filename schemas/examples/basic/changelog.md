@@ -7,5 +7,3 @@
   this schema as a $ref until a decision is made to avoid them
   also needing a major number increment. Already in use
   by /examples/advanced/ which is pinned at first release.
-
-CAUSE CI TO RUN NO CHANGES TO SCHEMA
