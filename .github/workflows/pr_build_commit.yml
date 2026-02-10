@@ -31,9 +31,9 @@ jobs:
         working-directory: ./
         run: git fetch  # fixes error: fatal: bad revision 'main'
 
-      #- name: Build current files different than main branch
-       # working-directory: ./  
-        #run:  npm run build-main-diff
+      - name: Build current files different than main branch
+        working-directory: ./  
+        run:  npm run build-main-diff
 
       - name: Check schema root passes minimum requirements
         working-directory: ./  
