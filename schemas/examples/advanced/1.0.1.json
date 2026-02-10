@@ -1,6 +1,6 @@
 {
   "title": "examples/advanced",
-  "description": "A schema that references another schema CHANGE MAKE CI BUILD IT",
+  "description": "A schema that references another schema",
   "$id": "/examples/advanced/1.0.1",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
@@ -11,7 +11,7 @@
   "properties": {
     "basic_from": {
       "title": "basic_from schema data",
-      "description": "Description that replaces value from $ref",
+      "description": "Description that replaces value from $ref ",
       "$id": "/examples/basic/1.0.1",
       "$schema": "http://json-schema.org/draft-07/schema#",
       "type": "object",
