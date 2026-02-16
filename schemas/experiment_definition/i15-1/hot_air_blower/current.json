@@ -1,0 +1,67 @@
+{
+    "$id": "experiment_definition/i15-1/hot_air_blower/0.0.1",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "experiment_definition/i15-1/hot_air_blower",
+    "type": "object",
+    "required": [ ],
+    "properties": {
+        "beam_energy": {
+            "title": "Beam Energy (keV)",
+            "type": "number",
+            "enum": [
+                40.0,
+                65.6,
+                76.7
+            ],
+            "description": "Beam Energy in keV",
+            "default": 76.7
+        },
+        "focused_beam_size": {
+            "title": "Focused Beam Size (um)",
+            "type": "number",
+            "description": "TBC",
+            "enum": [
+                10.0,
+                200.0
+            ],
+            "default": 200.0
+        },
+        "total_time": {
+            "title": "Total Time (seconds)",
+            "type": "number",
+            "description": "TBC",
+            "default": 600.0,
+            "minimum": 0,
+            "maximum": 99999.9
+        },
+        "q_max": {
+            "title": "Q-max",
+            "type": "number",
+            "description": "TBC", 
+            "default": 25.0,
+            "minimum": 0.0,
+            "maximum": 100.0
+        },
+        "repeats": {
+            "title": "Repeats",
+            "type": "integer",
+            "description": "TBC",
+            "default": 1,
+            "minimum": 1,
+            "maximum": 10000
+        },
+        "list_of_temperatures": {
+            "title": "List of Blower Temperatures (C)",
+            "type": "array",
+            "description": "TBC",
+            "minimum": 0,
+            "maximum": 999
+        },
+        "comment": {
+            "title": "Comment",
+            "type": "string",
+            "description": "Some text here to emphasise that this may not be read by beamline staff!",
+            "default": ""
+        }
+    }
+}
