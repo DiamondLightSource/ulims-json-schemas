@@ -1,0 +1,15 @@
+{
+    "$id": "experiment_definition/i15-1/room_temperature/0.0.1",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "experiment_definition/i15-1/room_temperature",
+    "type": "object",
+    "required": [],
+    "allOf": [
+        {
+            "$ref": "/experiment_definition/i15-1/_common/0.0.1.json"
+        },
+        {
+            "$ref": "/experiment_definition/shared/comment/1.0.0.json"
+        }
+    ]
+}

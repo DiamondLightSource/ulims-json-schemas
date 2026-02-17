@@ -1,0 +1,90 @@
+{
+  "title": "experiment_definition/i15-1/cobra",
+  "$id": "experiment_definition/i15-1/cobra/0.0.1",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "beam_energy"
+  ],
+  "properties": {
+    "beam_energy": {
+      "title": "Beam Energy (keV)",
+      "description": "Beam Energy in keV",
+      "type": "number",
+      "enum": [
+        40,
+        65.6,
+        76.7
+      ],
+      "default": 76.7,
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    },
+    "focused_beam_size": {
+      "title": "Focused Beam Size (µm)",
+      "description": "TBC",
+      "type": "number",
+      "enum": [
+        10,
+        200
+      ],
+      "default": 200,
+      "minimum": -9007199254740991,
+      "maximum": 9007199254740991
+    },
+    "total_time": {
+      "title": "Total Time (seconds)",
+      "description": "TBC",
+      "type": "number",
+      "default": 600,
+      "minimum": 0,
+      "maximum": 99999.9
+    },
+    "q_max": {
+      "title": "Q-max (units?)",
+      "description": "TBC",
+      "type": "number",
+      "default": 25,
+      "minimum": 0,
+      "maximum": 100
+    },
+    "repeats": {
+      "title": "Repeats",
+      "description": "TBC",
+      "type": "integer",
+      "default": 1,
+      "minimum": 1,
+      "maximum": 10000
+    },
+    "list_of_temperatures": {
+      "title": "List of Cobra Temperatures (K)",
+      "description": "TBC",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 80,
+        "maximum": 500
+      }
+    },
+    "comment": {
+      "title": "Comment",
+      "description": "Please note this comment field will not be read by beamline staff.",
+      "type": "string",
+      "default": "",
+      "maxLength": 1000
+    }
+  },
+  "examples": [
+    {
+      "beam_energy": 76.7,
+      "total_time": 600,
+      "q_max": 25,
+      "repeats": 1,
+      "list_of_temperatures": [
+        143
+      ],
+      "comment": "",
+      "focused_beam_size": 200
+    }
+  ]
+}

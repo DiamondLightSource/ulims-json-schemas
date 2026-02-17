@@ -1,0 +1,30 @@
+{
+    "$id": "experiment_definition/i15-1/cobra/0.0.1",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "experiment_definition/i15-1/cobra",
+    "required": [],
+    "allOf": [
+        {
+            "$ref": "/experiment_definition/i15-1/_common/0.0.1.json"
+        },
+        {
+            "type": "object",
+            "required": [],
+            "properties": {
+                "list_of_temperatures": {
+                    "title": "List of Cobra Temperatures (K)",
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "minimum": 80,
+                        "maximum": 500
+                    },
+                    "description": "TBC"
+                }
+            }
+        },
+        {
+            "$ref": "/experiment_definition/shared/comment/1.0.0.json"
+        }
+    ]
+}
