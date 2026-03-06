@@ -19,7 +19,7 @@
         "focused_beam_size": {
             "title": "Focused Beam Size (µm)",
             "type": "number",
-            "description": "TBC",
+            "description": "The vertical extent of the primary beam at the sample position. 200 um at the sample position means we focus on the detector for maximum reciprocal space resolution.",
             "enum": [
                 10.0,
                 200.0
@@ -29,15 +29,15 @@
         "total_time": {
             "title": "Total Time (seconds)",
             "type": "number",
-            "description": "TBC",
+            "description": "Total exposure time for each data collection in seconds.",
             "default": 600.0,
             "minimum": 0,
             "maximum": 99999.9
         },
         "q_max": {
-            "title": "Q-max (units?)",
+            "title": "Q-max (Å⁻¹)",
             "type": "number",
-            "description": "TBC", 
+            "description": "The required maximum momentum transfer for this collection.", 
             "default": 25.0,
             "minimum": 0.0,
             "maximum": 100.0
@@ -45,7 +45,7 @@
         "repeats": {
             "title": "Repeats",
             "type": "integer",
-            "description": "TBC",
+            "description": "The number of times to perform this collection. The time of this data collection will roughly equal the total time above multiplied by this number.",
             "default": 1,
             "minimum": 1,
             "maximum": 10000
