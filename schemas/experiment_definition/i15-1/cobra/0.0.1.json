@@ -22,7 +22,7 @@
     },
     "focused_beam_size": {
       "title": "Focused Beam Size (µm)",
-      "description": "TBC",
+      "description": "The vertical extent of the primary beam at the sample position. 200 um at the sample position means we focus on the detector for maximum reciprocal space resolution.",
       "type": "number",
       "enum": [
         10,
@@ -33,16 +33,16 @@
       "maximum": 9007199254740991
     },
     "total_time": {
-      "title": "Total Time (seconds)",
-      "description": "TBC",
+      "title": "Data Point Time (seconds)",
+      "description": "Total exposure time for each data point in seconds.",
       "type": "number",
       "default": 600,
       "minimum": 0,
       "maximum": 99999.9
     },
     "q_max": {
-      "title": "Q-max (units?)",
-      "description": "TBC",
+      "title": "Q-max (Å⁻¹)",
+      "description": "The required maximum momentum transfer for this collection.",
       "type": "number",
       "default": 25,
       "minimum": 0,
@@ -50,7 +50,7 @@
     },
     "repeats": {
       "title": "Repeats",
-      "description": "TBC",
+      "description": "The number of data points [at each temperature]. The total time for this experiment will be (data point time) × (repeats) × (number of temperatures).",
       "type": "integer",
       "default": 1,
       "minimum": 1,
@@ -58,7 +58,7 @@
     },
     "list_of_temperatures": {
       "title": "List of Cobra Temperatures (K)",
-      "description": "TBC",
+      "description": "The required temperatures in Kelvin. Individual data points will be collected at these temperatures after a short thermal stabilisation time.",
       "type": "array",
       "items": {
         "type": "number",
