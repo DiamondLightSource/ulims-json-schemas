@@ -19,7 +19,7 @@
                         "minimum": 80,
                         "maximum": 500
                     },
-                    "description": "TBC"
+                    "description": "The required temperatures in Kelvin. Individual data points will be collected at these temperatures after a short thermal stabilisation time."
                 }
             }
         },
