@@ -27,9 +27,9 @@
             "default": 200.0
         },
         "total_time": {
-            "title": "Total Time (seconds)",
+            "title": "Data Point Time (seconds)",
             "type": "number",
-            "description": "Total exposure time for each data collection in seconds.",
+            "description": "Total exposure time for each data point in seconds.",
             "default": 600.0,
             "minimum": 0,
             "maximum": 99999.9
@@ -45,7 +45,7 @@
         "repeats": {
             "title": "Repeats",
             "type": "integer",
-            "description": "The number of times to perform this collection. The time of this data collection will roughly equal the total time above multiplied by this number.",
+            "description": "The number of data points [at each temperature]. The total time for this experiment will be (data point time) × (repeats) × (number of temperatures).",
             "default": 1,
             "minimum": 1,
             "maximum": 10000
