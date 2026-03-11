@@ -48,9 +48,9 @@
       "minimum": 0,
       "maximum": 100
     },
-    "repeats": {
-      "title": "Repeats",
-      "description": "The number of data points [at each temperature]. The total time for this experiment will be (data point time) × (repeats) × (number of temperatures).",
+    "frames": {
+      "title": "Frames",
+      "description": "The number of data points [at each temperature]. The total time for this experiment will be (data point time) × (frames) × (number of temperatures).",
       "type": "integer",
       "default": 1,
       "minimum": 1,
@@ -79,7 +79,7 @@
       "beam_energy": 76.7,
       "total_time": 600,
       "q_max": 25,
-      "repeats": 1,
+      "frames": 1,
       "list_of_temperatures": [
         149.85
       ],
