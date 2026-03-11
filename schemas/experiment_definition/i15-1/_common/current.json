@@ -42,10 +42,10 @@
             "minimum": 0.0,
             "maximum": 100.0
         },
-        "repeats": {
-            "title": "Repeats",
+        "frames": {
+            "title": "Frames",
             "type": "integer",
-            "description": "The number of data points [at each temperature]. The total time for this experiment will be (data point time) × (repeats) × (number of temperatures).",
+            "description": "The number of data points [at each temperature]. The total time for this experiment will be (data point time) × (frames) × (number of temperatures).",
             "default": 1,
             "minimum": 1,
             "maximum": 10000
