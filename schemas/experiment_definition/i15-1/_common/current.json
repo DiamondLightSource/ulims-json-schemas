@@ -19,7 +19,7 @@
         "focused_beam_size": {
             "title": "Focused Beam Size (µm)",
             "type": "number",
-            "description": "The vertical extent of the primary beam at the sample position. 200 um at the sample position means we focus on the detector for maximum reciprocal space resolution.",
+            "description": "The vertical extent of the primary beam at the sample position. 200 µm at the sample position means we focus on the detector for maximum reciprocal space resolution.",
             "enum": [
                 10.0,
                 200.0
