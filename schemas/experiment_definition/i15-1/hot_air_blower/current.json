@@ -1,0 +1,40 @@
+{
+    "$id": "experiment_definition/i15-1/hot_air_blower/0.0.1",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "experiment_definition/i15-1/hot_air_blower",
+    "required": [],
+    "allOf": [
+        {
+            "$ref": "/experiment_definition/i15-1/_common/0.0.1.json"
+        },
+        {
+            "type": "object",
+            "required": [],
+            "properties": {
+                "list_of_temperatures": {
+                    "title": "List of Blower Temperatures (C)",
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 999
+                    },
+                    "description": "The required temperatures in degrees Celsius. Individual data points will be collected at these temperatures after a short thermal stabilisation time."
+                    },
+                "ramp_rate": {
+                    "title": "Blower Ramp Rate (C/min)",
+                    "type": "number",
+                    "default": 0.0,
+                    "minimum": 0.0,
+                    "maximum": 12.0,
+                    "description": "The required ramp rate for the blower in C/min. The default value, 0 means that the blower will ramp as fast as possible."
+                }
+
+                }
+            }
+        },
+        {
+            "$ref": "/experiment_definition/shared/comment/1.0.0.json"
+        }
+    ]
+}

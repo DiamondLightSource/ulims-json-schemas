@@ -1,0 +1,15 @@
+{
+    "$id": "experiment_definition/shared/comment/1.0.0",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "experiment_definition/shared/comment",
+    "type": "object",
+    "properties": {
+        "comment": {
+            "title": "Comment",
+            "type": "string",
+            "description": "Please note this comment field will not be read by beamline staff.",
+            "default": "",
+            "maxLength": 1000
+        }
+    }
+}
