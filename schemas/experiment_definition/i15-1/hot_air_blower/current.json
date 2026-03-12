@@ -19,7 +19,7 @@
                         "minimum": 0,
                         "maximum": 999
                     },
-                    "description": "The required temperatures in degrees Celcius. Individual data points will be collected at these temperatures after a short thermal stabilisation time."
+                    "description": "The required temperatures in degrees Celsius. Individual data points will be collected at these temperatures after a short thermal stabilisation time."
                 }
             }
         },
