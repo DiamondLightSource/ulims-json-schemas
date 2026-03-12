@@ -22,7 +22,7 @@
     },
     "focused_beam_size": {
       "title": "Focused Beam Size (µm)",
-      "description": "The vertical extent of the primary beam at the sample position. 200 um at the sample position means we focus on the detector for maximum reciprocal space resolution.",
+      "description": "The vertical extent of the primary beam at the sample position. 200 µm at the sample position means we focus on the detector for maximum reciprocal space resolution.",
       "type": "number",
       "enum": [
         10,
@@ -58,7 +58,7 @@
     },
     "list_of_temperatures": {
       "title": "List of Blower Temperatures (C)",
-      "description": "The required temperatures in degrees Celcius. Individual data points will be collected at these temperatures after a short thermal stabilisation time.",
+      "description": "The required temperatures in degrees Celsius. Individual data points will be collected at these temperatures after a short thermal stabilisation time.",
       "type": "array",
       "items": {
         "type": "number",
