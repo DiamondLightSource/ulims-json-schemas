@@ -26,10 +26,10 @@
             ],
             "default": 200.0
         },
-        "total_time": {
-            "title": "Data Point Time (seconds)",
+        "time_per_pdf": {
+            "title": "Time per PDF (seconds)",
             "type": "number",
-            "description": "Total exposure time for each data point in seconds.",
+            "description": "Total exposure time for each diffraction pattern/PDF in seconds.",
             "default": 600.0,
             "minimum": 0,
             "maximum": 99999.9
@@ -45,7 +45,7 @@
         "frames": {
             "title": "Frames",
             "type": "integer",
-            "description": "The number of data points [at each temperature]. The total time for this experiment will be (data point time) × (frames) × (number of temperatures).",
+            "description": "The number of PDFs [at each temperature]. The total time for this experiment will be (time per PDF) × (frames) × (number of temperatures).",
             "default": 1,
             "minimum": 1,
             "maximum": 10000
