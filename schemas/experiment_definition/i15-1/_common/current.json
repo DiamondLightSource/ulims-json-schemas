@@ -3,7 +3,9 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "experiment_definition/i15-1/_common",
     "type": "object",
-    "required": ["beam_energy"],
+    "required": [
+        "beam_energy"
+    ],
     "properties": {
         "beam_energy": {
             "title": "Beam Energy (keV)",
@@ -37,7 +39,7 @@
         "q_max": {
             "title": "Q-max (Å⁻¹)",
             "type": "number",
-            "description": "The required maximum momentum transfer for this collection.", 
+            "description": "The required maximum momentum transfer for this collection.",
             "default": 25.0,
             "minimum": 0.0,
             "maximum": 100.0

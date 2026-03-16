@@ -37,7 +37,6 @@
                     "maximum": 99999.0,
                     "description": "The required settle time per temperature point in seconds."
                 }
-
             }
         },
         {
