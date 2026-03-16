@@ -25,9 +25,17 @@
                     "title": "Cobra Ramp Rate (K/min)",
                     "type": "number",
                     "default": 6.0,
-                    "minimum": 0.1,
-                    "maximum": 12.0,
+                    "minimum": 0.02,
+                    "maximum": 6.0,
                     "description": "The required ramp rate for the cobra in K/min."
+                },
+                "settle_time": {
+                    "title": "Settle time per temperature point (seconds)",
+                    "type": "number",
+                    "default": 180.0,
+                    "minimum": 0.0,
+                    "maximum": 99999.0,
+                    "description": "The required settle time per temperature point in seconds."
                 }
             }
         },
