@@ -4,7 +4,11 @@
     "title": "experiment_definition/i15-1/_common",
     "type": "object",
     "required": [
-        "beam_energy"
+        "beam_energy",
+        "focused_beam_size",
+        "time_per_pdf",
+        "q_max",
+        "frames"
     ],
     "properties": {
         "beam_energy": {
