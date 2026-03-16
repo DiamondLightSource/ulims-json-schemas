@@ -4,7 +4,11 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "required": [
-    "beam_energy"
+    "beam_energy",
+    "focused_beam_size",
+    "frames",
+    "q_max",
+    "time_per_pdf"
   ],
   "properties": {
     "beam_energy": {
@@ -67,11 +71,11 @@
   "examples": [
     {
       "beam_energy": 76.7,
-      "time_per_pdf": 600,
-      "q_max": 25,
+      "focused_beam_size": 200,
       "frames": 1,
-      "comment": "",
-      "focused_beam_size": 200
+      "q_max": 25,
+      "time_per_pdf": 600,
+      "comment": ""
     }
   ]
 }

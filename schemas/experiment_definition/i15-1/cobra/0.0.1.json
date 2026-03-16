@@ -4,7 +4,11 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "required": [
-    "beam_energy"
+    "beam_energy",
+    "focused_beam_size",
+    "frames",
+    "q_max",
+    "time_per_pdf"
   ],
   "properties": {
     "beam_energy": {
@@ -93,16 +97,16 @@
   "examples": [
     {
       "beam_energy": 76.7,
-      "settle_time": 180,
-      "q_max": 25,
+      "focused_beam_size": 200,
       "frames": 1,
+      "q_max": 25,
+      "time_per_pdf": 600,
+      "ramp_rate": 6,
+      "settle_time": 180,
+      "comment": "",
       "list_of_temperatures": [
         143
-      ],
-      "ramp_rate": 6,
-      "focused_beam_size": 200,
-      "comment": "",
-      "time_per_pdf": 600
+      ]
     }
   ]
 }
