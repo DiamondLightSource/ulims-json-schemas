@@ -2,7 +2,11 @@
     "$id": "experiment_definition/i15-1/cobra/0.0.1",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "experiment_definition/i15-1/cobra",
-    "required": [],
+    "required": [
+        "list_of_temperatures",
+        "ramp_rate",
+        "settle_time"
+    ],
     "allOf": [
         {
             "$ref": "/experiment_definition/i15-1/_common/0.0.1.json"
