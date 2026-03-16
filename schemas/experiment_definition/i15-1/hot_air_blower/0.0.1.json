@@ -66,6 +66,22 @@
         "maximum": 999
       }
     },
+    "ramp_rate": {
+      "title": "Blower Ramp Rate (C/min)",
+      "description": "The required ramp rate for the blower in C/min. The value used will be rounded to the nearest multiple of six.",
+      "type": "number",
+      "default": 120,
+      "minimum": 0,
+      "maximum": 120
+    },
+    "settle_time": {
+      "title": "Settle time per temperature point (seconds)",
+      "description": "The required settle time per temperature point in seconds.",
+      "type": "number",
+      "default": 180,
+      "minimum": 0,
+      "maximum": 99999
+    },
     "comment": {
       "title": "Comment",
       "description": "Please note this comment field will not be read by beamline staff.",
@@ -77,14 +93,16 @@
   "examples": [
     {
       "beam_energy": 76.7,
-      "total_time": 600,
+      "settle_time": 180,
       "q_max": 25,
       "frames": 1,
       "list_of_temperatures": [
         149.85
       ],
+      "ramp_rate": 120,
+      "focused_beam_size": 200,
       "comment": "",
-      "focused_beam_size": 200
+      "total_time": 600
     }
   ]
 }
