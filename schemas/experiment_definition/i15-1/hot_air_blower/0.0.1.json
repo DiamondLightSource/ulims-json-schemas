@@ -7,7 +7,10 @@
     "beam_energy",
     "focused_beam_size",
     "frames",
+    "list_of_temperatures",
     "q_max",
+    "ramp_rate",
+    "settle_time",
     "time_per_pdf"
   ],
   "properties": {
@@ -99,14 +102,14 @@
       "beam_energy": 76.7,
       "focused_beam_size": 200,
       "frames": 1,
-      "q_max": 25,
-      "time_per_pdf": 600,
-      "ramp_rate": 120,
-      "settle_time": 180,
-      "comment": "",
       "list_of_temperatures": [
         149.85
-      ]
+      ],
+      "q_max": 25,
+      "ramp_rate": 120,
+      "settle_time": 180,
+      "time_per_pdf": 600,
+      "comment": ""
     }
   ]
 }
