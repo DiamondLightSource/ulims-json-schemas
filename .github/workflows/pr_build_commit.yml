@@ -39,6 +39,10 @@ jobs:
         working-directory: ./  
         run: npm run check
 
+      - name: Confirm http and hash used in schema value
+        working-directory: ./
+        run: npm run fail-no-hash-found
+
       - name: Commit changes, requires writers to pull branch
         uses: EndBug/add-and-commit@v9
         with:
