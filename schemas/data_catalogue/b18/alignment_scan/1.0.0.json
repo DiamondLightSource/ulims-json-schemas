@@ -59,7 +59,7 @@
           "minimum": -9007199254740991,
           "maximum": 9007199254740991
         },
-        "region_of_interest_end": {
+        "region_of_interest_end_changed": {
           "title": "Region of Interest End Value",
           "description": "For Fluorescence detection mode",
           "type": "number",
@@ -72,7 +72,7 @@
           "amplification": -6305039478318694,
           "detector_distance": -6305039478318694,
           "region_of_interest_start": -6305039478318694,
-          "region_of_interest_end": -6305039478318694,
+          "region_of_interest_end_changed": -6305039478318694,
           "detectors": [
             {
               "detection_mode": "dolor",
@@ -419,7 +419,7 @@
         "amplification": -6305039478318694,
         "detector_distance": -6305039478318694,
         "region_of_interest_start": -6305039478318694,
-        "region_of_interest_end": -6305039478318694,
+        "region_of_interest_end_changed": -6305039478318694,
         "detectors": [
           {
             "detection_mode": "dolor",
