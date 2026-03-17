@@ -13,9 +13,8 @@
       "check": "mocha test/jsonschema",
       "build-new": "jsonschema-tools materialize",
       "build-all": "jsonschema-tools materialize-all",
-      "build-main-diff": "for fn in $(git diff --name-only origin/main --diff-filter=ACM -- *current.json); do npm run build-new $fn; done",
       "count-snohash": "grep --include=\\*.json -r './schemas' -e 'https.*draft-07/schema[^#]' | wc -l",
-      "fail-snohash-found": "! grep --include=\\*.json -rn './schemas' -e 'https.*draft-07/schema[^#]'",
+      "fail-no-hash-found": "! grep --include=\\*.json -rn './schemas' -e 'https.*draft-07/schema[^#]'",
       "find-deleted": "! git diff --name-status --diff-filter=D origin/main | awk '{print $2}' | grep -e 'schemas/.*.json'",
       "find-modified": "! git diff --name-status --diff-filter=M origin/main | awk '{print $2}' | grep -e 'schemas/.*.json' | grep -v 'current.json'"
     },
