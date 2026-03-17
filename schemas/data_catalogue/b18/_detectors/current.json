@@ -46,7 +46,7 @@
             "description": "For Fluorescence detection mode",
             "type": "number"
         },
-        "region_of_interest_end_changed_again": {
+        "region_of_interest_end_changed_again_and_again": {
             "title": "Region of Interest End Value",
             "description": "For Fluorescence detection mode",
             "type": "number"
