@@ -8,3 +8,5 @@ logLevel: info
 shouldGenerateExample: true
 
 shouldSymlinkExtensionless: false
+
+enforcedNumericBounds: null
