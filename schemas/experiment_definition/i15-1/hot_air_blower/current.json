@@ -9,7 +9,7 @@
     ],
     "allOf": [
         {
-            "$ref": "/experiment_definition/i15-1/_common/0.0.1.json"
+            "$ref": "/experiment_definition/i15-1/shared/0.0.1.json"
         },
         {
             "type": "object",
