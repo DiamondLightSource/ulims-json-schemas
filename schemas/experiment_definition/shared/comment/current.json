@@ -7,7 +7,7 @@
         "comment": {
             "title": "Comment",
             "type": "string",
-            "description": "Please note this comment field will not be read by beamline staff.",
+            "description": "Add a comment to this experiment definition, to provide additional information or context. The comment will have no impact on the experiment definition itself, and is purely for informational purposes.",
             "default": "",
             "maxLength": 1000
         }
