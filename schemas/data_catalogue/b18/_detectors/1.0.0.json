@@ -34,38 +34,30 @@
     "amplification": {
       "title": "Amplification",
       "description": "For Transmission detection mode",
-      "type": "number",
-      "minimum": -9007199254740991,
-      "maximum": 9007199254740991
+      "type": "number"
     },
     "detector_distance": {
       "title": "Detector Distance",
       "description": "The distance of the detector, for Fluorescence detection mode, ??",
-      "type": "number",
-      "minimum": -9007199254740991,
-      "maximum": 9007199254740991
+      "type": "number"
     },
     "region_of_interest_start": {
       "title": "Region of Interest Start Value",
       "description": "For Fluorescence detection mode",
-      "type": "number",
-      "minimum": -9007199254740991,
-      "maximum": 9007199254740991
+      "type": "number"
     },
     "region_of_interest_end": {
       "title": "Region of Interest End Value",
       "description": "For Fluorescence detection mode",
-      "type": "number",
-      "minimum": -9007199254740991,
-      "maximum": 9007199254740991
+      "type": "number"
     }
   },
   "examples": [
     {
-      "amplification": -6305039478318694,
-      "detector_distance": -6305039478318694,
-      "region_of_interest_start": -6305039478318694,
-      "region_of_interest_end": -6305039478318694,
+      "amplification": -70000000,
+      "detector_distance": -70000000,
+      "region_of_interest_start": -70000000,
+      "region_of_interest_end": -70000000,
       "detectors": [
         {
           "detection_mode": "dolor",
