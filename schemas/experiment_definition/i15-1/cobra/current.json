@@ -21,7 +21,8 @@
                     "items": {
                         "type": "number",
                         "minimum": 80,
-                        "maximum": 500
+                        "maximum": 500,
+                        "minItems": 1
                     },
                     "description": "The required temperatures in Kelvin. Individual data points will be collected at these temperatures after a short thermal stabilisation time."
                 },

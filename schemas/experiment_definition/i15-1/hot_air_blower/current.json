@@ -31,7 +31,8 @@
                     "default": 120.0,
                     "minimum": 0.0,
                     "maximum": 120.0,
-                    "description": "The required ramp rate for the blower in C/min. The value used will be rounded to the nearest multiple of six."
+                    "multipleOf": 6,
+                    "description": "The required ramp rate for the blower in C/min. The values need to be multiples of 6."
                 },
                 "settle_time": {
                     "title": "Settle time per temperature point (seconds)",
