@@ -1,0 +1,60 @@
+{
+    "$id": "experiment_definition/i15-1/shared/0.0.1",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "experiment_definition/i15-1/shared",
+    "type": "object",
+    "required": [
+        "beam_energy",
+        "focused_beam_size",
+        "time_per_pdf",
+        "q_max",
+        "frames"
+    ],
+    "properties": {
+        "beam_energy": {
+            "title": "Beam Energy (keV)",
+            "type": "number",
+            "enum": [
+                40.0,
+                65.6,
+                76.7
+            ],
+            "description": "Beam Energy in keV",
+            "default": 76.7
+        },
+        "focused_beam_size": {
+            "title": "Focused Beam Size (µm)",
+            "type": "number",
+            "description": "The vertical extent of the primary beam at the sample position. 200 µm at the sample position means we focus on the detector for maximum reciprocal space resolution.",
+            "enum": [
+                10.0,
+                200.0
+            ],
+            "default": 200.0
+        },
+        "time_per_pdf": {
+            "title": "Time per PDF (seconds)",
+            "type": "number",
+            "description": "Total exposure time for each diffraction pattern/PDF in seconds.",
+            "default": 600.0,
+            "minimum": 0,
+            "maximum": 99999.9
+        },
+        "q_max": {
+            "title": "Q-max (Å⁻¹)",
+            "type": "number",
+            "description": "The required maximum momentum transfer for this collection, in reciprocal Angstroms.", 
+            "default": 25.0,
+            "minimum": 0.0,
+            "maximum": 100.0
+        },
+        "frames": {
+            "title": "Frames",
+            "type": "integer",
+            "description": "The number of PDFs [at each temperature]. The total time for this experiment will be (time per PDF) × (frames) × (number of temperatures).",
+            "default": 1,
+            "minimum": 1,
+            "maximum": 10000
+        }
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "$id": "experiment_definition/i15-1/cobra/0.0.1",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "experiment_definition/i15-1/cobra",
+    "required": [
+        "list_of_temperatures",
+        "ramp_rate",
+        "settle_time"
+    ],
+    "allOf": [
+        {
+            "$ref": "/experiment_definition/i15-1/shared/0.0.1.json"
+        },
+        {
+            "type": "object",
+            "required": [],
+            "properties": {
+                "list_of_temperatures": {
+                    "title": "List of Cobra Temperatures (K)",
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "minimum": 80,
+                        "maximum": 500,
+                        "minItems": 1
+                    },
+                    "description": "The required temperatures in Kelvin. Individual data points will be collected at these temperatures after a short thermal stabilisation time."
+                },
+                "ramp_rate": {
+                    "title": "Cobra Ramp Rate (K/min)",
+                    "type": "number",
+                    "default": 6.0,
+                    "minimum": 0.02,
+                    "maximum": 6.0,
+                    "description": "The required ramp rate for the cobra in K/min."
+                },
+                "settle_time": {
+                    "title": "Settle time per temperature point (seconds)",
+                    "type": "number",
+                    "default": 180.0,
+                    "minimum": 0.0,
+                    "maximum": 99999.0,
+                    "description": "The required settle time per temperature point in seconds."
+                }
+            }
+        },
+        {
+            "$ref": "/experiment_definition/shared/comment/1.0.0.json"
+        }
+    ]
+}

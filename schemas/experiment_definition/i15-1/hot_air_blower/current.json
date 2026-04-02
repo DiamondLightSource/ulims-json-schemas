@@ -1,0 +1,51 @@
+{
+    "$id": "experiment_definition/i15-1/hot_air_blower/0.0.1",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "experiment_definition/i15-1/hot_air_blower",
+    "required": [
+        "list_of_temperatures",
+        "ramp_rate",
+        "settle_time"
+    ],
+    "allOf": [
+        {
+            "$ref": "/experiment_definition/i15-1/shared/0.0.1.json"
+        },
+        {
+            "type": "object",
+            "required": [],
+            "properties": {
+                "list_of_temperatures": {
+                    "title": "List of Blower Temperatures (C)",
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "minimum": 0,
+                        "maximum": 999
+                    },
+                    "description": "The required temperatures in degrees Celsius. Individual data points will be collected at these temperatures after a short thermal stabilisation time."
+                },
+                "ramp_rate": {
+                    "title": "Blower Ramp Rate (C/min)",
+                    "type": "number",
+                    "default": 120.0,
+                    "minimum": 0.0,
+                    "maximum": 120.0,
+                    "multipleOf": 6,
+                    "description": "The required ramp rate for the blower in C/min. The values need to be multiples of 6."
+                },
+                "settle_time": {
+                    "title": "Settle time per temperature point (seconds)",
+                    "type": "number",
+                    "default": 180.0,
+                    "minimum": 0.0,
+                    "maximum": 99999.0,
+                    "description": "The required settle time per temperature point in seconds."
+                }
+            }
+        },
+        {
+            "$ref": "/experiment_definition/shared/comment/1.0.0.json"
+        }
+    ]
+}

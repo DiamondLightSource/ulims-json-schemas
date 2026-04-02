@@ -41,38 +41,30 @@
         "amplification": {
           "title": "Amplification",
           "description": "For Transmission detection mode",
-          "type": "number",
-          "minimum": -9007199254740991,
-          "maximum": 9007199254740991
+          "type": "number"
         },
         "detector_distance": {
           "title": "Detector Distance",
           "description": "The distance of the detector, for Fluorescence detection mode, ??",
-          "type": "number",
-          "minimum": -9007199254740991,
-          "maximum": 9007199254740991
+          "type": "number"
         },
         "region_of_interest_start": {
           "title": "Region of Interest Start Value",
           "description": "For Fluorescence detection mode",
-          "type": "number",
-          "minimum": -9007199254740991,
-          "maximum": 9007199254740991
+          "type": "number"
         },
         "region_of_interest_end": {
           "title": "Region of Interest End Value",
           "description": "For Fluorescence detection mode",
-          "type": "number",
-          "minimum": -9007199254740991,
-          "maximum": 9007199254740991
+          "type": "number"
         }
       },
       "examples": [
         {
-          "amplification": -6305039478318694,
-          "detector_distance": -6305039478318694,
-          "region_of_interest_start": -6305039478318694,
-          "region_of_interest_end": -6305039478318694,
+          "amplification": -70000000,
+          "detector_distance": -70000000,
+          "region_of_interest_start": -70000000,
+          "region_of_interest_end": -70000000,
           "detectors": [
             {
               "detection_mode": "dolor",
@@ -256,9 +248,7 @@
         "beam_size": {
           "title": "Beam Size",
           "description": "The size of the beam, ??",
-          "type": "number",
-          "minimum": -9007199254740991,
-          "maximum": 9007199254740991
+          "type": "number"
         },
         "mirror_types": {
           "title": "Mirror Types",
@@ -314,44 +304,32 @@
               "motor_position_x_start": {
                 "title": "X Position at Start of Scan",
                 "description": "The x-position of the motor at the start of the scan",
-                "type": "number",
-                "minimum": -9007199254740991,
-                "maximum": 9007199254740991
+                "type": "number"
               },
               "motor_position_x_end": {
                 "title": "X Position at End of Scan",
                 "description": "The x-position of the motor at the end of the scan",
-                "type": "number",
-                "minimum": -9007199254740991,
-                "maximum": 9007199254740991
+                "type": "number"
               },
               "motor_position_x_step": {
                 "title": "X Position Step Size",
                 "description": "The step size for the x-position of the motor",
-                "type": "number",
-                "minimum": -9007199254740991,
-                "maximum": 9007199254740991
+                "type": "number"
               },
               "motor_position_y_start": {
                 "title": "Y Position at Start of Scan",
                 "description": "The y-position of the motor at the start of the scan",
-                "type": "number",
-                "minimum": -9007199254740991,
-                "maximum": 9007199254740991
+                "type": "number"
               },
               "motor_position_y_end": {
                 "title": "Y Position at End of Scan",
                 "description": "The y-position of the motor at the end of the scan",
-                "type": "number",
-                "minimum": -9007199254740991,
-                "maximum": 9007199254740991
+                "type": "number"
               },
               "motor_position_y_step": {
                 "title": "Y Position Step Size",
                 "description": "The step size for the y-position of the motor",
-                "type": "number",
-                "minimum": -9007199254740991,
-                "maximum": 9007199254740991
+                "type": "number"
               }
             }
           }
@@ -361,13 +339,13 @@
         {
           "motor_scan": [
             {
-              "motor_position_y_step": -6305039478318694,
-              "motor_position_x_end": -6305039478318694,
-              "motor_position_x_step": -6305039478318694,
-              "motor_position_y_start": -6305039478318694,
-              "motor_position_y_end": -6305039478318694,
+              "motor_position_y_step": -70000000,
+              "motor_position_x_end": -70000000,
+              "motor_position_x_step": -70000000,
+              "motor_position_y_start": -70000000,
+              "motor_position_y_end": -70000000,
               "motor_name": "dolor",
-              "motor_position_x_start": -6305039478318694
+              "motor_position_x_start": -70000000
             }
           ]
         }
@@ -377,9 +355,7 @@
       "title": "Temperature",
       "description": "The temperature of the heating or cooling device, K",
       "type": "number",
-      "nexus_path": "/scan/temperature",
-      "minimum": -9007199254740991,
-      "maximum": 9007199254740991
+      "nexus_path": "/scan/temperature"
     },
     "comments": {
       "title": "Comments",
@@ -399,27 +375,27 @@
           "hr_mirror": "Pt",
           "collimating_mirror": "311"
         },
-        "beam_size": -6305039478318694
+        "beam_size": -70000000
       },
       "motor_information": {
         "motor_scan": [
           {
-            "motor_position_y_step": -6305039478318694,
-            "motor_position_x_end": -6305039478318694,
-            "motor_position_x_step": -6305039478318694,
-            "motor_position_y_start": -6305039478318694,
-            "motor_position_y_end": -6305039478318694,
+            "motor_position_y_step": -70000000,
+            "motor_position_x_end": -70000000,
+            "motor_position_x_step": -70000000,
+            "motor_position_y_start": -70000000,
+            "motor_position_y_end": -70000000,
             "motor_name": "dolor",
-            "motor_position_x_start": -6305039478318694
+            "motor_position_x_start": -70000000
           }
         ]
       },
-      "temperature": -6305039478318694,
+      "temperature": -70000000,
       "detector_information": {
-        "amplification": -6305039478318694,
-        "detector_distance": -6305039478318694,
-        "region_of_interest_start": -6305039478318694,
-        "region_of_interest_end": -6305039478318694,
+        "amplification": -70000000,
+        "detector_distance": -70000000,
+        "region_of_interest_start": -70000000,
+        "region_of_interest_end": -70000000,
         "detectors": [
           {
             "detection_mode": "dolor",

@@ -1,0 +1,15 @@
+{
+    "$id": "experiment_definition/shared/comment/1.0.0",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "experiment_definition/shared/comment",
+    "type": "object",
+    "properties": {
+        "comment": {
+            "title": "Comment",
+            "type": "string",
+            "description": "Add a comment to this experiment definition, to provide additional information or context. The comment will have no impact on the experiment definition itself, and is purely for informational purposes.",
+            "default": "",
+            "maxLength": 1000
+        }
+    }
+}
