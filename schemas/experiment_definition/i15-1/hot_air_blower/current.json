@@ -2,6 +2,7 @@
     "$id": "experiment_definition/i15-1/hot_air_blower/0.0.1",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "experiment_definition/i15-1/hot_air_blower",
+    "description": "A variable temperature data collection on I15-1 using the hot air blower. Can be one PDF or multiple PDFs at each temperature.",
     "required": [
         "list_of_temperatures",
         "ramp_rate",
