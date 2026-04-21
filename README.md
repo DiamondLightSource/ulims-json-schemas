@@ -20,7 +20,7 @@ directly without reference to any external dependencies.
 
 Github raw can be used for accessing schemas for now.
 The example schemas can be used for testing, such
-as [examples/advanced/1.0.0.json](schemas/examples/advanced/1.0.0.json?raw=1).
+as [examples/advanced/1.0.0.json](https://github.com/DiamondLightSource/ulims-json-schemas/blob/main/schemas/examples/advanced/1.0.0.json).
 
 The schema linked above includes example data for required
 values. A writer can override with custom examples so all
@@ -51,8 +51,9 @@ new to JSON schema before moving to the six steps for adding.
 It explains every schema **must** have a "current" file for
 building the "latest" release. A build will combine
 schema when needed so writers get
-a [simpler view](schemas/examples/advanced/current.json?raw=1)
+a [simpler view](https://github.com/DiamondLightSource/ulims-json-schemas/blob/main/schemas/examples/advanced/current.json)
 which just shows a link to the referenced schema.
+
 
 ## Wikimedia Example Usage
 
