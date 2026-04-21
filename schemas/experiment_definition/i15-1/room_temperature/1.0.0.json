@@ -1,16 +1,13 @@
 {
-  "title": "experiment_definition/i15-1/hot_air_blower",
-  "$id": "experiment_definition/i15-1/hot_air_blower/0.0.1",
+  "title": "experiment_definition/i15-1/room_temperature",
+  "$id": "experiment_definition/i15-1/room_temperature/1.0.0",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "required": [
     "beam_energy",
     "focused_beam_size",
     "frames",
-    "list_of_temperatures",
     "q_max",
-    "ramp_rate",
-    "settle_time",
     "time_per_pdf"
   ],
   "properties": {
@@ -45,7 +42,7 @@
     },
     "q_max": {
       "title": "Q-max (Å⁻¹)",
-      "description": "The required maximum momentum transfer for this collection.",
+      "description": "The required maximum momentum transfer for this collection, in reciprocal Angstroms.",
       "type": "number",
       "default": 25,
       "minimum": 0,
@@ -58,33 +55,6 @@
       "default": 1,
       "minimum": 1,
       "maximum": 10000
-    },
-    "list_of_temperatures": {
-      "title": "List of Blower Temperatures (C)",
-      "description": "The required temperatures in degrees Celsius. Individual data points will be collected at these temperatures after a short thermal stabilisation time.",
-      "type": "array",
-      "items": {
-        "type": "number",
-        "minimum": 0,
-        "maximum": 999
-      }
-    },
-    "ramp_rate": {
-      "title": "Blower Ramp Rate (C/min)",
-      "description": "The required ramp rate for the blower in C/min. The values need to be multiples of 6.",
-      "type": "number",
-      "default": 120,
-      "minimum": 0,
-      "maximum": 120,
-      "multipleOf": 6
-    },
-    "settle_time": {
-      "title": "Settle time per temperature point (seconds)",
-      "description": "The required settle time per temperature point in seconds.",
-      "type": "number",
-      "default": 180,
-      "minimum": 0,
-      "maximum": 99999
     },
     "comment": {
       "title": "Comment",
@@ -99,12 +69,7 @@
       "beam_energy": 76.7,
       "focused_beam_size": 200,
       "frames": 1,
-      "list_of_temperatures": [
-        149.85
-      ],
       "q_max": 25,
-      "ramp_rate": 120,
-      "settle_time": 180,
       "time_per_pdf": 600,
       "comment": ""
     }

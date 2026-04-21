@@ -1,6 +1,6 @@
 {
   "title": "experiment_definition/i15-1/shared",
-  "$id": "experiment_definition/i15-1/shared/0.0.1",
+  "$id": "experiment_definition/i15-1/shared/1.0.0",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "required": [
@@ -42,7 +42,7 @@
     },
     "q_max": {
       "title": "Q-max (Å⁻¹)",
-      "description": "The required maximum momentum transfer for this collection.",
+      "description": "The required maximum momentum transfer for this collection, in reciprocal Angstroms.",
       "type": "number",
       "default": 25,
       "minimum": 0,
