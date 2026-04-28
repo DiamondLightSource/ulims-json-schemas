@@ -1,6 +1,6 @@
 {
     "title": "data_catalogue/b18/energy_scan",
-    "$id": "/data_catalogue/b18/energy_scan/4.0.0",
+    "$id": "/data_catalogue/b18/energy_scan/4.0.1",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "additionalProperties": false,
@@ -24,7 +24,8 @@
                 "scan_command": {
                     "description": "The full scan command",
                     "type": "string",
-                    "nexus_path": ["/entry1/scan_command"]
+                    "nexus_path": ["/entry1/scan_command"],
+                    "highlight": true
                 },
                 "scan_type": {
                     "title": "Scan type",
@@ -34,6 +35,12 @@
                         "Step"
                     ],
                     "type": "string"
+                },
+                "start_time": {
+                    "title": "Scan Start Time",
+                    "description": "The time the scan started",
+                    "type": "string",
+                    "nexus_path": ["/entry1/start_time"]
                 },
                 "energy_min": {
                     "title": "Minimum Energy",
