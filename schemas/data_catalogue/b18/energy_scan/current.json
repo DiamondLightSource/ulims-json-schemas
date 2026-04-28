@@ -40,7 +40,7 @@
                     "title": "Scan Start Time",
                     "description": "The time the scan started",
                     "type": "string",
-                    "nexus_path": ["/entry1/start_time"]
+                    "nexus_path": ["/entry/start_time", "/entry1/start_time"]
                 },
                 "energy_min": {
                     "title": "Minimum Energy",

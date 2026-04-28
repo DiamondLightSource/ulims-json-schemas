@@ -267,6 +267,7 @@
           "description": "The time the scan started",
           "type": "string",
           "nexus_path": [
+            "/entry/start_time",
             "/entry1/start_time"
           ]
         },
