@@ -42,7 +42,7 @@
     },
     "q_max": {
       "title": "Q-max (Å⁻¹)",
-      "description": "The required maximum momentum transfer for this collection.",
+      "description": "The required maximum momentum transfer for this collection, in reciprocal Angstroms.",
       "type": "number",
       "default": 25,
       "minimum": 0,
