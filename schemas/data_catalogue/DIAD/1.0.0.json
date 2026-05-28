@@ -1,0 +1,93 @@
+{
+  "title": "data_catalogue/DIAD",
+  "$id": "/data_catalogue/DIAD/1.0.0",
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "beam_energy": {
+      "title": "Beam Energy",
+      "description": "The beam energy during the scan, keV",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "detector": {
+      "title": "Detector",
+      "description": "Which detector was used to collect the data",
+      "type": "string",
+      "enum": [
+        "Imaging Detector",
+        "Diffraction Detector"
+      ]
+    },
+    "detector_beaming": {
+      "title": "Beaming of Detector",
+      "description": "Was there beaming of the detector? Only needed for Imaging scans",
+      "type": "boolean"
+    },
+    "electric_current_profile": {
+      "title": "Electric Current Profile",
+      "description": "",
+      "type": "string"
+    },
+    "exposure_time": {
+      "title": "Exposure Time",
+      "description": "The exposure time of the scan, ms",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "ground_scan": {
+      "title": "Ground Scan",
+      "description": "Was the scan a ground scan with an empty capillary?",
+      "type": "boolean"
+    },
+    "imaging": {
+      "title": "Imaging",
+      "description": "Was the scan an imaging scan?",
+      "type": "boolean"
+    },
+    "ring_current": {
+      "title": "Ring Current",
+      "description": "The ring current, mA",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "start_time": {
+      "title": "Start Time",
+      "description": "The start time of the scan",
+      "type": "string"
+    },
+    "strain": {
+      "title": "Strain",
+      "description": "The strain or force on the sample during the scan (units?)",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    },
+    "temperature": {
+      "title": "Temperature",
+      "description": "The temperature of the sample environment, in K",
+      "type": "number",
+      "maximum": 9007199254740991,
+      "minimum": -9007199254740991
+    }
+  },
+  "examples": [
+    {
+      "beam_energy": -6305039478318694,
+      "detector": "Imaging Detector",
+      "detector_beaming": false,
+      "electric_current_profile": "dolor",
+      "exposure_time": -6305039478318694,
+      "ground_scan": false,
+      "imaging": false,
+      "ring_current": -6305039478318694,
+      "start_time": "dolor",
+      "strain": -6305039478318694,
+      "temperature": -6305039478318694
+    }
+  ]
+}
