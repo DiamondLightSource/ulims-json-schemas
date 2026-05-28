@@ -35,7 +35,7 @@ added when needed:
 * [examples](schemas/examples/) - - A minimum set that can be
   used for testing and checking release process.
 
-* [shared](schemas/shared/) - A common set of schemas
+* [shared](schemas/_shared/) - A common set of schemas
    that can but reused across all schema, services and
    applications. For examples, units or chemical elements.
 

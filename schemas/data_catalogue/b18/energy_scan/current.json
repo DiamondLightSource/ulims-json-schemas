@@ -10,12 +10,12 @@
             "title": "Detector Information"
         },
         "element_measured": {
-            "$ref": "/shared/chemical_elements/1.0.0.json",
+            "$ref": "/_shared/chemical_elements/1.0.0.json",
             "title": "Element Measured"
         },
         "edge_measured": {
             "title": "Edge Measured",
-            "$ref": "/shared/absorption_edges/1.0.0.json"
+            "$ref": "/_shared/absorption_edges/1.0.0.json"
         },
         "scan_parameters": {
             "title": "Scan Parameters",
@@ -114,7 +114,7 @@
             }
         },
         "motor_information": {
-            "$ref": "/shared/motors/motor_positions/1.0.0.json",
+            "$ref": "/_shared/motors/motor_positions/1.0.0.json",
             "title": "Motor Information"
         },
         "temperature": {
