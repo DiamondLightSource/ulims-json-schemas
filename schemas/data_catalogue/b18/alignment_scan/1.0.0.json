@@ -76,7 +76,7 @@
     },
     "element_measured": {
       "title": "Element Measured",
-      "$id": "/shared/chemical_elements/1.0.0",
+      "$id": "/_shared/chemical_elements/1.0.0",
       "$schema": "http://json-schema.org/draft-07/schema#",
       "type": "object",
       "additionalProperties": false,
@@ -214,7 +214,7 @@
     },
     "edge_measured": {
       "title": "Edge Measured",
-      "$id": "/shared/absorption_edges/1.0.0",
+      "$id": "/_shared/absorption_edges/1.0.0",
       "$schema": "http://json-schema.org/draft-07/schema#",
       "type": "object",
       "additionalProperties": false,
@@ -284,7 +284,7 @@
     },
     "motor_information": {
       "title": "Motor Information",
-      "$id": "/shared/motors/motor_scan/1.0.0",
+      "$id": "/_shared/motors/motor_scan/1.0.0",
       "$schema": "http://json-schema.org/draft-07/schema#",
       "type": "object",
       "additionalProperties": false,
