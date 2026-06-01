@@ -13,6 +13,11 @@
       "title": "basic_from schema data",
       "description": "Description that replaces value from $ref ",
       "$ref": "/examples/basic/1.0.1.json"
+    },
+    "comment": {
+      "title": "Field heading on interfaces",
+      "description": "A string property added in advanced 1.0.1 retrospectively",
+      "type": "string"
     }
   }
 }
