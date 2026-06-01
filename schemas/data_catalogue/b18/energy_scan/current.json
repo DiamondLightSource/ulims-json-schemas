@@ -10,14 +10,14 @@
             "title": "Detector Information"
         },
         "element_measured": {
-            "$ref": "/shared/chemical_elements/1.0.0.json",
+            "$ref": "/_shared/chemical_elements/1.0.0.json",
             "title": "Element Measured",
             "nexus_path": ["/entry1/before_scan/QEXAFS_Parameters1"],
             "xml_path": "QEXAFSParameters/element"
         },
         "edge_measured": {
             "title": "Edge Measured",
-            "$ref": "/shared/absorption_edges/1.0.0.json",
+            "$ref": "/_shared/absorption_edges/1.0.0.json",
             "nexus_path": ["/entry1/before_scan/QEXAFS_Parameters1"],
             "xml_path": "QEXAFSParameters/edge"
         },
