@@ -64,6 +64,11 @@
           "is_confidential": true
         }
       ]
+    },
+    "comment": {
+      "title": "Field heading on interfaces",
+      "description": "A string property added in advanced 1.0.1 retrospectively",
+      "type": "string"
     }
   },
   "examples": [
@@ -74,7 +79,8 @@
         "when": "2021-01-01T00:00:00.0Z",
         "is_confidential": false,
         "counter": 150
-      }
+      },
+      "comment": "dolor"
     }
   ]
 }
