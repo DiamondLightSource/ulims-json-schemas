@@ -31,17 +31,27 @@ jobs:
         working-directory: ./
         run: git fetch  # fixes error: fatal: bad revision 'main'
 
-      - name: Build current files different than main branch
+      - name: Build all current files on current branch
         working-directory: ./  
-        run:  npm run build-main-diff
+        run:  npm run build-all
 
       - name: Check schema root passes minimum requirements
         working-directory: ./  
         run: npm run check
 
       - name: Commit changes, requires writers to pull branch
+        id: git_commit
         uses: EndBug/add-and-commit@v9
         with:
           default_author: github_actor
           message: 'Schema(s) build and commit via GH action.'
           add: '*'
+
+      - name: Notify pull is required
+        if: steps.git_commit.outputs.committed == 'true'
+        run: |
+          echo "::notice title=Branch changed, pull branch if editing locally"
+          echo "> [!IMPORTANT] >> $GITHUB_STEP_SUMMARY"
+          echo "> **Branch changed** and committed" >> $GITHUB_STEP_SUMMARY
+          echo "> The `npm run build-all` found changes and made them, with commit" >> $GITHUB_STEP_SUMMARY
+          echo "> to this branch. Pull this branch to make local match remote." >> $GITHUB_STEP_SUMMARY
