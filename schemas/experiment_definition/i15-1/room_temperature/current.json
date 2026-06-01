@@ -2,6 +2,7 @@
     "$id": "experiment_definition/i15-1/room_temperature/0.0.1",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "experiment_definition/i15-1/room_temperature",
+    "description": "A room temperature data collection on I15-1. Can be one PDF or multiple PDFs as a function of time.",
     "type": "object",
     "required": [],
     "allOf": [
