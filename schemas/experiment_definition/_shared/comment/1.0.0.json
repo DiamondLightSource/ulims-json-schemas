@@ -1,6 +1,6 @@
 {
-  "title": "experiment_definition/shared/comment",
-  "$id": "experiment_definition/shared/comment/1.0.0",
+  "title": "experiment_definition/_shared/comment",
+  "$id": "experiment_definition/_shared/comment/1.0.0",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "properties": {

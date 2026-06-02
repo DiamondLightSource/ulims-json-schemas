@@ -1,7 +1,7 @@
 {
-    "$id": "/shared/motors/motor_positions/1.0.0",
+    "$id": "/_shared/motors/motor_positions/1.0.0",
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "shared/motors/motor_positions",
+    "title": "_shared/motors/motor_positions",
     "type": "object",
     "additionalProperties": false,
     "properties": {
