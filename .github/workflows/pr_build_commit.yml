@@ -54,4 +54,4 @@ jobs:
           echo "> [!IMPORTANT]"" >> $GITHUB_STEP_SUMMARY
           echo "> **Branch changed** and committed" >> $GITHUB_STEP_SUMMARY
           echo "> The \`npm run build-all\` found changes and made them, with commit to this" >> $GITHUB_STEP_SUMMARY
-          echo "> branch. Remember to \`git pull origin <branch>`\ to make local match remote." >> $GITHUB_STEP_SUMMARY
+          echo "> branch. Remember to \`git pull origin <branch>\` to make local match remote." >> $GITHUB_STEP_SUMMARY
