@@ -47,14 +47,24 @@ jobs:
           message: 'Schema(s) build and commit via GH action.'
           add: '*'
 
+  notify:
+    needs: run
+    if: needs.run.outputs.committed == 'true'
+    runs-on: ubuntu-latest
+    continue-on-error: true 
+
+    steps:
       - name: Notify pull is recommended
-        if: steps.git_commit.outputs.committed == 'true'
-        continue-on-error: true 
         run: |
           cat << 'EOF' >> $GITHUB_STEP_SUMMARY
-          > [!IMPORTANT]
+          > [!WARNING]
           > **Branch was changed and was committed**
           > - Running *npm run build-all* found changes and made them, with commit to this branch.
-          > - Recommendation to \`git pull origin $GITHUB_REF_NAME\` before next local edit.
+          > - Recommendation to *git pull origin ${{ github.ref_name }}* before next local edit.
+
+          > [!NOTE]
+          > - Job *schema check* on CI will show as failed for a branch push which
+          >   triggered this job. Commit only occurs in this job if check passed. If
+          >   pulled locally or CI run again that check will pass.
           EOF
           exit 1
