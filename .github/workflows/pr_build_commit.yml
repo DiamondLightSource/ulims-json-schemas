@@ -51,7 +51,7 @@ jobs:
         if: steps.git_commit.outputs.committed == 'true'
         run: |
           echo "::notice title=Branch changed: Pull branch if editing locally"
-          echo "> [!IMPORTANT]"" >> $GITHUB_STEP_SUMMARY
+          echo "> [!IMPORTANT]" >> $GITHUB_STEP_SUMMARY
           echo "> **Branch changed** and committed" >> $GITHUB_STEP_SUMMARY
-          echo "> Running *npm run build-all* found changes and made them, with commit to this" >> $GITHUB_STEP_SUMMARY
-          echo "> branch. Remember to *git pull origin your-branch* to make local match remote." >> $GITHUB_STEP_SUMMARY
+          echo "> Running \`npm run build-all\` found changes and made them, with commit to this" >> $GITHUB_STEP_SUMMARY
+          echo "> branch. Remember to \`git pull origin your-branch\` to make local match remote." >> $GITHUB_STEP_SUMMARY
