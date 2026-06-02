@@ -48,12 +48,14 @@ jobs:
           add: '*'
 
       - name: Notify pull is required
+        if: steps.git_commit.outputs.committed == 'true'
+        continue-on-error: true 
         run: |
           echo "::notice title=Branch changed: Pull branch if editing locally"
           
           cat << 'EOF' >> $GITHUB_STEP_SUMMARY
           > [!IMPORTANT]
-          > **Branch changed** and committed
-          > Running \`npm run build-all\` found changes and made them, with commit to this
-          > branch. Remember to \`git pull origin your-branch\` before next local edit.
+          > **Branch was changed and was committed**
+          > Running *npm run build-all* found changes and made them, with commit to this
+          > branch. Recommendation to *git pull origin $GITHUB_REF_NAME* before next local edit.
           EOF
