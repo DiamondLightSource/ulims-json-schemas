@@ -6,10 +6,10 @@
     "required": [],
     "allOf": [
         {
-            "$ref": "/experiment_definition/i15-1/shared/0.0.1.json"
+            "$ref": "/experiment_definition/i15-1/_shared/0.0.1.json"
         },
         {
-            "$ref": "/experiment_definition/shared/comment/1.0.0.json"
+            "$ref": "/experiment_definition/_shared/comment/1.0.0.json"
         }
     ]
 }
