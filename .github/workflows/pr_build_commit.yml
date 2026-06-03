@@ -48,7 +48,6 @@ jobs:
           add: '*'
       - name: Notify pull is recommended
         if: steps.git_commit.outputs.committed == 'true'
-        continue-on-error: true 
         run: |
           cat << 'EOF' >> $GITHUB_STEP_SUMMARY
           > [!WARNING]
