@@ -52,12 +52,10 @@ jobs:
           cat << 'EOF' >> $GITHUB_STEP_SUMMARY
           > [!WARNING]
           > **Branch was changed and was committed**
-          > - Running *npm run build-all* found changes and made them, with commit to this branch.
-          > - Recommendation to *git pull origin ${{ github.ref_name }}* before next local edit.
+          > - Run of \`npm run build-all`\ wrote changes that passed `npm run check` so committed to this branch.
+          > - Recommendation to \`git pull origin ${{ github.ref_name }}\` before next local edit.
 
           > [!NOTE]
           > - Job *schema check* on CI will show as failed for a branch push which
-          >   triggered this job. Commit only occurs in this job if check passed. If
-          >   pulled locally or CI run again that check will pass.
+          >   triggered this job. If pulled locally or CI run again that check will pass.
           EOF
-          exit 1
