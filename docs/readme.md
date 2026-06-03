@@ -50,7 +50,7 @@ There are six steps.
    visit https://github.com/DiamondLightSource/ulims-json-schemas
    to start a pull request on your branch. (Your push should
    have appeared with a button to start a pull-request if you
-   are logged in.
+   are logged in.)
    
 6. The action "Build current.json different..." will run and
    appear on the GH `Actions` tab. A green tick will appear if
