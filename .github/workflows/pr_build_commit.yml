@@ -46,15 +46,9 @@ jobs:
           default_author: github_actor
           message: 'Schema(s) build and commit via GH action.'
           add: '*'
-
-  notify:
-    needs: run
-    if: needs.run.outputs.committed == 'true'
-    runs-on: ubuntu-latest
-    continue-on-error: true 
-
-    steps:
       - name: Notify pull is recommended
+        if: steps.git_commit.outputs.committed == 'true'
+        continue-on-error: true 
         run: |
           cat << 'EOF' >> $GITHUB_STEP_SUMMARY
           > [!WARNING]
