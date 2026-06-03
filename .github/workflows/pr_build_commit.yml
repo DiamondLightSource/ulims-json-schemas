@@ -52,10 +52,18 @@ jobs:
           cat << 'EOF' >> $GITHUB_STEP_SUMMARY
           > [!WARNING]
           > **Branch was changed and was committed**
-          > - Run of \`npm run build-all`\ wrote changes that passed `npm run check` so committed to this branch.
-          > - Recommendation to \`git pull origin ${{ github.ref_name }}\` before next local edit.
+          > - Run of *npm run build-all* wrote changes that passed *npm run check* so committed to this branch.
+          > - Recommendation to *git pull origin ${{ github.ref_name }}* before next local edit.
 
-          > [!NOTE]
+          > [!TIP]
           > - Job *schema check* on CI will show as failed for a branch push which
-          >   triggered this job. If pulled locally or CI run again that check will pass.
+          >   triggered this message. If pulled locally or CI run again that check will pass.
+          EOF
+      - name: Notify local check is recommended
+        if: steps.git_commit.outputs.committed == 'false'
+        run: |
+          cat << 'EOF' >> $GITHUB_STEP_SUMMARY
+          > [!TIP]
+          > - If step *Check schema root passes minimum requirements* failed doing *npm run build-all*
+          >   then *npm run check* locally can avoid the delays CI can sometimes caused.
           EOF
