@@ -1,6 +1,6 @@
 {
     "title": "data_catalogue/b18/energy_scan",
-    "$id": "/data_catalogue/b18/energy_scan/4.0.2",
+    "$id": "/data_catalogue/b18/energy_scan/4.0.3",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "additionalProperties": false,
@@ -11,15 +11,11 @@
         },
         "element_measured": {
             "$ref": "/_shared/chemical_elements/1.0.0.json",
-            "title": "Element Measured",
-            "nexus_path": ["/entry1/before_scan/QEXAFS_Parameters1"],
-            "xml_path": "QEXAFSParameters/element"
+            "title": "Element Measured"
         },
         "edge_measured": {
             "title": "Edge Measured",
-            "$ref": "/_shared/absorption_edges/1.0.0.json",
-            "nexus_path": ["/entry1/before_scan/QEXAFS_Parameters1"],
-            "xml_path": "QEXAFSParameters/edge"
+            "$ref": "/_shared/absorption_edges/1.0.0.json"
         },
         "scan_parameters": {
             "title": "Scan Parameters",
