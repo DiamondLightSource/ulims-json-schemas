@@ -10,12 +10,12 @@
             "title": "Detector Information"
         },
         "element_measured": {
-            "$ref": "/_shared/chemical_elements/1.0.0.json",
+            "$ref": "/_shared/chemical_elements/1.0.1.json",
             "title": "Element Measured"
         },
         "edge_measured": {
             "title": "Edge Measured",
-            "$ref": "/_shared/absorption_edges/1.0.0.json"
+            "$ref": "/_shared/absorption_edges/1.0.1.json"
         },
         "scan_parameters": {
             "title": "Scan Parameters",

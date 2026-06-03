@@ -76,7 +76,7 @@
     },
     "element_measured": {
       "title": "Element Measured",
-      "$id": "/_shared/chemical_elements/1.0.0",
+      "$id": "/_shared/chemical_elements/1.0.1",
       "$schema": "http://json-schema.org/draft-07/schema#",
       "type": "object",
       "additionalProperties": false,
@@ -203,6 +203,12 @@
             "Lv",
             "Ts",
             "Og"
+          ],
+          "nexus_path": [
+            "/entry1/before_scan/QEXAFS_Parameters1"
+          ],
+          "xml_path": [
+            "QEXAFSParameters/element"
           ]
         }
       },
@@ -214,7 +220,7 @@
     },
     "edge_measured": {
       "title": "Edge Measured",
-      "$id": "/_shared/absorption_edges/1.0.0",
+      "$id": "/_shared/absorption_edges/1.0.1",
       "$schema": "http://json-schema.org/draft-07/schema#",
       "type": "object",
       "additionalProperties": false,
@@ -232,6 +238,12 @@
             "M2",
             "M3",
             "M4"
+          ],
+          "nexus_path": [
+            "/entry1/before_scan/QEXAFS_Parameters1"
+          ],
+          "xml_path": [
+            "QEXAFSParameters/edge"
           ]
         }
       },
