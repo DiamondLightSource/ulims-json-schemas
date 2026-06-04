@@ -50,6 +50,13 @@
           "title": "Is Confidential",
           "description": "True if entry is confidential, adding in basic 1.0.1",
           "type": "boolean"
+        },
+        "contacts": {
+          "title": "Contact email",
+          "description": "True if entry is confidential, adding in basic 1.0.2 (but $id was not changed)",
+          "type": "string",
+          "format": "email",
+          "maxLength": 128
         }
       },
       "examples": [
@@ -78,6 +85,7 @@
         "ident": "22222222-2222-2222-2222-222222222222",
         "when": "2021-01-01T00:00:00.0Z",
         "is_confidential": false,
+        "contacts": "jjjj@hhhhh.dd",
         "counter": 150
       },
       "comment": "dolor"
