@@ -39,6 +39,13 @@
       "title": "Is Confidential",
       "type": "boolean",
       "description": "True if entry is confidential, adding in basic 1.0.1"
+    },
+    "contacts": {
+      "title": "Contact email",
+      "type": "string",
+      "format": "email",
+      "maxLength": 128,
+      "description": "True if entry is confidential, adding in basic 1.0.2 (but $id was not changed)"
     }
   },
   "examples": [
