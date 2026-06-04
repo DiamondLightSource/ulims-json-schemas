@@ -65,10 +65,12 @@
         }
       ]
     },
-    "comment": {
+    "contacts": {
       "title": "Field heading on interfaces",
-      "description": "A string property added in advanced 1.0.2",
-      "type": "string"
+      "description": "A string property added in advanced 1.0.2 which is email format",
+      "type": "string",
+      "format": "email",
+      "maxLength": 128
     }
   },
   "examples": [
@@ -80,7 +82,7 @@
         "is_confidential": false,
         "counter": 150
       },
-      "comment": "dolor"
+      "contacts": "jjjj@hhhhh.dd"
     }
   ]
 }
