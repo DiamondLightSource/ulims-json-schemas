@@ -1,0 +1,132 @@
+{
+    "title": "data_catalogue/p99/grid_scan",
+    "$id": "/data_catalogue/p99/grid_scan/1.0.0",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "scan_parameters": {
+            "title": "Scan Parameters",
+            "type": "object",
+            "properties": {
+                "scan_command": {
+                    "title": "Plan Name",
+                    "description": "The specific Bluesky scan plan executed",
+                    "type": "string",
+                    "nexus_path": ["/entry/plan_metadata/plan_name"],
+                    "highlight": true
+                },
+                "scan_type": {
+                    "title": "Scan Type",
+                    "type": "string",
+                    "nexus_path": ["/entry/plan_metadata/plan_type"]
+                },
+                "start_time": {
+                    "title": "Scan Start Time",
+                    "type": "string",
+                    "nexus_path": ["/entry/diamond_scan/start_time"]
+                },
+                "end_time": {
+                    "title": "Scan End Time",
+                    "type": "string",
+                    "nexus_path": ["/entry/diamond_scan/end_time"]
+                },
+                "duration_s": {
+                    "title": "Scan Duration",
+                    "description": "Total duration of the scan in seconds",
+                    "type": "number",
+                    "nexus_path": ["/entry/diamond_scan/duration"]
+                }
+            }
+        },
+        "optical_configurations": {
+            "title": "Optical Configurations",
+            "type": "object",
+            "properties": {
+                "energy": {
+                    "title": "Beam Energy",
+                    "type": "number",
+                    "nexus_path": ["/entry/plan_metadata/energy/value"]
+                },
+                "detector_distance": {
+                    "title": "Detector Distance",
+                    "type": "number",
+                    "nexus_path": ["/entry/plan_metadata/detector_dist/value"]
+                }
+            }
+        },
+        "instrument_settings": {
+            "title": "Instrument Settings",
+            "type": "object",
+            "properties": {
+                "acquire_time": {
+                    "title": "Detector Acquire Time",
+                    "type": "number",
+                    "nexus_path": ["/entry/instrument/andor2_det/driver-acquire_time"]
+                },
+                "acquire_period": {
+                    "title": "Detector Acquire Period",
+                    "type": "number",
+                    "nexus_path": ["/entry/instrument/andor2_det/driver-acquire_period"]
+                },
+                "sample_stage_x_velocity": {
+                    "title": "Stage X Velocity",
+                    "type": "number",
+                    "nexus_path": ["/entry/instrument/sample_stage-x/velocity"]
+                },
+                "sample_stage_y_velocity": {
+                    "title": "Stage Y Velocity",
+                    "type": "number",
+                    "nexus_path": ["/entry/instrument/sample_stage-y/velocity"]
+                },
+                "intensities": {
+                    "title": "Detector External Link Dataset",
+                    "description": "Array of raw counts resolved from the external detector data link",
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "nexus_path": ["/entry/andor2_det/andor2_det"]
+                }
+            }
+        },
+        "display": {
+            "title": "Display Information",
+            "description": "Visualizations generated for the frontend interface",
+            "type": "object",
+            "properties": {
+                "charts": {
+                    "title": "Charts",
+                    "type": "object",
+                    "properties": {
+                        "spatial_intensity_plot": {
+                            "type": "object",
+                            "properties": {
+                                "title": {
+                                    "title": "Chart Title",
+                                    "type": "string",
+                                    "default": "Stage Y vs Stage X"
+                                },
+                                "line_1": {
+                                    "type": "object",
+                                    "properties": {
+                                        "x": {
+                                            "type": "array",
+                                            "items": { "type": "number" },
+                                            "nexus_path": ["/entry/andor2_det/sample_stage-x"]
+                                        },
+                                        "y": {
+                                            "type": "array",
+                                            "items": { "type": "number" },
+                                            "nexus_path": ["/entry/andor2_det/sample_stage-y"]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
