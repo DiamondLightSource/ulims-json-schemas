@@ -69,24 +69,61 @@
         }
       }
     },
-    "instrument_settings": {
-      "title": "Instrument Settings",
+    "detector_information": {
+      "title": "Detector Information",
+      "$id": "/data_catalogue/p99/_detectors/1.0.0.json",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "andor2_det": {
+          "title": "Andor 2 Detector Configuration",
+          "type": "object",
+          "properties": {
+            "acquire_time": {
+              "title": "Detector Acquire Time",
+              "type": "number",
+              "nexus_path": [
+                "/entry/instrument/andor2_det/driver-acquire_time"
+              ]
+            },
+            "acquire_period": {
+              "title": "Detector Acquire Period",
+              "type": "number",
+              "nexus_path": [
+                "/entry/instrument/andor2_det/driver-acquire_period"
+              ]
+            },
+            "intensities": {
+              "title": "Detector Intensity Data",
+              "description": "Array of raw counts resolved from the external detector data link",
+              "type": "array",
+              "nexus_path": [
+                "/entry/andor2_det/andor2_det"
+              ],
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "examples": [
+        {
+          "andor2_det": {
+            "acquire_period": -70000000,
+            "intensities": [
+              -70000000
+            ],
+            "acquire_time": -70000000
+          }
+        }
+      ]
+    },
+    "motor_information": {
+      "title": "Motor Settings",
       "type": "object",
       "properties": {
-        "acquire_time": {
-          "title": "Detector Acquire Time",
-          "type": "number",
-          "nexus_path": [
-            "/entry/instrument/andor2_det/driver-acquire_time"
-          ]
-        },
-        "acquire_period": {
-          "title": "Detector Acquire Period",
-          "type": "number",
-          "nexus_path": [
-            "/entry/instrument/andor2_det/driver-acquire_period"
-          ]
-        },
         "sample_stage_x_velocity": {
           "title": "Stage X Velocity",
           "type": "number",
@@ -100,63 +137,6 @@
           "nexus_path": [
             "/entry/instrument/sample_stage-y/velocity"
           ]
-        },
-        "intensities": {
-          "title": "Detector External Link Dataset",
-          "description": "Array of raw counts resolved from the external detector data link",
-          "type": "array",
-          "nexus_path": [
-            "/entry/andor2_det/andor2_det"
-          ],
-          "items": {
-            "type": "number"
-          }
-        }
-      }
-    },
-    "display": {
-      "title": "Display Information",
-      "description": "Visualizations generated for the frontend interface",
-      "type": "object",
-      "properties": {
-        "charts": {
-          "title": "Charts",
-          "type": "object",
-          "properties": {
-            "spatial_intensity_plot": {
-              "type": "object",
-              "properties": {
-                "title": {
-                  "title": "Chart Title",
-                  "type": "string",
-                  "default": "Stage Y vs Stage X"
-                },
-                "line_1": {
-                  "type": "object",
-                  "properties": {
-                    "x": {
-                      "type": "array",
-                      "nexus_path": [
-                        "/entry/andor2_det/sample_stage-x"
-                      ],
-                      "items": {
-                        "type": "number"
-                      }
-                    },
-                    "y": {
-                      "type": "array",
-                      "nexus_path": [
-                        "/entry/andor2_det/sample_stage-y"
-                      ],
-                      "items": {
-                        "type": "number"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
         }
       }
     }
@@ -167,29 +147,18 @@
         "detector_distance": -70000000,
         "energy": -70000000
       },
-      "instrument_settings": {
-        "acquire_period": -70000000,
-        "sample_stage_x_velocity": -70000000,
-        "sample_stage_y_velocity": -70000000,
-        "intensities": [
-          -70000000
-        ],
-        "acquire_time": -70000000
-      },
-      "display": {
-        "charts": {
-          "spatial_intensity_plot": {
-            "title": "Stage Y vs Stage X",
-            "line_1": {
-              "y": [
-                -70000000
-              ],
-              "x": [
-                -70000000
-              ]
-            }
-          }
+      "detector_information": {
+        "andor2_det": {
+          "acquire_period": -70000000,
+          "intensities": [
+            -70000000
+          ],
+          "acquire_time": -70000000
         }
+      },
+      "motor_information": {
+        "sample_stage_y_velocity": -70000000,
+        "sample_stage_x_velocity": -70000000
       },
       "scan_parameters": {
         "scan_type": "dolor",
