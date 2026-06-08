@@ -55,20 +55,14 @@
                 }
             }
         },
-        "instrument_settings": {
-            "title": "Instrument Settings",
+        "detector_information": {
+            "$ref": "/data_catalogue/p99/_detectors/1.0.0.json",
+            "title": "Detector Information"
+        },
+        "motor_information": {
+            "title": "Motor Settings",
             "type": "object",
             "properties": {
-                "acquire_time": {
-                    "title": "Detector Acquire Time",
-                    "type": "number",
-                    "nexus_path": ["/entry/instrument/andor2_det/driver-acquire_time"]
-                },
-                "acquire_period": {
-                    "title": "Detector Acquire Period",
-                    "type": "number",
-                    "nexus_path": ["/entry/instrument/andor2_det/driver-acquire_period"]
-                },
                 "sample_stage_x_velocity": {
                     "title": "Stage X Velocity",
                     "type": "number",
@@ -78,55 +72,8 @@
                     "title": "Stage Y Velocity",
                     "type": "number",
                     "nexus_path": ["/entry/instrument/sample_stage-y/velocity"]
-                },
-                "intensities": {
-                    "title": "Detector External Link Dataset",
-                    "description": "Array of raw counts resolved from the external detector data link",
-                    "type": "array",
-                    "items": {
-                        "type": "number"
-                    },
-                    "nexus_path": ["/entry/andor2_det/andor2_det"]
                 }
             }
         },
-        "display": {
-            "title": "Display Information",
-            "description": "Visualizations generated for the frontend interface",
-            "type": "object",
-            "properties": {
-                "charts": {
-                    "title": "Charts",
-                    "type": "object",
-                    "properties": {
-                        "spatial_intensity_plot": {
-                            "type": "object",
-                            "properties": {
-                                "title": {
-                                    "title": "Chart Title",
-                                    "type": "string",
-                                    "default": "Stage Y vs Stage X"
-                                },
-                                "line_1": {
-                                    "type": "object",
-                                    "properties": {
-                                        "x": {
-                                            "type": "array",
-                                            "items": { "type": "number" },
-                                            "nexus_path": ["/entry/andor2_det/sample_stage-x"]
-                                        },
-                                        "y": {
-                                            "type": "array",
-                                            "items": { "type": "number" },
-                                            "nexus_path": ["/entry/andor2_det/sample_stage-y"]
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 }
