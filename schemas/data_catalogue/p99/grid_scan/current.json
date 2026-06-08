@@ -72,8 +72,26 @@
                     "title": "Stage Y Velocity",
                     "type": "number",
                     "nexus_path": ["/entry/instrument/sample_stage-y/velocity"]
+                },
+                "sample_stage_x_values": {
+                    "title": "Sample Stage X Array",
+                    "description": "The measured motor X position array across the scan points",
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "nexus_path": ["/entry/andor2_det/sample_stage-x"]
+                },
+                "sample_stage_y_values": {
+                    "title": "Sample Stage Y Array",
+                    "description": "The measured motor Y position array across the scan points",
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    },
+                    "nexus_path": ["/entry/andor2_det/sample_stage-y"]
                 }
             }
-        },
+        }
     }
 }
