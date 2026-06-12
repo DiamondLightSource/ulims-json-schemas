@@ -1,5 +1,5 @@
 {
-    "$id": "/_shared/absorption_edges/1.0.0",
+    "$id": "/_shared/absorption_edges/1.0.1",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "_shared/absorption_edges",
     "type": "object",
@@ -18,7 +18,9 @@
                 "M3",
                 "M4"
             ],
-            "type": "string"
+            "type": "string",
+            "nexus_path": ["/entry1/before_scan/QEXAFS_Parameters1"],
+            "xml_path": ["QEXAFSParameters/edge"]
         }
     }
 }
