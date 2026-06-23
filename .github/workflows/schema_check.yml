@@ -30,3 +30,7 @@ jobs:
         - name: Confirm http and hash used in schema value
           working-directory: ./  
           run: npm run fail-snohash-found
+
+        - name: Confirm $id start with a / slash
+          working-directory: ./  
+          run: npm run fail-slash-id-found
