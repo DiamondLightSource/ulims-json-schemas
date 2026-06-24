@@ -50,18 +50,21 @@ There are six steps.
    visit https://github.com/DiamondLightSource/ulims-json-schemas
    to start a pull request on your branch. (Your push should
    have appeared with a button to start a pull-request if you
-   are logged in.
+   are logged in.)
    
 6. The action "Build current.json different..." will run and
    appear on the GH `Actions` tab. A green tick will appear if
    everything builds and the check passes. Technically, this
-   action is doing `npm run build-main-diff` then **commiting
+   action is doing `npm run build-all` then **committing
    new files to your branch** which you can pull to see changes.
 
 > [!TIP]
+> Looking at the details of a workflow run on the following
+> page will highlight if the CI has built and committed to
+> your branch with a recommendation. https://github.com/DiamondLightSource/ulims-json-schemas/actions/workflows/pr_build_commit.yml
+>
 > The commit message "Schema(s) build and commit via GH action."
-> will appear if the alterations made in step 3 caused new files or
-> the "latest" softlinks to change.
+> will appear if the alterations made in step 3 caused new files.
 
 If a red cross appears then you can click on it to see
 more information about the failures. Check any
@@ -69,7 +72,8 @@ failures in "Build current.json different than main and commit".
 
 If getting a lot of errors it is recommended to try running this 
 process locally. See the "Setup on a new machine" section for 
-information on the set-up. Then run `npm run build-main-diff` 
+information on the set-up. Then run `npm run build-main-diff`
+for targeted build or `npm run build-all` for every current schema
 and `npm run check` to test locally. It removes most delays 
 caused by steps 3-6 so build/check iterations can be quicker. 
 Once everything passes, repeat from step 4 and the action 
