@@ -56,7 +56,7 @@
             }
         },
         "detector_information": {
-            "$ref": "/data_catalogue/p99/_detectors/1.0.0#/properties/andor2_det",
+            "$ref": "/data_catalogue/p99/_detectors/1.0.0.json#/properties/andor2_det",
             "title": "Detector Information"
         },
         "motor_information": {
