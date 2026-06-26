@@ -29,4 +29,8 @@ jobs:
 
         - name: Confirm http and hash used in schema value
           working-directory: ./  
-          run: npm run fail-snohash-found
+          run: npm run fail-https-hash-found
+
+        - name: Confirm $id start with a / slash
+          working-directory: ./  
+          run: npm run fail-slash-id-found
