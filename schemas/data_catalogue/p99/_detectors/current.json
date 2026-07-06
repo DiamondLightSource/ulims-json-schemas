@@ -5,30 +5,24 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
-        "andor2_det": {
-            "title": "Andor 2 Detector Configuration",
-            "type": "object",
-            "properties": {
-                "acquire_time": {
-                    "title": "Detector Acquire Time",
-                    "type": "number",
-                    "nexus_path": ["/entry/instrument/andor2_det/driver-acquire_time"]
-                },
-                "acquire_period": {
-                    "title": "Detector Acquire Period",
-                    "type": "number",
-                    "nexus_path": ["/entry/instrument/andor2_det/driver-acquire_period"]
-                },
-                "intensities": {
-                    "title": "Detector Intensity Data",
-                    "description": "Array of raw counts resolved from the external detector data link",
-                    "type": "array",
-                    "items": {
-                        "type": "number"
-                    },
-                    "nexus_path": ["/entry/andor2_det/andor2_det"]
-                }
-            }
+        "acquire_time": {
+            "title": "Detector Acquire Time",
+            "type": "number",
+            "nexus_path": ["/entry/instrument/andor2_det/driver-acquire_time"]
+        },
+        "acquire_period": {
+            "title": "Detector Acquire Period",
+            "type": "number",
+            "nexus_path": ["/entry/instrument/andor2_det/driver-acquire_period"]
+        },
+        "intensities": {
+            "title": "Detector Intensity Data",
+            "description": "Array of raw counts resolved from the external detector data link",
+            "type": "array",
+            "items": {
+                "type": "number"
+            },
+            "nexus_path": ["/entry/andor2_det/andor2_det"]
         }
     }
 }
