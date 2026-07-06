@@ -71,7 +71,10 @@
     },
     "detector_information": {
       "title": "Detector Information",
+      "$id": "/data_catalogue/p99/_detectors/1.0.0.json",
+      "$schema": "http://json-schema.org/draft-07/schema#",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "acquire_time": {
           "title": "Detector Acquire Time",
@@ -98,7 +101,16 @@
             "type": "number"
           }
         }
-      }
+      },
+      "examples": [
+        {
+          "acquire_period": -70000000,
+          "intensities": [
+            -70000000
+          ],
+          "acquire_time": -70000000
+        }
+      ]
     },
     "motor_information": {
       "title": "Motor Settings",
