@@ -1,6 +1,6 @@
 {
     "title": "data_catalogue/p99/_detectors",
-    "$id": "/data_catalogue/p99/_detectors/1.0.0.json",
+    "$id": "/data_catalogue/p99/_detectors/1.0.1.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "additionalProperties": false,
@@ -8,11 +8,13 @@
         "acquire_time": {
             "title": "Detector Acquire Time",
             "type": "number",
+            "minimum": 0.0,
             "nexus_path": ["/entry/instrument/andor2_det/driver-acquire_time"]
         },
         "acquire_period": {
             "title": "Detector Acquire Period",
             "type": "number",
+            "minimum": 0.0,
             "nexus_path": ["/entry/instrument/andor2_det/driver-acquire_period"]
         },
         "intensities": {
@@ -22,6 +24,7 @@
             "items": {
                 "type": "number"
             },
+            "minimum": 0.0,
             "nexus_path": ["/entry/andor2_det/andor2_det"]
         }
     }
