@@ -39,6 +39,7 @@
                     "title": "Scan Duration",
                     "description": "Total duration of the scan in seconds",
                     "type": "number",
+                    "minimum": 0.0,
                     "nexus_path": ["/entry/diamond_scan/duration"]
                 }
             }
@@ -50,11 +51,13 @@
                 "energy": {
                     "title": "Beam Energy",
                     "type": "number",
+                    "minimum": 0.0,
                     "nexus_path": ["/entry/plan_metadata/energy/value"]
                 },
                 "detector_distance": {
                     "title": "Detector Distance",
                     "type": "number",
+                    "minimum": 0.0,
                     "nexus_path": ["/entry/plan_metadata/detector_dist/value"]
                 }
             }
@@ -70,11 +73,13 @@
                 "sample_stage_x_velocity": {
                     "title": "Stage X Velocity",
                     "type": "number",
+                    "minimum": 0.0,
                     "nexus_path": ["/entry/instrument/sample_stage-x/velocity"]
                 },
                 "sample_stage_y_velocity": {
                     "title": "Stage Y Velocity",
                     "type": "number",
+                    "minimum": 0.0,
                     "nexus_path": ["/entry/instrument/sample_stage-y/velocity"]
                 },
                 "sample_stage_x_values": {
@@ -82,7 +87,9 @@
                     "description": "The measured motor X position array across the scan points",
                     "type": "array",
                     "items": {
-                        "type": "number"
+                        "type": "number",
+                        "minimum": -1000.0,
+                        "maximum": 1000.0
                     },
                     "nexus_path": ["/entry/andor2_det/sample_stage-x"]
                 },
@@ -91,7 +98,9 @@
                     "description": "The measured motor Y position array across the scan points",
                     "type": "array",
                     "items": {
-                        "type": "number"
+                        "type": "number",
+                        "minimum": -1000.0,
+                        "maximum": 1000.0
                     },
                     "nexus_path": ["/entry/andor2_det/sample_stage-y"]
                 }
