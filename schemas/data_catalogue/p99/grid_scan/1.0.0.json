@@ -1,0 +1,206 @@
+{
+  "title": "data_catalogue/p99/grid_scan",
+  "$id": "/data_catalogue/p99/grid_scan/1.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "scan_parameters": {
+      "title": "Scan Parameters",
+      "type": "object",
+      "properties": {
+        "scan_command": {
+          "title": "Plan Name",
+          "description": "The specific Bluesky scan plan executed",
+          "type": "string",
+          "nexus_path": [
+            "/entry/plan_metadata/plan_name"
+          ],
+          "highlight": true
+        },
+        "scan_type": {
+          "title": "Scan Type",
+          "type": "string",
+          "nexus_path": [
+            "/entry/plan_metadata/plan_type"
+          ]
+        },
+        "start_time": {
+          "title": "Scan Start Time",
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 128,
+          "nexus_path": [
+            "/entry/diamond_scan/start_time"
+          ]
+        },
+        "end_time": {
+          "title": "Scan End Time",
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 128,
+          "nexus_path": [
+            "/entry/diamond_scan/end_time"
+          ]
+        },
+        "duration_s": {
+          "title": "Scan Duration",
+          "description": "Total duration of the scan in seconds",
+          "type": "number",
+          "minimum": 0,
+          "nexus_path": [
+            "/entry/diamond_scan/duration"
+          ]
+        }
+      }
+    },
+    "optical_configurations": {
+      "title": "Optical Configurations",
+      "type": "object",
+      "properties": {
+        "energy": {
+          "title": "Beam Energy",
+          "type": "number",
+          "minimum": 0,
+          "nexus_path": [
+            "/entry/plan_metadata/energy/value"
+          ]
+        },
+        "detector_distance": {
+          "title": "Detector Distance",
+          "type": "number",
+          "minimum": 0,
+          "nexus_path": [
+            "/entry/plan_metadata/detector_dist/value"
+          ]
+        }
+      }
+    },
+    "detector_information": {
+      "title": "Detector Information",
+      "$id": "/data_catalogue/p99/_detectors/1.0.0.json",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "acquire_time": {
+          "title": "Detector Acquire Time",
+          "type": "number",
+          "minimum": 0,
+          "nexus_path": [
+            "/entry/instrument/andor2_det/driver-acquire_time"
+          ]
+        },
+        "acquire_period": {
+          "title": "Detector Acquire Period",
+          "type": "number",
+          "minimum": 0,
+          "nexus_path": [
+            "/entry/instrument/andor2_det/driver-acquire_period"
+          ]
+        },
+        "intensities": {
+          "title": "Detector Intensity Data",
+          "description": "Array of raw counts resolved from the external detector data link",
+          "type": "array",
+          "nexus_path": [
+            "/entry/andor2_det/andor2_det"
+          ],
+          "items": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      },
+      "examples": [
+        {
+          "acquire_period": 15000000,
+          "intensities": [
+            15000000
+          ],
+          "acquire_time": 15000000
+        }
+      ]
+    },
+    "motor_information": {
+      "title": "Motor Settings",
+      "type": "object",
+      "properties": {
+        "sample_stage_x_velocity": {
+          "title": "Stage X Velocity",
+          "type": "number",
+          "minimum": 0,
+          "nexus_path": [
+            "/entry/instrument/sample_stage-x/velocity"
+          ]
+        },
+        "sample_stage_y_velocity": {
+          "title": "Stage Y Velocity",
+          "type": "number",
+          "minimum": 0,
+          "nexus_path": [
+            "/entry/instrument/sample_stage-y/velocity"
+          ]
+        },
+        "sample_stage_x_values": {
+          "title": "Sample Stage X Array",
+          "description": "The measured motor X position array across the scan points",
+          "type": "array",
+          "nexus_path": [
+            "/entry/andor2_det/sample_stage-x"
+          ],
+          "items": {
+            "type": "number",
+            "minimum": -1000,
+            "maximum": 1000
+          }
+        },
+        "sample_stage_y_values": {
+          "title": "Sample Stage Y Array",
+          "description": "The measured motor Y position array across the scan points",
+          "type": "array",
+          "nexus_path": [
+            "/entry/andor2_det/sample_stage-y"
+          ],
+          "items": {
+            "type": "number",
+            "minimum": -1000,
+            "maximum": 1000
+          }
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "optical_configurations": {
+        "detector_distance": 15000000,
+        "energy": 15000000
+      },
+      "detector_information": {
+        "acquire_period": 15000000,
+        "intensities": [
+          15000000
+        ],
+        "acquire_time": 15000000
+      },
+      "motor_information": {
+        "sample_stage_y_velocity": 15000000,
+        "sample_stage_x_values": [
+          -700
+        ],
+        "sample_stage_y_values": [
+          -700
+        ],
+        "sample_stage_x_velocity": 15000000
+      },
+      "scan_parameters": {
+        "scan_type": "dolor",
+        "start_time": "2021-01-01T00:00:00.0Z",
+        "end_time": "2021-01-01T00:00:00.0Z",
+        "duration_s": 15000000,
+        "scan_command": "dolor"
+      }
+    }
+  ]
+}
