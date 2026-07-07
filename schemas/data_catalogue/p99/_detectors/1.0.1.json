@@ -25,12 +25,12 @@
       "title": "Detector Intensity Data",
       "description": "Array of raw counts resolved from the external detector data link",
       "type": "array",
-      "minimum": 0,
       "nexus_path": [
         "/entry/andor2_det/andor2_det"
       ],
       "items": {
-        "type": "number"
+        "type": "number",
+        "minimum": 0
       }
     }
   },
@@ -38,7 +38,7 @@
     {
       "acquire_period": 15000000,
       "intensities": [
-        -70000000
+        15000000
       ],
       "acquire_time": 15000000
     }
