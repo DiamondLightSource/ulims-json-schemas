@@ -1,0 +1,46 @@
+{
+  "title": "data_catalogue/p99/_detectors",
+  "$id": "/data_catalogue/p99/_detectors/1.0.0.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "acquire_time": {
+      "title": "Detector Acquire Time",
+      "type": "number",
+      "minimum": 0,
+      "nexus_path": [
+        "/entry/instrument/andor2_det/driver-acquire_time"
+      ]
+    },
+    "acquire_period": {
+      "title": "Detector Acquire Period",
+      "type": "number",
+      "minimum": 0,
+      "nexus_path": [
+        "/entry/instrument/andor2_det/driver-acquire_period"
+      ]
+    },
+    "intensities": {
+      "title": "Detector Intensity Data",
+      "description": "Array of raw counts resolved from the external detector data link",
+      "type": "array",
+      "nexus_path": [
+        "/entry/andor2_det/andor2_det"
+      ],
+      "items": {
+        "type": "number",
+        "minimum": 0
+      }
+    }
+  },
+  "examples": [
+    {
+      "acquire_period": 15000000,
+      "intensities": [
+        15000000
+      ],
+      "acquire_time": 15000000
+    }
+  ]
+}
