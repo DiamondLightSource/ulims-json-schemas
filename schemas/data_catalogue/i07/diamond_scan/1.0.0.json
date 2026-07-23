@@ -1,0 +1,213 @@
+{
+  "title": "data_catalogue/i07/diamond_scan",
+  "$id": "/data_catalogue/i07/diamond_scan/1.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "detector_information": {
+      "title": "Detector Information",
+      "$id": "/data_catalogue/i07/_detectors/1.0.0",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "detectors": {
+          "title": "Detectors",
+          "description": "The detector used for the scan, and the detection mode used",
+          "type": "object",
+          "properties": {
+            "detector_1": {
+              "title": "Detector 1",
+              "type": "object",
+              "properties": {
+                "detector_x_centre": {
+                  "title": "DetectorXCentre",
+                  "type": "number",
+                  "nexus_path": [
+                    "/entry/instrument/dets1xcentre/value"
+                  ]
+                },
+                "detector_x_size": {
+                  "title": "DetectorXSize",
+                  "type": "number",
+                  "nexus_path": [
+                    "/entry/instrument/dets1xsize/value"
+                  ]
+                },
+                "detector_y_centre": {
+                  "title": "DetectorYCentre",
+                  "type": "number",
+                  "nexus_path": [
+                    "/entry/instrument/dets1ycentre/value"
+                  ]
+                },
+                "detector_y_size": {
+                  "title": "DetectorYSize",
+                  "type": "number",
+                  "nexus_path": [
+                    "/entry/instrument/dets1ysize/value"
+                  ]
+                }
+              }
+            },
+            "detector_2": {
+              "title": "Detector 2",
+              "type": "object",
+              "properties": {
+                "detector_x_centre": {
+                  "title": "DetectorXCentre",
+                  "type": "number",
+                  "nexus_path": [
+                    "/entry/instrument/dets2xcentre/value"
+                  ]
+                },
+                "detector_x_size": {
+                  "title": "DetectorXSize",
+                  "type": "number",
+                  "nexus_path": [
+                    "/entry/instrument/dets2xsize/value"
+                  ]
+                },
+                "detector_y_centre": {
+                  "title": "DetectorYCentre",
+                  "type": "number",
+                  "nexus_path": [
+                    "/entry/instrument/dets2ycentre/value"
+                  ]
+                },
+                "detector_y_size": {
+                  "title": "DetectorYSize",
+                  "type": "number",
+                  "nexus_path": [
+                    "/entry/instrument/dets2ysize/value"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "examples": [
+        {
+          "detectors": {
+            "detector_2": {
+              "detector_x_size": -70000000,
+              "detector_y_centre": -70000000,
+              "detector_y_size": -70000000,
+              "detector_x_centre": -70000000
+            },
+            "detector_1": {
+              "detector_x_size": -70000000,
+              "detector_y_centre": -70000000,
+              "detector_y_size": -70000000,
+              "detector_x_centre": -70000000
+            }
+          }
+        }
+      ]
+    },
+    "instrument": {
+      "title": "Instrument",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string",
+          "nexus_path": [
+            "/entry/instrument/name"
+          ]
+        },
+        "ring_current": {
+          "title": "Ring Current",
+          "type": "number",
+          "nexus_path": [
+            "/entry/instrument/ringcurrent/ringcurrent"
+          ]
+        },
+        "beam_energy": {
+          "title": "Beam Energy",
+          "type": "number",
+          "nexus_path": [
+            "/entry/instrument/beamenergy/beamenergy"
+          ]
+        }
+      }
+    },
+    "scan_parameters": {
+      "title": "Scan Parameters",
+      "type": "object",
+      "properties": {
+        "start_time": {
+          "title": "Start Time",
+          "description": "The time the scan started",
+          "type": "string",
+          "nexus_path": [
+            "/entry/start_time"
+          ]
+        },
+        "end_time": {
+          "title": "End Time",
+          "description": "The time the scan ended",
+          "type": "string",
+          "nexus_path": [
+            "/entry/end_time"
+          ]
+        },
+        "scan_command": {
+          "title": "Scan command",
+          "description": "The scan command",
+          "type": "string",
+          "nexus_path": [
+            "/entry/diamond_scan/scan_command"
+          ]
+        },
+        "scan_shape": {
+          "title": "Scan shape",
+          "description": "The scan shape",
+          "type": "number",
+          "nexus_path": [
+            "/entry/diamond_scan/scan_shape"
+          ]
+        }
+      }
+    },
+    "comments": {
+      "title": "Comments",
+      "description": "Any further comments",
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "instrument": {
+        "ring_current": -70000000,
+        "beam_energy": -70000000,
+        "name": "dolor"
+      },
+      "scan_parameters": {
+        "end_time": "dolor",
+        "scan_command": "dolor",
+        "scan_shape": -70000000,
+        "start_time": "dolor"
+      },
+      "comments": "dolor",
+      "detector_information": {
+        "detectors": {
+          "detector_2": {
+            "detector_x_size": -70000000,
+            "detector_y_centre": -70000000,
+            "detector_y_size": -70000000,
+            "detector_x_centre": -70000000
+          },
+          "detector_1": {
+            "detector_x_size": -70000000,
+            "detector_y_centre": -70000000,
+            "detector_y_size": -70000000,
+            "detector_x_centre": -70000000
+          }
+        }
+      }
+    }
+  ]
+}
