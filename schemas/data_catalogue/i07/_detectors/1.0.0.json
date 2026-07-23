@@ -1,0 +1,102 @@
+{
+  "title": "data_catalogue/i07/_detectors",
+  "$id": "/data_catalogue/i07/_detectors/1.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "detectors": {
+      "title": "Detectors",
+      "description": "The detector used for the scan, and the detection mode used",
+      "type": "object",
+      "properties": {
+        "detector_1": {
+          "title": "Detector 1",
+          "type": "object",
+          "properties": {
+            "detector_x_centre": {
+              "title": "DetectorXCentre",
+              "type": "number",
+              "nexus_path": [
+                "/entry/instrument/dets1xcentre/value"
+              ]
+            },
+            "detector_x_size": {
+              "title": "DetectorXSize",
+              "type": "number",
+              "nexus_path": [
+                "/entry/instrument/dets1xsize/value"
+              ]
+            },
+            "detector_y_centre": {
+              "title": "DetectorYCentre",
+              "type": "number",
+              "nexus_path": [
+                "/entry/instrument/dets1ycentre/value"
+              ]
+            },
+            "detector_y_size": {
+              "title": "DetectorYSize",
+              "type": "number",
+              "nexus_path": [
+                "/entry/instrument/dets1ysize/value"
+              ]
+            }
+          }
+        },
+        "detector_2": {
+          "title": "Detector 2",
+          "type": "object",
+          "properties": {
+            "detector_x_centre": {
+              "title": "DetectorXCentre",
+              "type": "number",
+              "nexus_path": [
+                "/entry/instrument/dets2xcentre/value"
+              ]
+            },
+            "detector_x_size": {
+              "title": "DetectorXSize",
+              "type": "number",
+              "nexus_path": [
+                "/entry/instrument/dets2xsize/value"
+              ]
+            },
+            "detector_y_centre": {
+              "title": "DetectorYCentre",
+              "type": "number",
+              "nexus_path": [
+                "/entry/instrument/dets2ycentre/value"
+              ]
+            },
+            "detector_y_size": {
+              "title": "DetectorYSize",
+              "type": "number",
+              "nexus_path": [
+                "/entry/instrument/dets2ysize/value"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "detectors": {
+        "detector_2": {
+          "detector_x_size": -70000000,
+          "detector_y_centre": -70000000,
+          "detector_y_size": -70000000,
+          "detector_x_centre": -70000000
+        },
+        "detector_1": {
+          "detector_x_size": -70000000,
+          "detector_y_centre": -70000000,
+          "detector_y_size": -70000000,
+          "detector_x_centre": -70000000
+        }
+      }
+    }
+  ]
+}
