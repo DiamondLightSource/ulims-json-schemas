@@ -1,12 +1,13 @@
 {
-    "$id": "/experiment_definition/i15-1/room_temperature/0.0.1",
+    "$id": "/experiment_definition/i15-1/room_temperature/1.0.0",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "experiment_definition/i15-1/room_temperature",
+    "description": "A room temperature data collection on I15-1. Can be one PDF or multiple PDFs as a function of time.",
     "type": "object",
     "required": [],
     "allOf": [
         {
-            "$ref": "/experiment_definition/i15-1/_shared/0.0.1.json"
+            "$ref": "/experiment_definition/i15-1/_shared/1.0.0.json"
         },
         {
             "$ref": "/experiment_definition/_shared/comment/1.0.0.json"
