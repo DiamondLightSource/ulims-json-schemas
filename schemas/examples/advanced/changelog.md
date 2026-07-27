@@ -3,3 +3,6 @@
 
 # 1.0.1 (June 2024)
 - Update to using basic 1.0.1
+
+# 1.0.2 (June 2026)
+- Add string field with email format, no changes to basic exist.
