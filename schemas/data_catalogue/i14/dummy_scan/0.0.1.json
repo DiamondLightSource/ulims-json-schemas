@@ -1,0 +1,41 @@
+{
+  "title": "data_catalogue/i14/dummy_scan",
+  "$id": "/data_catalogue/i14/dummy_scan/0.0.1",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "scan_parameters": {
+      "title": "Scan Parameters",
+      "type": "object",
+      "properties": {
+        "start_time": {
+          "title": "Scan Start Time",
+          "description": "The time the scan started",
+          "type": "string",
+          "nexus_path": [
+            "/entry/start_time",
+            "/entry1/start_time"
+          ]
+        },
+        "end_time": {
+          "title": "Scan End Time",
+          "description": "The time the scan ended",
+          "type": "string",
+          "nexus_path": [
+            "/entry/end_time",
+            "/entry1/end_time"
+          ]
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "scan_parameters": {
+        "end_time": "dolor",
+        "start_time": "dolor"
+      }
+    }
+  ]
+}
