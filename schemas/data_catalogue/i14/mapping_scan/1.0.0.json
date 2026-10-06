@@ -52,6 +52,14 @@
             "/entry/instrument/sample/sample_rot",
             "/entry1/instrument/sample/sample_rot"
           ]
+        },
+        "scan_number": {
+          "title": "Scan Number",
+          "type": "number",
+          "nexus_path": [
+            "/entry/diamond_scan/entry_identifier",
+            "/entry1/diamond_scan/entry_identifier"
+          ]
         }
       }
     },
@@ -106,6 +114,7 @@
         "scan_request": "dolor",
         "photon_energy": -70000000,
         "rotation": -70000000,
+        "scan_number": -70000000,
         "start_time": "dolor"
       }
     }
