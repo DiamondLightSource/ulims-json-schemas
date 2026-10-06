@@ -1,6 +1,6 @@
 {
     "title": "data_catalogue/i14/mapping_scan",
-    "$id": "/data_catalogue/i14/mapping_scan/1.0.1",
+    "$id": "/data_catalogue/i14/mapping_scan/2.0.0",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "description": "Mapping scan on I14",
     "type": "object",
