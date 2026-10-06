@@ -1,0 +1,122 @@
+{
+  "title": "data_catalogue/i14/mapping_scan",
+  "description": "Mapping scan on I14",
+  "$id": "/data_catalogue/i14/mapping_scan/1.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "scan_parameters": {
+      "title": "Scan Parameters",
+      "type": "object",
+      "properties": {
+        "start_time": {
+          "title": "Scan Start Time",
+          "description": "The time the scan started",
+          "type": "string",
+          "nexus_path": [
+            "/entry/start_time",
+            "/entry1/start_time"
+          ]
+        },
+        "end_time": {
+          "title": "Scan End Time",
+          "description": "The time the scan ended",
+          "type": "string",
+          "nexus_path": [
+            "/entry/end_time",
+            "/entry1/end_time"
+          ]
+        },
+        "scan_request": {
+          "title": "Scan Request",
+          "description": "Scan request information",
+          "type": "string",
+          "nexus_path": [
+            "/entry/diamond_scan/scan_request",
+            "/entry1/diamond_scan/scan_request"
+          ]
+        },
+        "photon_energy": {
+          "title": "Photon Energy",
+          "type": "number",
+          "nexus_path": [
+            "/entry/instrument/DCM/dcm_energy",
+            "/entry1/instrument/DCM/dcm_energy"
+          ]
+        },
+        "rotation": {
+          "title": "Sample Rotation",
+          "type": "number",
+          "nexus_path": [
+            "/entry/instrument/sample/sample_rot",
+            "/entry1/instrument/sample/sample_rot"
+          ]
+        },
+        "scan_number": {
+          "title": "Scan Number",
+          "type": "number",
+          "nexus_path": [
+            "/entry/diamond_scan/entry_identifier",
+            "/entry1/diamond_scan/entry_identifier"
+          ]
+        }
+      }
+    },
+    "optical_configurations": {
+      "title": "Optical Configurations",
+      "type": "object",
+      "properties": {
+        "slit_size_x": {
+          "title": "Slit Size X",
+          "type": "number",
+          "nexus_path": [
+            "/entry/instrument/s3/s3_x_size",
+            "/entry1/instrument/s3/s3_x_size"
+          ]
+        },
+        "slit_size_y": {
+          "title": "Slit Size Y",
+          "type": "number",
+          "nexus_path": [
+            "/entry/instrument/s3/s3_y_size",
+            "/entry1/instrument/s3/s3_y_size"
+          ]
+        }
+      }
+    },
+    "sample_information": {
+      "title": "Sample",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Sample Name",
+          "type": "string",
+          "nexus_path": [
+            "/entry/sample/name",
+            "/entry1/sample/name"
+          ]
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "optical_configurations": {
+        "slit_size_y": -70000000,
+        "slit_size_x": -70000000
+      },
+      "sample_information": {
+        "name": "dolor"
+      },
+      "scan_parameters": {
+        "end_time": "dolor",
+        "scan_request": "dolor",
+        "photon_energy": -70000000,
+        "rotation": -70000000,
+        "scan_number": -70000000,
+        "start_time": "dolor"
+      }
+    }
+  ]
+}
