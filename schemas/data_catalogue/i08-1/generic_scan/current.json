@@ -1,0 +1,55 @@
+{
+    "title": "data_catalogue/i08-1/generic_scan",
+    "$id": "/data_catalogue/i08-1/generic_scan/1.0.0",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "Generic scan on I08-1",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "scan_parameters": {
+            "title": "Scan Parameters",
+            "type": "object",
+            "properties": {
+                "start_time": {
+                    "title": "Scan Start Time",
+                    "description": "The time the scan started",
+                    "type": "string",
+                    "nexus_path": ["/entry/start_time"]
+                },
+                "end_time": {
+                    "title": "Scan End Time",
+                    "description": "The time the scan ended",
+                    "type": "string",
+                    "nexus_path": ["/entry/end_time"]
+                },
+                "scan_request": {
+                    "title": "Scan Request",
+                    "description": "Scan request information",
+                    "type": "string",
+                    "nexus_path": ["/entry/diamond_scan/scan_request"]
+                },
+                "photon_energy": {
+                    "title": "Photon Energy",
+                    "type": "number",
+                    "nexus_path": ["/entry/instrument/pgm_energy/value"]
+                },
+                "sample_rotation": {
+                    "title": "Sample Rotation",
+                    "type": "number",
+                    "nexus_path": ["/entry/instrument/sample_rotation/value"]
+                }
+            }
+        },
+        "sample_information": {
+            "title": "Sample",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "title": "Sample Name",
+                    "type": "string",
+                    "nexus_path": ["/entry/sample/name"]
+                }
+            }
+        }
+    }
+}
