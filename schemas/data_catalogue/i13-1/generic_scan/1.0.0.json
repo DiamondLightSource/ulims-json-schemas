@@ -1,0 +1,100 @@
+{
+  "title": "data_catalogue/i13-1/generic_scan",
+  "description": "Generic scan on I13-1",
+  "$id": "/data_catalogue/i13-1/generic_scan/1.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "scan_parameters": {
+      "title": "Scan Parameters",
+      "type": "object",
+      "properties": {
+        "start_time": {
+          "title": "Scan Start Time",
+          "description": "The time the scan started",
+          "type": "string",
+          "nexus_path": [
+            "/entry/start_time",
+            "/entry1/start_time"
+          ]
+        },
+        "end_time": {
+          "title": "Scan End Time",
+          "description": "The time the scan ended",
+          "type": "string",
+          "nexus_path": [
+            "/entry/end_time",
+            "/entry1/end_time"
+          ]
+        },
+        "scan_request": {
+          "title": "Scan Request",
+          "description": "Scan request information",
+          "type": "string",
+          "nexus_path": [
+            "/entry/diamond_scan/scan_request"
+          ]
+        },
+        "photon_energy": {
+          "title": "Photon Energy",
+          "type": "number",
+          "nexus_path": [
+            "/entry/instrument/qcm/qcm_energy"
+          ]
+        },
+        "scan_number": {
+          "title": "Scan Number",
+          "type": "number",
+          "nexus_path": [
+            "/entry1/entry_identifier"
+          ]
+        },
+        "scan_command": {
+          "title": "Scan Command",
+          "type": "string",
+          "nexus_path": [
+            "/entry1/scan_command"
+          ]
+        },
+        "scan_title": {
+          "title": "Scan Title",
+          "type": "string",
+          "nexus_path": [
+            "/entry1/title"
+          ]
+        }
+      }
+    },
+    "sample_information": {
+      "title": "Sample",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Sample Name",
+          "type": "string",
+          "nexus_path": [
+            "/entry/sample/name",
+            "/entry1/sample/name"
+          ]
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "sample_information": {
+        "name": "dolor"
+      },
+      "scan_parameters": {
+        "scan_title": "dolor",
+        "scan_request": "dolor",
+        "photon_energy": -70000000,
+        "scan_number": -70000000,
+        "scan_command": "dolor",
+        "start_time": "dolor",
+        "end_time": "dolor"
+      }
+    }
+  ]
+}
