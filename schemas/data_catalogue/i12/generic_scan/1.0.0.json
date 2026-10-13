@@ -1,0 +1,64 @@
+{
+  "title": "data_catalogue/i12/generic_scan",
+  "description": "Generic scan on I12",
+  "$id": "/data_catalogue/i12/generic_scan/1.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "scan_parameters": {
+      "title": "Scan Parameters",
+      "type": "object",
+      "properties": {
+        "start_time": {
+          "title": "Scan Start Time",
+          "description": "The time the scan started",
+          "type": "string",
+          "nexus_path": [
+            "/entry1/start_time"
+          ]
+        },
+        "end_time": {
+          "title": "Scan End Time",
+          "description": "The time the scan ended",
+          "type": "string",
+          "nexus_path": [
+            "/entry1/end_time"
+          ]
+        },
+        "scan_number": {
+          "title": "Scan Number",
+          "type": "number",
+          "nexus_path": [
+            "/entry1/entry_identifier"
+          ]
+        },
+        "scan_title": {
+          "title": "Scan Title",
+          "type": "string",
+          "nexus_path": [
+            "/entry1/title"
+          ]
+        },
+        "scan_command": {
+          "title": "Scan Command",
+          "type": "string",
+          "nexus_path": [
+            "/entry1/scan_command"
+          ]
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "scan_parameters": {
+        "end_time": "dolor",
+        "scan_number": -70000000,
+        "scan_title": "dolor",
+        "scan_command": "dolor",
+        "start_time": "dolor"
+      }
+    }
+  ]
+}
