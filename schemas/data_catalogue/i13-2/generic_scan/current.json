@@ -1,0 +1,43 @@
+{
+    "title": "data_catalogue/i13-2/generic_scan",
+    "$id": "/data_catalogue/i13-2/generic_scan/1.0.0",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "Generic scan on I13-2",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "scan_parameters": {
+            "title": "Scan Parameters",
+            "type": "object",
+            "properties": {
+                "start_time": {
+                    "title": "Scan Start Time",
+                    "description": "The time the scan started",
+                    "type": "string",
+                    "nexus_path": ["/entry1/start_time"]
+                },
+                "end_time": {
+                    "title": "Scan End Time",
+                    "description": "The time the scan ended",
+                    "type": "string",
+                    "nexus_path": ["/entry1/end_time"]
+                },
+                "scan_command": {
+                    "title": "Scan Command",
+                    "type": "string",
+                    "nexus_path": ["/entry1/scan_command"]
+                },
+                "scan_title": {
+                    "title": "Scan Title",
+                    "type": "string",
+                    "nexus_path": ["/entry1/title"]
+                },
+                "scan_number": {
+                    "title": "Scan Number",
+                    "type": "number",
+                    "nexus_path": ["/entry1/entry_identifier"]
+                }
+            }
+        }
+    }
+}
