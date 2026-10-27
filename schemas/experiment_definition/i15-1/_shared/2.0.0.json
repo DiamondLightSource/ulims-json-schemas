@@ -18,11 +18,15 @@
     },
     "q_max": {
       "title": "Q-max (Å⁻¹)",
-      "description": "The required maximum momentum transfer for this collection, in reciprocal Angstroms.",
+      "description": "The required maximum momentum transfer for this collection, in reciprocal Angstroms. Higher Qmax requires higher total exposure times",
       "type": "number",
-      "default": 25,
-      "minimum": 0,
-      "maximum": 100
+      "enum": [
+        25,
+        30,
+        35,
+        40
+      ],
+      "default": 25
     }
   },
   "examples": [
