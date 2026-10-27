@@ -1,0 +1,38 @@
+{
+  "title": "experiment_definition/i15-1/_shared",
+  "$id": "/experiment_definition/i15-1/_shared/2.0.1",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "time_per_pdf",
+    "q_max"
+  ],
+  "properties": {
+    "time_per_pdf": {
+      "title": "Time per PDF (seconds)",
+      "description": "Total exposure time for each diffraction pattern/PDF in seconds.",
+      "type": "number",
+      "default": 600,
+      "minimum": 0,
+      "maximum": 99999.9
+    },
+    "q_max": {
+      "title": "Q-max (Å⁻¹)",
+      "description": "The required maximum momentum transfer for this collection, in reciprocal Angstroms. Higher Qmax requires higher total exposure times",
+      "type": "number",
+      "enum": [
+        25,
+        30,
+        35,
+        40
+      ],
+      "default": 25
+    }
+  },
+  "examples": [
+    {
+      "time_per_pdf": 600,
+      "q_max": 25
+    }
+  ]
+}

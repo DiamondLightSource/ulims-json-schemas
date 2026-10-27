@@ -1,0 +1,82 @@
+{
+  "title": "experiment_definition/i15-1/cobra",
+  "description": "A variable temperature data collection on I15-1 using the Oxford Cryosystem Cobra. Can be one PDF or multiple PDFs at each temperature.",
+  "$id": "/experiment_definition/i15-1/cobra/2.0.1",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "list_of_temperatures",
+    "q_max",
+    "ramp_rate",
+    "settle_time",
+    "time_per_pdf"
+  ],
+  "properties": {
+    "time_per_pdf": {
+      "title": "Time per PDF (seconds)",
+      "description": "Total exposure time for each diffraction pattern/PDF in seconds.",
+      "type": "number",
+      "default": 600,
+      "minimum": 0,
+      "maximum": 99999.9
+    },
+    "q_max": {
+      "title": "Q-max (Å⁻¹)",
+      "description": "The required maximum momentum transfer for this collection, in reciprocal Angstroms. Higher Qmax requires higher total exposure times",
+      "type": "number",
+      "enum": [
+        25,
+        30,
+        35,
+        40
+      ],
+      "default": 25
+    },
+    "list_of_temperatures": {
+      "title": "List of Cobra Temperatures (K)",
+      "description": "The required temperatures in Kelvin. Individual data points will be collected at these temperatures after a short thermal stabilisation time.",
+      "type": "array",
+      "items": {
+        "type": "number",
+        "minimum": 80,
+        "maximum": 500,
+        "minItems": 1
+      }
+    },
+    "ramp_rate": {
+      "title": "Cobra Ramp Rate (K/min)",
+      "description": "The required ramp rate for the cobra in K/min.",
+      "type": "number",
+      "default": 6,
+      "minimum": 0.02,
+      "maximum": 6
+    },
+    "settle_time": {
+      "title": "Settle time per temperature point (seconds)",
+      "description": "The required settle time per temperature point in seconds.",
+      "type": "number",
+      "default": 180,
+      "minimum": 0,
+      "maximum": 99999
+    },
+    "comment": {
+      "title": "Comment",
+      "description": "Add a comment to this experiment definition, to provide additional information or context. The comment will have no impact on the experiment definition itself, and is purely for informational purposes.",
+      "type": "string",
+      "default": "",
+      "maxLength": 1000
+    }
+  },
+  "examples": [
+    {
+      "list_of_temperatures": [
+        143
+      ],
+      "q_max": 25,
+      "ramp_rate": 6,
+      "settle_time": 180,
+      "time_per_pdf": 600,
+      "comment": ""
+    }
+  ]
+}
