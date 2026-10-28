@@ -67,5 +67,5 @@
       "capillary": "bs1.5"
     }
   ],
-  "deprecated": true
+  "x_deprecated": true
 }
