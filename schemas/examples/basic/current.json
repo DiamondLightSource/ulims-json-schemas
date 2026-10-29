@@ -1,12 +1,13 @@
 {
   "title": "examples/basic",
   "description": "A basic schema not using references",
-  "$id": "/examples/basic/1.0.1",
+  "$id": "/examples/basic/2.0.0",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "additionalProperties": false,
   "required": [
-    "comment"
+    "comment",
+    "counter"
   ],
   "properties": {
     "comment": {
@@ -43,7 +44,8 @@
   },
   "examples": [
     {
-      "comment": "Example showing required data values in basic 1.0.0"
+      "comment": "Example showing required data values in basic 1.0.0",
+      "counter": 101
     },
     {
       "comment": "Example showing all values in basic 1.0.0 version.",
