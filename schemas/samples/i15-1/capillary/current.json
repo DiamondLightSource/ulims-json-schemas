@@ -29,8 +29,8 @@
             "minimum": 0.0,
             "maximum": 1.0
         },
-        "capillary": {
-            "title": "Capillary",
+        "capillary_type": {
+            "title": "Capillary Type",
             "type": "string",
             "enum": [
                 "bs1.0", 
