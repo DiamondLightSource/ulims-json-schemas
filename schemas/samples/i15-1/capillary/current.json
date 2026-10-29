@@ -2,6 +2,7 @@
     "$id": "/samples/i15-1/capillary/1.0.0",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "samples/i15-1/capillary",
+    "description": "A sample loaded into a standard capillary, for I15-1 experiments.",
     "type": "object",
     "required": [
         "composition", "density",  "packing_fraction"
