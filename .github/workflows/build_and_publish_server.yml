@@ -60,9 +60,15 @@ jobs:
           output: trivy-results.sarif
 
       - name: Upload Trivy results
-        uses: github/codeql-action/upload-sarif@v3
+        uses: github/codeql-action/upload-sarif@v4
         with:
           sarif_file: trivy-results.sarif
+
+      - name: Upload SARIF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: trivy-results
+          path: trivy-results.sarif
 
       - name: Fail on HIGH/CRITICAL vulnerabilities
         uses: aquasecurity/trivy-action@v0.36.0
