@@ -1,0 +1,37 @@
+{
+    "title": "data_catalogue/shared/imaging/scan_common",
+    "description": "Schema containing fields common to several imaging beamlines",
+    "$id": "/data_catalogue/shared/imaging/scan_common/1.0.0",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "start_time": {
+            "title": "Scan Start Time",
+            "description": "The time the scan started",
+            "type": "string",
+            "format": "date-time",
+            "maxLength": 128,
+            "nexus_path": ["/entry/start_time", "/entry1/start_time"]
+        },
+        "end_time": {
+            "title": "Scan End Time",
+            "description": "The time the scan ended",
+            "type": "string",
+            "format": "date-time",
+            "maxLength": 128,
+            "nexus_path": ["/entry/end_time", "/entry1/end_time"]
+        },
+        "scan_request": {
+            "title": "Scan Request",
+            "description": "Scan request information",
+            "type": "string",
+            "nexus_path": ["/entry/diamond_scan/scan_request", "/entry1/diamond_scan/scan_request"]
+        },
+        "scan_number": {
+            "title": "Scan Number",
+            "type": "number",
+            "nexus_path": ["/entry/diamond_scan/entry_identifier", "/entry1/diamond_scan/entry_identifier", "/entry1/entry_identifier"]
+        }
+    }
+}
