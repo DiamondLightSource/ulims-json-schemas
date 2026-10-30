@@ -9,6 +9,9 @@
         "scan_common": {
             "$ref": "/data_catalogue/shared/imaging/scan_common/1.0.0.json"
         },
+        "sample_common": {
+            "$ref": "/data_catalogue/shared/imaging/sample_common/1.0.0.json"
+        },
         "scan_parameters": {
             "title": "Scan Parameters",
             "type": "object",
@@ -40,9 +43,6 @@
                     "nexus_path": ["/entry/instrument/S3/s3_y_size", "/entry1/instrument/S3/s3_y_size"]
                 }
             }
-        },
-        "sample_common": {
-            "$ref": "/data_catalogue/shared/imaging/sample_common/1.0.0.json"
         }
     }
 }
