@@ -64,6 +64,29 @@
         }
       ]
     },
+    "sample_common": {
+      "title": "data_catalogue/shared/imaging/sample_common",
+      "description": "Schema containing fields common to several imaging beamlines",
+      "$id": "/data_catalogue/shared/imaging/sample_common/1.0.0",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Sample Name",
+          "type": "string",
+          "nexus_path": [
+            "/entry/sample/name",
+            "/entry1/sample/name"
+          ]
+        }
+      },
+      "examples": [
+        {
+          "name": "dolor"
+        }
+      ]
+    },
     "scan_parameters": {
       "title": "Scan Parameters",
       "type": "object",
@@ -107,33 +130,13 @@
           ]
         }
       }
-    },
-    "sample_common": {
-      "title": "data_catalogue/shared/imaging/sample_common",
-      "description": "Schema containing fields common to several imaging beamlines",
-      "$id": "/data_catalogue/shared/imaging/sample_common/1.0.0",
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "name": {
-          "title": "Sample Name",
-          "type": "string",
-          "nexus_path": [
-            "/entry/sample/name",
-            "/entry1/sample/name"
-          ]
-        }
-      },
-      "examples": [
-        {
-          "name": "dolor"
-        }
-      ]
     }
   },
   "examples": [
     {
+      "sample_common": {
+        "name": "dolor"
+      },
       "scan_parameters": {
         "rotation": -70000000,
         "photon_energy": -70000000
@@ -141,9 +144,6 @@
       "optical_configurations": {
         "slit_size_y": -70000000,
         "slit_size_x": -70000000
-      },
-      "sample_common": {
-        "name": "dolor"
       },
       "scan_common": {
         "end_time": "2021-01-01T00:00:00.0Z",
