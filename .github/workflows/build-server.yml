@@ -9,14 +9,21 @@ on:
 permissions:
   contents: read
   packages: write
+  security-events: write
 
 jobs:
-  build-and-push:
+  build-scan-push:
     runs-on: ubuntu-latest
+
+    env:
+      LOCAL_IMAGE: schema-server:test
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
       - name: Log in to GitHub Container Registry
         uses: docker/login-action@v3
@@ -34,36 +41,42 @@ jobs:
             type=raw,value=latest
             type=sha,prefix=
 
+      #
+      # Build locally for scanning
+      #
       - name: Build image
         uses: docker/build-push-action@v6
         with:
           context: .
           file: server/Dockerfile
           load: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-      
-      - name: Scan image
-        uses: aquasecurity/trivy-action@v0.36.0
-        with:
-          image-ref: ghcr.io/${{ github.repository }}:${{ github.sha }}
-          severity: HIGH,CRITICAL
-          ignore-unfixed: true
-          exit-code: 1
+          tags: ${{ env.LOCAL_IMAGE }}
 
-      - name: Run Trivy scan
+      - name: Generate Trivy SARIF report
         uses: aquasecurity/trivy-action@v0.36.0
         with:
-          image-ref: ${{ env.IMAGE_NAME }}:${{ github.sha }}
+          image-ref: ${{ env.LOCAL_IMAGE }}
           format: sarif
           output: trivy-results.sarif
 
-      - name: Upload SARIF
+      - name: Upload Trivy results
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: trivy-results.sarif
 
-      - name: Push image
+      - name: Fail on HIGH/CRITICAL vulnerabilities
+        uses: aquasecurity/trivy-action@v0.36.0
+        with:
+          image-ref: ${{ env.LOCAL_IMAGE }}
+          format: table
+          severity: HIGH,CRITICAL
+          ignore-unfixed: true
+          exit-code: 1
+
+      #
+      # Rebuild and push with the real tags
+      #
+      - name: Build and push image
         uses: docker/build-push-action@v6
         with:
           context: .
