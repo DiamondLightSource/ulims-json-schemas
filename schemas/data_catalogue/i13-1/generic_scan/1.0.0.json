@@ -6,14 +6,20 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "scan_parameters": {
-      "title": "Scan Parameters",
+    "scan_common": {
+      "title": "data_catalogue/shared/imaging/scan_common",
+      "description": "Schema containing fields common to several imaging beamlines",
+      "$id": "/data_catalogue/shared/imaging/scan_common/1.0.0",
+      "$schema": "http://json-schema.org/draft-07/schema#",
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "start_time": {
           "title": "Scan Start Time",
           "description": "The time the scan started",
           "type": "string",
+          "format": "date-time",
+          "maxLength": 128,
           "nexus_path": [
             "/entry/start_time",
             "/entry1/start_time"
@@ -23,6 +29,8 @@
           "title": "Scan End Time",
           "description": "The time the scan ended",
           "type": "string",
+          "format": "date-time",
+          "maxLength": 128,
           "nexus_path": [
             "/entry/end_time",
             "/entry1/end_time"
@@ -33,21 +41,61 @@
           "description": "Scan request information",
           "type": "string",
           "nexus_path": [
-            "/entry/diamond_scan/scan_request"
-          ]
-        },
-        "photon_energy": {
-          "title": "Photon Energy",
-          "type": "number",
-          "nexus_path": [
-            "/entry/instrument/qcm/qcm_energy"
+            "/entry/diamond_scan/scan_request",
+            "/entry1/diamond_scan/scan_request"
           ]
         },
         "scan_number": {
           "title": "Scan Number",
           "type": "number",
           "nexus_path": [
+            "/entry/diamond_scan/entry_identifier",
+            "/entry1/diamond_scan/entry_identifier",
             "/entry1/entry_identifier"
+          ]
+        }
+      },
+      "examples": [
+        {
+          "end_time": "2021-01-01T00:00:00.0Z",
+          "scan_request": "dolor",
+          "scan_number": -70000000,
+          "start_time": "2021-01-01T00:00:00.0Z"
+        }
+      ]
+    },
+    "sample_common": {
+      "title": "data_catalogue/shared/imaging/sample_common",
+      "description": "Schema containing fields common to several imaging beamlines",
+      "$id": "/data_catalogue/shared/imaging/sample_common/1.0.0",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Sample Name",
+          "type": "string",
+          "nexus_path": [
+            "/entry/sample/name",
+            "/entry1/sample/name"
+          ]
+        }
+      },
+      "examples": [
+        {
+          "name": "dolor"
+        }
+      ]
+    },
+    "scan_parameters": {
+      "title": "Scan Parameters",
+      "type": "object",
+      "properties": {
+        "photon_energy": {
+          "title": "Photon Energy",
+          "type": "number",
+          "nexus_path": [
+            "/entry/instrument/qcm/qcm_energy"
           ]
         },
         "scan_command": {
@@ -65,35 +113,23 @@
           ]
         }
       }
-    },
-    "sample_information": {
-      "title": "Sample",
-      "type": "object",
-      "properties": {
-        "name": {
-          "title": "Sample Name",
-          "type": "string",
-          "nexus_path": [
-            "/entry/sample/name",
-            "/entry1/sample/name"
-          ]
-        }
-      }
     }
   },
   "examples": [
     {
-      "sample_information": {
+      "sample_common": {
         "name": "dolor"
       },
       "scan_parameters": {
-        "scan_title": "dolor",
-        "scan_request": "dolor",
-        "photon_energy": -70000000,
-        "scan_number": -70000000,
         "scan_command": "dolor",
-        "start_time": "dolor",
-        "end_time": "dolor"
+        "scan_title": "dolor",
+        "photon_energy": -70000000
+      },
+      "scan_common": {
+        "end_time": "2021-01-01T00:00:00.0Z",
+        "scan_request": "dolor",
+        "scan_number": -70000000,
+        "start_time": "2021-01-01T00:00:00.0Z"
       }
     }
   ]
