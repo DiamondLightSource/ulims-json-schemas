@@ -6,45 +6,11 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
-        "scan_parameters": {
-            "title": "Scan Parameters",
-            "type": "object",
-            "properties": {
-                "start_time": {
-                    "title": "Scan Start Time",
-                    "description": "The time the scan started",
-                    "type": "string",
-                    "nexus_path": ["/entry/start_time", "/entry1/start_time"]
-                },
-                "end_time": {
-                    "title": "Scan End Time",
-                    "description": "The time the scan ended",
-                    "type": "string",
-                    "nexus_path": ["/entry/end_time", "/entry1/end_time"]
-                },
-                "scan_request": {
-                    "title": "Scan Request",
-                    "description": "Scan request information",
-                    "type": "string",
-                    "nexus_path": ["/entry/diamond_scan/scan_request", "/entry1/diamond_scan/scan_request"]
-                },
-                "scan_number": {
-                    "title": "Scan Number",
-                    "type": "number",
-                    "nexus_path": ["/entry/diamond_scan/entry_identifier", "/entry1/diamond_scan/entry_identifier"]
-                }
-            }
+        "scan_common": {
+            "$ref": "/data_catalogue/shared/imaging/scan_common/1.0.0.json"
         },
-        "sample_information": {
-            "title": "Sample",
-            "type": "object",
-            "properties": {
-                "name": {
-                    "title": "Sample Name",
-                    "type": "string",
-                    "nexus_path": ["/entry/sample/name", "/entry1/sample/name"]
-                }
-            }
+        "sample_common": {
+            "$ref": "/data_catalogue/shared/imaging/sample_common/1.0.0.json"
         }
     }
 }
