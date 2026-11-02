@@ -6,22 +6,13 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
+        "scan_common": {
+            "$ref": "/data_catalogue/shared/imaging/scan_common/1.0.0.json"
+        },
         "scan_parameters": {
             "title": "Scan Parameters",
             "type": "object",
             "properties": {
-                "start_time": {
-                    "title": "Scan Start Time",
-                    "description": "The time the scan started",
-                    "type": "string",
-                    "nexus_path": ["/entry1/start_time"]
-                },
-                "end_time": {
-                    "title": "Scan End Time",
-                    "description": "The time the scan ended",
-                    "type": "string",
-                    "nexus_path": ["/entry1/end_time"]
-                },
                 "scan_command": {
                     "title": "Scan Command",
                     "type": "string",
@@ -31,11 +22,6 @@
                     "title": "Scan Title",
                     "type": "string",
                     "nexus_path": ["/entry1/title"]
-                },
-                "scan_number": {
-                    "title": "Scan Number",
-                    "type": "number",
-                    "nexus_path": ["/entry1/entry_identifier"]
                 }
             }
         }
