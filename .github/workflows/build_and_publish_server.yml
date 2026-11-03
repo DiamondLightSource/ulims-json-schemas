@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - mp/ci/build-server
 
 permissions:
   contents: read
