@@ -1,0 +1,37 @@
+{
+    "$id": "/experiment_definition/batch/0.1.0",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "experiment_definition/b21/batch",
+    "description": "A batch collection using the robot on B21.",
+    "required": [
+        "list_of_temperatures",
+        "ramp_rate",
+        "settle_time"
+    ],
+    "properties": {
+        "offline_storage_temperature": {
+            "title": "Offline Sample Storage Temperature (C)",
+            "description": "The temperature to store the samples at when they're not on the beamline",
+            "type": "integer",
+            "enum": [
+                -80,
+                4,
+                22
+            ]
+        },
+        "robot_storage_temperature": {
+            "title": "Robot Platform Temperature (C)",
+            "description": "The temperature to store the samples when they are being stored on the robot platform",
+            "type": "integer",
+            "maximum": 40,
+            "minimum": 4
+        },
+        "collection_temperature": {
+            "title": "Collection Temperature (C)",
+            "description": "The temperature to collect data at",
+            "type": "integer",
+            "maximum": 80,
+            "minimum": 4
+        }
+    }
+}
