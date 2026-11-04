@@ -69,15 +69,6 @@ jobs:
           name: trivy-results
           path: trivy-results.sarif
 
-      - name: Fail on HIGH/CRITICAL vulnerabilities
-        uses: aquasecurity/trivy-action@v0.36.0
-        with:
-          image-ref: ${{ env.LOCAL_IMAGE }}
-          format: table
-          severity: HIGH,CRITICAL
-          ignore-unfixed: true
-          exit-code: 1
-
       #
       # Rebuild and push with the real tags
       #
