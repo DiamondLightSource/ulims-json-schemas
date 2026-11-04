@@ -9,15 +9,15 @@
     ],
     "properties": {
         "volume": {
-            "title": "Volume",
-            "description": "Volume of sample in μL",
+            "title": "Volume (mL)",
+            "description": "Volume of buffer in mL",
             "type": "number",
-            "minimum": 25.0,
-            "maximum": 100.0
+            "minimum": 0.02,
+            "maximum": 1.5
         },
         "notes": {
             "title": "Notes",
-            "description": "Any further notes about the sample",
+            "description": "Any further notes about the buffer",
             "type": "string"
         }
     }

@@ -9,10 +9,10 @@
     ],
     "properties": {
         "volume": {
-            "title": "Volume",
+            "title": "Volume (μL)",
             "description": "Volume of sample in μL",
             "type": "number",
-            "minimum": 25.0,
+            "minimum": 20.0,
             "maximum": 100.0
         },
         "notes": {
