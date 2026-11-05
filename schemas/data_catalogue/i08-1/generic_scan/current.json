@@ -1,0 +1,32 @@
+{
+    "title": "data_catalogue/i08-1/generic_scan",
+    "$id": "/data_catalogue/i08-1/generic_scan/1.0.0",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "Generic scan on I08-1",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "scan_common": {
+            "$ref": "/data_catalogue/shared/imaging/scan_common/1.0.0.json"
+        },
+        "sample_common": {
+            "$ref": "/data_catalogue/shared/imaging/sample_common/1.0.0.json"
+        },
+        "scan_parameters": {
+            "title": "Scan Parameters",
+            "type": "object",
+            "properties": {
+                "photon_energy": {
+                    "title": "Photon Energy",
+                    "type": "number",
+                    "nexus_path": ["/entry/instrument/pgm_energy/value"]
+                },
+                "sample_rotation": {
+                    "title": "Sample Rotation",
+                    "type": "number",
+                    "nexus_path": ["/entry/instrument/sample_rotation/value"]
+                }
+            }
+        }
+    }
+}
