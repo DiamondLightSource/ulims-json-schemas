@@ -1,0 +1,95 @@
+{
+    "title": "data_catalogue/i12/generic_scan",
+    "$id": "/data_catalogue/i12/generic_scan/1.0.0",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "Generic scan on I12",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "scan_common": {
+            "$ref": "/data_catalogue/_shared/imaging/scan_common/2.0.0.json"
+        },
+        "scan_parameters": {
+            "title": "Scan Parameters",
+            "type": "object",
+            "properties": {
+                "scan_title": {
+                    "title": "Scan Title",
+                    "type": "string",
+                    "nexus_path": ["/entry1/title"]
+                },
+                "scan_command": {
+                    "title": "Scan Command",
+                    "type": "string",
+                    "nexus_path": ["/entry1/scan_command"]
+                },
+                "tomography_command": {
+                    "title": "Tomography Command",
+                    "type": "string",
+                    "nexus_path": ["/entry1/before_scan/flyscan_cfg/tomography_cmd"]
+                },
+                "tomography_shutter": {
+                    "title": "Tomography Shutter",
+                    "type": "string",
+                    "nexus_path": ["/entry1/before_scan/flyscan_cfg/tomography_shutter"]
+                },
+                "cam1_x": {
+                    "title": "cam1_x",
+                    "type": "number",
+                    "nexus_path": ["/entry1/before_scan/cam1/cam1_x"]
+                },
+                "cam_model": {
+                    "title": "Camera Model",
+                    "type": "string",
+                    "nexus_path": ["/entry1/before_scan/det_cfg/cam_model"]
+                },
+                "energy_est": {
+                    "title": "Energy Estimate",
+                    "type": "number",
+                    "nexus_path": ["/entry1/before_scan/energy_est/energy_est"]
+                },
+                "mc2_z": {
+                    "title": "Monochromator Spacing",
+                    "type": "number",
+                    "nexus_path": ["/entry1/before_scan/mc2/mc2_z"]
+                }
+            }
+        },
+        "sample_parameters": {
+            "title": "Sample Parameters",
+            "type": "object",
+            "properties": {
+                "ss1_x": {
+                    "title": "Sample Stage 1 X",
+                    "type": "number",
+                    "nexus_path": ["/entry1/before_scan/ss1/ss1_x"]
+                },
+                "ss1_tx": {
+                    "title": "Sample Stage 1 TX",
+                    "type": "number",
+                    "nexus_path": ["/entry1/before_scan/ss1/ss1_tx"]
+                },
+                "ss1_tz": {
+                    "title": "Sample Stage 1 TZ",
+                    "type": "number",
+                    "nexus_path": ["/entry1/before_scan/ss1/ss1_tz"]
+                },
+                "ss1_y1": {
+                    "title": "Sample Stage 1 Y1",
+                    "type": "number",
+                    "nexus_path": ["/entry1/before_scan/ss1/ss1_y1"]
+                },
+                "ss1_y2": {
+                    "title": "Sample Stage 1 Y2",
+                    "type": "number",
+                    "nexus_path": ["/entry1/before_scan/ss1/ss1_y2"]
+                },
+                "ss1_y3": {
+                    "title": "Sample Stage 1 Y3",
+                    "type": "number",
+                    "nexus_path": ["/entry1/before_scan/ss1/ss1_y3"]
+                }
+            }
+        }
+    }
+}

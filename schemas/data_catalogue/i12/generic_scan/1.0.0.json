@@ -1,0 +1,216 @@
+{
+  "title": "data_catalogue/i12/generic_scan",
+  "description": "Generic scan on I12",
+  "$id": "/data_catalogue/i12/generic_scan/1.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "scan_common": {
+      "title": "data_catalogue/_shared/imaging/scan_common",
+      "description": "Schema containing fields common to several imaging beamlines",
+      "$id": "/data_catalogue/_shared/imaging/scan_common/2.0.0",
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start_time": {
+          "title": "Scan Start Time",
+          "description": "The time the scan started",
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 128,
+          "nexus_path": [
+            "/entry/start_time",
+            "/entry1/start_time"
+          ]
+        },
+        "end_time": {
+          "title": "Scan End Time",
+          "description": "The time the scan ended",
+          "type": "string",
+          "format": "date-time",
+          "maxLength": 128,
+          "nexus_path": [
+            "/entry/end_time",
+            "/entry1/end_time"
+          ]
+        },
+        "scan_request": {
+          "title": "Scan Request",
+          "description": "Scan request information",
+          "type": "string",
+          "nexus_path": [
+            "/entry/diamond_scan/scan_request",
+            "/entry1/diamond_scan/scan_request"
+          ]
+        },
+        "scan_number": {
+          "title": "Scan Number",
+          "type": "number",
+          "nexus_path": [
+            "/entry/diamond_scan/entry_identifier",
+            "/entry1/diamond_scan/entry_identifier",
+            "/entry1/entry_identifier"
+          ]
+        },
+        "synchrotron_current": {
+          "title": "Synchrotron Current",
+          "type": "number",
+          "nexus_path": [
+            "/entry/instrument/source/current",
+            "/entry1/instrument/source/current"
+          ]
+        }
+      },
+      "examples": [
+        {
+          "end_time": "2021-01-01T00:00:00.0Z",
+          "scan_request": "dolor",
+          "scan_number": -70000000,
+          "synchrotron_current": -70000000,
+          "start_time": "2021-01-01T00:00:00.0Z"
+        }
+      ]
+    },
+    "scan_parameters": {
+      "title": "Scan Parameters",
+      "type": "object",
+      "properties": {
+        "scan_title": {
+          "title": "Scan Title",
+          "type": "string",
+          "nexus_path": [
+            "/entry1/title"
+          ]
+        },
+        "scan_command": {
+          "title": "Scan Command",
+          "type": "string",
+          "nexus_path": [
+            "/entry1/scan_command"
+          ]
+        },
+        "tomography_command": {
+          "title": "Tomography Command",
+          "type": "string",
+          "nexus_path": [
+            "/entry1/before_scan/flyscan_cfg/tomography_cmd"
+          ]
+        },
+        "tomography_shutter": {
+          "title": "Tomography Shutter",
+          "type": "string",
+          "nexus_path": [
+            "/entry1/before_scan/flyscan_cfg/tomography_shutter"
+          ]
+        },
+        "cam1_x": {
+          "title": "cam1_x",
+          "type": "number",
+          "nexus_path": [
+            "/entry1/before_scan/cam1/cam1_x"
+          ]
+        },
+        "cam_model": {
+          "title": "Camera Model",
+          "type": "string",
+          "nexus_path": [
+            "/entry1/before_scan/det_cfg/cam_model"
+          ]
+        },
+        "energy_est": {
+          "title": "Energy Estimate",
+          "type": "number",
+          "nexus_path": [
+            "/entry1/before_scan/energy_est/energy_est"
+          ]
+        },
+        "mc2_z": {
+          "title": "Monochromator Spacing",
+          "type": "number",
+          "nexus_path": [
+            "/entry1/before_scan/mc2/mc2_z"
+          ]
+        }
+      }
+    },
+    "sample_parameters": {
+      "title": "Sample Parameters",
+      "type": "object",
+      "properties": {
+        "ss1_x": {
+          "title": "Sample Stage 1 X",
+          "type": "number",
+          "nexus_path": [
+            "/entry1/before_scan/ss1/ss1_x"
+          ]
+        },
+        "ss1_tx": {
+          "title": "Sample Stage 1 TX",
+          "type": "number",
+          "nexus_path": [
+            "/entry1/before_scan/ss1/ss1_tx"
+          ]
+        },
+        "ss1_tz": {
+          "title": "Sample Stage 1 TZ",
+          "type": "number",
+          "nexus_path": [
+            "/entry1/before_scan/ss1/ss1_tz"
+          ]
+        },
+        "ss1_y1": {
+          "title": "Sample Stage 1 Y1",
+          "type": "number",
+          "nexus_path": [
+            "/entry1/before_scan/ss1/ss1_y1"
+          ]
+        },
+        "ss1_y2": {
+          "title": "Sample Stage 1 Y2",
+          "type": "number",
+          "nexus_path": [
+            "/entry1/before_scan/ss1/ss1_y2"
+          ]
+        },
+        "ss1_y3": {
+          "title": "Sample Stage 1 Y3",
+          "type": "number",
+          "nexus_path": [
+            "/entry1/before_scan/ss1/ss1_y3"
+          ]
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "scan_parameters": {
+        "energy_est": -70000000,
+        "tomography_command": "dolor",
+        "tomography_shutter": "dolor",
+        "cam1_x": -70000000,
+        "cam_model": "dolor",
+        "scan_title": "dolor",
+        "mc2_z": -70000000,
+        "scan_command": "dolor"
+      },
+      "sample_parameters": {
+        "ss1_tx": -70000000,
+        "ss1_tz": -70000000,
+        "ss1_y1": -70000000,
+        "ss1_y2": -70000000,
+        "ss1_y3": -70000000,
+        "ss1_x": -70000000
+      },
+      "scan_common": {
+        "end_time": "2021-01-01T00:00:00.0Z",
+        "scan_request": "dolor",
+        "scan_number": -70000000,
+        "synchrotron_current": -70000000,
+        "start_time": "2021-01-01T00:00:00.0Z"
+      }
+    }
+  ]
+}
