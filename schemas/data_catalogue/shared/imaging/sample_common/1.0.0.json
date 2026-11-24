@@ -1,0 +1,23 @@
+{
+  "title": "data_catalogue/shared/imaging/sample_common",
+  "description": "Schema containing fields common to several imaging beamlines",
+  "$id": "/data_catalogue/shared/imaging/sample_common/1.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "title": "Sample Name",
+      "type": "string",
+      "nexus_path": [
+        "/entry/sample/name",
+        "/entry1/sample/name"
+      ]
+    }
+  },
+  "examples": [
+    {
+      "name": "dolor"
+    }
+  ]
+}
