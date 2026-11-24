@@ -57,6 +57,11 @@
                     "title": "tomoflyer_eh2",
                     "type": "string",
                     "nexus_path": ["/entry1/instrument/tomoflyer_eh2/local_name"]
+                },
+                "t3_m1z": {
+                    "title": "t3_m1z",
+                    "type": "number",
+                    "nexus_path": ["/entry1/before_scan/t3/t3_m1z"]
                 }
             }
         },
