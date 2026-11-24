@@ -52,6 +52,11 @@
                     "title": "Monochromator Spacing",
                     "type": "number",
                     "nexus_path": ["/entry1/before_scan/mc2/mc2_z"]
+                },
+                "tomoflyer_eh2": {
+                    "title": "tomoflyer_eh2",
+                    "type": "string",
+                    "nexus_path": ["/entry1/instrument/tomoflyer_eh2/local_name"]
                 }
             }
         },
