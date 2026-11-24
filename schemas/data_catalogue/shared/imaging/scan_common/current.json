@@ -1,7 +1,7 @@
 {
     "title": "data_catalogue/shared/imaging/scan_common",
     "description": "Schema containing fields common to several imaging beamlines",
-    "$id": "/data_catalogue/shared/imaging/scan_common/1.0.0",
+    "$id": "/data_catalogue/shared/imaging/scan_common/2.0.0",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "additionalProperties": false,
@@ -32,6 +32,11 @@
             "title": "Scan Number",
             "type": "number",
             "nexus_path": ["/entry/diamond_scan/entry_identifier", "/entry1/diamond_scan/entry_identifier", "/entry1/entry_identifier"]
+        },
+        "synchrotron_current": {
+            "title": "Synchrotron Current",
+            "type": "number",
+            "nexus_path": ["/entry/instrument/source/current", "/entry1/instrument/source/current"]
         }
     }
 }
