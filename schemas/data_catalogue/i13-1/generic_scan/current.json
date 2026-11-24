@@ -7,10 +7,10 @@
     "additionalProperties": false,
     "properties": {
         "scan_common": {
-            "$ref": "/data_catalogue/shared/imaging/scan_common/1.0.0.json"
+            "$ref": "/data_catalogue/_shared/imaging/scan_common/1.0.0.json"
         },
         "sample_common": {
-            "$ref": "/data_catalogue/shared/imaging/sample_common/1.0.0.json"
+            "$ref": "/data_catalogue/_shared/imaging/sample_common/1.0.0.json"
         },
         "scan_parameters": {
             "title": "Scan Parameters",
