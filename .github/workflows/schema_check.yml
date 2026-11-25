@@ -22,6 +22,10 @@ jobs:
           run: |
             cat .jsonschema-tools.yaml
             cat test/jsonschema/repository.test.js
+        
+        - name: Signal "shared" folder when "_shared" is required (npm)
+          working-directory: ./  
+          run: npm run fail-shared-no-underscore-gh
 
         - name: Check schema root passes minimum requirements
           working-directory: ./  
@@ -34,7 +38,3 @@ jobs:
         - name: Confirm $id start with a / slash
           working-directory: ./  
           run: npm run fail-slash-id-found
-
-        - name: Flag "shared" folder when "_shared" is required
-          working-directory: ./  
-          run: npm run fail-shared-no_underscore-gh
