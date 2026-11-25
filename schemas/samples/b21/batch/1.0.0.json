@@ -1,0 +1,63 @@
+{
+  "title": "samples/b21/batch",
+  "$id": "/samples/b21/batch/1.0.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "barcode",
+    "position",
+    "volume",
+    "buffer_position"
+  ],
+  "properties": {
+    "barcode": {
+      "title": "Barcode",
+      "description": "The sample's barcode",
+      "type": "string",
+      "pattern": "[A-Z]{4}-[0-9]{3}",
+      "maxLength": 8
+    },
+    "position": {
+      "title": "Sample Position",
+      "description": "The position of the sample in the holder. Should be a number 1-9.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9
+    },
+    "volume": {
+      "title": "Volume",
+      "description": "Volume of sample in μL",
+      "type": "number",
+      "minimum": 25,
+      "maximum": 100
+    },
+    "buffer": {
+      "title": "Buffer",
+      "description": "Is this a buffer or a sample?",
+      "type": "boolean"
+    },
+    "buffer_position": {
+      "title": "Buffer Position Number",
+      "description": "Buffer position in the holder. Should be a number 1-9.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 9
+    },
+    "notes": {
+      "title": "Notes",
+      "description": "Any further notes about the sample",
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "barcode": "DDDD-111",
+      "position": 2,
+      "volume": 36.25,
+      "buffer_position": 2,
+      "notes": "dolor",
+      "buffer": false
+    }
+  ]
+}
