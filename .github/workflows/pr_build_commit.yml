@@ -27,6 +27,10 @@ jobs:
           cat .jsonschema-tools.yaml
           cat test/jsonschema/repository.test.js
 
+      - name: Block build if "shared" folder exists when "_shared" is required
+        working-directory: ./  
+        run: npm run fail-shared-no-underscore-gh
+
       - name: Fetch repo  
         working-directory: ./
         run: git fetch  # fixes error: fatal: bad revision 'main'
