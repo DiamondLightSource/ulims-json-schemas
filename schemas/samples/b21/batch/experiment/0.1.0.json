@@ -1,0 +1,30 @@
+{
+  "title": "samples/b21/batch/experiment",
+  "$id": "/samples/b21/batch/experiment/0.1.0",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "volume"
+  ],
+  "properties": {
+    "volume": {
+      "title": "Volume (μL)",
+      "description": "Volume of sample in μL",
+      "type": "number",
+      "minimum": 20,
+      "maximum": 100
+    },
+    "notes": {
+      "title": "Notes",
+      "description": "Any further notes about the sample",
+      "type": "string"
+    }
+  },
+  "examples": [
+    {
+      "volume": 32,
+      "notes": "dolor"
+    }
+  ]
+}
