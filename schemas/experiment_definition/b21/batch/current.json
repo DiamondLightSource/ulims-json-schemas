@@ -3,7 +3,11 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "experiment_definition/b21/batch",
   "description": "A batch collection using the robot on B21.",
-  "required": ["list_of_temperatures", "ramp_rate", "settle_time"],
+  "required": [
+    "offline_storage_temperature",
+    "robot_storage_temperature",
+    "collection_temperature"
+  ],
   "properties": {
     "offline_storage_temperature": {
       "title": "Offline Sample Storage Temperature (C)",

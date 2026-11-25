@@ -4,9 +4,9 @@
   "$id": "/experiment_definition/batch/0.1.0",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "required": [
-    "list_of_temperatures",
-    "ramp_rate",
-    "settle_time"
+    "offline_storage_temperature",
+    "robot_storage_temperature",
+    "collection_temperature"
   ],
   "properties": {
     "offline_storage_temperature": {
@@ -36,9 +36,9 @@
   },
   "examples": [
     {
+      "offline_storage_temperature": -80,
       "robot_storage_temperature": 9,
-      "collection_temperature": 15,
-      "offline_storage_temperature": -80
+      "collection_temperature": 15
     }
   ]
 }
