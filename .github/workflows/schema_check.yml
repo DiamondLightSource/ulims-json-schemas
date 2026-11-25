@@ -34,3 +34,7 @@ jobs:
         - name: Confirm $id start with a / slash
           working-directory: ./  
           run: npm run fail-slash-id-found
+
+        - name: Flag "shared" folder when "_shared" is required
+          working-directory: ./  
+          run: npm run fail-shared-no_underscore-gh
