@@ -24,10 +24,9 @@ jobs:
         run:  |
           ! git diff --name-status --diff-filter=M origin/main | awk '{print $2}' | grep -e 'schemas/.*.json' | grep -v 'current.json'
       - name: Signal "shared" folder when "_shared" is required (disabled)
-        if: false
         working-directory: ./
         run: |
-          FOUND=$(find . -type d \( -path "*/schemas/shared" -o -path "*/schemas/*/shared" \))
+          FOUND=$(find ./schemas -type d -name \"shared\"  | grep .)
           if [ -n "$FOUND" ]; then
             echo "::error::Found 'shared' folder inside schemas (must be '_shared' instead):"
             echo "$FOUND"
