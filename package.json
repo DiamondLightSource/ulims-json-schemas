@@ -18,7 +18,9 @@
       "fail-https-hash-found": "! grep --include=\\*.json -rn './schemas' -e 'https.*draft-07/schema[^#]'",
       "fail-slash-id-found": "! grep --include=\\*.json -rn './schemas' -e '\"\\$id\"\\s*:\\s*\"[^/][^\"]*\"'",
       "find-deleted": "! git diff --name-status --diff-filter=D origin/main | awk '{print $2}' | grep -e 'schemas/.*.json'",
-      "find-modified": "! git diff --name-status --diff-filter=M origin/main | awk '{print $2}' | grep -e 'schemas/.*.json' | grep -v 'current.json'"
+      "find-modified": "! git diff --name-status --diff-filter=M origin/main | awk '{print $2}' | grep -e 'schemas/.*.json' | grep -v 'current.json'",
+      "fail-shared-no-underscore": "! find ./schemas -type d -name \"shared\"  | grep .",
+      "fail-shared-no-underscore-gh": "FOUND=$(find ./schemas -type d -name \"shared\" | awk '{printf \"%s%s\", sep, $0; sep=\" | \"}'); if [ -n \"$FOUND\" ]; then echo \"::error::Found 'shared' folder inside schemas (must be renamed to '_shared' and schema refs updated), use npm run fail-shared-no-underscore locally to see if fixed. Found: $FOUND\"; exit 1; fi"
     },
     "keywords": [
         "jsonschema",
