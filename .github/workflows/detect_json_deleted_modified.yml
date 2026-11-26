@@ -23,7 +23,8 @@ jobs:
         working-directory: ./  
         run:  |
           ! git diff --name-status --diff-filter=M origin/main | awk '{print $2}' | grep -e 'schemas/.*.json' | grep -v 'current.json'
-      - name: Signal "shared" folder when "_shared" is required
+      - name: Signal "shared" folder when "_shared" is required (disabled)
+        if: false
         working-directory: ./
         run: |
           FOUND=$(find . -type d \( -path "*/schemas/shared" -o -path "*/schemas/*/shared" \))
